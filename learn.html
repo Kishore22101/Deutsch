@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn – A1 | Deutsch Lernen</title>
+  <meta name="description" content="65 A1 German lessons with voice playback in German and English." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">D</div>
+      <span class="logo-text">Deutsch Lernen</span>
+    </a>
+    <a href="a1.html" class="back-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      A1 Hub
+    </a>
+  </div>
+</header>
+
+<div class="learn-layout">
+
+  <!-- Sidebar -->
+  <aside class="lesson-sidebar">
+    <div class="sidebar-header">
+      <h3>A1 Lessons</h3>
+      <input type="text" class="sidebar-search" id="lessonSearch" placeholder="Search lessons…" autocomplete="off" />
+    </div>
+    <div class="lesson-list" id="lessonList"></div>
+  </aside>
+
+  <!-- Main viewer -->
+  <section class="lesson-viewer" id="lessonViewer">
+
+    <!-- Top bar -->
+    <div class="viewer-top">
+      <span class="lesson-counter" id="lessonCounter">Lesson 1 of 65</span>
+      <div class="lesson-nav-btns">
+        <button class="nav-btn" id="prevBtn" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Previous
+        </button>
+        <button class="nav-btn" id="nextBtn">
+          Next
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Progress strip -->
+    <div class="lesson-progress-strip">
+      <div class="lesson-progress-fill" id="progressFill" style="width:1.5%;"></div>
+    </div>
+
+    <!-- Main vocab block -->
+    <div class="vocab-block">
+      <div class="vocab-german" id="vocabGerman">Hallo / Guten Tag</div>
+      <div class="vocab-english" id="vocabEnglish">Hello / Good day</div>
+      <div class="vocab-phonetic" id="vocabPhonetic">HAH-loh / GOO-ten tahk</div>
+    </div>
+
+    <!-- Voice buttons -->
+    <div class="voice-btns">
+      <button class="voice-btn voice-btn-de" id="btnSpeakDE">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        </svg>
+        🇩🇪 Speak German
+      </button>
+      <button class="voice-btn voice-btn-en" id="btnSpeakEN">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        </svg>
+        🇬🇧 Speak English
+      </button>
+    </div>
+
+    <!-- Example sentences -->
+    <div class="examples-section">
+      <h4>📝 Example Sentences</h4>
+      <div id="examplesContainer"></div>
+    </div>
+
+    <!-- Vocabulary list -->
+    <div class="examples-section">
+      <h4>📚 Vocabulary</h4>
+      <div class="vocab-list" id="vocabListContainer"></div>
+    </div>
+
+  </section>
+</div>
+
+<footer class="site-footer">
+  <p>© 2024 Deutsch Lernen &nbsp;·&nbsp; A1 – Learn</p>
+</footer>
+
+<script src="lessons.js"></script>
+<script src="app.js"></script>
+<script>
+  // ── State ──
+  let currentIndex = 0;
+
+  // ── Render sidebar ──
+  function buildSidebar(filter = '') {
+    const list = document.getElementById('lessonList');
+    list.innerHTML = '';
+    const lower = filter.toLowerCase();
+    LESSONS.forEach((lesson, i) => {
+      if (lower && !lesson.title.toLowerCase().includes(lower) && !String(lesson.id).includes(lower)) return;
+      const item = document.createElement('div');
+      item.className = 'lesson-item' + (i === currentIndex ? ' active' : '');
+      item.dataset.index = i;
+      item.innerHTML = `
+        <div class="lesson-num">${lesson.id}</div>
+        <div class="lesson-name">${lesson.title}</div>
+      `;
+      item.addEventListener('click', () => { currentIndex = i; renderLesson(); buildSidebar(filter); scrollActiveIntoView(); });
+      list.appendChild(item);
+    });
+  }
+
+  function scrollActiveIntoView() {
+    const active = document.querySelector('.lesson-item.active');
+    if (active) active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+
+  // ── Render lesson ──
+  function renderLesson() {
+    const lesson = LESSONS[currentIndex];
+
+    document.getElementById('vocabGerman').textContent = lesson.german;
+    document.getElementById('vocabEnglish').textContent = lesson.english;
+    document.getElementById('vocabPhonetic').textContent = lesson.phonetic || '';
+    document.getElementById('lessonCounter').textContent = `Lesson ${lesson.id} of ${LESSONS.length}`;
+
+    // Progress
+    const pct = (lesson.id / LESSONS.length) * 100;
+    document.getElementById('progressFill').style.width = Math.max(1.5, pct) + '%';
+
+    // Prev / Next
+    document.getElementById('prevBtn').disabled = currentIndex === 0;
+    document.getElementById('nextBtn').disabled = currentIndex === LESSONS.length - 1;
+
+    // Examples
+    const exBox = document.getElementById('examplesContainer');
+    exBox.innerHTML = (lesson.examples || []).map(ex => `
+      <div class="example-row">
+        <div class="example-de">${ex.de}</div>
+        <div class="example-en">${ex.en}</div>
+      </div>
+    `).join('');
+
+    // Vocab list
+    const vcBox = document.getElementById('vocabListContainer');
+    vcBox.innerHTML = (lesson.vocab || []).map((v, vi) => `
+      <div class="vocab-item">
+        <span class="vi-german">${v.de}</span>
+        <span class="vi-english">${v.en}</span>
+        <button class="vi-play" title="Speak German" onclick="speakGerman('${v.de.replace(/'/g,"\\'")}', this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+          </svg>
+        </button>
+      </div>
+    `).join('');
+
+    // Voice buttons
+    document.getElementById('btnSpeakDE').onclick = function() { speakGerman(lesson.german, this); };
+    document.getElementById('btnSpeakEN').onclick = function() { speakEnglish(lesson.english, this); };
+
+    // Page title
+    document.title = `Lesson ${lesson.id}: ${lesson.title} – Deutsch Lernen`;
+
+    // Hash
+    history.replaceState(null, '', '#lesson-' + lesson.id);
+
+    buildSidebar(document.getElementById('lessonSearch').value);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // ── Navigation ──
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    if (currentIndex > 0) { currentIndex--; renderLesson(); }
+  });
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    if (currentIndex < LESSONS.length - 1) { currentIndex++; renderLesson(); }
+  });
+
+  // ── Search ──
+  document.getElementById('lessonSearch').addEventListener('input', function() {
+    buildSidebar(this.value);
+  });
+
+  // ── Handle deep-link hash ──
+  function loadFromHash() {
+    const hash = location.hash;
+    if (hash && hash.startsWith('#lesson-')) {
+      const id = parseInt(hash.replace('#lesson-', ''), 10);
+      const idx = LESSONS.findIndex(l => l.id === id);
+      if (idx !== -1) currentIndex = idx;
+    }
+  }
+
+  // ── Keyboard navigation ──
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      if (currentIndex < LESSONS.length - 1) { currentIndex++; renderLesson(); }
+    }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      if (currentIndex > 0) { currentIndex--; renderLesson(); }
+    }
+  });
+
+  // ── Init ──
+  loadFromHash();
+  buildSidebar();
+  renderLesson();
+</script>
+</body>
+</html>
