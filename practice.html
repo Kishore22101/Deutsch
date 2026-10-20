@@ -59,7 +59,10 @@
 <div class="tw-layout">
 
   <!-- ── Sidebar ─────────────────────────────── -->
-  <aside class="tw-sidebar">
+  <!-- mobile overlay -->
+  <div class="mob-overlay" id="mobOverlay" onclick="closeSidebar()"></div>
+
+  <aside class="tw-sidebar" id="sidebar">
     <div class="tw-sidebar-head">
       <h3>Lessons</h3>
     </div>
@@ -69,9 +72,15 @@
   <!-- ── Main Panel ──────────────────────────── -->
   <main class="tw-main" id="mainPanel">
     <div class="tw-panel-head">
-      <div>
-        <div class="tw-panel-title" id="panelTitle">Select a Lesson</div>
-        <div class="tw-panel-sub" id="panelSub">Choose a lesson from the sidebar</div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button class="mob-sidebar-btn" onclick="openSidebar()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          Lessons
+        </button>
+        <div>
+          <div class="tw-panel-title" id="panelTitle">Select a Lesson</div>
+          <div class="tw-panel-sub" id="panelSub">Choose a lesson from the sidebar</div>
+        </div>
       </div>
       <div class="score-strip">
         <div class="score-label" id="scoreLabel">0 / 0</div>
@@ -181,7 +190,7 @@ const SPP=5;
     const el=document.createElement('div');
     el.className='lesson-item';el.id='li-'+l.id;
     el.innerHTML=`<div class="lesson-num">${l.id}</div><div class="lesson-name">${l.title}</div>`;
-    el.onclick=()=>loadLesson(l.id);
+    el.onclick=()=>{loadLesson(l.id);closeSidebar();}
     list.appendChild(el);
   });
 })();
@@ -372,6 +381,16 @@ function pickSound(ai,opt){
 }
 function nextSoundPage(){
   const tot=Math.ceil(soundQ.length/SPP);soundPage=(soundPage+1)%tot;renderSound();
+}
+
+// ── Mobile Sidebar ─────────────────────────
+function openSidebar(){
+  document.getElementById('sidebar').classList.add('mob-open');
+  document.getElementById('mobOverlay').classList.add('show');
+}
+function closeSidebar(){
+  document.getElementById('sidebar').classList.remove('mob-open');
+  document.getElementById('mobOverlay').classList.remove('show');
 }
 
 // ── Tabs ───────────────────────────────────

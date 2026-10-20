@@ -69,11 +69,21 @@
       border-radius:var(--r-md);margin-bottom:12px;
       font-family:var(--font);font-size:13px;font-weight:700;color:var(--t-70);
       cursor:pointer;text-align:left;align-items:center;gap:8px;
+      grid-column:1/-1; /* span full grid row */
     }
     @media(max-width:860px){
       .mob-sidebar-toggle{display:flex;}
-      .tw-sidebar{position:relative;top:0;max-height:none;display:none;}
-      .tw-sidebar.mob-open{display:flex;max-height:50vh;}
+      /* Override global fixed positioning for assessment sidebar */
+      .tw-sidebar{
+        position:relative !important;top:0 !important;
+        transform:none !important;max-height:0;
+        overflow:hidden;display:flex !important;
+        transition:max-height .3s ease;border-radius:var(--r-xl) !important;
+        border:1px solid var(--border-lo) !important;
+      }
+      .tw-sidebar.mob-open{max-height:50vh;}
+      /* Show-all footer smaller on mobile */
+      .show-all-footer{padding:14px 16px;}
     }
   </style>
 </head>
@@ -337,12 +347,15 @@ function buildTeilA(all){
 
 /* ── TEIL B – Fill in Blank ───────────────────── */
 function buildTeilB(all){
-  const count = Math.min(8, all.length);
-  const pool = shuffle(all).slice(0, count);
+  // Prefer example sentences (longer, richer context); supplement with vocab
+  const exs = (cur.examples||[]).map(e=>({de:e.de,en:e.en,isExample:true}));
+  const voc = [...cur.vocab].map(v=>({...v,isExample:false}));
+  // Combine: examples first so we get real sentences, then vocab
+  const combined = [...shuffle(exs), ...shuffle(voc)];
+  const pool = combined.slice(0, Math.min(8, combined.length));
   let html = '';
   pool.forEach(item => {
     qNum++;
-    // Create a sentence using the example or vocab
     const sentence = makeFillSentence(item);
     html += `
       <div class="q-card" style="margin-bottom:12px;">
@@ -360,11 +373,49 @@ function buildTeilB(all){
 }
 
 function makeFillSentence(item){
-  // Hide the German word behind a blank
-  const german = item.de.split(' ')[0].replace(/[!?,]/g,'');
-  const display = item.de.replace(german, '<span style="display:inline-block;min-width:80px;border-bottom:2px solid var(--border-hi);margin:0 4px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>');
-  return { display: `${display} &nbsp;<span class="q-note">[ ${item.en} ]</span>`,
-           answer: german, full: item.de };
+  const BLANK = '<span style="display:inline-block;min-width:90px;height:2px;background:var(--border-hi);vertical-align:middle;margin:0 6px;border-radius:1px;font-size:1px;">&nbsp;</span>';
+  const de = item.de;
+  const en = item.en;
+  const words = de.split(/\s+/).filter(w => w.length > 0);
+
+  // For true example sentences (3+ meaningful words), blank the most significant word
+  if(item.isExample && words.length >= 3){
+    const stopWords = new Set(['ich','du','er','sie','es','wir','ihr','und','oder','aber','die','der','das','den','dem','des','ein','eine','einen','einem','einer','ist','bin','bist','sind','seid','hat','habe','hast','haben','habt','in','an','auf','bei','mit','von','zu','aus','im','am','a','the','is','are','was','were']);
+    let best = null, bestScore = -1;
+    words.forEach((w, i) => {
+      const clean = w.replace(/[!?,.:;"'()]/g, '');
+      if(clean.length < 3) return;
+      const score = clean.length * (stopWords.has(clean.toLowerCase()) ? 0.2 : 1);
+      if(score > bestScore){ bestScore = score; best = {w, clean, i}; }
+    });
+    if(best){
+      const displayed = words.map((w, i) => i === best.i ? BLANK : w).join(' ');
+      return {
+        display: `${displayed} &nbsp;<span class="q-note">[Meaning: ${en}]</span>`,
+        hint: 'Fill in the missing German word from the sentence.',
+        answer: best.clean,
+        full: `${de}  →  ${en}`
+      };
+    }
+  }
+
+  // For short vocab items: build a contextual cloze prompt
+  // Handle entries like "0 – null" → extract "null", "groß / klein" → "groß"
+  let target = de
+    .split('/')[0]         // take first alternative
+    .replace(/^\d+\s*[–-]\s*/, '')  // strip "0 – " prefix
+    .replace(/\s*\(.*?\)/g, '')     // strip parenthetical notes
+    .replace(/[!?.]/g, '')
+    .trim();
+  if(!target) target = de.split(' ')[0].replace(/[!?,]/g,'');
+
+  const hint_char = target.charAt(0);
+  return {
+    display: `The German word/phrase for "<strong>${en}</strong>" is ${BLANK}`,
+    hint: `Write the correct German. Hint: starts with "${hint_char}"`,
+    answer: target,
+    full: `${de}  (${en})`
+  };
 }
 
 /* ── TEIL C – Error Finding ───────────────────── */
