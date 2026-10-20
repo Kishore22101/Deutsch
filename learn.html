@@ -146,10 +146,9 @@
       `;
       item.addEventListener('click', () => {
         currentIndex = i;
+        closeLessonSidebar(); // close first on mobile
         renderLesson();
-        buildSidebar(filter);
         scrollActiveIntoView();
-        closeLessonSidebar(); // auto-close on mobile
       });
       list.appendChild(item);
     });

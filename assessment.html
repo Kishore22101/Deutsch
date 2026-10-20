@@ -62,26 +62,7 @@
     .q-area{padding-bottom:8px;}
     .q-area + .q-area{padding-top:0;}
 
-    /* Mobile sidebar toggle */
-    .mob-sidebar-toggle{
-      display:none;width:100%;padding:11px 16px;
-      background:var(--bg-01);border:1px solid var(--border-lo);
-      border-radius:var(--r-md);margin-bottom:12px;
-      font-family:var(--font);font-size:13px;font-weight:700;color:var(--t-70);
-      cursor:pointer;text-align:left;align-items:center;gap:8px;
-      grid-column:1/-1; /* span full grid row */
-    }
     @media(max-width:860px){
-      .mob-sidebar-toggle{display:flex;}
-      /* Override global fixed positioning for assessment sidebar */
-      .tw-sidebar{
-        position:relative !important;top:0 !important;
-        transform:none !important;max-height:0;
-        overflow:hidden;display:flex !important;
-        transition:max-height .3s ease;border-radius:var(--r-xl) !important;
-        border:1px solid var(--border-lo) !important;
-      }
-      .tw-sidebar.mob-open{max-height:50vh;}
       /* Show-all footer smaller on mobile */
       .show-all-footer{padding:14px 16px;}
     }
@@ -133,11 +114,8 @@
 <div class="tw-layout">
 
   <!-- ── Sidebar ─────────────────────────── -->
-  <!-- Mobile toggle -->
-  <button class="mob-sidebar-toggle" onclick="toggleMobSidebar()">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-list"/></svg>
-    <span id="mobSidebarLabel">Choose Lesson</span>
-  </button>
+  <!-- Mobile overlay -->
+  <div class="mob-overlay" id="assessOverlay" onclick="closeMobSidebar()"></div>
 
   <aside class="tw-sidebar" id="sidebar">
     <div class="tw-sidebar-head">
@@ -151,9 +129,15 @@
 
     <!-- Header -->
     <div class="tw-panel-head">
-      <div>
-        <div class="tw-panel-title" id="panelTitle">Assessment</div>
-        <div class="tw-panel-sub" id="panelSub">Select a lesson from the sidebar to begin</div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button class="mob-sidebar-btn" onclick="openMobSidebar()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          Lessons
+        </button>
+        <div>
+          <div class="tw-panel-title" id="panelTitle">Assessment</div>
+          <div class="tw-panel-sub" id="panelSub">Select a lesson from the sidebar to begin</div>
+        </div>
       </div>
     </div>
 
@@ -268,12 +252,13 @@ let qNum = 0;   // global question counter per render
   });
 })();
 
-function toggleMobSidebar(){
-  const sb = document.getElementById('sidebar');
-  sb.classList.toggle('mob-open');
+function openMobSidebar(){
+  document.getElementById('sidebar').classList.add('mob-open');
+  document.getElementById('assessOverlay').classList.add('show');
 }
 function closeMobSidebar(){
   document.getElementById('sidebar').classList.remove('mob-open');
+  document.getElementById('assessOverlay').classList.remove('show');
 }
 
 /* ════════════════════════════════════════════════
@@ -287,7 +272,6 @@ function loadLesson(id){
   document.getElementById('li-' + id).classList.add('active');
   document.getElementById('panelTitle').textContent = `L${id}: ${cur.title}`;
   document.getElementById('panelSub').textContent = `${cur.german} · A1 Written Assessment`;
-  document.getElementById('mobSidebarLabel').textContent = `L${id}: ${cur.title}`;
   document.getElementById('revealBtn').innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-eye"/></svg>&nbsp;Show All Answers`;
   document.getElementById('landingView').classList.add('hidden');
   document.getElementById('assessView').classList.remove('hidden');

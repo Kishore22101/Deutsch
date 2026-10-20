@@ -132,7 +132,7 @@ a{text-decoration:none;color:inherit;}
   .learn-layout{grid-template-columns:1fr;}
   /* Sidebar: completely removed from grid on mobile */
   .lesson-sidebar{
-    display:none;
+    display:none !important;
     position:fixed !important;top:0;left:0;bottom:0;z-index:300;
     width:82vw;max-width:300px;max-height:100vh;
     border-radius:0 !important;border-right:1px solid var(--border-md) !important;
