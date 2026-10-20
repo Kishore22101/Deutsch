@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Deutsch Lernen – Learn German</title>
-  <meta name="description" content="Learn German from scratch. Choose your level and start your journey from A1 to C2 with interactive lessons, practice, and assessments." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Learn German from scratch. Choose your level and start from A1 to C2."/>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="ic-world" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="ic-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+</svg>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="logo">
-      <div class="logo-icon">D</div>
+      <div class="logo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-world"/></svg></div>
       <span class="logo-text">Deutsch Lernen</span>
     </a>
   </div>
@@ -20,7 +24,7 @@
 
 <main>
   <section class="page-hero container">
-    <div class="badge">🇩🇪 German Language Course</div>
+    <div class="badge">German Language Course</div>
     <h1>Choose Your Level</h1>
     <p>Start from the basics or jump to your level. Each stage builds on the last — from beginner to mastery.</p>
   </section>
@@ -28,75 +32,52 @@
   <div class="container">
     <div class="cards-grid cols-6">
 
-      <!-- A1 – Active -->
       <a href="a1.html" class="glass-card active-card" id="card-a1">
-        <div class="card-icon" style="background:rgba(16,185,129,.15);">
-          <span style="font-size:32px;">🌱</span>
-        </div>
+        <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-world"/></svg></div>
         <div class="card-level">A1</div>
         <div class="card-title">Beginner</div>
         <div class="card-desc">Greetings, numbers, everyday basics</div>
-        <span class="card-tag tag-beginner">Start Here</span>
+        <span class="card-tag">Start Here</span>
       </a>
 
-      <!-- A2 – Locked -->
       <div class="glass-card locked" id="card-a2">
-        <div class="card-icon" style="background:rgba(245,158,11,.12);">
-          <span style="font-size:32px;">🌿</span>
-        </div>
+        <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-lock"/></svg></div>
         <div class="card-level">A2</div>
         <div class="card-title">Elementary</div>
         <div class="card-desc">Simple conversations & routines</div>
-        <span class="card-tag tag-elementary">Locked</span>
-        <span class="lock-icon">🔒</span>
+        <span class="card-tag">Locked</span>
       </div>
 
-      <!-- B1 – Locked -->
       <div class="glass-card locked" id="card-b1">
-        <div class="card-icon" style="background:rgba(37,99,235,.12);">
-          <span style="font-size:32px;">🌳</span>
-        </div>
+        <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-lock"/></svg></div>
         <div class="card-level">B1</div>
         <div class="card-title">Intermediate</div>
         <div class="card-desc">Expressing opinions, travel topics</div>
-        <span class="card-tag tag-intermediate">Locked</span>
-        <span class="lock-icon">🔒</span>
+        <span class="card-tag">Locked</span>
       </div>
 
-      <!-- B2 – Locked -->
       <div class="glass-card locked" id="card-b2">
-        <div class="card-icon" style="background:rgba(124,58,237,.12);">
-          <span style="font-size:32px;">🏔️</span>
-        </div>
+        <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-lock"/></svg></div>
         <div class="card-level">B2</div>
         <div class="card-title">Upper-Inter.</div>
         <div class="card-desc">Complex discussions, nuance</div>
-        <span class="card-tag tag-upper-int">Locked</span>
-        <span class="lock-icon">🔒</span>
+        <span class="card-tag">Locked</span>
       </div>
 
-      <!-- C1 – Locked -->
       <div class="glass-card locked" id="card-c1">
-        <div class="card-icon" style="background:rgba(239,68,68,.12);">
-          <span style="font-size:32px;">⚡</span>
-        </div>
+        <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-lock"/></svg></div>
         <div class="card-level">C1</div>
         <div class="card-title">Advanced</div>
         <div class="card-desc">Fluency, academic language</div>
-        <span class="card-tag tag-advanced">Locked</span>
-        <span class="lock-icon">🔒</span>
+        <span class="card-tag">Locked</span>
       </div>
 
-      <!-- C2 – Locked -->
       <div class="glass-card locked" id="card-c2">
-        <div class="card-icon" style="background:rgba(236,72,153,.12);">
-          <span style="font-size:32px;">👑</span>
-        </div>
+        <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-lock"/></svg></div>
         <div class="card-level">C2</div>
         <div class="card-title">Mastery</div>
         <div class="card-desc">Native-level proficiency</div>
-        <span class="card-tag tag-mastery">Locked</span>
-        <span class="lock-icon">🔒</span>
+        <span class="card-tag">Locked</span>
       </div>
 
     </div>
@@ -104,8 +85,7 @@
 </main>
 
 <footer class="site-footer">
-  <p>© 2024 Deutsch Lernen &nbsp;·&nbsp; Built with ❤️ for German learners</p>
+  <p>© 2024 Deutsch Lernen · Built for German learners</p>
 </footer>
-
 </body>
 </html>

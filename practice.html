@@ -1,41 +1,393 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Practice – A1 | Deutsch Lernen</title>
-  <meta name="description" content="A1 German Practice – interactive exercises coming soon." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Interactive A1 German practice – Match, Choose, Type, Sound exercises."/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* SVG icon helpers */
+    .tab-icon svg{width:15px;height:15px;vertical-align:middle;margin-right:5px;}
+  </style>
 </head>
 <body>
+
+<!-- SVG sprite (no emojis) -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="ic-match" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/>
+  </symbol>
+  <symbol id="ic-choose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+  </symbol>
+  <symbol id="ic-type" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/>
+  </symbol>
+  <symbol id="ic-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+  </symbol>
+  <symbol id="ic-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+  </symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="20 6 9 17 4 12"/>
+  </symbol>
+  <symbol id="ic-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="5 3 19 12 5 21 5 3"/>
+  </symbol>
+  <symbol id="ic-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+  </symbol>
+</svg>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="logo">
-      <div class="logo-icon">D</div>
+      <div class="logo-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </div>
       <span class="logo-text">Deutsch Lernen</span>
     </a>
     <a href="a1.html" class="back-btn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
       A1 Hub
     </a>
   </div>
 </header>
 
-<main class="container">
-  <div class="coming-soon-wrap">
-    <div class="big-emoji">✍️</div>
-    <h2>Practice – Coming Soon</h2>
-    <p>Interactive exercises, fill-in-the-blank quizzes, and listening tasks for A1 are being built. Check back soon!</p>
-    <a href="learn.html" class="voice-btn voice-btn-de" style="text-decoration:none;margin-top:16px;">
-      📖 &nbsp;Go to Lessons
-    </a>
-  </div>
-</main>
+<div class="tw-layout">
+
+  <!-- ── Sidebar ─────────────────────────────── -->
+  <aside class="tw-sidebar">
+    <div class="tw-sidebar-head">
+      <h3>Lessons</h3>
+    </div>
+    <div class="lesson-list" id="lessonList"></div>
+  </aside>
+
+  <!-- ── Main Panel ──────────────────────────── -->
+  <main class="tw-main" id="mainPanel">
+    <div class="tw-panel-head">
+      <div>
+        <div class="tw-panel-title" id="panelTitle">Select a Lesson</div>
+        <div class="tw-panel-sub" id="panelSub">Choose a lesson from the sidebar</div>
+      </div>
+      <div class="score-strip">
+        <div class="score-label" id="scoreLabel">0 / 0</div>
+        <div class="score-bar-wrap"><div class="score-bar-fill" id="scoreBar" style="width:0%"></div></div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tw-tabs" id="tabBar">
+      <button class="tw-tab active" data-tab="match" onclick="switchTab('match')">
+        <span class="tab-icon"><svg><use href="#ic-match"/></svg></span>Match
+      </button>
+      <button class="tw-tab" data-tab="choose" onclick="switchTab('choose')">
+        <span class="tab-icon"><svg><use href="#ic-choose"/></svg></span>Choose
+      </button>
+      <button class="tw-tab" data-tab="type" onclick="switchTab('type')">
+        <span class="tab-icon"><svg><use href="#ic-type"/></svg></span>Type
+      </button>
+      <button class="tw-tab" data-tab="sound" onclick="switchTab('sound')">
+        <span class="tab-icon"><svg><use href="#ic-sound"/></svg></span>Sound
+      </button>
+    </div>
+
+    <!-- ── MATCH ── -->
+    <div id="matchSection" class="q-area">
+      <div class="teil-banner">
+        <h2>Match the Following</h2>
+        <p>Click a German word, then click its English meaning to match them.</p>
+      </div>
+      <div class="match-cols"><div class="match-col" id="matchLeft"></div><div class="match-col" id="matchRight"></div></div>
+      <div class="q-nav">
+        <span class="q-ctr" id="matchCtr">Round 1 of 5</span>
+        <div class="q-btns">
+          <button class="btn btn-primary" onclick="nextMatchRound()">Next Round</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CHOOSE ── -->
+    <div id="chooseSection" class="q-area hidden">
+      <div class="teil-banner">
+        <h2>Multiple Choice</h2>
+        <p>Choose the correct English meaning for the German word or phrase.</p>
+      </div>
+      <div id="mcArea"></div>
+      <div class="q-nav">
+        <span class="q-ctr" id="mcCtr">Q 1 of 30</span>
+        <div class="q-btns">
+          <button class="btn" id="mcPrev" onclick="mcNav(-1)" disabled>Prev</button>
+          <button class="btn btn-primary" id="mcNext" onclick="mcNav(1)">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TYPE ── -->
+    <div id="typeSection" class="q-area hidden">
+      <div class="teil-banner">
+        <h2>Typing Practice</h2>
+        <p>Read the English prompt and type the correct German word or phrase.</p>
+      </div>
+      <div id="typeArea"></div>
+      <div class="q-nav">
+        <span class="q-ctr" id="typeCtr">Q 1 of 30</span>
+        <div class="q-btns">
+          <button class="btn" id="typePrev" onclick="typeNav(-1)" disabled>Prev</button>
+          <button class="btn btn-primary" id="typeNext" onclick="typeNav(1)">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SOUND ── -->
+    <div id="soundSection" class="q-area hidden">
+      <div class="teil-banner">
+        <h2>Sound Match</h2>
+        <p>Press play to hear the pronunciation, then select the correct German word.</p>
+      </div>
+      <div id="soundGrid"></div>
+      <div class="q-nav">
+        <span class="q-ctr" id="soundCtr">Page 1 of 5</span>
+        <div class="q-btns">
+          <button class="btn btn-primary" onclick="nextSoundPage()">Next Page</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
 
 <footer class="site-footer">
-  <p>© 2024 Deutsch Lernen &nbsp;·&nbsp; A1 – Practice</p>
+  <p>© 2024 Deutsch Lernen · A1 Practice</p>
 </footer>
 
+<script src="lessons.js"></script>
+<script>
+// ── State ──────────────────────────────────
+let cur = null, tab = 'match', score = 0, total = 0;
+let matchPairs=[], matchRound=0, matchSel=null;
+let mcQ=[], mcIdx=0, mcAns=[];
+let typeQ=[], typeIdx=0, typeAns=[];
+let soundQ=[], soundPage=0;
+const SPP=5;
+
+// ── Sidebar ────────────────────────────────
+(function(){
+  const list=document.getElementById('lessonList');
+  LESSONS.forEach(l=>{
+    const el=document.createElement('div');
+    el.className='lesson-item';el.id='li-'+l.id;
+    el.innerHTML=`<div class="lesson-num">${l.id}</div><div class="lesson-name">${l.title}</div>`;
+    el.onclick=()=>loadLesson(l.id);
+    list.appendChild(el);
+  });
+})();
+
+// ── Load ───────────────────────────────────
+function loadLesson(id){
+  cur=LESSONS.find(l=>l.id===id);if(!cur)return;
+  score=0;total=0;
+  document.querySelectorAll('.lesson-item').forEach(e=>e.classList.remove('active'));
+  document.getElementById('li-'+id).classList.add('active');
+  document.getElementById('panelTitle').textContent=`L${id}: ${cur.title}`;
+  document.getElementById('panelSub').textContent=cur.german+' – '+cur.english;
+  updateScore();buildAll();switchTab(tab);
+}
+function updateScore(){
+  document.getElementById('scoreLabel').textContent=score+' / '+total;
+  const p=total?Math.round(score/total*100):0;
+  document.getElementById('scoreBar').style.width=p+'%';
+}
+
+// ── Build ──────────────────────────────────
+function buildAll(){
+  if(!cur)return;
+  const all=[...cur.vocab,...(cur.examples||[]).map(e=>({de:e.de,en:e.en}))];
+  matchPairs=expand(all,30);matchRound=0;matchSel=null;
+  mcQ=buildMC(all,30);mcIdx=0;mcAns=new Array(mcQ.length).fill(null);
+  typeQ=buildType(all,30);typeIdx=0;typeAns=new Array(typeQ.length).fill(null);
+  soundQ=buildSound(all,25);soundPage=0;
+  renderMatch();renderMC();renderType();renderSound();
+}
+function expand(arr,n){const p=[...arr];while(p.length<n)p.push(...arr);return shuffle(p).slice(0,n);}
+
+// ── Match ──────────────────────────────────
+function renderMatch(){
+  const RS=6,s=matchRound*RS;
+  const pairs=matchPairs.slice(s,s+RS);
+  matchSel=null;
+  const dePairs=shuffle(pairs.map((p,i)=>({t:p.de,i})));
+  const enPairs=shuffle(pairs.map((p,i)=>({t:p.en,i})));
+  ['matchLeft','matchRight'].forEach(id=>document.getElementById(id).innerHTML='');
+  dePairs.forEach(item=>{
+    const el=mk('div','match-pill de-pill',item.t);
+    el.dataset.i=item.i;el.onclick=()=>onMatch('L',item.i,el);
+    document.getElementById('matchLeft').appendChild(el);
+  });
+  enPairs.forEach(item=>{
+    const el=mk('div','match-pill en-pill',item.t);
+    el.dataset.i=item.i;el.onclick=()=>onMatch('R',item.i,el);
+    document.getElementById('matchRight').appendChild(el);
+  });
+  const tot=Math.ceil(matchPairs.length/RS);
+  document.getElementById('matchCtr').textContent=`Round ${matchRound+1} of ${tot}`;
+}
+function onMatch(side,idx,el){
+  if(el.classList.contains('matched')||el.classList.contains('wrong'))return;
+  if(!matchSel){matchSel={side,idx,el};el.classList.add('selected');}
+  else{
+    if(matchSel.side===side){matchSel.el.classList.remove('selected');matchSel={side,idx,el};el.classList.add('selected');return;}
+    const ok=matchSel.idx===idx;total++;
+    if(ok){score++;[matchSel.el,el].forEach(e=>{e.classList.remove('selected');e.classList.add('matched');});}
+    else{
+      [matchSel.el,el].forEach(e=>{e.classList.remove('selected');e.classList.add('wrong');});
+      setTimeout(()=>[matchSel.el,el].forEach(e=>e.classList.remove('wrong')),800);
+    }
+    if(ok)matchSel=null;
+    updateScore();
+  }
+}
+function nextMatchRound(){
+  const tot=Math.ceil(matchPairs.length/6);
+  matchRound=(matchRound+1)%tot;renderMatch();
+}
+
+// ── Multiple Choice ────────────────────────
+function buildMC(all,n){
+  const pool=[];
+  for(let i=0;pool.length<n;i++){
+    const item=all[i%all.length];
+    const d2e=Math.random()>.4;
+    const dis=shuffle(all.filter(x=>x.en!==item.en)).slice(0,3).map(x=>d2e?x.en:x.de);
+    const correct=d2e?item.en:item.de;
+    pool.push({q:d2e?item.de:item.en,correct,opts:shuffle([correct,...dis]),d2e});
+  }return pool;
+}
+function renderMC(){
+  if(!mcQ.length)return;
+  const q=mcQ[mcIdx],ans=mcAns[mcIdx],area=document.getElementById('mcArea');
+  area.innerHTML=`
+    <div class="q-card">
+      <div class="q-num-row">
+        <div class="q-badge">${mcIdx+1}</div>
+        <div class="q-body">
+          <div class="q-note">${q.d2e?'Translate German → English:':'Translate English → German:'}</div>
+          <div class="q-text"><span class="hl">${q.q}</span></div>
+          <div class="mc-opts">
+            ${q.opts.map(o=>`<button class="mc-opt${ans?(o===q.correct?' correct':o===ans?' wrong':''):''}"
+              onclick="selectMC('${esc(o)}')" ${ans?'disabled':''}>${o}</button>`).join('')}
+          </div>
+          ${ans?`<div class="fb ${ans===q.correct?'ok':'no'}">
+            ${ans===q.correct?'<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#ic-check"/></svg> Correct':'Correct answer: '+q.correct}
+          </div>`:''}
+        </div>
+      </div>
+    </div>`;
+  document.getElementById('mcCtr').textContent=`Q ${mcIdx+1} of ${mcQ.length}`;
+  document.getElementById('mcPrev').disabled=mcIdx===0;
+  document.getElementById('mcNext').textContent=mcIdx===mcQ.length-1?'Finish':'Next';
+}
+function selectMC(opt){
+  if(mcAns[mcIdx])return;mcAns[mcIdx]=opt;total++;
+  if(opt===mcQ[mcIdx].correct)score++;updateScore();renderMC();
+}
+function mcNav(d){mcIdx=Math.max(0,Math.min(mcQ.length-1,mcIdx+d));renderMC();}
+
+// ── Typing ─────────────────────────────────
+function buildType(all,n){
+  return expand(all,n).map(item=>({prompt:item.en,answer:item.de}));
+}
+function renderType(){
+  if(!typeQ.length)return;
+  const q=typeQ[typeIdx],ans=typeAns[typeIdx],area=document.getElementById('typeArea');
+  area.innerHTML=`
+    <div class="q-card">
+      <div class="q-num-row">
+        <div class="q-badge">${typeIdx+1}</div>
+        <div class="q-body">
+          <div class="q-note">Translate to German:</div>
+          <div class="q-text"><span class="hl">${q.prompt}</span></div>
+          <div style="display:flex;gap:8px;margin-top:10px;">
+            <input class="fill-input${ans?(ans.ok?' correct':' wrong'):''}" id="typeInp"
+              type="text" placeholder="Type German here…" value="${ans?ans.val:''}" ${ans?'disabled':''}
+              onkeydown="if(event.key==='Enter')checkType()" style="flex:1"/>
+            ${!ans?`<button class="btn btn-primary" onclick="checkType()" style="flex-shrink:0;border-radius:var(--r-sm);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-check"/></svg>
+            </button>`:''}
+          </div>
+          ${ans?`<div class="fb ${ans.ok?'ok':'no'}">${ans.ok?'Correct':'Answer: '+q.answer}</div>`:''}
+        </div>
+      </div>
+    </div>`;
+  if(!ans)setTimeout(()=>{const i=document.getElementById('typeInp');if(i)i.focus();},50);
+  document.getElementById('typeCtr').textContent=`Q ${typeIdx+1} of ${typeQ.length}`;
+  document.getElementById('typePrev').disabled=typeIdx===0;
+  document.getElementById('typeNext').textContent=typeIdx===typeQ.length-1?'Finish':'Next';
+}
+function checkType(){
+  if(typeAns[typeIdx])return;
+  const inp=document.getElementById('typeInp');if(!inp||!inp.value.trim())return;
+  const ok=inp.value.trim().toLowerCase()===typeQ[typeIdx].answer.toLowerCase();
+  typeAns[typeIdx]={val:inp.value.trim(),ok};total++;if(ok)score++;updateScore();renderType();
+}
+function typeNav(d){typeIdx=Math.max(0,Math.min(typeQ.length-1,typeIdx+d));renderType();}
+
+// ── Sound ──────────────────────────────────
+function buildSound(all,n){
+  return expand(all,n).map(item=>{
+    const dis=shuffle(all.filter(x=>x.de!==item.de)).slice(0,3).map(x=>x.de);
+    return{correct:item.de,opts:shuffle([item.de,...dis]),ans:null};
+  });
+}
+function renderSound(){
+  const s=soundPage*SPP,sl=soundQ.slice(s,s+SPP);
+  const grid=document.getElementById('soundGrid');grid.innerHTML='';
+  sl.forEach((q,ri)=>{
+    const ai=s+ri;
+    const row=document.createElement('div');row.className='sound-row';
+    row.innerHTML=`
+      <button class="snd-play" id="spb-${ai}" onclick="playW('${esc(q.correct)}',${ai})">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-play"/></svg>
+      </button>
+      <div class="snd-opts">
+        ${q.opts.map(o=>`<button class="snd-opt${q.ans?(o===q.correct?' correct':o===q.ans?' wrong':''):''}"
+          onclick="pickSound(${ai},'${esc(o)}')" ${q.ans?'disabled':''}>${o}</button>`).join('')}
+      </div>`;
+    grid.appendChild(row);
+  });
+  const tot=Math.ceil(soundQ.length/SPP);
+  document.getElementById('soundCtr').textContent=`Page ${soundPage+1} of ${tot}`;
+}
+function playW(text,idx){
+  const btn=document.getElementById('spb-'+idx);
+  if(btn){btn.classList.add('playing');setTimeout(()=>btn.classList.remove('playing'),2000);}
+  const u=new SpeechSynthesisUtterance(text);u.lang='de-DE';u.rate=.85;speechSynthesis.speak(u);
+}
+function pickSound(ai,opt){
+  if(soundQ[ai].ans)return;soundQ[ai].ans=opt;total++;
+  if(opt===soundQ[ai].correct)score++;updateScore();renderSound();
+}
+function nextSoundPage(){
+  const tot=Math.ceil(soundQ.length/SPP);soundPage=(soundPage+1)%tot;renderSound();
+}
+
+// ── Tabs ───────────────────────────────────
+function switchTab(t){
+  tab=t;
+  document.querySelectorAll('.tw-tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===t));
+  ['match','choose','type','sound'].forEach(s=>document.getElementById(s+'Section').classList.toggle('hidden',s!==t));
+}
+
+// ── Helpers ────────────────────────────────
+function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){const j=~~(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function esc(s){return String(s).replace(/\\/g,'\\\\').replace(/'/g,"\\'");}
+function mk(tag,cls,txt){const el=document.createElement(tag);el.className=cls;el.textContent=txt;return el;}
+
+// Load lesson 1 by default
+loadLesson(1);switchTab('match');
+</script>
 </body>
 </html>

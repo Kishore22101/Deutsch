@@ -1,41 +1,576 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Assessment – A1 | Deutsch Lernen</title>
-  <meta name="description" content="A1 German Assessment – test your knowledge and earn your level badge." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="A1 German Assessment – per-lesson exam with TEIL A–F sections."/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* Assessment-only extras */
+    .assess-start{
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      min-height:50vh;gap:16px;text-align:center;padding:32px;
+    }
+    .assess-start h2{font-size:22px;font-weight:800;letter-spacing:-.02em;}
+    .assess-start p{font-size:14px;color:var(--t-45);max-width:340px;line-height:1.65;}
+
+    /* A/B/C tags */
+    .teil-tag{
+      font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+      padding:3px 10px;border-radius:50px;border:1px solid var(--border-md);
+      color:var(--t-70);display:inline-block;margin-bottom:8px;
+    }
+
+    /* Fill / blank row */
+    .fill-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:10px;}
+    .fill-blank{
+      display:inline-block;min-width:120px;padding:8px 12px;
+      border-bottom:2px solid var(--border-hi);
+      background:transparent;border-top:none;border-left:none;border-right:none;
+      color:var(--t-100);font-family:var(--font);font-size:14px;font-weight:600;
+      outline:none;text-align:center;transition:var(--ease);
+    }
+    .fill-blank:focus{border-bottom-color:var(--t-100);}
+    .fill-blank.correct{border-bottom-color:var(--t-100);}
+    .fill-blank.wrong{opacity:.5;}
+
+    /* Textarea for longer answers */
+    textarea.fill-input{
+      resize:vertical;min-height:60px;font-size:13px;
+      line-height:1.55;padding:10px 12px;
+    }
+
+    /* Show all answers - sticky footer */
+    .show-all-footer{
+      padding:20px 26px;border-top:1px solid var(--border-lo);
+      display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
+      background:var(--bg);position:sticky;bottom:0;z-index:50;
+    }
+    .reveal-note{font-size:11px;color:var(--t-45);}
+
+    /* Answer panel override - white on dark */
+    .ans-panel{
+      display:none;margin-top:12px;padding:12px 14px;
+      border-radius:var(--r-md);background:var(--bg-03);
+      border:1px solid var(--border-md);border-left:2px solid var(--t-100);
+    }
+    .ans-panel.open{display:block;animation:fadeIn .2s ease;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(-4px);}to{opacity:1;transform:translateY(0);}}
+
+    /* Section scroll space */
+    .q-area{padding-bottom:8px;}
+    .q-area + .q-area{padding-top:0;}
+
+    /* Mobile sidebar toggle */
+    .mob-sidebar-toggle{
+      display:none;width:100%;padding:11px 16px;
+      background:var(--bg-01);border:1px solid var(--border-lo);
+      border-radius:var(--r-md);margin-bottom:12px;
+      font-family:var(--font);font-size:13px;font-weight:700;color:var(--t-70);
+      cursor:pointer;text-align:left;align-items:center;gap:8px;
+    }
+    @media(max-width:860px){
+      .mob-sidebar-toggle{display:flex;}
+      .tw-sidebar{position:relative;top:0;max-height:none;display:none;}
+      .tw-sidebar.mob-open{display:flex;max-height:50vh;}
+    }
+  </style>
 </head>
 <body>
+
+<!-- SVG Defs -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="ic-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+  </symbol>
+  <symbol id="ic-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+  </symbol>
+  <symbol id="ic-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+    <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+    <line x1="1" y1="1" x2="23" y2="23"/>
+  </symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="20 6 9 17 4 12"/>
+  </symbol>
+  <symbol id="ic-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/>
+    <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>
+  </symbol>
+  <symbol id="ic-world" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+  </symbol>
+</svg>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="logo">
-      <div class="logo-icon">D</div>
+      <div class="logo-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-world"/></svg>
+      </div>
       <span class="logo-text">Deutsch Lernen</span>
     </a>
     <a href="a1.html" class="back-btn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
       A1 Hub
     </a>
   </div>
 </header>
 
-<main class="container">
-  <div class="coming-soon-wrap">
-    <div class="big-emoji">🎯</div>
-    <h2>Assessment – Coming Soon</h2>
-    <p>Complete all 65 A1 lessons, then take the final assessment to test your knowledge and earn your A1 certificate!</p>
-    <a href="learn.html" class="voice-btn voice-btn-de" style="text-decoration:none;margin-top:16px;">
-      📖 &nbsp;Start Learning First
-    </a>
-  </div>
-</main>
+<div class="tw-layout">
+
+  <!-- ── Sidebar ─────────────────────────── -->
+  <!-- Mobile toggle -->
+  <button class="mob-sidebar-toggle" onclick="toggleMobSidebar()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-list"/></svg>
+    <span id="mobSidebarLabel">Choose Lesson</span>
+  </button>
+
+  <aside class="tw-sidebar" id="sidebar">
+    <div class="tw-sidebar-head">
+      <h3>Assessment by Lesson</h3>
+    </div>
+    <div class="lesson-list" id="lessonList"></div>
+  </aside>
+
+  <!-- ── Main ───────────────────────────── -->
+  <main class="tw-main" id="mainPanel">
+
+    <!-- Header -->
+    <div class="tw-panel-head">
+      <div>
+        <div class="tw-panel-title" id="panelTitle">Assessment</div>
+        <div class="tw-panel-sub" id="panelSub">Select a lesson from the sidebar to begin</div>
+      </div>
+    </div>
+
+    <!-- Content: landing or assessment -->
+    <div id="landingView" class="assess-start">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".4"><use href="#ic-list"/></svg>
+      <h2>Choose a Lesson</h2>
+      <p>Select any lesson from the sidebar to start the written assessment for that lesson.</p>
+    </div>
+
+    <!-- Assessment sections (TEIL A–F) – generated per lesson -->
+    <div id="assessView" class="hidden">
+
+      <!-- TEIL A – Multiple Choice -->
+      <div class="q-area" id="teilA">
+        <div class="teil-banner">
+          <div class="teil-tag">TEIL A</div>
+          <h2>Multiple Choice Fragen</h2>
+          <p>Choose the correct answer. Circle or note your answer (A / B / C / D).</p>
+        </div>
+        <div id="teilABody"></div>
+      </div>
+
+      <!-- TEIL B – Fill in the blank / Lückentext -->
+      <div class="q-area" id="teilB" style="border-top:1px solid var(--border-lo);padding-top:18px;">
+        <div class="teil-banner">
+          <div class="teil-tag">TEIL B</div>
+          <h2>Lückentext (Fill in the Blank)</h2>
+          <p>Complete each sentence with the correct German word from the lesson.</p>
+        </div>
+        <div id="teilBBody"></div>
+      </div>
+
+      <!-- TEIL C – Fehler finden -->
+      <div class="q-area" id="teilC" style="border-top:1px solid var(--border-lo);padding-top:18px;">
+        <div class="teil-banner">
+          <div class="teil-tag">TEIL C</div>
+          <h2>Fehler finden und korrigieren</h2>
+          <p>Each sentence has one mistake. Find it and rewrite the sentence correctly in your notes.</p>
+        </div>
+        <div id="teilCBody"></div>
+      </div>
+
+      <!-- TEIL D – German → English -->
+      <div class="q-area" id="teilD" style="border-top:1px solid var(--border-lo);padding-top:18px;">
+        <div class="teil-banner">
+          <div class="teil-tag">TEIL D</div>
+          <h2>Deutsch → Englisch</h2>
+          <p>Write the English meaning for each German word or phrase below.</p>
+        </div>
+        <div id="teilDBody"></div>
+      </div>
+
+      <!-- TEIL E – English → German -->
+      <div class="q-area" id="teilE" style="border-top:1px solid var(--border-lo);padding-top:18px;">
+        <div class="teil-banner">
+          <div class="teil-tag">TEIL E</div>
+          <h2>Englisch → Deutsch</h2>
+          <p>Write the correct German word or phrase for each English prompt.</p>
+        </div>
+        <div id="teilEBody"></div>
+      </div>
+
+      <!-- TEIL F – Meisterprüfung -->
+      <div class="q-area" id="teilF" style="border-top:1px solid var(--border-lo);padding-top:18px;">
+        <div class="teil-banner">
+          <div class="teil-tag">TEIL F</div>
+          <h2>Meisterprüfung</h2>
+          <p>Complete each challenge carefully. Use correct words, pronouns, and sentence structure.</p>
+        </div>
+        <div id="teilFBody"></div>
+      </div>
+
+      <!-- SHOW ALL ANSWERS – sticky at bottom -->
+      <div class="show-all-footer">
+        <span class="reveal-note">Write your answers first, then reveal:</span>
+        <button class="btn btn-primary" id="revealBtn" onclick="toggleRevealAll()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-eye"/></svg>
+          &nbsp;Show All Answers
+        </button>
+      </div>
+
+    </div><!-- /assessView -->
+
+  </main>
+</div>
 
 <footer class="site-footer">
-  <p>© 2024 Deutsch Lernen &nbsp;·&nbsp; A1 – Assessment</p>
+  <p>© 2024 Deutsch Lernen · A1 Assessment</p>
 </footer>
 
+<script src="lessons.js"></script>
+<script>
+/* ════════════════════════════════════════════════
+   STATE
+════════════════════════════════════════════════ */
+let cur = null;
+let revealed = false;
+let qNum = 0;   // global question counter per render
+
+/* ════════════════════════════════════════════════
+   SIDEBAR
+════════════════════════════════════════════════ */
+(function buildSidebar(){
+  const list = document.getElementById('lessonList');
+  LESSONS.forEach(l => {
+    const el = document.createElement('div');
+    el.className = 'lesson-item'; el.id = 'li-' + l.id;
+    el.innerHTML = `<div class="lesson-num">${l.id}</div><div class="lesson-name">${l.title}</div>`;
+    el.onclick = () => { loadLesson(l.id); closeMobSidebar(); };
+    list.appendChild(el);
+  });
+})();
+
+function toggleMobSidebar(){
+  const sb = document.getElementById('sidebar');
+  sb.classList.toggle('mob-open');
+}
+function closeMobSidebar(){
+  document.getElementById('sidebar').classList.remove('mob-open');
+}
+
+/* ════════════════════════════════════════════════
+   LOAD LESSON
+════════════════════════════════════════════════ */
+function loadLesson(id){
+  cur = LESSONS.find(l => l.id === id);
+  if(!cur) return;
+  revealed = false;
+  document.querySelectorAll('.lesson-item').forEach(e => e.classList.remove('active'));
+  document.getElementById('li-' + id).classList.add('active');
+  document.getElementById('panelTitle').textContent = `L${id}: ${cur.title}`;
+  document.getElementById('panelSub').textContent = `${cur.german} · A1 Written Assessment`;
+  document.getElementById('mobSidebarLabel').textContent = `L${id}: ${cur.title}`;
+  document.getElementById('revealBtn').innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-eye"/></svg>&nbsp;Show All Answers`;
+  document.getElementById('landingView').classList.add('hidden');
+  document.getElementById('assessView').classList.remove('hidden');
+  buildAssessment();
+}
+
+/* ════════════════════════════════════════════════
+   BUILD ASSESSMENT (all TEIL sections)
+════════════════════════════════════════════════ */
+function buildAssessment(){
+  qNum = 0;
+  const vocab = cur.vocab;
+  const examples = (cur.examples||[]).map(e=>({de:e.de,en:e.en}));
+  const all = [...vocab, ...examples];
+
+  buildTeilA(all);   // Multiple choice
+  buildTeilB(all);   // Fill in blank
+  buildTeilC(all);   // Error correction
+  buildTeilD(all);   // DE → EN
+  buildTeilE(all);   // EN → DE
+  buildTeilF(all);   // Meisterprüfung
+}
+
+/* ── TEIL A – Multiple Choice ─────────────────── */
+function buildTeilA(all){
+  const count = Math.min(10, all.length);
+  const pool = shuffle(all).slice(0, count);
+  let html = '';
+  pool.forEach(item => {
+    qNum++;
+    const d2e = Math.random() > .4;
+    const correct = d2e ? item.en : item.de;
+    const wrongPool = shuffle(all.filter(x => x.en !== item.en));
+    const distractors = wrongPool.slice(0,3).map(x => d2e ? x.en : x.de);
+    const opts = shuffle([correct, ...distractors]);
+    const labels = ['A','B','C','D'];
+    const correctLabel = labels[opts.indexOf(correct)];
+    html += `
+      <div class="q-card" style="margin-bottom:12px;">
+        <div class="q-num-row">
+          <div class="q-badge">${qNum}</div>
+          <div class="q-body">
+            <div class="q-note">${d2e?'Translate German → English:':'Translate English → German:'}</div>
+            <div class="q-text"><span class="hl">${d2e?item.de:item.en}</span></div>
+            <div class="mc-opts" style="margin-top:12px;">
+              ${opts.map((o,oi)=>`<div class="mc-opt" style="cursor:default;display:flex;gap:6px;align-items:center;">
+                <span style="font-weight:800;color:var(--t-45);min-width:16px;">${labels[oi]}</span>${o}
+              </div>`).join('')}
+            </div>
+            ${ansBox(correct, `Correct: ${correctLabel}) ${correct}`)}
+          </div>
+        </div>
+      </div>`;
+  });
+  document.getElementById('teilABody').innerHTML = html;
+}
+
+/* ── TEIL B – Fill in Blank ───────────────────── */
+function buildTeilB(all){
+  const count = Math.min(8, all.length);
+  const pool = shuffle(all).slice(0, count);
+  let html = '';
+  pool.forEach(item => {
+    qNum++;
+    // Create a sentence using the example or vocab
+    const sentence = makeFillSentence(item);
+    html += `
+      <div class="q-card" style="margin-bottom:12px;">
+        <div class="q-num-row">
+          <div class="q-badge">${qNum}</div>
+          <div class="q-body">
+            <div class="q-text">${sentence.display}</div>
+            <div class="q-note">Fill in the blank with the correct German word.</div>
+            ${ansBox(sentence.answer, sentence.full)}
+          </div>
+        </div>
+      </div>`;
+  });
+  document.getElementById('teilBBody').innerHTML = html;
+}
+
+function makeFillSentence(item){
+  // Hide the German word behind a blank
+  const german = item.de.split(' ')[0].replace(/[!?,]/g,'');
+  const display = item.de.replace(german, '<span style="display:inline-block;min-width:80px;border-bottom:2px solid var(--border-hi);margin:0 4px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>');
+  return { display: `${display} &nbsp;<span class="q-note">[ ${item.en} ]</span>`,
+           answer: german, full: item.de };
+}
+
+/* ── TEIL C – Error Finding ───────────────────── */
+function buildTeilC(all){
+  const pool = shuffle(all).slice(0, Math.min(6, all.length));
+  let html = '';
+  pool.forEach(item => {
+    qNum++;
+    const {wrong, correct, hint} = makeError(item);
+    html += `
+      <div class="q-card" style="margin-bottom:12px;">
+        <div class="q-num-row">
+          <div class="q-badge">${qNum}</div>
+          <div class="q-body">
+            <div class="q-note">Find and correct the mistake:</div>
+            <div class="q-text" style="text-decoration:underline;text-underline-offset:3px;">${wrong}</div>
+            ${item.en ? `<div class="q-note" style="margin-top:4px;">Meaning: ${item.en}</div>` : ''}
+            ${ansBox(correct, hint)}
+          </div>
+        </div>
+      </div>`;
+  });
+  document.getElementById('teilCBody').innerHTML = html;
+}
+
+function makeError(item){
+  // Introduce a simple error: wrong capitalisation or missing umlaut
+  const de = item.de;
+  const errors = [
+    // Lowercase first letter of a noun (common German error)
+    { wrong: de.replace(/^([A-ZÜÖÄ])/, m => m.toLowerCase()),
+      correct: de, hint: 'Capitalise the noun.' },
+    // Remove umlaut
+    { wrong: de.replace('ü','u').replace('ä','a').replace('ö','o').replace('ß','ss').replace('Ä','A').replace('Ö','O').replace('Ü','U'),
+      correct: de, hint: 'Check the umlaut (ä/ö/ü/ß).' },
+    // Extra space
+    { wrong: de + '  !', correct: de, hint: 'Remove the extra space / punctuation.' },
+  ].filter(e => e.wrong !== de);
+  const chosen = errors.length ? errors[Math.floor(Math.random()*errors.length)] : { wrong: de+'?', correct: de, hint: 'Remove the extra punctuation.' };
+  return chosen;
+}
+
+/* ── TEIL D – DE → EN ─────────────────────────── */
+function buildTeilD(all){
+  const count = Math.min(10, all.length);
+  const pool = shuffle(all).slice(0, count);
+  let html = '';
+  pool.forEach(item => {
+    qNum++;
+    html += `
+      <div class="q-card" style="margin-bottom:12px;">
+        <div class="q-num-row">
+          <div class="q-badge">${qNum}</div>
+          <div class="q-body">
+            <div class="q-note">What does this mean in English?</div>
+            <div class="q-text"><span class="hl">${item.de}</span></div>
+            ${ansBox(item.en)}
+          </div>
+        </div>
+      </div>`;
+  });
+  document.getElementById('teilDBody').innerHTML = html;
+}
+
+/* ── TEIL E – EN → DE ─────────────────────────── */
+function buildTeilE(all){
+  const count = Math.min(10, all.length);
+  const pool = shuffle(all).slice(0, count);
+  let html = '';
+  pool.forEach(item => {
+    qNum++;
+    html += `
+      <div class="q-card" style="margin-bottom:12px;">
+        <div class="q-num-row">
+          <div class="q-badge">${qNum}</div>
+          <div class="q-body">
+            <div class="q-note">What is the German for:</div>
+            <div class="q-text"><span class="hl">${item.en}</span></div>
+            ${ansBox(item.de)}
+          </div>
+        </div>
+      </div>`;
+  });
+  document.getElementById('teilEBody').innerHTML = html;
+}
+
+/* ── TEIL F – Meisterprüfung ─────────────────── */
+function buildTeilF(all){
+  const challenges = makeMeister(all);
+  let html = '';
+  challenges.forEach(ch => {
+    qNum++;
+    html += `
+      <div class="q-card" style="margin-bottom:12px;">
+        <div class="q-num-row">
+          <div class="q-badge">${qNum}</div>
+          <div class="q-body">
+            <div class="q-note">${ch.instruction}</div>
+            <div class="q-text">${ch.question}</div>
+            ${ansBox(ch.answer, ch.note||'')}
+          </div>
+        </div>
+      </div>`;
+  });
+  document.getElementById('teilFBody').innerHTML = html;
+}
+
+function makeMeister(all){
+  const pool = shuffle(all);
+  const challenges = [];
+
+  // 1. Use 3 words in sentences
+  if(pool.length >= 3){
+    const items = pool.slice(0,3);
+    challenges.push({
+      instruction:'Use these 3 words in separate German sentences:',
+      question: items.map(i=>`<strong>${i.de}</strong>`).join(' &nbsp;|&nbsp; '),
+      answer: items.map(i=>`${i.de} → e.g. sentence using "${i.de}" (${i.en})`).join('<br>'),
+      note:'Write your own sentences using each word correctly.'
+    });
+  }
+
+  // 2. Translate a full example sentence
+  const exs = cur.examples||[];
+  if(exs.length > 0){
+    const ex = exs[0];
+    challenges.push({
+      instruction:'Translate this full sentence into English:',
+      question:`<span class="hl">${ex.de}</span>`,
+      answer: ex.en,
+      note:'Check verb position and all words.'
+    });
+  }
+  if(exs.length > 1){
+    const ex2 = exs[1];
+    challenges.push({
+      instruction:'Translate this English sentence into German:',
+      question:`<span class="hl">${ex2.en}</span>`,
+      answer: ex2.de,
+      note:'Pay attention to word order and special characters.'
+    });
+  }
+
+  // 3. List all vocab (from memory)
+  const half = pool.slice(0, Math.min(5, pool.length));
+  challenges.push({
+    instruction:'Write the German for each English word from memory:',
+    question: half.map((v,i)=>`${i+1}. ${v.en}`).join(' &nbsp;&nbsp; '),
+    answer: half.map((v,i)=>`${i+1}. ${v.de}`).join('<br>'),
+    note:'No looking! Test your memory first.'
+  });
+
+  // 4. Reverse: write English for German
+  const half2 = shuffle(pool).slice(0, Math.min(5, pool.length));
+  challenges.push({
+    instruction:'Write the English for each German word from memory:',
+    question: half2.map((v,i)=>`${i+1}. ${v.de}`).join(' &nbsp;&nbsp; '),
+    answer: half2.map((v,i)=>`${i+1}. ${v.en}`).join('<br>'),
+    note:''
+  });
+
+  // 5. Create a mini-dialogue (if lesson has enough examples)
+  if(pool.length >= 4){
+    const words = shuffle(pool).slice(0,4).map(v=>v.de).join(', ');
+    challenges.push({
+      instruction:'Build a short 2-line dialogue using any of these words:',
+      question: `Words: <strong>${words}</strong>`,
+      answer:'Any correct dialogue using at least 2 of the words above.',
+      note:'Be creative – focus on correct grammar.'
+    });
+  }
+
+  return challenges;
+}
+
+/* ════════════════════════════════════════════════
+   SHOW / HIDE ANSWERS
+════════════════════════════════════════════════ */
+function ansBox(answer, note=''){
+  const id = 'ans-' + Math.random().toString(36).slice(2,8);
+  return `
+    <div class="ans-panel" id="${id}">
+      <div class="ans-label">Answer</div>
+      <div class="ans-text">${answer}</div>
+      ${note ? `<div class="ans-note">${note}</div>` : ''}
+    </div>`;
+}
+
+function toggleRevealAll(){
+  revealed = !revealed;
+  document.querySelectorAll('.ans-panel').forEach(el => el.classList.toggle('open', revealed));
+  const btn = document.getElementById('revealBtn');
+  if(revealed){
+    btn.innerHTML=`<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-eye-off"/></svg>&nbsp;Hide All Answers`;
+  } else {
+    btn.innerHTML=`<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-eye"/></svg>&nbsp;Show All Answers`;
+  }
+}
+
+/* ════════════════════════════════════════════════
+   HELPERS
+════════════════════════════════════════════════ */
+function shuffle(a){ a=[...a]; for(let i=a.length-1;i>0;i--){const j=~~(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+
+// Load first lesson by default
+loadLesson(1);
+</script>
 </body>
 </html>
