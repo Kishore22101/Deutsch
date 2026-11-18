@@ -1,5 +1,10 @@
 /* dmat.css – Dedicated Styling for dMAT Subtests, Exam Simulator & Submissions */
 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 /* ─── Header & Nav Additions ─── */
 .header-left {
   display: flex;
@@ -1426,13 +1431,30 @@ body.exam-active .site-footer { display: none; }
 
 /* ── Tablet / Small Desktop (≤900px) ── */
 @media (max-width: 900px) {
-  .exam-container { padding: 10px; }
-  .exam-layout { grid-template-columns: 1fr; gap: 10px; }
+  .exam-container {
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .exam-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
   .exam-palette-sidebar {
     position: static;
     padding: 10px 12px;
     border-radius: var(--r-md);
     order: -1;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
   .palette-head {
     display: flex;
@@ -1449,6 +1471,10 @@ body.exam-active .site-footer { display: none; }
     padding: 6px 0 4px;
     margin: 4px 0 0;
     scrollbar-width: none;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
   }
   .palette-grid::-webkit-scrollbar { display: none; }
   .palette-btn {
@@ -1537,31 +1563,91 @@ body.exam-active .site-footer { display: none; }
   .palette-btn { min-width: 36px; width: 36px; height: 36px; font-size: 13px; }
 
   /* ─ Exam Stage ─ */
-  .exam-stage-card { padding: 12px 10px; gap: 10px; border-radius: var(--r-md); }
+  .exam-stage {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .exam-stage-card {
+    padding: 12px 10px; gap: 10px; border-radius: var(--r-md);
+    overflow: hidden; width: 100%; max-width: 100%; box-sizing: border-box;
+  }
   .q-stage-head { padding-bottom: 10px; }
   .q-stage-sub { font-size: 9px; }
   .q-stage-title { font-size: 18px; margin: 2px 0 4px; }
   .q-stage-instruction { font-size: 11px; line-height: 1.4; }
 
-  /* ─ Equations Box: tighter ─ */
+  /* ─ Equations Box: tighter + centered ─ */
   .equations-stage-box {
-    padding: 14px 8px; gap: 8px; border-radius: var(--r-md);
+    padding: 16px 10px;
+    gap: 8px;
+    border-radius: var(--r-md);
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
-  .equation-line { font-size: clamp(1rem, 5vw, 1.5rem); }
+  .equation-line {
+    font-size: clamp(1.05rem, 5vw, 1.5rem);
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    letter-spacing: .02em;
+    display: block;
+  }
 
-  /* ─ Answer Inputs: ALWAYS 2×2 grid ─ */
-  .answer-entry-card { padding: 10px 8px; border-radius: var(--r-md); }
+  /* ─ Answer Inputs: ALWAYS 2×2 equal grid ─ */
+  .answer-entry-card {
+    padding: 12px 10px;
+    border-radius: var(--r-md);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
   .entry-header { margin-bottom: 8px; }
   .entry-header h4 { font-size: 12px; }
   .entry-note { font-size: 10px; }
   .inputs-row-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 6px;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden;
   }
-  .var-input-group { padding: 8px 8px; gap: 6px; border-radius: 8px; }
-  .var-input-group label { font-size: 16px; }
-  .var-input-group input { font-size: 20px; }
+  .var-input-group {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 8px 10px !important;
+    gap: 6px !important;
+    border-radius: 8px !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .var-input-group label {
+    font-size: 16px !important;
+    font-weight: 900 !important;
+    flex-shrink: 0 !important;
+    width: 24px !important;
+  }
+  .var-input-group input {
+    font-size: 20px !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    flex: 1 !important;
+    text-align: center !important;
+    padding: 2px 0 !important;
+  }
 
   /* ─ Nav Buttons: flex row, no overflow ─ */
   .exam-actions-bar {
@@ -1595,12 +1681,21 @@ body.exam-active .site-footer { display: none; }
   .breakdown-eqs { font-size: 12px; padding: 10px 12px; }
   .breakdown-comparison { grid-template-columns: 1fr; gap: 10px; }
 
-  /* ─ Modals: bottom sheet ─ */
-  .dmat-modal-overlay { align-items: flex-end; padding: 0; }
+  /* ─ Modals: centered on mobile ─ */
+  .dmat-modal-overlay {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 16px !important;
+  }
   .dmat-modal-card {
-    max-height: 92vh; width: 100%; margin: 0;
-    border-radius: 16px 16px 0 0;
-    display: flex; flex-direction: column;
+    max-height: 90vh;
+    width: 100% !important;
+    max-width: 420px !important;
+    margin: auto !important;
+    border-radius: 16px !important;
+    display: flex;
+    flex-direction: column;
   }
   .modal-large { max-height: 95vh; }
   .modal-body { overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 12px; flex: 1; }
@@ -1630,7 +1725,7 @@ body.exam-active .site-footer { display: none; }
   .equation-line { font-size: clamp(0.95rem, 5.5vw, 1.25rem); }
   .page-hero h1 { font-size: 1.4rem; }
   .q-stage-title { font-size: 16px; }
-  .dmat-modal-card { max-height: 100vh; border-radius: 0; }
+  .dmat-modal-card { max-height: 92vh; border-radius: 16px !important; margin: auto !important; }
   .sub-table th:nth-child(6),
   .sub-table td:nth-child(6) { display: none; }
   .m-val { font-size: 16px; }
