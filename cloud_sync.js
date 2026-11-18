@@ -38,7 +38,17 @@
     if (!sub || typeof sub !== 'object') return sub;
     if (!Array.isArray(sub.details) || sub.details.length === 0) return sub;
 
-    const diffKey = (sub.difficulty || 'hard').toLowerCase();
+    let rawKey = (sub.difficultyKey || sub.difficulty || 'hard').toLowerCase();
+    let diffKey = 'hard';
+    if (rawKey.includes('test 2') || rawKey.includes('test2') || rawKey === 'hard_t2') {
+      diffKey = 'hard_t2';
+    } else if (rawKey.includes('test 1') || rawKey.includes('test1') || rawKey.includes('hard')) {
+      diffKey = 'hard';
+    } else if (rawKey.includes('med')) {
+      diffKey = 'medium';
+    } else if (rawKey.includes('easy')) {
+      diffKey = 'easy';
+    }
     const dataset = (typeof window !== 'undefined' && window.DMAT_DATA && window.DMAT_DATA[diffKey])
       ? window.DMAT_DATA[diffKey]
       : ((typeof DMAT_DATA !== 'undefined' && DMAT_DATA[diffKey]) ? DMAT_DATA[diffKey] : []);

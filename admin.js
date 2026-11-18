@@ -268,7 +268,16 @@
       const dateMatch = (item.submittedAt   || '').toLowerCase().includes(query);
       const matchesSearch = query === '' || nameMatch || diffMatch || dateMatch;
       let matchesDiff = true;
-      if (diffFilter !== 'all') matchesDiff = (item.difficulty || '').toLowerCase() === diffFilter.toLowerCase();
+      if (diffFilter !== 'all') {
+        const itemDiff = (item.difficulty || '').toLowerCase();
+        if (diffFilter === 'hard') {
+          matchesDiff = itemDiff.includes('test 1') || itemDiff === 'hard';
+        } else if (diffFilter === 'hard_t2') {
+          matchesDiff = itemDiff.includes('test 2') || itemDiff === 'hard_t2';
+        } else {
+          matchesDiff = itemDiff.includes(diffFilter.toLowerCase());
+        }
+      }
       return matchesSearch && matchesDiff;
     });
 
@@ -292,7 +301,9 @@
     dom.tableBody.innerHTML = '';
     filtered.forEach((sub, idx) => {
       const pctBadgeClass = sub.percentage >= 80 ? 'pill-green' : (sub.percentage >= 50 ? 'pill-yellow' : 'pill-red');
-      const diffClass = (sub.difficulty || 'hard').toLowerCase();
+      const isHard = (sub.difficulty || '').toLowerCase().includes('hard');
+      const diffClass = isHard ? 'hard' : ((sub.difficulty || '').toLowerCase().includes('medium') ? 'medium' : 'easy');
+      const timerCap = isHard ? '25m' : ((sub.difficulty || '').toLowerCase().includes('medium') ? '15m' : '10m');
 
       const tr = document.createElement('tr');
       tr.innerHTML = `
@@ -316,7 +327,7 @@
           <div class="time-cell">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-timer"/></svg>
             <strong>${sub.timeTakenFormatted || formatDuration(sub.timeTakenSeconds || 0)}</strong>
-            <span class="time-sub">/ ${sub.difficulty === 'Hard' ? '25m' : (sub.difficulty === 'Medium' ? '15m' : '10m')}</span>
+            <span class="time-sub">/ ${timerCap}</span>
           </div>
         </td>
         <td><span class="date-txt">${sub.submittedAt || 'Today'}</span></td>
@@ -423,14 +434,17 @@
       return;
     }
 
-    const diff        = dom.selectAddDiff ? dom.selectAddDiff.value : 'Hard';
+    const diff        = dom.selectAddDiff ? dom.selectAddDiff.value : 'Hard – Test 1';
     const scoreVal    = parseInt(dom.inputAddScore ? dom.inputAddScore.value : '0', 10) || 0;
     const timeMinutes = parseFloat(dom.inputAddTime ? dom.inputAddTime.value : '15') || 15;
     const timeSeconds = Math.round(timeMinutes * 60);
 
-    const questions = (typeof DMAT_DATA !== 'undefined' && DMAT_DATA[diff.toLowerCase()])
-      ? DMAT_DATA[diff.toLowerCase()] : [];
-    const total      = questions.length || (diff === 'Hard' ? 20 : (diff === 'Medium' ? 4 : 5));
+    const isHard = diff.toLowerCase().includes('hard');
+    const isT2   = diff.toLowerCase().includes('test 2') || diff.toLowerCase().includes('hard_t2');
+    const questions = (typeof DMAT_DATA !== 'undefined')
+      ? (isT2 ? (DMAT_DATA.hard_t2 || []) : (isHard ? (DMAT_DATA.hard || []) : (diff === 'Medium' ? DMAT_DATA.medium : DMAT_DATA.easy)))
+      : [];
+    const total      = (questions && questions.length) || (isHard ? 20 : (diff === 'Medium' ? 4 : 5));
     const score      = Math.min(scoreVal, total);
     const percentage = Math.round((score / total) * 100);
     const details    = typeof buildDetailsForCandidate === 'function' ? buildDetailsForCandidate(questions, score) : [];
@@ -439,11 +453,12 @@
       id: 'sub-' + Date.now(),
       candidateName: name,
       difficulty: diff,
+      difficultyKey: isT2 ? 'hard_t2' : (isHard ? 'hard' : (diff === 'Medium' ? 'medium' : 'easy')),
       questionCount: total,
       score, total, percentage,
       timeTakenSeconds: timeSeconds,
       timeTakenFormatted: formatDuration(timeSeconds),
-      timeLeftFormatted: formatDuration(Math.max(0, (diff === 'Hard' ? 1500 : 900) - timeSeconds)),
+      timeLeftFormatted: formatDuration(Math.max(0, (isHard ? 1500 : 900) - timeSeconds)),
       submittedAt: formatDateTime(new Date()),
       status: 'Completed',
       details

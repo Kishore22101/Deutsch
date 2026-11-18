@@ -363,6 +363,469 @@ const DMAT_DATA = {
       ]
     }
   ],
+  hard_t2: [
+    {
+        "id": 1,
+        "equations": [
+            "B = 3 × D",
+            "A = B − 5",
+            "C + A = 18",
+            "D + C + B = 25"
+        ],
+        "solution": {
+            "A": 1,
+            "B": 6,
+            "C": 17,
+            "D": 2
+        },
+        "stepByStep": [
+            "From (2): A = B − 5",
+            "From (3): C = 18 − A = 18 − (B − 5) = 23 − B",
+            "Substitute C into (4): D + (23 − B) + B = 25 ⟹ D + 23 = 25 ⟹ D = 2",
+            "From (1): B = 3 × 2 = 6",
+            "From (2): A = 6 − 5 = 1",
+            "From (3): C = 18 − 1 = 17"
+        ]
+    },
+    {
+        "id": 2,
+        "equations": [
+            "C = 4 × A",
+            "D = C − 3",
+            "B + D = 19",
+            "A + B + C = 25"
+        ],
+        "solution": {
+            "A": 3,
+            "B": 10,
+            "C": 12,
+            "D": 9
+        },
+        "stepByStep": [
+            "From (2): D = C − 3",
+            "From (3): B = 19 − D = 19 − (C − 3) = 22 − C",
+            "Substitute B into (4): A + (22 − C) + C = 25 ⟹ A + 22 = 25 ⟹ A = 3",
+            "From (1): C = 4 × 3 = 12",
+            "From (2): D = 12 − 3 = 9",
+            "From (3): B = 19 − 9 = 10"
+        ]
+    },
+    {
+        "id": 3,
+        "equations": [
+            "A = 3 × C",
+            "D = A − 7",
+            "B + D = 15",
+            "C + B + A = 27"
+        ],
+        "solution": {
+            "A": 15,
+            "B": 7,
+            "C": 5,
+            "D": 8
+        },
+        "stepByStep": [
+            "From (2): D = A − 7",
+            "From (3): B = 15 − D = 15 − (A − 7) = 22 − A",
+            "Substitute B into (4): C + (22 − A) + A = 27 ⟹ C + 22 = 27 ⟹ C = 5",
+            "From (1): A = 3 × 5 = 15",
+            "From (2): D = 15 − 7 = 8",
+            "From (3): B = 15 − 8 = 7"
+        ]
+    },
+    {
+        "id": 4,
+        "equations": [
+            "C = 3 × B",
+            "A = C − 4",
+            "D + A = 20",
+            "B + D + C = 27"
+        ],
+        "solution": {
+            "A": 5,
+            "B": 3,
+            "C": 9,
+            "D": 15
+        },
+        "stepByStep": [
+            "From (2): A = C − 4",
+            "From (3): D = 20 − A = 20 − (C − 4) = 24 − C",
+            "Substitute D into (4): B + (24 − C) + C = 27 ⟹ B + 24 = 27 ⟹ B = 3",
+            "From (1): C = 3 × 3 = 9",
+            "From (2): A = 9 − 4 = 5",
+            "From (3): D = 20 − 5 = 15"
+        ]
+    },
+    {
+        "id": 5,
+        "equations": [
+            "B = 2 × A",
+            "C = B − 2",
+            "D + C = 16",
+            "A + D + B = 21"
+        ],
+        "solution": {
+            "A": 3,
+            "B": 6,
+            "C": 4,
+            "D": 12
+        },
+        "stepByStep": [
+            "From (2): C = B − 2",
+            "From (3): D = 16 − C = 16 − (B − 2) = 18 − B",
+            "Substitute D into (4): A + (18 − B) + B = 21 ⟹ A + 18 = 21 ⟹ A = 3",
+            "From (1): B = 2 × 3 = 6",
+            "From (2): C = 6 − 2 = 4",
+            "From (3): D = 16 − 4 = 12"
+        ]
+    },
+    {
+        "id": 6,
+        "equations": [
+            "D = 5 × B",
+            "A = D − 6",
+            "C + A = 21",
+            "B + C + D = 30"
+        ],
+        "solution": {
+            "A": 9,
+            "B": 3,
+            "C": 12,
+            "D": 15
+        },
+        "stepByStep": [
+            "From (2): A = D − 6",
+            "From (3): C = 21 − A = 21 − (D − 6) = 27 − D",
+            "Substitute C into (4): B + (27 − D) + D = 30 ⟹ B + 27 = 30 ⟹ B = 3",
+            "From (1): D = 5 × 3 = 15",
+            "From (2): A = 15 − 6 = 9",
+            "From (3): C = 21 − 9 = 12"
+        ]
+    },
+    {
+        "id": 7,
+        "equations": [
+            "A = 2 × B",
+            "D = A − 1",
+            "C + D = 17",
+            "B + C + A = 24"
+        ],
+        "solution": {
+            "A": 12,
+            "B": 6,
+            "C": 6,
+            "D": 11
+        },
+        "stepByStep": [
+            "From (2): D = A − 1",
+            "From (3): C = 17 − D = 17 − (A − 1) = 18 − A",
+            "Substitute C into (4): B + (18 − A) + A = 24 ⟹ B + 18 = 24 ⟹ B = 6",
+            "From (1): A = 2 × 6 = 12",
+            "From (2): D = 12 − 1 = 11",
+            "From (3): C = 17 − 11 = 6"
+        ]
+    },
+    {
+        "id": 8,
+        "equations": [
+            "B = 4 × C",
+            "D = B − 3",
+            "A + D = 14",
+            "C + A + B = 21"
+        ],
+        "solution": {
+            "A": 1,
+            "B": 16,
+            "C": 4,
+            "D": 13
+        },
+        "stepByStep": [
+            "From (2): D = B − 3",
+            "From (3): A = 14 − D = 14 − (B − 3) = 17 − B",
+            "Substitute A into (4): C + (17 − B) + B = 21 ⟹ C + 17 = 21 ⟹ C = 4",
+            "From (1): B = 4 × 4 = 16",
+            "From (2): D = 16 − 3 = 13",
+            "From (3): A = 14 − 13 = 1"
+        ]
+    },
+    {
+        "id": 9,
+        "equations": [
+            "C = 2 × D",
+            "B = C − 5",
+            "A + B = 18",
+            "D + A + C = 26"
+        ],
+        "solution": {
+            "A": 17,
+            "B": 1,
+            "C": 6,
+            "D": 3
+        },
+        "stepByStep": [
+            "From (2): B = C − 5",
+            "From (3): A = 18 − B = 18 − (C − 5) = 23 − C",
+            "Substitute A into (4): D + (23 − C) + C = 26 ⟹ D + 23 = 26 ⟹ D = 3",
+            "From (1): C = 2 × 3 = 6",
+            "From (2): B = 6 − 5 = 1",
+            "From (3): A = 18 − 1 = 17"
+        ]
+    },
+    {
+        "id": 10,
+        "equations": [
+            "D = 3 × C",
+            "A = D − 2",
+            "B + A = 22",
+            "C + B + D = 28"
+        ],
+        "solution": {
+            "A": 10,
+            "B": 12,
+            "C": 4,
+            "D": 12
+        },
+        "stepByStep": [
+            "From (2): A = D − 2",
+            "From (3): B = 22 − A = 22 − (D − 2) = 24 − D",
+            "Substitute B into (4): C + (24 − D) + D = 28 ⟹ C + 24 = 28 ⟹ C = 4",
+            "From (1): D = 3 × 4 = 12",
+            "From (2): A = 12 − 2 = 10",
+            "From (3): B = 22 − 10 = 12"
+        ]
+    },
+    {
+        "id": 11,
+        "equations": [
+            "A + B + C + D = 39",
+            "A = 2 × C + 1",
+            "B = 3 × C − 2",
+            "D = C + 5"
+        ],
+        "solution": {
+            "A": 11,
+            "B": 13,
+            "C": 5,
+            "D": 10
+        },
+        "stepByStep": [
+            "Substitute A, B, and D into (1) in terms of C:",
+            "(2 × C + 1) + (3 × C − 2) + C + (C + 5) = 39",
+            "Combine like terms: 7 × C + 4 = 39 ⟹ 7 × C = 35 ⟹ C = 5",
+            "From (2): A = 2 × 5 + 1 = 11",
+            "From (3): B = 3 × 5 − 2 = 13",
+            "From (4): D = 5 + 5 = 10"
+        ]
+    },
+    {
+        "id": 12,
+        "equations": [
+            "A + B − C + D = 32",
+            "A = 2 × C + 4",
+            "B = C + 6",
+            "D = 2 × C − 2"
+        ],
+        "solution": {
+            "A": 16,
+            "B": 12,
+            "C": 6,
+            "D": 10
+        },
+        "stepByStep": [
+            "Substitute A, B, and D into (1) in terms of C:",
+            "(2 × C + 4) + (C + 6) − C + (2 × C − 2) = 32",
+            "Combine like terms: 4 × C + 8 = 32 ⟹ 4 × C = 24 ⟹ C = 6",
+            "From (2): A = 2 × 6 + 4 = 16",
+            "From (3): B = 6 + 6 = 12",
+            "From (4): D = 2 × 6 − 2 = 10"
+        ]
+    },
+    {
+        "id": 13,
+        "equations": [
+            "D − A + B + C = 28",
+            "B = 2 × A − 3",
+            "C = A + 4",
+            "D = 3 × A + 2"
+        ],
+        "solution": {
+            "A": 5,
+            "B": 7,
+            "C": 9,
+            "D": 17
+        },
+        "stepByStep": [
+            "Substitute B, C, and D into (1) in terms of A:",
+            "(3 × A + 2) − A + (2 × A − 3) + (A + 4) = 28",
+            "Combine like terms: 5 × A + 3 = 28 ⟹ 5 × A = 25 ⟹ A = 5",
+            "From (2): B = 2 × 5 − 3 = 7",
+            "From (3): C = 5 + 4 = 9",
+            "From (4): D = 3 × 5 + 2 = 17"
+        ]
+    },
+    {
+        "id": 14,
+        "equations": [
+            "A + B + C − D = 25",
+            "A = 2 × D − 1",
+            "B = D + 7",
+            "C = 2 × D − 5"
+        ],
+        "solution": {
+            "A": 11,
+            "B": 13,
+            "C": 7,
+            "D": 6
+        },
+        "stepByStep": [
+            "Substitute A, B, and C into (1) in terms of D:",
+            "(2 × D − 1) + (D + 7) + (2 × D − 5) − D = 25",
+            "Combine like terms: 4 × D + 1 = 25 ⟹ 4 × D = 24 ⟹ D = 6",
+            "From (2): A = 2 × 6 − 1 = 11",
+            "From (3): B = 6 + 7 = 13",
+            "From (4): C = 2 × 6 − 5 = 7"
+        ]
+    },
+    {
+        "id": 15,
+        "equations": [
+            "B − C + A + D = 31",
+            "A = B + 5",
+            "C = 15 − B",
+            "D = 2 × B − 4"
+        ],
+        "solution": {
+            "A": 14,
+            "B": 9,
+            "C": 6,
+            "D": 14
+        },
+        "stepByStep": [
+            "Substitute A, C, and D into (1) in terms of B:",
+            "B − (15 − B) + (B + 5) + (2 × B − 4) = 31",
+            "Combine like terms: 5 × B − 14 = 31 ⟹ 5 × B = 45 ⟹ B = 9",
+            "From (2): A = 9 + 5 = 14",
+            "From (3): C = 15 − 9 = 6",
+            "From (4): D = 2 × 9 − 4 = 14"
+        ]
+    },
+    {
+        "id": 16,
+        "equations": [
+            "C + D − A + B = 25",
+            "A = 2 × C + 3",
+            "B = 3 × C − 1",
+            "D = C + 8"
+        ],
+        "solution": {
+            "A": 17,
+            "B": 20,
+            "C": 7,
+            "D": 15
+        },
+        "stepByStep": [
+            "Substitute A, B, and D into (1) in terms of C:",
+            "C + (C + 8) − (2 × C + 3) + (3 × C − 1) = 25",
+            "Combine like terms: 3 × C + 4 = 25 ⟹ 3 × C = 21 ⟹ C = 7",
+            "From (2): A = 2 × 7 + 3 = 17",
+            "From (3): B = 3 × 7 − 1 = 20",
+            "From (4): D = 7 + 8 = 15"
+        ]
+    },
+    {
+        "id": 17,
+        "equations": [
+            "A − D + B + C = 30",
+            "A = 3 × D − 2",
+            "B = 2 × D + 1",
+            "C = D + 6"
+        ],
+        "solution": {
+            "A": 13,
+            "B": 11,
+            "C": 11,
+            "D": 5
+        },
+        "stepByStep": [
+            "Substitute A, B, and C into (1) in terms of D:",
+            "(3 × D − 2) − D + (2 × D + 1) + (D + 6) = 30",
+            "Combine like terms: 5 × D + 5 = 30 ⟹ 5 × D = 25 ⟹ D = 5",
+            "From (2): A = 3 × 5 − 2 = 13",
+            "From (3): B = 2 × 5 + 1 = 11",
+            "From (4): C = 5 + 6 = 11"
+        ]
+    },
+    {
+        "id": 18,
+        "equations": [
+            "A + B − D + C = 16",
+            "A = 2 × B − 3",
+            "C = 18 − B",
+            "D = 3 × B − 5"
+        ],
+        "solution": {
+            "A": 5,
+            "B": 4,
+            "C": 14,
+            "D": 7
+        },
+        "stepByStep": [
+            "Substitute A, C, and D into (1) in terms of B:",
+            "(2 × B − 3) + B − (3 × B − 5) + (18 − B) = 16",
+            "Combine like terms: 20 − B = 16 ⟹ B = 4",
+            "From (2): A = 2 × 4 − 3 = 5",
+            "From (3): C = 18 − 4 = 14",
+            "From (4): D = 3 × 4 − 5 = 7"
+        ]
+    },
+    {
+        "id": 19,
+        "equations": [
+            "2 × A + B − C + D = 29",
+            "B = A + 3",
+            "C = 2 × A − 4",
+            "D = A + 6"
+        ],
+        "solution": {
+            "A": 8,
+            "B": 11,
+            "C": 12,
+            "D": 14
+        },
+        "stepByStep": [
+            "Substitute B, C, and D into (1) in terms of A:",
+            "2 × A + (A + 3) − (2 × A − 4) + (A + 6) = 29",
+            "Combine like terms: 2 × A + 13 = 29 ⟹ 2 × A = 16 ⟹ A = 8",
+            "From (2): B = 8 + 3 = 11",
+            "From (3): C = 2 × 8 − 4 = 12",
+            "From (4): D = 8 + 6 = 14"
+        ]
+    },
+    {
+        "id": 20,
+        "equations": [
+            "A + 2 × B + C − D = 30",
+            "A = 3 × B − 1",
+            "C = B + 8",
+            "D = 2 × B + 1"
+        ],
+        "solution": {
+            "A": 17,
+            "B": 6,
+            "C": 14,
+            "D": 13
+        },
+        "stepByStep": [
+            "Substitute A, C, and D into (1) in terms of B:",
+            "(3 × B − 1) + 2 × B + (B + 8) − (2 × B + 1) = 30",
+            "Combine like terms: 4 × B + 6 = 30 ⟹ 4 × B = 24 ⟹ B = 6",
+            "From (2): A = 3 × 6 − 1 = 17",
+            "From (3): C = 6 + 8 = 14",
+            "From (4): D = 2 × 6 + 1 = 13"
+        ]
+    }
+],
+  hard_t1: null,
   medium: [
     {
       id: 1,
@@ -691,6 +1154,8 @@ function getRealTimeSubmissions() {
 }
 
 const INITIAL_SUBMISSIONS = getRealTimeSubmissions();
+
+DMAT_DATA.hard_t1 = DMAT_DATA.hard;
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { DMAT_DATA, INITIAL_SUBMISSIONS, getRealTimeSubmissions };

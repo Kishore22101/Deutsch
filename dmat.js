@@ -365,18 +365,26 @@
     const timerLabel = document.getElementById('name-modal-timer-label');
     const qCountLabel = document.getElementById('name-modal-qcount-label');
 
-    if (difficulty === 'hard') {
-      label.textContent = 'Hard Mode · dMAT Official Standard';
+    if (difficulty === 'hard_t2') {
+      label.textContent = 'Hard Mode · Test 2 (New Questions)';
       timerLabel.textContent = '25 Minutes';
       qCountLabel.textContent = '20 System Questions';
+      if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Test 2 (25m) ➔';
+    } else if (difficulty === 'hard' || difficulty === 'hard_t1') {
+      label.textContent = 'Hard Mode · Test 1 (dMAT Standard)';
+      timerLabel.textContent = '25 Minutes';
+      qCountLabel.textContent = '20 System Questions';
+      if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Test 1 (25m) ➔';
     } else if (difficulty === 'medium') {
       label.textContent = 'Medium Mode · Intermediate';
       timerLabel.textContent = '15 Minutes';
       qCountLabel.textContent = '4 System Questions';
+      if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Medium Test (15m) ➔';
     } else {
       label.textContent = 'Easy Mode · Warm-Up';
       timerLabel.textContent = '10 Minutes';
       qCountLabel.textContent = '5 System Questions';
+      if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Easy Test (10m) ➔';
     }
 
     dom.nameModal.classList.remove('hidden');
@@ -403,17 +411,23 @@
 
   function startExam(difficulty) {
     state.selectedDifficulty = difficulty;
-    state.questions = (difficulty === 'hard')
-      ? DMAT_DATA.hard.slice(0, 20)
-      : (difficulty === 'medium' ? DMAT_DATA.medium : DMAT_DATA.easy);
+    if (difficulty === 'hard_t2') {
+      state.questions = (DMAT_DATA.hard_t2 || []).slice(0, 20);
+    } else if (difficulty === 'hard' || difficulty === 'hard_t1') {
+      state.questions = (DMAT_DATA.hard || []).slice(0, 20);
+    } else if (difficulty === 'medium') {
+      state.questions = DMAT_DATA.medium;
+    } else {
+      state.questions = DMAT_DATA.easy;
+    }
 
     state.currentIndex = 0;
     state.userAnswers = {};
     state.flagged.clear();
 
     // Setup Timer
-    if (difficulty === 'hard') {
-      state.timerTotalSeconds = 25 * 60; // 25 minutes exactly as requested!
+    if (difficulty === 'hard' || difficulty === 'hard_t1' || difficulty === 'hard_t2') {
+      state.timerTotalSeconds = 25 * 60; // 25 minutes exactly
     } else if (difficulty === 'medium') {
       state.timerTotalSeconds = 15 * 60;
     } else {
@@ -425,7 +439,10 @@
     state.examEndTime = null;
 
     // UI labels
-    dom.examTitle.textContent = `Mathematic Equations – ${difficulty.toUpperCase()}`;
+    const diffLabel = (difficulty === 'hard_t2') ? 'Hard – Test 2'
+      : (difficulty === 'hard' || difficulty === 'hard_t1') ? 'Hard – Test 1'
+      : (difficulty.charAt(0).toUpperCase() + difficulty.slice(1));
+    dom.examTitle.textContent = `Mathematic Equations – ${diffLabel}`;
     dom.examCandidateName.textContent = state.candidateName;
 
     // Render palette & question
@@ -660,10 +677,15 @@
     const total = state.questions.length;
     const percentage = Math.round((correctCount / total) * 100);
 
+    const diffDisplay = (state.selectedDifficulty === 'hard_t2') ? 'Hard – Test 2'
+      : (state.selectedDifficulty === 'hard' || state.selectedDifficulty === 'hard_t1') ? 'Hard – Test 1'
+      : state.selectedDifficulty.charAt(0).toUpperCase() + state.selectedDifficulty.slice(1);
+
     const submission = {
       id: 'sub-' + Date.now(),
       candidateName: state.candidateName,
-      difficulty: state.selectedDifficulty.charAt(0).toUpperCase() + state.selectedDifficulty.slice(1),
+      difficulty: diffDisplay,
+      difficultyKey: state.selectedDifficulty,
       questionCount: total,
       score: correctCount,
       total: total,
@@ -789,6 +811,10 @@
       const tr = document.createElement('tr');
       const pctBadgeClass = sub.percentage >= 80 ? 'pill-green' : (sub.percentage >= 50 ? 'pill-yellow' : 'pill-red');
 
+      const isHard = (sub.difficulty || '').toLowerCase().includes('hard');
+      const diffCss = isHard ? 'hard' : ((sub.difficulty || '').toLowerCase().includes('medium') ? 'medium' : 'easy');
+      const timerCap = isHard ? '25m' : ((sub.difficulty || '').toLowerCase().includes('medium') ? '15m' : '10m');
+
       tr.innerHTML = `
         <td><span class="rank-num">#${idx + 1}</span></td>
         <td>
@@ -797,7 +823,7 @@
             <span class="c-name">${escapeHtml(sub.candidateName)}</span>
           </div>
         </td>
-        <td><span class="diff-tag ${sub.difficulty.toLowerCase()}">${sub.difficulty} (${sub.questionCount}Q)</span></td>
+        <td><span class="diff-tag ${diffCss}">${escapeHtml(sub.difficulty)} (${sub.questionCount}Q)</span></td>
         <td>
           <div class="score-cell">
             <span class="score-badge ${pctBadgeClass}">${sub.score}/${sub.total} (${sub.percentage}%)</span>
@@ -807,14 +833,13 @@
           <div class="time-cell">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <strong>${sub.timeTakenFormatted}</strong>
-            <span class="time-sub">/ ${sub.difficulty === 'Hard' ? '25m' : '15m'}</span>
+            <span class="time-sub">/ ${timerCap}</span>
           </div>
         </td>
         <td><span class="date-txt">${sub.submittedAt}</span></td>
         <td>
-          <div class="action-btns">
+          <div class="action-btns" style="justify-content: flex-end;">
             ${sub.details ? `<button class="btn-sm-view" data-view-id="${sub.id}" title="View Answer Sheet">Inspect</button>` : '<span class="text-dim">Archived</span>'}
-            <button class="btn-sm-del" data-del-id="${sub.id}" title="Delete Record">✕</button>
           </div>
         </td>
       `;
@@ -827,13 +852,6 @@
       btn.addEventListener('click', () => {
         const id = btn.getAttribute('data-view-id');
         viewSubmissionDetails(id);
-      });
-    });
-
-    dom.subTableBody.querySelectorAll('.btn-sm-del').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const id = btn.getAttribute('data-del-id');
-        deleteSubmission(id);
       });
     });
   }
