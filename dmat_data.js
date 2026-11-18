@@ -511,7 +511,7 @@ const DMAT_DATA = {
       features: [
         "20 sequence items per standard subtest",
         "Focus on rotation, subtraction, reflection, and element count",
-        "Standard MedAT / dMAT test format"
+        "Standard Germany Master Degree dMAT test format"
       ]
     },
     math: {
@@ -539,15 +539,15 @@ const DMAT_DATA = {
     },
     modules: {
       name: "Subject Modules",
-      subtitle: "Fachmodule (BMS)",
-      desc: "Broad subject knowledge testing covering Biology (Biologie), Chemistry (Chemie), Physics (Physik), and Mathematics (Mathematik).",
+      subtitle: "Fachmodule (Master)",
+      desc: "Subject knowledge testing covering Applied Sciences, Quantitative Methods, and Advanced Mathematics for German Master's admissions.",
       icon: "ic-atom",
-      sample: "Cell biology, stoichiometry, optics, kinematics, trigonometry, and logarithms as defined by the official Austrian medical admissions syllabus.",
+      sample: "Applied sciences, quantitative methods, data analysis, and advanced mathematics as defined by the Germany Master's Degree syllabus.",
       features: [
-        "Biologie: Cell biology, genetics, anatomy, physiology",
-        "Chemie: Periodic table, chemical bonding, organic chemistry",
-        "Physik: Mechanics, thermodynamics, wave optics",
-        "Mathematik: Functions, vectors, statistics & probability"
+        "Mathematik: Functions, vectors, linear algebra, statistics & probability",
+        "Informatik: Algorithms, computational logic & quantitative systems",
+        "Physik: Mechanics, thermodynamics, circuits & signals",
+        "Naturwissenschaften: Scientific analysis & applied problem solving"
       ]
     }
   }
