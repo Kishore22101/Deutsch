@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <title>Admin Dashboard – Candidate Submissions &amp; Completion Times</title>
+  <meta name="description" content="dMAT Admin Dashboard: Real-time candidate submissions, completion times, score breakdowns, and answer sheet analytics for Germany Master's Degree Preparation."/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="dmat.css"/>
+  <link rel="stylesheet" href="admin.css"/>
+</head>
+<body class="admin-body">
+
+<!-- SVG Defs -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="ic-world" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="ic-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></symbol>
+  <symbol id="ic-math" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></symbol>
+  <symbol id="ic-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="ic-timer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+  <symbol id="ic-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+  <symbol id="ic-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></symbol>
+  <symbol id="ic-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></symbol>
+</svg>
+
+<!-- Header -->
+<header class="site-header admin-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-world"/></svg></div>
+        <span class="logo-text">Learning Portal</span>
+      </a>
+      <span class="admin-badge">Admin Dashboard</span>
+      <div class="live-status-pill">
+        <span class="live-dot"></span>
+        <span class="live-text">Real-Time Sync Active</span>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <a href="dmat.html" class="dmat-btn-sub">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-math"/></svg>
+        <span>dMAT Portal</span>
+      </a>
+      <a href="index.html" class="back-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+        Home
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="admin-main">
+  <div class="container">
+
+    <!-- Admin Hero -->
+    <div class="admin-hero">
+      <div class="admin-hero-top">
+        <span class="badge">dMAT Assessment Administration · Germany Master's Degree</span>
+        <div class="admin-last-sync" id="admin-last-sync">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Live Stamped: <strong id="live-time-now">Loading...</strong></span>
+        </div>
+      </div>
+      <h1>Candidate Submissions &amp; Completion Times</h1>
+      <p>Live real-time monitoring of all candidate attempts, accuracy scores, detailed algebraic answer sheets, and speed metrics for German university Master's degree preparation.</p>
+    </div>
+
+    <!-- 5 KPI Cards Grid -->
+    <div class="admin-kpi-grid">
+      <div class="glass-card kpi-card">
+        <div class="kpi-icon icon-emerald">
+          <svg width="22" height="22" viewBox="0 0 24 24"><use href="#ic-users"/></svg>
+        </div>
+        <div class="kpi-info">
+          <span class="kpi-label">Total Candidates</span>
+          <span class="kpi-val" id="kpi-total-candidates">0</span>
+          <span class="kpi-sub">Evaluated records</span>
+        </div>
+      </div>
+
+      <div class="glass-card kpi-card">
+        <div class="kpi-icon icon-blue">
+          <svg width="22" height="22" viewBox="0 0 24 24"><use href="#ic-check"/></svg>
+        </div>
+        <div class="kpi-info">
+          <span class="kpi-label">Average Score</span>
+          <span class="kpi-val" id="kpi-avg-score">0%</span>
+          <span class="kpi-sub">Overall accuracy</span>
+        </div>
+      </div>
+
+      <div class="glass-card kpi-card">
+        <div class="kpi-icon icon-amber">
+          <svg width="22" height="22" viewBox="0 0 24 24"><use href="#ic-timer"/></svg>
+        </div>
+        <div class="kpi-info">
+          <span class="kpi-label">Avg Completion Time</span>
+          <span class="kpi-val" id="kpi-avg-time">0m 00s</span>
+          <span class="kpi-sub">Pace per candidate</span>
+        </div>
+      </div>
+
+      <div class="glass-card kpi-card">
+        <div class="kpi-icon icon-purple">
+          <svg width="22" height="22" viewBox="0 0 24 24"><use href="#ic-math"/></svg>
+        </div>
+        <div class="kpi-info">
+          <span class="kpi-label">Pass Rate (≥60%)</span>
+          <span class="kpi-val" id="kpi-pass-rate">100%</span>
+          <span class="kpi-sub">Qualified candidates</span>
+        </div>
+      </div>
+
+      <div class="glass-card kpi-card">
+        <div class="kpi-icon icon-gold">
+          <span class="kpi-badge-top">#1</span>
+        </div>
+        <div class="kpi-info">
+          <span class="kpi-label">Top Performer</span>
+          <span class="kpi-val kpi-val-text" id="kpi-top-candidate">—</span>
+          <span class="kpi-sub" id="kpi-top-score">—</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls & Actions Toolbar -->
+    <div class="admin-toolbar">
+      <div class="toolbar-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="admin-search-input" placeholder="Search candidate by name, difficulty, or date..."/>
+      </div>
+
+      <div class="toolbar-filters">
+        <select id="admin-filter-difficulty" class="admin-select">
+          <option value="all">All Difficulties</option>
+          <option value="hard">Hard (20 Questions)</option>
+          <option value="medium">Medium (4 Questions)</option>
+          <option value="easy">Easy (5 Questions)</option>
+        </select>
+
+        <select id="admin-sort-by" class="admin-select">
+          <option value="recent">Most Recent First</option>
+          <option value="score-desc">Highest Score</option>
+          <option value="time-asc">Fastest Completion</option>
+          <option value="name-asc">Candidate Name (A–Z)</option>
+        </select>
+      </div>
+
+      <div class="toolbar-actions">
+        <button class="btn-admin-action" id="btn-export-csv" title="Export full report to CSV file">
+          <svg width="15" height="15" viewBox="0 0 24 24"><use href="#ic-download"/></svg>
+          <span>Export CSV</span>
+        </button>
+
+        <button class="btn-admin-action" id="btn-simulate-candidate" title="Simulate adding a live candidate test">
+          <svg width="15" height="15" viewBox="0 0 24 24"><use href="#ic-plus"/></svg>
+          <span>+ Add Candidate Test</span>
+        </button>
+
+        <button class="btn-admin-action btn-refresh" id="btn-refresh-data" title="Reload live data">
+          <svg width="15" height="15" viewBox="0 0 24 24"><use href="#ic-refresh"/></svg>
+          <span>Refresh</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Submissions Table Section -->
+    <div class="glass-card admin-table-card">
+      <div class="table-card-head">
+        <div>
+          <h3>Live Candidate Submissions</h3>
+          <p class="table-sub">Real-time completion timestamps, accuracy scores, and detailed answer sheet logs.</p>
+        </div>
+        <div class="table-count-tag">
+          Showing <span id="display-count">0</span> of <span id="total-count">0</span> records
+        </div>
+      </div>
+
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th style="width: 50px;">#</th>
+              <th>Candidate Name</th>
+              <th>Difficulty Track</th>
+              <th>Score &amp; Accuracy</th>
+              <th>Completion Time</th>
+              <th>Real-Time Timestamp</th>
+              <th>Status</th>
+              <th style="text-align: right; width: 150px;">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="admin-table-body">
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+
+        <!-- Empty state -->
+        <div class="admin-empty-state hidden" id="admin-empty-state">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#ic-users"/></svg>
+          <h4>No Candidate Records Found</h4>
+          <p>No submissions match your active search or filter. Take an exam simulation or click "+ Add Candidate Test".</p>
+          <button class="btn-primary" id="btn-empty-reset" style="margin-top: 14px;">Reset Live Candidate Data</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ══════════════════════════════════════════
+     MODAL 1: CANDIDATE ANSWER SHEET INSPECT
+══════════════════════════════════════════ -->
+<div class="dmat-modal-overlay hidden" id="modal-admin-details">
+  <div class="dmat-modal-card modal-large">
+    <div class="modal-header modal-header-flex">
+      <div>
+        <h3 id="admin-details-title">Candidate Answer Sheet</h3>
+        <div class="sub-details-meta" id="admin-details-meta"></div>
+      </div>
+      <button class="modal-close-x" id="btn-close-admin-details">✕</button>
+    </div>
+    <div class="modal-body" style="padding: 20px 24px; max-height: 72vh; overflow-y: auto;" id="admin-details-body">
+      <!-- Full question list with equations, user answers, solutions & steps -->
+    </div>
+    <div class="modal-footer" style="justify-content: flex-end;">
+      <button class="btn-secondary" id="btn-close-admin-details-ft">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     MODAL 2: SIMULATE NEW CANDIDATE SUBMISSION
+══════════════════════════════════════════ -->
+<div class="dmat-modal-overlay hidden" id="modal-add-candidate">
+  <div class="dmat-modal-card" style="max-width: 480px;">
+    <div class="modal-header modal-header-flex">
+      <div>
+        <h3>+ Record Candidate Test Result</h3>
+        <span class="modal-sub">Log a real-time assessment entry for Germany Master's preparation.</span>
+      </div>
+      <button class="modal-close-x" id="btn-close-add-modal">✕</button>
+    </div>
+    <div class="modal-body">
+      <form id="form-add-candidate">
+        <div class="form-group" style="margin-bottom: 14px;">
+          <label for="new-candidate-name">Candidate Full Name *</label>
+          <input type="text" id="new-candidate-name" class="modal-input" placeholder="e.g. Kishore K. / Alex Bauer" required/>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 14px;">
+          <label for="new-candidate-diff">Test Difficulty Track *</label>
+          <select id="new-candidate-diff" class="modal-input" style="background: var(--bg-03); color: var(--t-100);">
+            <option value="Hard">Hard (20 Questions · 25 Minutes Standard)</option>
+            <option value="Medium">Medium (4 Questions · 15 Minutes)</option>
+            <option value="Easy">Easy (5 Questions · 10 Minutes)</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 14px;">
+          <label for="new-candidate-score">Correct Answers (Score) *</label>
+          <input type="number" id="new-candidate-score" class="modal-input" min="0" max="20" value="19" required/>
+          <span style="font-size: 11px; color: var(--t-45); margin-top: 4px; display: block;">Max score: 20 for Hard, 4 for Medium, 5 for Easy</span>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 14px;">
+          <label for="new-candidate-time">Completion Time (Minutes) *</label>
+          <input type="number" id="new-candidate-time" class="modal-input" min="1" max="25" step="0.5" value="18.5" required/>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 14px;">
+          <label>Submission Timestamp</label>
+          <input type="text" id="new-candidate-timestamp" class="modal-input" readonly style="opacity: 0.8;"/>
+          <span style="font-size: 11px; color: #10b981; margin-top: 4px; display: block;">Auto-stamped with live real-time date &amp; clock</span>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-secondary" id="btn-cancel-add">Cancel</button>
+      <button class="btn-primary" id="btn-submit-add">Save &amp; Log Result ➔</button>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>© 2026 Learning Portal · dMAT Germany Master's Degree Examination System</p>
+</footer>
+
+<script src="dmat_data.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

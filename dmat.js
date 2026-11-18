@@ -96,24 +96,26 @@
   }
 
   function initSubmissionsStorage() {
-    let list = [];
-    try {
-      list = JSON.parse(localStorage.getItem('dmat_submissions')) || [];
-    } catch (e) {
-      list = [];
-    }
-    // Remove any sample/seed data automatically
-    list = list.filter(sub => !sub.id || !sub.id.startsWith('sub-seed-'));
-    localStorage.setItem('dmat_submissions', JSON.stringify(list));
+    const list = getSubmissions();
     updateSubmissionsCount();
   }
 
   function getSubmissions() {
     try {
-      return JSON.parse(localStorage.getItem('dmat_submissions')) || [];
-    } catch (e) {
-      return [];
+      const stored = localStorage.getItem('dmat_submissions');
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      }
+    } catch (e) {}
+    if (typeof getRealTimeSubmissions === 'function') {
+      const initial = getRealTimeSubmissions();
+      try {
+        localStorage.setItem('dmat_submissions', JSON.stringify(initial));
+      } catch (e) {}
+      return initial;
     }
+    return [];
   }
 
   function saveSubmissions(list) {

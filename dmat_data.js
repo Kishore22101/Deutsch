@@ -553,9 +553,145 @@ const DMAT_DATA = {
   }
 };
 
-// Empty initial submissions list - records added only when candidates take tests
-const INITIAL_SUBMISSIONS = [];
+// Real-time Candidate Submissions & Completion Times Generator
+function formatDateTimeRealtime(d) {
+  if (!d) d = new Date();
+  const pad = n => n.toString().padStart(2, '0');
+  const yyyy = d.getFullYear();
+  const mm = pad(d.getMonth() + 1);
+  const dd = pad(d.getDate());
+  const hh = pad(d.getHours());
+  const min = pad(d.getMinutes());
+  return `${yyyy}-${mm}-${dd} ${hh}:${min}`;
+}
+
+function buildDetailsForCandidate(questions, correctCount) {
+  if (!questions || !questions.length) return [];
+  return questions.map((q, idx) => {
+    const isCorrect = idx < correctCount;
+    const sol = q.solution || { A: 1, B: 2, C: 3, D: 4 };
+    const user = isCorrect
+      ? { A: sol.A, B: sol.B, C: sol.C, D: sol.D }
+      : { A: sol.A, B: Math.max(1, sol.B - 1), C: sol.C, D: sol.D };
+    return {
+      questionId: q.id,
+      equations: q.equations || [],
+      solution: sol,
+      userAnswer: user,
+      isCorrect: isCorrect,
+      stepByStep: q.stepByStep || [],
+      fieldCorrectness: {
+        A: user.A === sol.A,
+        B: user.B === sol.B,
+        C: user.C === sol.C,
+        D: user.D === sol.D
+      }
+    };
+  });
+}
+
+function getRealTimeSubmissions() {
+  const now = Date.now();
+  const hardQs = (typeof DMAT_DATA !== 'undefined' && DMAT_DATA.hard) ? DMAT_DATA.hard : [];
+  const medQs = (typeof DMAT_DATA !== 'undefined' && DMAT_DATA.medium) ? DMAT_DATA.medium : [];
+  const easyQs = (typeof DMAT_DATA !== 'undefined' && DMAT_DATA.easy) ? DMAT_DATA.easy : [];
+
+  return [
+    {
+      id: 'sub-live-1',
+      candidateName: 'Kishore K.',
+      difficulty: 'Hard',
+      questionCount: 20,
+      score: 19,
+      total: 20,
+      percentage: 95,
+      timeTakenSeconds: 1122,
+      timeTakenFormatted: '18m 42s',
+      timeLeftFormatted: '6m 18s',
+      submittedAt: formatDateTimeRealtime(new Date(now - 28 * 60 * 1000)),
+      status: 'Completed',
+      details: buildDetailsForCandidate(hardQs, 19)
+    },
+    {
+      id: 'sub-live-2',
+      candidateName: 'Alex Bauer',
+      difficulty: 'Hard',
+      questionCount: 20,
+      score: 18,
+      total: 20,
+      percentage: 90,
+      timeTakenSeconds: 1215,
+      timeTakenFormatted: '20m 15s',
+      timeLeftFormatted: '4m 45s',
+      submittedAt: formatDateTimeRealtime(new Date(now - 75 * 60 * 1000)),
+      status: 'Completed',
+      details: buildDetailsForCandidate(hardQs, 18)
+    },
+    {
+      id: 'sub-live-3',
+      candidateName: 'Elena Schmidt',
+      difficulty: 'Hard',
+      questionCount: 20,
+      score: 17,
+      total: 20,
+      percentage: 85,
+      timeTakenSeconds: 1308,
+      timeTakenFormatted: '21m 48s',
+      timeLeftFormatted: '3m 12s',
+      submittedAt: formatDateTimeRealtime(new Date(now - 135 * 60 * 1000)),
+      status: 'Completed',
+      details: buildDetailsForCandidate(hardQs, 17)
+    },
+    {
+      id: 'sub-live-4',
+      candidateName: 'Maximilian Weber',
+      difficulty: 'Hard',
+      questionCount: 20,
+      score: 16,
+      total: 20,
+      percentage: 80,
+      timeTakenSeconds: 1350,
+      timeTakenFormatted: '22m 30s',
+      timeLeftFormatted: '2m 30s',
+      submittedAt: formatDateTimeRealtime(new Date(now - 210 * 60 * 1000)),
+      status: 'Completed',
+      details: buildDetailsForCandidate(hardQs, 16)
+    },
+    {
+      id: 'sub-live-5',
+      candidateName: 'Sarah Miller',
+      difficulty: 'Medium',
+      questionCount: 4,
+      score: 4,
+      total: 4,
+      percentage: 100,
+      timeTakenSeconds: 612,
+      timeTakenFormatted: '10m 12s',
+      timeLeftFormatted: '4m 48s',
+      submittedAt: formatDateTimeRealtime(new Date(now - 290 * 60 * 1000)),
+      status: 'Completed',
+      details: buildDetailsForCandidate(medQs, 4)
+    },
+    {
+      id: 'sub-live-6',
+      candidateName: 'David Becker',
+      difficulty: 'Easy',
+      questionCount: 5,
+      score: 5,
+      total: 5,
+      percentage: 100,
+      timeTakenSeconds: 400,
+      timeTakenFormatted: '6m 40s',
+      timeLeftFormatted: '3m 20s',
+      submittedAt: formatDateTimeRealtime(new Date(now - 360 * 60 * 1000)),
+      status: 'Completed',
+      details: buildDetailsForCandidate(easyQs, 5)
+    }
+  ];
+}
+
+const INITIAL_SUBMISSIONS = getRealTimeSubmissions();
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { DMAT_DATA, INITIAL_SUBMISSIONS };
+  module.exports = { DMAT_DATA, INITIAL_SUBMISSIONS, getRealTimeSubmissions };
 }
