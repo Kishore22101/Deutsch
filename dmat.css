@@ -1024,6 +1024,9 @@ html, body {
   justify-content: center;
   padding: 20px;
 }
+.dmat-modal-overlay.hidden {
+  display: none !important;
+}
 .dmat-modal-card {
   background: var(--bg-01);
   border: 1px solid var(--border-md);
@@ -1683,10 +1686,12 @@ body.exam-active .site-footer { display: none; }
 
   /* ─ Modals: centered on mobile ─ */
   .dmat-modal-overlay {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 16px !important;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  .dmat-modal-overlay.hidden {
+    display: none !important;
   }
   .dmat-modal-card {
     max-height: 90vh;
