@@ -134,14 +134,22 @@
     };
   }
 
+  function isSampleRecord(s) {
+    if (!s || !s.id) return true;
+    if (s.id.startsWith('sub-live-')) return true;
+    const name = (s.candidateName || '').trim().toLowerCase();
+    if (name === 'nithyasree' || name.includes('nithyasree')) return true;
+    return false;
+  }
+
   function initSubmissionsStorage() {
-    // Purge any old demo/sample records from localStorage
+    // Purge any old demo/sample records or removed records from localStorage
     try {
       const stored = localStorage.getItem('dmat_submissions');
       if (stored) {
         const parsed = JSON.parse(stored);
         if (Array.isArray(parsed)) {
-          const real = parsed.filter(s => s && s.id && !s.id.startsWith('sub-live-'));
+          const real = parsed.filter(s => !isSampleRecord(s));
           if (real.length !== parsed.length) {
             localStorage.setItem('dmat_submissions', JSON.stringify(real));
           }
@@ -175,7 +183,7 @@
       if (stored) {
         const parsed = JSON.parse(stored);
         if (Array.isArray(parsed)) {
-          return parsed.filter(s => s && s.id && !s.id.startsWith('sub-live-'));
+          return parsed.filter(s => !isSampleRecord(s));
         }
       }
     } catch (e) {}

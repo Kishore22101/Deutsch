@@ -183,9 +183,13 @@
 
   /* ───── STORAGE ───── */
 
-  // IDs that belong to demo/sample records (prefixed sub-live-)
+  // IDs that belong to demo/sample records (prefixed sub-live-) or requested to be removed
   function isSampleRecord(sub) {
-    return sub && sub.id && sub.id.startsWith('sub-live-');
+    if (!sub) return true;
+    if (sub.id && sub.id.startsWith('sub-live-')) return true;
+    const name = (sub.candidateName || '').trim().toLowerCase();
+    if (name === 'nithyasree' || name.includes('nithyasree')) return true;
+    return false;
   }
 
   // On every admin page load: silently remove all pre-seeded demo records

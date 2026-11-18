@@ -134,9 +134,13 @@
     return packed;
   }
 
-  // Check if a record is a seeded sample/demo (never broadcast or restore these)
+  // Check if a record is a seeded sample/demo or requested to be removed
   function isSampleRecord(sub) {
-    return sub && sub.id && sub.id.startsWith('sub-live-');
+    if (!sub) return true;
+    if (sub.id && sub.id.startsWith('sub-live-')) return true;
+    const name = (sub.candidateName || '').trim().toLowerCase();
+    if (name === 'nithyasree' || name.includes('nithyasree')) return true;
+    return false;
   }
 
   // Get local storage submissions (never return demo/sample records)
