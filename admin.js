@@ -111,7 +111,7 @@
   function init() {
     buildDomRefs();
     startLiveClock();
-    ensureSubmissionsData();
+    clearSampleData();   // purge old demo records on every admin load
     renderDashboard();
     bindEvents();
     initCrossDeviceSync();
@@ -181,31 +181,43 @@
   }
 
   /* ───── STORAGE ───── */
+
+  // IDs that belong to demo/sample records (prefixed sub-live-)
+  function isSampleRecord(sub) {
+    return sub && sub.id && sub.id.startsWith('sub-live-');
+  }
+
+  // On every admin page load: silently remove all pre-seeded demo records
+  function clearSampleData() {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (!stored) return;
+      const parsed = JSON.parse(stored);
+      if (!Array.isArray(parsed)) return;
+      const realOnly = parsed.filter(s => !isSampleRecord(s));
+      // If some were demo records, persist the cleaned list
+      if (realOnly.length !== parsed.length) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(realOnly));
+      }
+    } catch (e) {}
+  }
+
   function getSubmissions() {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
       if (stored) {
         const parsed = JSON.parse(stored);
-        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        if (Array.isArray(parsed)) {
+          // Filter out any residual sample records
+          return parsed.filter(s => !isSampleRecord(s));
+        }
       }
     } catch (e) {}
-    if (typeof getRealTimeSubmissions === 'function') {
-      const live = getRealTimeSubmissions();
-      saveSubmissions(live);
-      return live;
-    }
     return [];
   }
 
   function saveSubmissions(list) {
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
-  }
-
-  function ensureSubmissionsData() {
-    const list = getSubmissions();
-    if (!list || list.length === 0) {
-      if (typeof getRealTimeSubmissions === 'function') saveSubmissions(getRealTimeSubmissions());
-    }
   }
 
   /* ───── RENDER ───── */

@@ -94,24 +94,23 @@
     return packed;
   }
 
-  // Get local storage submissions
+  // Check if a record is a seeded sample/demo (never broadcast or restore these)
+  function isSampleRecord(sub) {
+    return sub && sub.id && sub.id.startsWith('sub-live-');
+  }
+
+  // Get local storage submissions (never return demo/sample records)
   function getLocalList() {
     try {
       const stored = localStorage.getItem(LOCAL_STORAGE_KEY);
       if (stored) {
         const parsed = JSON.parse(stored);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed.map(enrichSubmissionDetails);
+        if (Array.isArray(parsed)) {
+          const real = parsed.filter(s => !isSampleRecord(s));
+          return real.map(enrichSubmissionDetails);
         }
       }
     } catch (e) {}
-
-    // Initial default fallback
-    if (typeof getRealTimeSubmissions === 'function') {
-      const live = getRealTimeSubmissions().map(enrichSubmissionDetails);
-      saveLocalList(live);
-      return live;
-    }
     return [];
   }
 
@@ -121,31 +120,26 @@
     } catch (e) {}
   }
 
-  // Merge remote items with local items (deduplicating by ID)
+  // Merge remote items with local items (deduplicating by ID, never include sample data)
   function mergeSubmissions(localList, remoteList) {
     const map = new Map();
-    // 1. Put local items first
+    // 1. Put local real items first
     (localList || []).forEach(item => {
-      if (item && item.id) map.set(item.id, enrichSubmissionDetails(item));
+      if (item && item.id && !isSampleRecord(item)) map.set(item.id, enrichSubmissionDetails(item));
     });
-    // 2. Put remote items (override/prepend)
+    // 2. Put remote real items (override/prepend)
     (remoteList || []).forEach(item => {
-      if (item && item.id) map.set(item.id, enrichSubmissionDetails(item));
+      if (item && item.id && !isSampleRecord(item)) map.set(item.id, enrichSubmissionDetails(item));
     });
 
     const merged = Array.from(map.values());
-    // Sort most recent first
-    merged.sort((a, b) => {
-      const dateA = a.submittedAt || '';
-      const dateB = b.submittedAt || '';
-      return dateB.localeCompare(dateA);
-    });
+    merged.sort((a, b) => (b.submittedAt || '').localeCompare(a.submittedAt || ''));
     return merged;
   }
 
   // Broadcast a new submission from THIS device to ALL devices in real time
   async function broadcastSubmission(submission) {
-    if (!submission) return false;
+    if (!submission || isSampleRecord(submission)) return false;
 
     // 1. Save full submission locally first (instant UI update)
     const enriched = enrichSubmissionDetails(submission);

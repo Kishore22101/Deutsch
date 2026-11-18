@@ -96,7 +96,20 @@
   }
 
   function initSubmissionsStorage() {
-    const list = getSubmissions();
+    // Purge any old demo/sample records from localStorage
+    try {
+      const stored = localStorage.getItem('dmat_submissions');
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed)) {
+          const real = parsed.filter(s => s && s.id && !s.id.startsWith('sub-live-'));
+          if (real.length !== parsed.length) {
+            localStorage.setItem('dmat_submissions', JSON.stringify(real));
+          }
+        }
+      }
+    } catch (e) {}
+
     updateSubmissionsCount();
 
     // Live cross-device synchronization
@@ -122,16 +135,12 @@
       const stored = localStorage.getItem('dmat_submissions');
       if (stored) {
         const parsed = JSON.parse(stored);
-        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        if (Array.isArray(parsed)) {
+          // Filter out any seeded sample records (sub-live-*)
+          return parsed.filter(s => s && s.id && !s.id.startsWith('sub-live-'));
+        }
       }
     } catch (e) {}
-    if (typeof getRealTimeSubmissions === 'function') {
-      const initial = getRealTimeSubmissions();
-      try {
-        localStorage.setItem('dmat_submissions', JSON.stringify(initial));
-      } catch (e) {}
-      return initial;
-    }
     return [];
   }
 
