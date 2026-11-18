@@ -85,6 +85,7 @@
       btnExportCsv: document.getElementById('btn-export-csv'),
       btnSimulate:  document.getElementById('btn-simulate-candidate'),
       btnRefresh:   document.getElementById('btn-refresh-data'),
+      btnClearAll:  document.getElementById('btn-clear-all-data'),
       btnEmptyReset:document.getElementById('btn-empty-reset'),
 
       modalDetails:    document.getElementById('modal-admin-details'),
@@ -375,21 +376,43 @@
       item.details.forEach((d, i) => {
         const card = document.createElement('div');
         card.className = `sub-q-detail ${d.isCorrect ? 'q-correct' : 'q-wrong'}`;
-        const eqs     = Array.isArray(d.equations) ? d.equations : [];
         const userAns = d.userAnswer || {};
         const sol     = d.solution   || {};
-        card.innerHTML = `
-          <div class="q-detail-head">
-            <span>Question ${i + 1}</span>
-            <span class="q-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">${d.isCorrect ? 'Correct' : 'Incorrect'}</span>
-          </div>
-          <div class="q-detail-eqs">${eqs.map(e => `<div>${escapeHtml(e)}</div>`).join('')}</div>
-          <div class="q-detail-ans">
-            <div>Your Answer: <strong>A=${userAns.A || '—'}, B=${userAns.B || '—'}, C=${userAns.C || '—'}, D=${userAns.D || '—'}</strong></div>
-            <div>Solution: <strong>A=${sol.A !== undefined ? sol.A : '—'}, B=${sol.B !== undefined ? sol.B : '—'}, C=${sol.C !== undefined ? sol.C : '—'}, D=${sol.D !== undefined ? sol.D : '—'}</strong></div>
-          </div>
-          ${d.stepByStep && d.stepByStep.length ? `<div class="step-by-step">${d.stepByStep.map(s => `• ${escapeHtml(s)}`).join('<br/>')}</div>` : ''}
-        `;
+
+        if (d.subtest === 'figures') {
+          const seq = d.matrices || d.sequence;
+          const stripHtml = (typeof FiguresRender !== 'undefined' && Array.isArray(seq) && seq.length)
+            ? `<div class="figures-sequence-strip" style="padding:10px; margin:10px 0; background:rgba(0,0,0,0.6); overflow-x:auto;">
+                 ${FiguresRender.renderFigureSequenceStrip(d, userAns, 60)}
+               </div>`
+            : '';
+          card.innerHTML = `
+            <div class="q-detail-head">
+              <span>Question ${i + 1} · Figure Sequences</span>
+              <span class="q-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">${d.isCorrect ? 'Correct' : 'Incorrect'}</span>
+            </div>
+            ${stripHtml}
+            <div class="q-detail-ans">
+              <div>Candidate Choice: <strong>M5 = Option ${userAns.m5 || '—'}, M6 = Option ${userAns.m6 || '—'}</strong></div>
+              <div>Official Solution: <strong style="color:#10b981;">M5 = Option ${sol.m5 || '—'}, M6 = Option ${sol.m6 || '—'}</strong></div>
+            </div>
+            ${(d.explanation || d.ruleExplanation) ? `<div class="step-by-step" style="margin-top:8px;font-size:12px;color:var(--t-80);background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:6px;border-left:2px solid #10b981;">• <strong>Pattern Rule:</strong> ${escapeHtml(d.explanation || d.ruleExplanation)}</div>` : ''}
+          `;
+        } else {
+          const eqs = Array.isArray(d.equations) ? d.equations : [];
+          card.innerHTML = `
+            <div class="q-detail-head">
+              <span>Question ${i + 1} · Equations</span>
+              <span class="q-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">${d.isCorrect ? 'Correct' : 'Incorrect'}</span>
+            </div>
+            <div class="q-detail-eqs">${eqs.map(e => `<div>${escapeHtml(e)}</div>`).join('')}</div>
+            <div class="q-detail-ans">
+              <div>Candidate Answer: <strong>A=${userAns.A || '—'}, B=${userAns.B || '—'}, C=${userAns.C || '—'}, D=${userAns.D || '—'}</strong></div>
+              <div>Solution: <strong>A=${sol.A !== undefined ? sol.A : '—'}, B=${sol.B !== undefined ? sol.B : '—'}, C=${sol.C !== undefined ? sol.C : '—'}, D=${sol.D !== undefined ? sol.D : '—'}</strong></div>
+            </div>
+            ${d.stepByStep && d.stepByStep.length ? `<div class="step-by-step">${d.stepByStep.map(s => `• ${escapeHtml(s)}`).join('<br/>')}</div>` : ''}
+          `;
+        }
         dom.detailsBody.appendChild(card);
       });
     }
@@ -522,6 +545,14 @@
     if (dom.sortBy)           dom.sortBy.addEventListener('change', renderTable);
     if (dom.btnExportCsv)     dom.btnExportCsv.addEventListener('click', exportCsv);
     if (dom.btnRefresh)       dom.btnRefresh.addEventListener('click', () => { renderDashboard(); updateLiveClock(); });
+    if (dom.btnClearAll) {
+      dom.btnClearAll.addEventListener('click', () => {
+        if (!confirm('Are you sure you want to permanently clear all candidate submission records?')) return;
+        localStorage.removeItem(STORAGE_KEY);
+        saveSubmissions([]);
+        renderDashboard();
+      });
+    }
     if (dom.btnEmptyReset)    dom.btnEmptyReset.addEventListener('click', resetLiveSubmissions);
     if (dom.btnCloseDetails)    dom.btnCloseDetails.addEventListener('click', closeInspectModal);
     if (dom.btnCloseDetailsFt)  dom.btnCloseDetailsFt.addEventListener('click', closeInspectModal);

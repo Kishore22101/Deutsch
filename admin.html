@@ -11,6 +11,12 @@
   <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="dmat.css"/>
   <link rel="stylesheet" href="admin.css"/>
+  <style>
+    html, body, .admin-body, .admin-main, .admin-layout, .container {
+      background-color: #000 !important;
+      color: #fff !important;
+    }
+  </style>
 </head>
 <body class="admin-body">
 
@@ -196,10 +202,14 @@
       <div class="toolbar-filters">
         <select id="admin-filter-difficulty" class="admin-select">
           <option value="all">All Difficulties</option>
+          <option value="figures">Figure Sequences</option>
           <option value="hard">Hard – Test 1 (20Q)</option>
           <option value="hard_t2">Hard – Test 2 (20Q)</option>
-          <option value="medium">Medium (4Q)</option>
-          <option value="easy">Easy (5Q)</option>
+          <option value="hard_t3">Hard – Test 3 (20Q)</option>
+          <option value="hard_t4">Hard – Test 4 (20Q)</option>
+          <option value="hard_t5">Hard – Test 5 (20Q)</option>
+          <option value="medium">Medium</option>
+          <option value="easy">Easy</option>
         </select>
         <select id="admin-sort-by" class="admin-select">
           <option value="recent">Most Recent</option>
@@ -221,6 +231,9 @@
         <button class="btn-admin-action btn-refresh" id="btn-refresh-data" title="Refresh live data">
           <svg width="15" height="15" viewBox="0 0 24 24"><use href="#ic-refresh"/></svg>
           <span>Refresh</span>
+        </button>
+        <button class="btn-admin-action btn-danger" id="btn-clear-all-data" title="Clear all submission records" style="color:#ef4444; border-color:rgba(239,68,68,0.35);">
+          <span>✕ Clear All</span>
         </button>
       </div>
     </div>
@@ -347,6 +360,8 @@
   </div>
 </div>
 
+<script src="figures_render.js"></script>
+<script src="figures_data.js"></script>
 <script src="dmat_data.js"></script>
 <script src="cloud_sync.js"></script>
 <script src="admin.js"></script>

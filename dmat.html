@@ -88,18 +88,19 @@
       <div class="cards-grid cols-2-dmat">
 
         <!-- 1. Figure Sequences -->
-        <div class="glass-card dmat-cat-card" data-category="figures" id="cat-figures">
+        <div class="glass-card dmat-cat-card dmat-featured-card" data-category="figures" id="cat-figures">
           <div class="card-num-pill">1</div>
+          <div class="featured-ribbon">Active Testing Module</div>
           <div class="card-icon dmat-icon-blue">
             <svg width="30" height="30" viewBox="0 0 24 24"><use href="#ic-shapes"/></svg>
           </div>
           <div class="cat-content">
             <div class="card-level">Figure Sequences</div>
             <div class="card-title">Formenreihen</div>
-            <div class="card-desc">Identify underlying transformation rules, geometric rotation, mirror reflections, and shape sequence progression.</div>
+            <div class="card-desc">Identify underlying transformation rules, geometric rotation, perimeter progression, and color cycles. Includes Easy, Medium, and 5 Hard practice tests (20Q · 25m each).</div>
           </div>
           <div class="cat-footer">
-            <span class="card-tag">Overview &amp; Syllabus</span>
+            <span class="card-tag tag-primary">Easy · Medium · Hard (5 Tests)</span>
             <span class="cat-arrow">→</span>
           </div>
         </div>
@@ -161,7 +162,7 @@
   </section>
 
   <!-- ══════════════════════════════════════════
-       VIEW 2: MATHEMATIC EQUATIONS DIFFICULTIES
+       VIEW 2: EXAMINATION DIFFICULTIES
   ══════════════════════════════════════════ -->
   <section class="dmat-view hidden" id="view-difficulties">
     <div class="page-hero container">
@@ -169,51 +170,51 @@
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
         Back to All 4 Categories
       </button>
-      <div class="badge" style="margin-top:16px;">Category 2 · Mathematic Equations</div>
-      <h1>Choose Difficulty Level</h1>
-      <p>Test your algebraic deduction and system substitution skills. Select your level to begin.</p>
+      <div class="badge" style="margin-top:16px;" id="diff-cat-badge">Category 2 · Mathematic Equations</div>
+      <h1 id="diff-cat-title">Choose Difficulty Level</h1>
+      <p id="diff-cat-desc">Test your algebraic deduction and system substitution skills. Select your level to begin.</p>
     </div>
 
     <div class="container">
       <div class="cards-grid cols-3">
 
         <!-- Easy -->
-        <div class="glass-card diff-card" data-difficulty="easy">
+        <div class="glass-card diff-card" data-difficulty="easy" id="diff-card-easy">
           <div class="diff-badge badge-easy">Warm-Up</div>
-          <div class="diff-title">Easy</div>
-          <div class="diff-desc">5 Systems of equations. Single-variable substitutions and basic relations.</div>
-          <div class="diff-specs">
-            <div class="spec-row"><span>Questions:</span><strong>5 Q</strong></div>
-            <div class="spec-row"><span>Timer:</span><strong>10 mins</strong></div>
-            <div class="spec-row"><span>Inputs:</span><strong>A, B, C, D</strong></div>
+          <div class="diff-title" id="diff-card-easy-title">Easy</div>
+          <div class="diff-desc" id="diff-card-easy-desc">5 Systems of equations. Single-variable substitutions and basic relations.</div>
+          <div class="diff-specs" id="diff-card-easy-specs">
+            <div class="spec-row"><span>Questions:</span><strong id="diff-easy-qcount">5 Q</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong id="diff-easy-timer">10 mins</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong id="diff-easy-inputs">A, B, C, D</strong></div>
           </div>
           <button class="btn-diff-action">Start Easy</button>
         </div>
 
         <!-- Medium -->
-        <div class="glass-card diff-card" data-difficulty="medium">
+        <div class="glass-card diff-card" data-difficulty="medium" id="diff-card-medium">
           <div class="diff-badge badge-medium">Intermediate</div>
-          <div class="diff-title">Medium</div>
-          <div class="diff-desc">4 Systems of equations. Chained substitutions and multi-step balance equations.</div>
-          <div class="diff-specs">
-            <div class="spec-row"><span>Questions:</span><strong>4 Q</strong></div>
-            <div class="spec-row"><span>Timer:</span><strong>15 mins</strong></div>
-            <div class="spec-row"><span>Inputs:</span><strong>A, B, C, D</strong></div>
+          <div class="diff-title" id="diff-card-med-title">Medium</div>
+          <div class="diff-desc" id="diff-card-med-desc">4 Systems of equations. Chained substitutions and multi-step balance equations.</div>
+          <div class="diff-specs" id="diff-card-med-specs">
+            <div class="spec-row"><span>Questions:</span><strong id="diff-med-qcount">4 Q</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong id="diff-med-timer">15 mins</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong id="diff-med-inputs">A, B, C, D</strong></div>
           </div>
           <button class="btn-diff-action">Start Medium</button>
         </div>
 
         <!-- Hard -->
-        <div class="glass-card diff-card diff-card-hard" data-difficulty="hard">
+        <div class="glass-card diff-card diff-card-hard" data-difficulty="hard" id="diff-card-hard">
           <div class="diff-badge badge-hard">Official dMAT Exam</div>
-          <div class="diff-title">Hard</div>
-          <div class="diff-desc">20 Unique Systems of equations (Test 1 &amp; Test 2). Official dMAT speed standard (1.25 min / question).</div>
-          <div class="diff-specs">
-            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Test 1 &amp; 2)</strong></div>
-            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 mins</strong></div>
-            <div class="spec-row"><span>Type Answers:</span><strong>A, B, C, D in numbers</strong></div>
+          <div class="diff-title" id="diff-card-hard-title">Hard</div>
+          <div class="diff-desc" id="diff-card-hard-desc">20 Unique Systems of equations (Test 1 &amp; Test 2). Official dMAT speed standard (1.25 min / question).</div>
+          <div class="diff-specs" id="diff-card-hard-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow" id="diff-hard-qcount">20 Q (Test 1 &amp; 2)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow" id="diff-hard-timer">25 mins</strong></div>
+            <div class="spec-row"><span>Type Answers:</span><strong id="diff-hard-inputs">A, B, C, D in numbers</strong></div>
           </div>
-          <button class="btn-diff-action btn-hard-primary">Start 25m Exam</button>
+          <button class="btn-diff-action btn-hard-primary" id="btn-diff-hard-action">Start 25m Exam</button>
         </div>
 
       </div>
@@ -311,20 +312,45 @@
 
             <!-- Question Header -->
             <div class="q-stage-head">
-              <div class="q-stage-sub">CORE MODULE · MATHEMATICAL EQUATIONS</div>
+              <div class="q-stage-sub" id="q-stage-sub">CORE MODULE · MATHEMATICAL EQUATIONS</div>
               <h2 class="q-stage-title" id="q-current-number">Question 1 of 20</h2>
-              <p class="q-stage-instruction">
+              <p class="q-stage-instruction" id="q-stage-instruction">
                 Solve the system. Every letter is a whole number from 1 to 20; there is exactly one solution.
               </p>
             </div>
 
-            <!-- Big Equation Box (PDF standard) -->
+            <!-- Figure Sequences Stage Wrap (dMAT Subtest 1) -->
+            <div class="figures-stage-wrap hidden" id="q-figures-stage-wrap">
+              <!-- Sequence Strip: Matrices 1 to 6 -->
+              <div class="figures-sequence-strip" id="q-figures-sequence-strip"></div>
+
+              <!-- Options Grid: Matrix 5 and Matrix 6 -->
+              <div class="figures-options-grid">
+                <div class="figures-opt-col">
+                  <div class="figures-opt-col-head">
+                    <h4>Options for Matrix 5</h4>
+                    <span class="opt-hint">Choose 1, 2, or 3</span>
+                  </div>
+                  <div class="figures-opts-list" id="figures-opts-m5"></div>
+                </div>
+
+                <div class="figures-opt-col">
+                  <div class="figures-opt-col-head">
+                    <h4>Options for Matrix 6</h4>
+                    <span class="opt-hint">Choose 1, 2, or 3</span>
+                  </div>
+                  <div class="figures-opts-list" id="figures-opts-m6"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Big Equation Box (PDF standard - dMAT Subtest 2) -->
             <div class="equations-stage-box" id="q-equations-box">
               <!-- Equation lines dynamically rendered -->
             </div>
 
             <!-- Input Fields for A, B, C, D in numbers -->
-            <div class="answer-entry-card">
+            <div class="answer-entry-card" id="q-math-answer-card">
               <div class="entry-header">
                 <h4>Type the value for each letter in numbers:</h4>
                 <span class="entry-note">Whole numbers 1 to 20</span>
@@ -452,25 +478,10 @@
         <div class="error-msg" id="name-modal-error"></div>
       </div>
 
-      <!-- Test 1 / Test 2 selection below the name -->
+      <!-- Test Selection below candidate name -->
       <div class="form-group" id="test-set-selector-wrap" style="margin-top: 16px;">
-        <label style="display:block; margin-bottom:8px; font-weight:700; font-size:13px; color:var(--t-90);">Select Test Set:</label>
-        <div class="test-set-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
-          <label class="test-set-label active" id="label-test-1" style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:rgba(16, 185, 129, 0.08); border:1.5px solid #10b981; border-radius:8px; cursor:pointer; transition:0.2s;">
-            <input type="radio" name="radio-test-set" id="radio-test-1" value="hard" checked style="accent-color:#10b981; width:16px; height:16px; cursor:pointer;"/>
-            <div>
-              <div style="font-weight:700; font-size:13px; color:#fff;">Test 1</div>
-              <div style="font-size:11px; color:var(--t-45);">Official Set (20Q)</div>
-            </div>
-          </label>
-          <label class="test-set-label" id="label-test-2" style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:var(--bg-02); border:1.5px solid var(--border-lo); border-radius:8px; cursor:pointer; transition:0.2s;">
-            <input type="radio" name="radio-test-set" id="radio-test-2" value="hard_t2" style="accent-color:#10b981; width:16px; height:16px; cursor:pointer;"/>
-            <div>
-              <div style="font-weight:700; font-size:13px; color:#fff;">Test 2</div>
-              <div style="font-size:11px; color:var(--t-45);">New Question Set (20Q)</div>
-            </div>
-          </label>
-        </div>
+        <label style="display:block; margin-bottom:8px; font-weight:700; font-size:13px; color:var(--t-90);" id="test-set-label-heading">Select Practice Test:</label>
+        <div id="test-set-selector-container"></div>
       </div>
 
       <p class="modal-note">
@@ -568,6 +579,8 @@
 </footer>
 
 <!-- Scripts -->
+<script src="figures_render.js"></script>
+<script src="figures_data.js"></script>
 <script src="dmat_data.js"></script>
 <script src="cloud_sync.js"></script>
 <script src="dmat.js"></script>

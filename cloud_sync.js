@@ -33,42 +33,72 @@
     }
   }
 
-  // Hydrate lightweight details with full question texts & solutions from DMAT_DATA
+  // Hydrate lightweight details with full question texts & solutions from DMAT_DATA / FIGURES_DATA
   function enrichSubmissionDetails(sub) {
     if (!sub || typeof sub !== 'object') return sub;
     if (!Array.isArray(sub.details) || sub.details.length === 0) return sub;
 
     let rawKey = (sub.difficultyKey || sub.difficulty || 'hard').toLowerCase();
+    const isFigures = (sub.subtest === 'figures') || rawKey.includes('figure') || (sub.details[0] && sub.details[0].subtest === 'figures');
+
     let diffKey = 'hard';
-    if (rawKey.includes('test 2') || rawKey.includes('test2') || rawKey === 'hard_t2') {
+    if (rawKey.includes('test 5') || rawKey.includes('test5') || rawKey === 'hard_t5') {
+      diffKey = 'hard_t5';
+    } else if (rawKey.includes('test 4') || rawKey.includes('test4') || rawKey === 'hard_t4') {
+      diffKey = 'hard_t4';
+    } else if (rawKey.includes('test 3') || rawKey.includes('test3') || rawKey === 'hard_t3') {
+      diffKey = 'hard_t3';
+    } else if (rawKey.includes('test 2') || rawKey.includes('test2') || rawKey === 'hard_t2') {
       diffKey = 'hard_t2';
     } else if (rawKey.includes('test 1') || rawKey.includes('test1') || rawKey.includes('hard')) {
-      diffKey = 'hard';
+      diffKey = isFigures ? 'hard_t1' : 'hard';
     } else if (rawKey.includes('med')) {
       diffKey = 'medium';
     } else if (rawKey.includes('easy')) {
       diffKey = 'easy';
     }
-    const dataset = (typeof window !== 'undefined' && window.DMAT_DATA && window.DMAT_DATA[diffKey])
-      ? window.DMAT_DATA[diffKey]
-      : ((typeof DMAT_DATA !== 'undefined' && DMAT_DATA[diffKey]) ? DMAT_DATA[diffKey] : []);
+
+    let dataset = [];
+    if (isFigures) {
+      dataset = (typeof window !== 'undefined' && window.FIGURES_DATA && window.FIGURES_DATA[diffKey])
+        ? window.FIGURES_DATA[diffKey]
+        : ((typeof FIGURES_DATA !== 'undefined' && FIGURES_DATA[diffKey]) ? FIGURES_DATA[diffKey] : []);
+    } else {
+      dataset = (typeof window !== 'undefined' && window.DMAT_DATA && window.DMAT_DATA[diffKey])
+        ? window.DMAT_DATA[diffKey]
+        : ((typeof DMAT_DATA !== 'undefined' && DMAT_DATA[diffKey]) ? DMAT_DATA[diffKey] : []);
+    }
 
     sub.details = sub.details.map((d, idx) => {
       if (!d) return {};
-      // If already has full equations array
-      if (Array.isArray(d.equations) && d.equations.length && d.stepByStep) {
+      // If already has full equations array or figure sequence
+      if ((Array.isArray(d.equations) && d.equations.length && d.stepByStep) || (d.subtest === 'figures' && Array.isArray(d.sequence))) {
         return d;
       }
 
-      // If lightweight format: { q, u, c, s }
       const qId = d.q || d.questionId;
       const qData = (dataset && dataset.length)
         ? (dataset.find(item => item.id === qId) || dataset[idx] || {})
         : {};
 
-      const sol = d.s || d.solution || qData.solution || { A: 1, B: 2, C: 3, D: 4 };
-      const user = d.u || d.userAnswer || { A: '', B: '', C: '', D: '' };
+      const sol = d.s || d.solution || qData.solution || {};
+      const user = d.u || d.userAnswer || {};
       const isCorrect = typeof d.c === 'boolean' ? d.c : (typeof d.isCorrect === 'boolean' ? d.isCorrect : false);
+
+      if (isFigures || qData.subtest === 'figures' || d.subtest === 'figures') {
+        return {
+          questionId: qId || qData.id || `fig-${idx + 1}`,
+          subtest: 'figures',
+          title: d.title || qData.title || `Figure Sequence #${idx + 1}`,
+          sequence: d.sequence || qData.sequence || [],
+          optionsM5: d.optionsM5 || qData.optionsM5 || [],
+          optionsM6: d.optionsM6 || qData.optionsM6 || [],
+          solution: sol,
+          userAnswer: user,
+          isCorrect: isCorrect,
+          explanation: d.explanation || qData.explanation || ''
+        };
+      }
 
       return {
         questionId: qId || qData.id || `q-${idx + 1}`,

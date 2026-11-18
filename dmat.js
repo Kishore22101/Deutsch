@@ -1,4 +1,5 @@
 // dmat.js – Complete Controller for dMAT Testing & Submissions
+// Supports Figure Sequences (Formenreihen) with 5 Practice Tests (20Q, 25m) & Mathematic Equations
 
 (function () {
   'use strict';
@@ -6,12 +7,12 @@
   // State Management
   const state = {
     view: 'categories', // 'categories' | 'difficulties' | 'category-info' | 'exam' | 'results' | 'submissions'
-    selectedCategory: null,
-    selectedDifficulty: 'hard',
+    selectedCategory: 'figures', // 'figures' | 'math' | 'latin' | 'modules'
+    selectedDifficulty: 'hard_t1', // 'easy' | 'medium' | 'hard_t1' .. 'hard_t5'
     candidateName: localStorage.getItem('dmat_last_candidate') || '',
     questions: [],
     currentIndex: 0,
-    userAnswers: {}, // { [qId]: { A: '', B: '', C: '', D: '' } }
+    userAnswers: {}, // figures: { [qId]: { m5: 1, m6: 2 } }, math: { [qId]: { A: '', B: '', C: '', D: '' } }
     flagged: new Set(),
     timerTotalSeconds: 25 * 60,
     timerRemainingSeconds: 25 * 60,
@@ -53,6 +54,31 @@
       candidateNameInput: document.getElementById('input-candidate-name'),
       nameModalError: document.getElementById('name-modal-error'),
 
+      // Difficulty selection headers
+      diffCatBadge: document.getElementById('diff-cat-badge'),
+      diffCatTitle: document.getElementById('diff-cat-title'),
+      diffCatDesc: document.getElementById('diff-cat-desc'),
+      diffCardEasyTitle: document.getElementById('diff-card-easy-title'),
+      diffCardEasyDesc: document.getElementById('diff-card-easy-desc'),
+      diffEasyQcount: document.getElementById('diff-easy-qcount'),
+      diffEasyTimer: document.getElementById('diff-easy-timer'),
+      diffEasyInputs: document.getElementById('diff-easy-inputs'),
+      diffCardMedTitle: document.getElementById('diff-card-med-title'),
+      diffCardMedDesc: document.getElementById('diff-card-med-desc'),
+      diffMedQcount: document.getElementById('diff-med-qcount'),
+      diffMedTimer: document.getElementById('diff-med-timer'),
+      diffMedInputs: document.getElementById('diff-med-inputs'),
+      diffCardHardTitle: document.getElementById('diff-card-hard-title'),
+      diffCardHardDesc: document.getElementById('diff-card-hard-desc'),
+      diffHardQcount: document.getElementById('diff-hard-qcount'),
+      diffHardTimer: document.getElementById('diff-hard-timer'),
+      diffHardInputs: document.getElementById('diff-hard-inputs'),
+
+      // Test Set Selector below candidate name
+      testSetWrap: document.getElementById('test-set-selector-wrap'),
+      testSetContainer: document.getElementById('test-set-selector-container'),
+      testSetLabelHeading: document.getElementById('test-set-label-heading'),
+
       // Exam components
       examTitle: document.getElementById('exam-title'),
       examCandidateName: document.getElementById('exam-candidate-name'),
@@ -61,11 +87,24 @@
       btnSubmitExam: document.getElementById('btn-submit-exam'),
       qPalette: document.getElementById('q-palette'),
       qCurrentNumber: document.getElementById('q-current-number'),
+      qStageSub: document.getElementById('q-stage-sub'),
+      qStageInstruction: document.getElementById('q-stage-instruction'),
+
+      // Figure sequences elements
+      qFiguresStageWrap: document.getElementById('q-figures-stage-wrap'),
+      qFiguresSequenceStrip: document.getElementById('q-figures-sequence-strip'),
+      figuresOptsM5: document.getElementById('figures-opts-m5'),
+      figuresOptsM6: document.getElementById('figures-opts-m6'),
+
+      // Math equation elements
       qEquationsBox: document.getElementById('q-equations-box'),
+      qMathAnswerCard: document.getElementById('q-math-answer-card'),
       inputA: document.getElementById('ans-A'),
       inputB: document.getElementById('ans-B'),
       inputC: document.getElementById('ans-C'),
       inputD: document.getElementById('ans-D'),
+
+      // Navigation & controls
       btnPrevQ: document.getElementById('btn-prev-q'),
       btnNextQ: document.getElementById('btn-next-q'),
       btnFlagQ: document.getElementById('btn-flag-q'),
@@ -114,14 +153,14 @@
 
     // Live cross-device synchronization
     if (typeof CloudSync !== 'undefined') {
-      CloudSync.fetchRemoteSubmissions().then(merged => {
+      CloudSync.fetchRemoteSubmissions().then(() => {
         updateSubmissionsCount();
         if (dom.subTableBody && dom.submissionsModal && !dom.submissionsModal.classList.contains('hidden')) {
           renderSubmissionsTable();
         }
       }).catch(() => {});
 
-      CloudSync.subscribeRealTime((newSub) => {
+      CloudSync.subscribeRealTime(() => {
         updateSubmissionsCount();
         if (dom.subTableBody && dom.submissionsModal && !dom.submissionsModal.classList.contains('hidden')) {
           renderSubmissionsTable();
@@ -136,7 +175,6 @@
       if (stored) {
         const parsed = JSON.parse(stored);
         if (Array.isArray(parsed)) {
-          // Filter out any seeded sample records (sub-live-*)
           return parsed.filter(s => s && s.id && !s.id.startsWith('sub-live-'));
         }
       }
@@ -207,17 +245,10 @@
       });
     }
 
-    // Test 1 / Test 2 radio selector inside candidate modal
-    const radioT1 = document.getElementById('radio-test-1');
-    const radioT2 = document.getElementById('radio-test-2');
-    if (radioT1) radioT1.addEventListener('change', syncTestSetSelection);
-    if (radioT2) radioT2.addEventListener('change', syncTestSetSelection);
-
-    // Exam question answers input
+    // Exam question answers input (Math only)
     [dom.inputA, dom.inputB, dom.inputC, dom.inputD].forEach((inp, idx, arr) => {
       if (!inp) return;
-      inp.addEventListener('input', (e) => {
-        // Sanitize to integer in range 1..20
+      inp.addEventListener('input', () => {
         let val = inp.value.replace(/\D/g, '');
         if (val !== '') {
           let num = parseInt(val, 10);
@@ -320,26 +351,79 @@
       dom.viewResults.classList.remove('hidden');
     }
 
-    // Hide footer during exam
     if (viewName !== 'exam') {
       document.body.classList.remove('exam-active');
     }
   }
 
+  function updateDifficultyView() {
+    const isFigures = state.selectedCategory === 'figures';
+    if (isFigures) {
+      if (dom.diffCatBadge) dom.diffCatBadge.textContent = 'Category 1 · Figure Sequences (Formenreihen)';
+      if (dom.diffCatTitle) dom.diffCatTitle.textContent = 'Choose Difficulty Level';
+      if (dom.diffCatDesc)  dom.diffCatDesc.textContent  = 'Analyze official 3×3 matrix sequence rules. Find the 5th and 6th figures in each series.';
+
+      // Easy
+      if (dom.diffCardEasyTitle) dom.diffCardEasyTitle.textContent = 'Easy';
+      if (dom.diffCardEasyDesc)  dom.diffCardEasyDesc.textContent  = 'Single moving element. Direct clockwise and counter-clockwise shifts.';
+      if (dom.diffEasyQcount)    dom.diffEasyQcount.textContent    = '20 Q';
+      if (dom.diffEasyTimer)     dom.diffEasyTimer.textContent     = '25 mins';
+      if (dom.diffEasyInputs)    dom.diffEasyInputs.textContent    = 'Matrix 5 & 6 Options';
+
+      // Medium
+      if (dom.diffCardMedTitle) dom.diffCardMedTitle.textContent = 'Medium';
+      if (dom.diffCardMedDesc)  dom.diffCardMedDesc.textContent  = 'Two alternating elements. Parity steps, directional rotations, and shape changes.';
+      if (dom.diffMedQcount)    dom.diffMedQcount.textContent    = '20 Q';
+      if (dom.diffMedTimer)     dom.diffMedTimer.textContent     = '25 mins';
+      if (dom.diffMedInputs)    dom.diffMedInputs.textContent    = 'Matrix 5 & 6 Options';
+
+      // Hard
+      if (dom.diffCardHardTitle) dom.diffCardHardTitle.textContent = 'Hard (5 Tests)';
+      if (dom.diffCardHardDesc)  dom.diffCardHardDesc.textContent  = '5 Complete Official Practice Tests (Test 1 to 5). Complex multi-element cyclic permutations.';
+      if (dom.diffHardQcount)    dom.diffHardQcount.textContent    = '20 Q (5 Tests)';
+      if (dom.diffHardTimer)     dom.diffHardTimer.textContent     = '25 mins';
+      if (dom.diffHardInputs)    dom.diffHardInputs.textContent    = 'Matrix 5 & 6 Options';
+    } else {
+      if (dom.diffCatBadge) dom.diffCatBadge.textContent = 'Category 2 · Mathematic Equations';
+      if (dom.diffCatTitle) dom.diffCatTitle.textContent = 'Choose Difficulty Level';
+      if (dom.diffCatDesc)  dom.diffCatDesc.textContent  = 'Test your algebraic deduction and system substitution skills. Select your level to begin.';
+
+      // Easy
+      if (dom.diffCardEasyTitle) dom.diffCardEasyTitle.textContent = 'Easy';
+      if (dom.diffCardEasyDesc)  dom.diffCardEasyDesc.textContent  = '5 Systems of equations. Single-variable substitutions and basic relations.';
+      if (dom.diffEasyQcount)    dom.diffEasyQcount.textContent    = '5 Q';
+      if (dom.diffEasyTimer)     dom.diffEasyTimer.textContent     = '10 mins';
+      if (dom.diffEasyInputs)    dom.diffEasyInputs.textContent    = 'A, B, C, D in numbers';
+
+      // Medium
+      if (dom.diffCardMedTitle) dom.diffCardMedTitle.textContent = 'Medium';
+      if (dom.diffCardMedDesc)  dom.diffCardMedDesc.textContent  = '4 Systems of equations. Chained substitutions and multi-step balance equations.';
+      if (dom.diffMedQcount)    dom.diffMedQcount.textContent    = '4 Q';
+      if (dom.diffMedTimer)     dom.diffMedTimer.textContent     = '15 mins';
+      if (dom.diffMedInputs)    dom.diffMedInputs.textContent    = 'A, B, C, D in numbers';
+
+      // Hard
+      if (dom.diffCardHardTitle) dom.diffCardHardTitle.textContent = 'Hard';
+      if (dom.diffCardHardDesc)  dom.diffCardHardDesc.textContent  = '20 Unique Systems of equations (Test 1 & Test 2). Official dMAT speed standard.';
+      if (dom.diffHardQcount)    dom.diffHardQcount.textContent    = '20 Q (Test 1 & 2)';
+      if (dom.diffHardTimer)     dom.diffHardTimer.textContent     = '25 mins';
+      if (dom.diffHardInputs)    dom.diffHardInputs.textContent    = 'A, B, C, D in numbers';
+    }
+  }
+
   function handleCategoryClick(catKey) {
     state.selectedCategory = catKey;
-    if (catKey === 'math') {
-      // 2. Mathematic Equations -> shows "Easy", "Medium", "Hard"
+    if (catKey === 'figures' || catKey === 'math') {
+      updateDifficultyView();
       setView('difficulties');
     } else {
-      // Show info/overview for Figure Sequences, Latin Squares, Subject Modules
       renderCategoryInfo(catKey);
       setView('category-info');
     }
   }
 
   function renderCategoryInfo(catKey) {
-    const info = DMAT_DATA.categoryInfo[catKey];
+    const info = (typeof DMAT_DATA !== 'undefined' && DMAT_DATA.categoryInfo) ? DMAT_DATA.categoryInfo[catKey] : null;
     if (!info) return;
 
     document.getElementById('cat-info-title').textContent = `${info.name} (${info.subtitle})`;
@@ -362,68 +446,159 @@
     }
   }
 
-  function syncTestSetSelection() {
-    const radioT1 = document.getElementById('radio-test-1');
-    const radioT2 = document.getElementById('radio-test-2');
-    const labelT1 = document.getElementById('label-test-1');
-    const labelT2 = document.getElementById('label-test-2');
-    const label = document.getElementById('name-modal-diff-label');
+  function renderTestSetSelector(category, difficulty) {
+    if (!dom.testSetContainer) return;
+    dom.testSetContainer.innerHTML = '';
 
-    if (radioT2 && radioT2.checked) {
-      if (state.selectedDifficulty.startsWith('hard')) state.selectedDifficulty = 'hard_t2';
-      if (label) label.textContent = 'Hard Mode · Test 2 (New Questions)';
-      if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Test 2 (25m) ➔';
-      if (labelT2) {
-        labelT2.style.borderColor = '#10b981';
-        labelT2.style.background = 'rgba(16, 185, 129, 0.08)';
+    if (category === 'figures') {
+      if (difficulty.startsWith('hard')) {
+        dom.testSetWrap.style.display = 'block';
+        if (dom.testSetLabelHeading) dom.testSetLabelHeading.textContent = 'Select Figure Sequences Test (20Q · 25 mins):';
+
+        const tests = [
+          { id: 'hard_t1', label: 'Test 1', sub: 'dMAT Standard' },
+          { id: 'hard_t2', label: 'Test 2', sub: 'Pattern Set 2' },
+          { id: 'hard_t3', label: 'Test 3', sub: 'Pattern Set 3' },
+          { id: 'hard_t4', label: 'Test 4', sub: 'Pattern Set 4' },
+          { id: 'hard_t5', label: 'Test 5', sub: 'Mastery Challenge' }
+        ];
+
+        let grid = document.createElement('div');
+        grid.className = 'test-set-grid-5';
+
+        tests.forEach((t) => {
+          const isSelected = (state.selectedDifficulty === t.id) || (state.selectedDifficulty === 'hard' && t.id === 'hard_t1');
+          const card = document.createElement('label');
+          card.className = `test-set-card-radio ${isSelected ? 'active' : ''}`;
+          card.style.cssText = `
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 10px 8px; border-radius: 8px; border: 2px solid ${isSelected ? '#10b981' : 'var(--border-lo)'};
+            background: ${isSelected ? 'rgba(16, 185, 129, 0.12)' : 'var(--bg-02)'};
+            cursor: pointer; text-align: center; transition: all 0.2s; user-select: none;
+          `;
+
+          card.innerHTML = `
+            <input type="radio" name="figure_test_radio" value="${t.id}" ${isSelected ? 'checked' : ''} style="display:none;"/>
+            <strong style="font-size:13px; color:${isSelected ? '#10b981' : 'var(--t-100)'};">${t.label}</strong>
+            <span style="font-size:10px; color:var(--t-60); margin-top:2px;">${t.sub}</span>
+          `;
+
+          card.addEventListener('click', () => {
+            state.selectedDifficulty = t.id;
+            renderTestSetSelector(category, 'hard');
+            updateModalLabels();
+          });
+
+          grid.appendChild(card);
+        });
+
+        dom.testSetContainer.appendChild(grid);
+      } else {
+        dom.testSetWrap.style.display = 'none';
       }
-      if (labelT1) {
-        labelT1.style.borderColor = 'var(--border-lo)';
-        labelT1.style.background = 'var(--bg-02)';
+    } else if (category === 'math') {
+      if (difficulty.startsWith('hard')) {
+        dom.testSetWrap.style.display = 'block';
+        if (dom.testSetLabelHeading) dom.testSetLabelHeading.textContent = 'Select Mathematic Equations Test (20Q · 25 mins):';
+
+        const tests = [
+          { id: 'hard_t1', label: 'Test 1', sub: 'dMAT Standard (20Q)' },
+          { id: 'hard_t2', label: 'Test 2', sub: 'New Systems (20Q)' }
+        ];
+
+        let grid = document.createElement('div');
+        grid.style.cssText = 'display: grid; grid-template-columns: 1fr 1fr; gap: 10px;';
+
+        tests.forEach((t) => {
+          const isSelected = (state.selectedDifficulty === t.id) || (state.selectedDifficulty === 'hard' && t.id === 'hard_t1');
+          const card = document.createElement('label');
+          card.className = `test-set-card-radio ${isSelected ? 'active' : ''}`;
+          card.style.cssText = `
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 12px 10px; border-radius: 8px; border: 2px solid ${isSelected ? '#10b981' : 'var(--border-lo)'};
+            background: ${isSelected ? 'rgba(16, 185, 129, 0.12)' : 'var(--bg-02)'};
+            cursor: pointer; text-align: center; transition: all 0.2s; user-select: none;
+          `;
+
+          card.innerHTML = `
+            <input type="radio" name="math_test_radio" value="${t.id}" ${isSelected ? 'checked' : ''} style="display:none;"/>
+            <strong style="font-size:13px; color:${isSelected ? '#10b981' : 'var(--t-100)'};">${t.label}</strong>
+            <span style="font-size:11px; color:var(--t-60); margin-top:2px;">${t.sub}</span>
+          `;
+
+          card.addEventListener('click', () => {
+            state.selectedDifficulty = t.id;
+            renderTestSetSelector(category, 'hard');
+            updateModalLabels();
+          });
+
+          grid.appendChild(card);
+        });
+
+        dom.testSetContainer.appendChild(grid);
+      } else {
+        dom.testSetWrap.style.display = 'none';
+      }
+    }
+  }
+
+  function updateModalLabels() {
+    const label = document.getElementById('name-modal-diff-label');
+    const timerLabel = document.getElementById('name-modal-timer-label');
+    const qCountLabel = document.getElementById('name-modal-qcount-label');
+
+    const isFigures = (state.selectedCategory === 'figures');
+    const diff = state.selectedDifficulty;
+
+    if (isFigures) {
+      timerLabel.textContent = '25 Minutes';
+      qCountLabel.textContent = '20 Matrix Sequences';
+
+      if (diff.startsWith('hard')) {
+        let testNum = diff.replace('hard_t', '');
+        if (testNum === 'hard') testNum = '1';
+        label.textContent = `Figure Sequences · Hard Test ${testNum} of 5`;
+        if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = `Begin Test ${testNum} (25m) ➔`;
+      } else if (diff === 'medium') {
+        label.textContent = 'Figure Sequences · Medium Mode';
+        if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Medium Test (25m) ➔';
+      } else {
+        label.textContent = 'Figure Sequences · Easy Mode';
+        if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Easy Test (25m) ➔';
       }
     } else {
-      if (state.selectedDifficulty.startsWith('hard')) state.selectedDifficulty = 'hard';
-      if (label) label.textContent = 'Hard Mode · Test 1 (dMAT Standard)';
-      if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Test 1 (25m) ➔';
-      if (labelT1) {
-        labelT1.style.borderColor = '#10b981';
-        labelT1.style.background = 'rgba(16, 185, 129, 0.08)';
-      }
-      if (labelT2) {
-        labelT2.style.borderColor = 'var(--border-lo)';
-        labelT2.style.background = 'var(--bg-02)';
+      if (diff.startsWith('hard')) {
+        timerLabel.textContent = '25 Minutes';
+        qCountLabel.textContent = '20 System Questions';
+        const isT2 = (diff === 'hard_t2');
+        label.textContent = isT2 ? 'Mathematic Equations · Hard Test 2' : 'Mathematic Equations · Hard Test 1';
+        if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = isT2 ? 'Begin Test 2 (25m) ➔' : 'Begin Test 1 (25m) ➔';
+      } else if (diff === 'medium') {
+        timerLabel.textContent = '15 Minutes';
+        qCountLabel.textContent = '4 System Questions';
+        label.textContent = 'Mathematic Equations · Medium Mode';
+        if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Medium Test (15m) ➔';
+      } else {
+        timerLabel.textContent = '10 Minutes';
+        qCountLabel.textContent = '5 System Questions';
+        label.textContent = 'Mathematic Equations · Easy Mode';
+        if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Easy Test (10m) ➔';
       }
     }
   }
 
   function promptCandidateName(difficulty) {
-    state.selectedDifficulty = difficulty;
+    if (difficulty === 'hard') {
+      state.selectedDifficulty = 'hard_t1';
+    } else {
+      state.selectedDifficulty = difficulty;
+    }
+
     dom.nameModalError.textContent = '';
     dom.candidateNameInput.value = state.candidateName || '';
 
-    const label = document.getElementById('name-modal-diff-label');
-    const timerLabel = document.getElementById('name-modal-timer-label');
-    const qCountLabel = document.getElementById('name-modal-qcount-label');
-    const testSetWrap = document.getElementById('test-set-selector-wrap');
-
-    if (difficulty === 'hard' || difficulty === 'hard_t1' || difficulty === 'hard_t2') {
-      if (testSetWrap) testSetWrap.style.display = 'block';
-      timerLabel.textContent = '25 Minutes';
-      qCountLabel.textContent = '20 System Questions';
-      syncTestSetSelection();
-    } else if (difficulty === 'medium') {
-      if (testSetWrap) testSetWrap.style.display = 'none';
-      label.textContent = 'Medium Mode · Intermediate';
-      timerLabel.textContent = '15 Minutes';
-      qCountLabel.textContent = '4 System Questions';
-      if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Medium Test (15m) ➔';
-    } else {
-      if (testSetWrap) testSetWrap.style.display = 'none';
-      label.textContent = 'Easy Mode · Warm-Up';
-      timerLabel.textContent = '10 Minutes';
-      qCountLabel.textContent = '5 System Questions';
-      if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Easy Test (10m) ➔';
-    }
+    renderTestSetSelector(state.selectedCategory, difficulty);
+    updateModalLabels();
 
     dom.nameModal.classList.remove('hidden');
     setTimeout(() => {
@@ -440,11 +615,6 @@
       return;
     }
 
-    if (state.selectedDifficulty.startsWith('hard')) {
-      const radioT2 = document.getElementById('radio-test-2');
-      state.selectedDifficulty = (radioT2 && radioT2.checked) ? 'hard_t2' : 'hard';
-    }
-
     state.candidateName = name;
     localStorage.setItem('dmat_last_candidate', name);
     dom.nameModal.classList.add('hidden');
@@ -454,49 +624,63 @@
 
   function startExam(difficulty) {
     state.selectedDifficulty = difficulty;
-    if (difficulty === 'hard_t2') {
-      state.questions = (DMAT_DATA.hard_t2 || []).slice(0, 20);
-    } else if (difficulty === 'hard' || difficulty === 'hard_t1') {
-      state.questions = (DMAT_DATA.hard || []).slice(0, 20);
-    } else if (difficulty === 'medium') {
-      state.questions = DMAT_DATA.medium;
-    } else {
-      state.questions = DMAT_DATA.easy;
-    }
-
-    state.currentIndex = 0;
     state.userAnswers = {};
     state.flagged.clear();
+    state.currentIndex = 0;
+    state.examStartTime = new Date();
 
-    // Setup Timer
-    if (difficulty === 'hard' || difficulty === 'hard_t1' || difficulty === 'hard_t2') {
-      state.timerTotalSeconds = 25 * 60; // 25 minutes exactly
-    } else if (difficulty === 'medium') {
-      state.timerTotalSeconds = 15 * 60;
+    const isFigures = (state.selectedCategory === 'figures');
+
+    if (isFigures) {
+      const figData = (typeof window !== 'undefined' && window.FIGURES_DATA) ? window.FIGURES_DATA : {};
+      let dataset = figData[difficulty] || figData.hard_t1 || figData.easy || [];
+      state.questions = dataset.slice(0, 20);
+
+      state.timerTotalSeconds = 25 * 60;
+      state.timerRemainingSeconds = 25 * 60;
+
+      let testLabel = 'Hard Mode';
+      if (difficulty.startsWith('hard_t')) {
+        testLabel = `Hard · Test ${difficulty.replace('hard_t', '')}`;
+      } else if (difficulty === 'medium') {
+        testLabel = 'Medium Mode';
+      } else if (difficulty === 'easy') {
+        testLabel = 'Easy Mode';
+      }
+
+      dom.examTitle.textContent = `Figure Sequences (Formenreihen) – ${testLabel}`;
     } else {
-      state.timerTotalSeconds = 10 * 60;
+      const mathData = (typeof window !== 'undefined' && window.DMAT_DATA) ? window.DMAT_DATA : {};
+      if (difficulty === 'hard_t2') {
+        state.questions = (mathData.hard_t2 || []).slice(0, 20);
+        state.timerTotalSeconds = 25 * 60;
+        dom.examTitle.textContent = 'Mathematic Equations – Hard Test 2';
+      } else if (difficulty === 'hard' || difficulty === 'hard_t1') {
+        state.questions = (mathData.hard || []).slice(0, 20);
+        state.timerTotalSeconds = 25 * 60;
+        dom.examTitle.textContent = 'Mathematic Equations – Hard Test 1';
+      } else if (difficulty === 'medium') {
+        state.questions = (mathData.medium || []).slice(0, 4);
+        state.timerTotalSeconds = 15 * 60;
+        dom.examTitle.textContent = 'Mathematic Equations – Medium Mode';
+      } else {
+        state.questions = (mathData.easy || []).slice(0, 5);
+        state.timerTotalSeconds = 10 * 60;
+        dom.examTitle.textContent = 'Mathematic Equations – Easy Mode';
+      }
+      state.timerRemainingSeconds = state.timerTotalSeconds;
     }
 
-    state.timerRemainingSeconds = state.timerTotalSeconds;
-    state.examStartTime = new Date();
-    state.examEndTime = null;
-
-    // UI labels
-    const diffLabel = (difficulty === 'hard_t2') ? 'Hard – Test 2'
-      : (difficulty === 'hard' || difficulty === 'hard_t1') ? 'Hard – Test 1'
-      : (difficulty.charAt(0).toUpperCase() + difficulty.slice(1));
-    dom.examTitle.textContent = `Mathematic Equations – ${diffLabel}`;
     dom.examCandidateName.textContent = state.candidateName;
 
-    // Render palette & question
-    renderPalette();
-    loadQuestion(0);
-
-    // Start timer interval
+    // Start Timer
     if (state.timerInterval) clearInterval(state.timerInterval);
     updateTimerDisplay();
     state.timerInterval = setInterval(handleTimerTick, 1000);
 
+    // Initialize palette and load first question
+    renderPalette();
+    loadQuestion(0);
     setView('exam');
   }
 
@@ -521,7 +705,7 @@
     const timeStr = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
     dom.examTimer.textContent = timeStr;
 
-    // Visual urgency classes
+    // Urgency indicators
     dom.examTimer.classList.remove('timer-warning', 'timer-urgent');
     if (state.timerRemainingSeconds <= 60) {
       dom.examTimer.classList.add('timer-urgent');
@@ -566,43 +750,138 @@
     }
 
     const q = state.questions[idx];
+    if (!q) return;
+
     const ans = state.userAnswers[q.id];
 
     if (state.flagged.has(q.id)) {
       btn.classList.add('flagged');
     }
 
-    if (ans) {
-      const filledCount = ['A', 'B', 'C', 'D'].filter(k => ans[k] !== undefined && ans[k] !== '').length;
-      if (filledCount === 4) {
+    if (q.subtest === 'figures') {
+      if (ans && ans.m5 && ans.m6) {
         btn.classList.add('answered');
-      } else if (filledCount > 0) {
+      } else if (ans && (ans.m5 || ans.m6)) {
         btn.classList.add('partial');
       }
+    } else {
+      if (ans) {
+        const filledCount = ['A', 'B', 'C', 'D'].filter(k => ans[k] !== undefined && ans[k] !== '').length;
+        if (filledCount === 4) {
+          btn.classList.add('answered');
+        } else if (filledCount > 0) {
+          btn.classList.add('partial');
+        }
+      }
+    }
+  }
+
+  function renderFigureQuestion(q) {
+    // Hide math boxes
+    if (dom.qEquationsBox) dom.qEquationsBox.classList.add('hidden');
+    if (dom.qMathAnswerCard) dom.qMathAnswerCard.classList.add('hidden');
+
+    // Show figures wrap
+    if (dom.qFiguresStageWrap) dom.qFiguresStageWrap.classList.remove('hidden');
+
+    if (dom.qStageSub) dom.qStageSub.textContent = 'CORE MODULE · FIGURE SEQUENCES (FORMENREIHEN)';
+    if (dom.qStageInstruction) dom.qStageInstruction.textContent = 'Analyze the sequence of matrices from left to right. Select the correct figure for Matrix 5 and Matrix 6 from the options below. Both must be correct.';
+
+    const userAns = state.userAnswers[q.id] || {};
+
+    // 1. Render sequence strip
+    function refreshStrip() {
+      if (typeof FiguresRender !== 'undefined' && dom.qFiguresSequenceStrip) {
+        dom.qFiguresSequenceStrip.innerHTML = FiguresRender.renderFigureSequenceStrip(q, state.userAnswers[q.id] || {});
+      }
+    }
+    refreshStrip();
+
+    // 2. Render Options for Matrix 5
+    if (dom.figuresOptsM5) {
+      dom.figuresOptsM5.innerHTML = '';
+      (q.optionsM5 || []).forEach((optShapes, oIdx) => {
+        const optNum = oIdx + 1;
+        const isSelected = (userAns.m5 === optNum);
+        const cardWrap = document.createElement('div');
+        if (typeof FiguresRender !== 'undefined') {
+          cardWrap.innerHTML = FiguresRender.renderOptionCard(optShapes, optNum, isSelected, 78);
+        }
+        const card = cardWrap.firstElementChild;
+        card.addEventListener('click', () => {
+          if (!state.userAnswers[q.id]) state.userAnswers[q.id] = {};
+          state.userAnswers[q.id].m5 = optNum;
+          renderFigureQuestion(q);
+          updatePaletteItem(state.currentIndex);
+        });
+        dom.figuresOptsM5.appendChild(card);
+      });
+    }
+
+    // 3. Render Options for Matrix 6
+    if (dom.figuresOptsM6) {
+      dom.figuresOptsM6.innerHTML = '';
+      (q.optionsM6 || []).forEach((optShapes, oIdx) => {
+        const optNum = oIdx + 1;
+        const isSelected = (userAns.m6 === optNum);
+        const cardWrap = document.createElement('div');
+        if (typeof FiguresRender !== 'undefined') {
+          cardWrap.innerHTML = FiguresRender.renderOptionCard(optShapes, optNum, isSelected, 78);
+        }
+        const card = cardWrap.firstElementChild;
+        card.addEventListener('click', () => {
+          if (!state.userAnswers[q.id]) state.userAnswers[q.id] = {};
+          state.userAnswers[q.id].m6 = optNum;
+          renderFigureQuestion(q);
+          updatePaletteItem(state.currentIndex);
+        });
+        dom.figuresOptsM6.appendChild(card);
+      });
     }
   }
 
   function loadQuestion(idx) {
     state.currentIndex = idx;
     const q = state.questions[idx];
+    if (!q) return;
 
     dom.qCurrentNumber.textContent = `Question ${idx + 1} of ${state.questions.length}`;
 
-    // Equations
-    dom.qEquationsBox.innerHTML = '';
-    q.equations.forEach(eq => {
-      const line = document.createElement('div');
-      line.className = 'equation-line';
-      line.textContent = eq;
-      dom.qEquationsBox.appendChild(line);
-    });
+    if (q.subtest === 'figures') {
+      renderFigureQuestion(q);
+    } else {
+      // Hide figure stage wrap
+      if (dom.qFiguresStageWrap) dom.qFiguresStageWrap.classList.add('hidden');
+      if (dom.qEquationsBox) dom.qEquationsBox.classList.remove('hidden');
+      if (dom.qMathAnswerCard) dom.qMathAnswerCard.classList.remove('hidden');
 
-    // Load saved answers if any
-    const saved = state.userAnswers[q.id] || { A: '', B: '', C: '', D: '' };
-    dom.inputA.value = saved.A || '';
-    dom.inputB.value = saved.B || '';
-    dom.inputC.value = saved.C || '';
-    dom.inputD.value = saved.D || '';
+      if (dom.qStageSub) dom.qStageSub.textContent = 'CORE MODULE · MATHEMATICAL EQUATIONS';
+      if (dom.qStageInstruction) dom.qStageInstruction.textContent = 'Solve the system. Every letter is a whole number from 1 to 20; there is exactly one solution.';
+
+      // Equations
+      dom.qEquationsBox.innerHTML = '';
+      (q.equations || []).forEach(eq => {
+        const line = document.createElement('div');
+        line.className = 'equation-line';
+        line.textContent = eq;
+        dom.qEquationsBox.appendChild(line);
+      });
+
+      // Load saved answers if any
+      const saved = state.userAnswers[q.id] || { A: '', B: '', C: '', D: '' };
+      dom.inputA.value = saved.A || '';
+      dom.inputB.value = saved.B || '';
+      dom.inputC.value = saved.C || '';
+      dom.inputD.value = saved.D || '';
+
+      // Auto-focus input A for math
+      setTimeout(() => {
+        if (dom.inputA) {
+          dom.inputA.focus();
+          dom.inputA.select();
+        }
+      }, 50);
+    }
 
     // Flag button state
     if (state.flagged.has(q.id)) {
@@ -624,24 +903,20 @@
     dom.btnNextQ.disabled = (idx === state.questions.length - 1);
 
     updateAllPaletteItems();
-
-    // Auto-focus input A
-    setTimeout(() => {
-      dom.inputA.focus();
-      dom.inputA.select();
-    }, 50);
   }
 
   function saveCurrentInputValues() {
     const q = state.questions[state.currentIndex];
     if (!q) return;
 
-    state.userAnswers[q.id] = {
-      A: dom.inputA.value.trim(),
-      B: dom.inputB.value.trim(),
-      C: dom.inputC.value.trim(),
-      D: dom.inputD.value.trim()
-    };
+    if (q.subtest !== 'figures') {
+      state.userAnswers[q.id] = {
+        A: dom.inputA.value.trim(),
+        B: dom.inputB.value.trim(),
+        C: dom.inputC.value.trim(),
+        D: dom.inputD.value.trim()
+      };
+    }
   }
 
   function goToQuestion(idx) {
@@ -664,12 +939,13 @@
   function handleManualSubmit() {
     saveCurrentInputValues();
 
-    // Count unanswered questions
     let unansweredCount = 0;
     state.questions.forEach(q => {
       const ans = state.userAnswers[q.id];
-      if (!ans || !ans.A || !ans.B || !ans.C || !ans.D) {
-        unansweredCount++;
+      if (q.subtest === 'figures') {
+        if (!ans || !ans.m5 || !ans.m6) unansweredCount++;
+      } else {
+        if (!ans || !ans.A || !ans.B || !ans.C || !ans.D) unansweredCount++;
       }
     });
 
@@ -692,43 +968,85 @@
     const timeTakenFormatted = formatDuration(secondsTaken);
     const timeLeftFormatted = formatDuration(state.timerRemainingSeconds);
 
-    // Calculate score
     let correctCount = 0;
-    const details = state.questions.map(q => {
-      const user = state.userAnswers[q.id] || { A: '', B: '', C: '', D: '' };
-      const sol = q.solution;
+    const isFiguresExam = (state.selectedCategory === 'figures');
 
-      const isACorrect = parseInt(user.A, 10) === sol.A;
-      const isBCorrect = parseInt(user.B, 10) === sol.B;
-      const isCCorrect = parseInt(user.C, 10) === sol.C;
-      const isDCorrect = parseInt(user.D, 10) === sol.D;
+    const details = state.questions.map((q) => {
+      const user = state.userAnswers[q.id] || {};
+      const sol = q.solution || {};
 
-      const allCorrect = (isACorrect && isBCorrect && isCCorrect && isDCorrect);
-      if (allCorrect) correctCount++;
+      if (q.subtest === 'figures') {
+        const isM5Correct = parseInt(user.m5, 10) === sol.m5;
+        const isM6Correct = parseInt(user.m6, 10) === sol.m6;
+        const allCorrect = (isM5Correct && isM6Correct);
+        if (allCorrect) correctCount++;
 
-      return {
-        questionId: q.id,
-        equations: q.equations,
-        solution: sol,
-        userAnswer: user,
-        isCorrect: allCorrect,
-        stepByStep: q.stepByStep,
-        fieldCorrectness: { A: isACorrect, B: isBCorrect, C: isCCorrect, D: isDCorrect }
-      };
+        return {
+          questionId: q.id,
+          subtest: 'figures',
+          title: q.title || 'Figure Sequence',
+          sequence: q.matrices || q.sequence,
+          optionsM5: q.optionsM5,
+          optionsM6: q.optionsM6,
+          solution: sol,
+          userAnswer: user,
+          isCorrect: allCorrect,
+          explanation: q.ruleExplanation || q.explanation || '',
+          fieldCorrectness: { m5: isM5Correct, m6: isM6Correct }
+        };
+      } else {
+        const isACorrect = parseInt(user.A, 10) === sol.A;
+        const isBCorrect = parseInt(user.B, 10) === sol.B;
+        const isCCorrect = parseInt(user.C, 10) === sol.C;
+        const isDCorrect = parseInt(user.D, 10) === sol.D;
+        const allCorrect = (isACorrect && isBCorrect && isCCorrect && isDCorrect);
+        if (allCorrect) correctCount++;
+
+        return {
+          questionId: q.id,
+          subtest: 'math',
+          equations: q.equations,
+          solution: sol,
+          userAnswer: user,
+          isCorrect: allCorrect,
+          stepByStep: q.stepByStep,
+          fieldCorrectness: { A: isACorrect, B: isBCorrect, C: isCCorrect, D: isDCorrect }
+        };
+      }
     });
 
     const total = state.questions.length;
     const percentage = Math.round((correctCount / total) * 100);
 
-    const diffDisplay = (state.selectedDifficulty === 'hard_t2') ? 'Hard – Test 2'
-      : (state.selectedDifficulty === 'hard' || state.selectedDifficulty === 'hard_t1') ? 'Hard – Test 1'
-      : state.selectedDifficulty.charAt(0).toUpperCase() + state.selectedDifficulty.slice(1);
+    let diffDisplay = 'Hard';
+    if (isFiguresExam) {
+      if (state.selectedDifficulty.startsWith('hard_t')) {
+        diffDisplay = `Figure Sequences – Test ${state.selectedDifficulty.replace('hard_t', '')}`;
+      } else if (state.selectedDifficulty === 'medium') {
+        diffDisplay = 'Figure Sequences – Medium';
+      } else if (state.selectedDifficulty === 'easy') {
+        diffDisplay = 'Figure Sequences – Easy';
+      } else {
+        diffDisplay = 'Figure Sequences – Hard';
+      }
+    } else {
+      if (state.selectedDifficulty === 'hard_t2') {
+        diffDisplay = 'Equations – Hard Test 2';
+      } else if (state.selectedDifficulty === 'hard' || state.selectedDifficulty === 'hard_t1') {
+        diffDisplay = 'Equations – Hard Test 1';
+      } else if (state.selectedDifficulty === 'medium') {
+        diffDisplay = 'Equations – Medium';
+      } else {
+        diffDisplay = 'Equations – Easy';
+      }
+    }
 
     const submission = {
       id: 'sub-' + Date.now(),
       candidateName: state.candidateName,
       difficulty: diffDisplay,
       difficultyKey: state.selectedDifficulty,
+      subtest: isFiguresExam ? 'figures' : 'math',
       questionCount: total,
       score: correctCount,
       total: total,
@@ -741,16 +1059,14 @@
       details: details
     };
 
-    // Save to storage
+    // Save locally
     const list = getSubmissions();
     list.unshift(submission);
     saveSubmissions(list);
 
-    // Broadcast live across all devices in real-time
+    // Live sync broadcast
     if (typeof CloudSync !== 'undefined' && CloudSync.broadcastSubmission) {
-      CloudSync.broadcastSubmission(submission).catch(err => {
-        console.warn('Real-time sync broadcast notice:', err);
-      });
+      CloudSync.broadcastSubmission(submission).catch(() => {});
     }
 
     state.lastResult = submission;
@@ -765,62 +1081,105 @@
     dom.resTimeTaken.textContent = result.timeTakenFormatted;
     dom.resTimeLeft.textContent = result.timeLeftFormatted;
 
-    // Render detailed breakdown
     dom.resBreakdown.innerHTML = '';
     result.details.forEach((item, idx) => {
       const card = document.createElement('div');
       card.className = `breakdown-card ${item.isCorrect ? 'correct-card' : 'wrong-card'}`;
 
-      const eqHtml = item.equations.map(e => `<div>${e}</div>`).join('');
-      const stepsHtml = (item.stepByStep || []).map(s => `<li>${s}</li>`).join('');
+      if (item.subtest === 'figures') {
+        const stripHtml = (typeof FiguresRender !== 'undefined' && Array.isArray(item.matrices || item.sequence))
+          ? `<div class="figures-sequence-strip" style="padding:10px; margin:10px 0; overflow-x:auto;">
+               ${FiguresRender.renderFigureSequenceStrip(item, item.userAnswer || {}, 68)}
+             </div>`
+          : '';
 
-      card.innerHTML = `
-        <div class="breakdown-header">
-          <div class="breakdown-q-title">
-            <span class="breakdown-status-badge ${item.isCorrect ? 'badge-correct' : 'badge-wrong'}">
-              ${item.isCorrect ? '✓ Correct' : '✕ Incorrect'}
-            </span>
-            <strong>Question ${idx + 1}</strong>
-          </div>
-        </div>
-        <div class="breakdown-body">
-          <div class="breakdown-eqs">
-            ${eqHtml}
-          </div>
-          <div class="breakdown-comparison">
-            <div class="user-col">
-              <span class="col-title">Your Answers:</span>
-              <div class="ans-grid">
-                <span class="${item.fieldCorrectness.A ? 'var-correct' : 'var-wrong'}">A = ${item.userAnswer.A || '—'}</span>
-                <span class="${item.fieldCorrectness.B ? 'var-correct' : 'var-wrong'}">B = ${item.userAnswer.B || '—'}</span>
-                <span class="${item.fieldCorrectness.C ? 'var-correct' : 'var-wrong'}">C = ${item.userAnswer.C || '—'}</span>
-                <span class="${item.fieldCorrectness.D ? 'var-correct' : 'var-wrong'}">D = ${item.userAnswer.D || '—'}</span>
-              </div>
-            </div>
-            <div class="correct-col">
-              <span class="col-title">Solution:</span>
-              <div class="ans-grid">
-                <span class="var-sol">A = ${item.solution.A}</span>
-                <span class="var-sol">B = ${item.solution.B}</span>
-                <span class="var-sol">C = ${item.solution.C}</span>
-                <span class="var-sol">D = ${item.solution.D}</span>
-              </div>
+        card.innerHTML = `
+          <div class="breakdown-header">
+            <div class="breakdown-q-title">
+              <span class="breakdown-status-badge ${item.isCorrect ? 'badge-correct' : 'badge-wrong'}">
+                ${item.isCorrect ? '✓ Correct' : '✕ Incorrect'}
+              </span>
+              <strong>Question ${idx + 1} · Figure Sequence</strong>
             </div>
           </div>
-          ${stepsHtml ? `
-            <details class="breakdown-steps">
-              <summary>View Step-by-Step Derivation</summary>
-              <ol>${stepsHtml}</ol>
-            </details>
-          ` : ''}
-        </div>
-      `;
+          <div class="breakdown-body">
+            ${stripHtml}
+            <div class="breakdown-comparison" style="margin-top:12px;">
+              <div class="user-col">
+                <span class="col-title">Your Choice:</span>
+                <div class="ans-grid" style="grid-template-columns: 1fr 1fr;">
+                  <span class="${item.fieldCorrectness && item.fieldCorrectness.m5 ? 'var-correct' : 'var-wrong'}">M5 = Option ${item.userAnswer.m5 || '—'}</span>
+                  <span class="${item.fieldCorrectness && item.fieldCorrectness.m6 ? 'var-correct' : 'var-wrong'}">M6 = Option ${item.userAnswer.m6 || '—'}</span>
+                </div>
+              </div>
+              <div class="correct-col">
+                <span class="col-title">Official Solution:</span>
+                <div class="ans-grid" style="grid-template-columns: 1fr 1fr;">
+                  <span class="var-sol">M5 = Option ${item.solution.m5}</span>
+                  <span class="var-sol">M6 = Option ${item.solution.m6}</span>
+                </div>
+              </div>
+            </div>
+            ${item.explanation ? `
+              <div style="margin-top:14px; padding:12px 14px; background:rgba(255,255,255,0.03); border-radius:8px; border-left:3px solid #10b981; font-size:13px; line-height:1.6; color:var(--t-80);">
+                <strong style="color:#10b981; display:block; margin-bottom:4px;">Rule Derivation:</strong>
+                ${escapeHtml(item.explanation)}
+              </div>
+            ` : ''}
+          </div>
+        `;
+      } else {
+        const eqHtml = (item.equations || []).map(e => `<div>${e}</div>`).join('');
+        const stepsHtml = (item.stepByStep || []).map(s => `<li>${s}</li>`).join('');
+
+        card.innerHTML = `
+          <div class="breakdown-header">
+            <div class="breakdown-q-title">
+              <span class="breakdown-status-badge ${item.isCorrect ? 'badge-correct' : 'badge-wrong'}">
+                ${item.isCorrect ? '✓ Correct' : '✕ Incorrect'}
+              </span>
+              <strong>Question ${idx + 1} · Equations</strong>
+            </div>
+          </div>
+          <div class="breakdown-body">
+            <div class="breakdown-eqs">
+              ${eqHtml}
+            </div>
+            <div class="breakdown-comparison">
+              <div class="user-col">
+                <span class="col-title">Your Answers:</span>
+                <div class="ans-grid">
+                  <span class="${item.fieldCorrectness && item.fieldCorrectness.A ? 'var-correct' : 'var-wrong'}">A = ${item.userAnswer.A || '—'}</span>
+                  <span class="${item.fieldCorrectness && item.fieldCorrectness.B ? 'var-correct' : 'var-wrong'}">B = ${item.userAnswer.B || '—'}</span>
+                  <span class="${item.fieldCorrectness && item.fieldCorrectness.C ? 'var-correct' : 'var-wrong'}">C = ${item.userAnswer.C || '—'}</span>
+                  <span class="${item.fieldCorrectness && item.fieldCorrectness.D ? 'var-correct' : 'var-wrong'}">D = ${item.userAnswer.D || '—'}</span>
+                </div>
+              </div>
+              <div class="correct-col">
+                <span class="col-title">Solution:</span>
+                <div class="ans-grid">
+                  <span class="var-sol">A = ${item.solution.A}</span>
+                  <span class="var-sol">B = ${item.solution.B}</span>
+                  <span class="var-sol">C = ${item.solution.C}</span>
+                  <span class="var-sol">D = ${item.solution.D}</span>
+                </div>
+              </div>
+            </div>
+            ${stepsHtml ? `
+              <details class="breakdown-steps">
+                <summary>View Step-by-Step Derivation</summary>
+                <ol>${stepsHtml}</ol>
+              </details>
+            ` : ''}
+          </div>
+        `;
+      }
 
       dom.resBreakdown.appendChild(card);
     });
   }
 
-  // Submissions Dashboard Logic
+  // Submissions Dashboard Modal
   function openSubmissionsModal() {
     renderSubmissionsTable();
     dom.submissionsModal.classList.remove('hidden');
@@ -837,8 +1196,8 @@
     const filtered = list.filter(sub => {
       if (!query) return true;
       return sub.candidateName.toLowerCase().includes(query) ||
-             sub.difficulty.toLowerCase().includes(query) ||
-             sub.submittedAt.includes(query);
+             (sub.difficulty || '').toLowerCase().includes(query) ||
+             (sub.submittedAt || '').includes(query);
     });
 
     if (filtered.length === 0) {
@@ -890,7 +1249,7 @@
       dom.subTableBody.appendChild(tr);
     });
 
-    // Bind action buttons
+    // Bind inspect buttons
     dom.subTableBody.querySelectorAll('.btn-sm-view').forEach(btn => {
       btn.addEventListener('click', () => {
         const id = btn.getAttribute('data-view-id');
@@ -930,35 +1289,49 @@
       details.forEach((d, i) => {
         const card = document.createElement('div');
         card.className = `sub-q-detail ${d.isCorrect ? 'q-correct' : 'q-wrong'}`;
-        const eqs = Array.isArray(d.equations) ? d.equations : [];
         const userAns = d.userAnswer || {};
         const sol = d.solution || {};
-        card.innerHTML = `
-          <div class="q-detail-head">
-            <span>Question ${i + 1}</span>
-            <span class="q-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">${d.isCorrect ? 'Correct' : 'Incorrect'}</span>
-          </div>
-          <div class="q-detail-eqs">
-            ${eqs.map(e => `<div>${e}</div>`).join('')}
-          </div>
-          <div class="q-detail-ans">
-            <div>Your Answer: A=${userAns.A || '—'}, B=${userAns.B || '—'}, C=${userAns.C || '—'}, D=${userAns.D || '—'}</div>
-            <div>Solution: <strong>A=${sol.A !== undefined ? sol.A : '—'}, B=${sol.B !== undefined ? sol.B : '—'}, C=${sol.C !== undefined ? sol.C : '—'}, D=${sol.D !== undefined ? sol.D : '—'}</strong></div>
-          </div>
-        `;
+
+        if (d.subtest === 'figures') {
+          const stripHtml = (typeof FiguresRender !== 'undefined' && Array.isArray(d.matrices || d.sequence))
+            ? `<div class="figures-sequence-strip" style="padding:10px; margin:10px 0; overflow-x:auto;">
+                 ${FiguresRender.renderFigureSequenceStrip(d, userAns, 60)}
+               </div>`
+            : '';
+
+          card.innerHTML = `
+            <div class="q-detail-head">
+              <span>Question ${i + 1} · Figure Sequence</span>
+              <span class="q-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">${d.isCorrect ? 'Correct' : 'Incorrect'}</span>
+            </div>
+            ${stripHtml}
+            <div class="q-detail-ans">
+              <div>Candidate Choice: <strong>M5 = Option ${userAns.m5 || '—'}, M6 = Option ${userAns.m6 || '—'}</strong></div>
+              <div>Official Solution: <strong style="color:#10b981;">M5 = Option ${sol.m5 || '—'}, M6 = Option ${sol.m6 || '—'}</strong></div>
+            </div>
+            ${d.explanation ? `<div class="step-by-step" style="margin-top:8px;font-size:12px;color:var(--t-80);background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:6px;border-left:2px solid #10b981;">• <strong>Pattern Rule:</strong> ${escapeHtml(d.explanation)}</div>` : ''}
+          `;
+        } else {
+          const eqs = Array.isArray(d.equations) ? d.equations : [];
+          card.innerHTML = `
+            <div class="q-detail-head">
+              <span>Question ${i + 1} · Equations</span>
+              <span class="q-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">${d.isCorrect ? 'Correct' : 'Incorrect'}</span>
+            </div>
+            <div class="q-detail-eqs">
+              ${eqs.map(e => `<div>${escapeHtml(e)}</div>`).join('')}
+            </div>
+            <div class="q-detail-ans">
+              <div>Your Answer: A=${userAns.A || '—'}, B=${userAns.B || '—'}, C=${userAns.C || '—'}, D=${userAns.D || '—'}</div>
+              <div>Solution: <strong>A=${sol.A !== undefined ? sol.A : '—'}, B=${sol.B !== undefined ? sol.B : '—'}, C=${sol.C !== undefined ? sol.C : '—'}, D=${sol.D !== undefined ? sol.D : '—'}</strong></div>
+            </div>
+          `;
+        }
         dom.subDetailsBody.appendChild(card);
       });
     }
 
     dom.detailsModal.classList.remove('hidden');
-  }
-
-  function deleteSubmission(id) {
-    if (!confirm('Are you sure you want to delete this candidate submission?')) return;
-    let list = getSubmissions();
-    list = list.filter(s => s.id !== id);
-    saveSubmissions(list);
-    renderSubmissionsTable();
   }
 
   function exportSubmissionsCsv() {

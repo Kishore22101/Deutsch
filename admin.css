@@ -1,7 +1,13 @@
 /* admin.css – Dedicated Styling for dMAT Admin Dashboard & Live Submissions */
 
+html, body, .admin-body, .admin-main, .admin-layout, .container, #admin-dashboard-content, #admin-login-screen {
+  background: #000 !important;
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
 .admin-body {
-  background: #000;
+  background: #000 !important;
   color: var(--t-100);
   min-height: 100vh;
   display: flex;
