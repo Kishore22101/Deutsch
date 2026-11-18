@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learn – A1 | Deutsch Lernen</title>
+  <title>Learn – A1 | Learning Portal</title>
   <meta name="description" content="65 A1 German lessons with voice playback in German and English." />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -13,7 +13,7 @@
   <div class="header-inner">
     <a href="index.html" class="logo">
       <div class="logo-icon">D</div>
-      <span class="logo-text">Deutsch Lernen</span>
+      <span class="logo-text">Learning Portal</span>
     </a>
     <a href="a1.html" class="back-btn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
@@ -21,12 +21,13 @@
     </a>
   </div>
 </header>
+
 <!-- Mobile overlay (fixed backdrop, outside everything) -->
 <div class="mob-overlay" id="learnOverlay" onclick="closeLessonSidebar()"></div>
 
 <div class="learn-layout">
 
-  <!-- Sidebar (grid column on desktop, off-canvas on mobile) -->
+  <!-- Sidebar -->
   <aside class="lesson-sidebar" id="learnSidebar">
     <div class="sidebar-header">
       <h3>A1 Lessons</h3>
@@ -38,7 +39,7 @@
   <!-- Main viewer -->
   <section class="lesson-viewer" id="lessonViewer">
 
-    <!-- Compact panel head — matches practice page style -->
+    <!-- Panel head -->
     <div class="tw-panel-head">
       <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;">
         <button class="mob-sidebar-btn" onclick="openLessonSidebar()">
@@ -66,7 +67,6 @@
     <div class="lesson-progress-strip">
       <div class="lesson-progress-fill" id="progressFill" style="width:1.5%;"></div>
     </div>
-
 
     <!-- Main vocab block -->
     <div class="vocab-block">
@@ -111,7 +111,7 @@
 </div>
 
 <footer class="site-footer">
-  <p>© 2024 Deutsch Lernen &nbsp;·&nbsp; A1 – Learn</p>
+  <p>© 2026 Learning Portal &nbsp;·&nbsp; A1 – Learn</p>
 </footer>
 
 <script src="lessons.js"></script>
@@ -121,106 +121,100 @@
   let currentIndex = 0;
 
   // ── Mobile Sidebar ──
-  function openLessonSidebar(){
+  function openLessonSidebar() {
     document.getElementById('learnSidebar').classList.add('mob-open');
     document.getElementById('learnOverlay').classList.add('show');
   }
-  function closeLessonSidebar(){
+  function closeLessonSidebar() {
     document.getElementById('learnSidebar').classList.remove('mob-open');
     document.getElementById('learnOverlay').classList.remove('show');
   }
 
-  // ── Render sidebar ──
-  function buildSidebar(filter = '') {
+  // ── Select lesson (single entry point for sidebar clicks) ──
+  function selectLesson(i) {
+    currentIndex = i;
+    closeLessonSidebar();
+    renderLesson();
+  }
+
+  // ── Build sidebar ──
+  function buildSidebar(filter) {
+    filter = filter || '';
     const list = document.getElementById('lessonList');
     list.innerHTML = '';
     const lower = filter.toLowerCase();
-    LESSONS.forEach((lesson, i) => {
+    LESSONS.forEach(function(lesson, i) {
       if (lower && !lesson.title.toLowerCase().includes(lower) && !String(lesson.id).includes(lower)) return;
       const item = document.createElement('div');
       item.className = 'lesson-item' + (i === currentIndex ? ' active' : '');
-      item.dataset.index = i;
-      item.innerHTML = `
-        <div class="lesson-num">${lesson.id}</div>
-        <div class="lesson-name">${lesson.title}</div>
-      `;
-      item.addEventListener('click', () => {
-        currentIndex = i;
-        closeLessonSidebar(); // close first on mobile
-        renderLesson();
-        scrollActiveIntoView();
-      });
+      item.onclick = (function(idx){ return function(){ selectLesson(idx); }; })(i);
+      item.innerHTML =
+        '<div class="lesson-num">' + lesson.id + '</div>' +
+        '<div class="lesson-name">' + lesson.title + '</div>';
       list.appendChild(item);
     });
-  }
-
-  function scrollActiveIntoView() {
-    const active = document.querySelector('.lesson-item.active');
+    // Scroll active item into view
+    const active = list.querySelector('.lesson-item.active');
     if (active) active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
   }
 
   // ── Render lesson ──
   function renderLesson() {
     const lesson = LESSONS[currentIndex];
+    if (!lesson) return;
 
     document.getElementById('vocabGerman').textContent = lesson.german;
     document.getElementById('vocabEnglish').textContent = lesson.english;
     document.getElementById('vocabPhonetic').textContent = lesson.phonetic || '';
-    // Update panel head title + subtitle
-    document.getElementById('panelTitle').textContent = `L${lesson.id}: ${lesson.title}`;
-    document.getElementById('panelSub').textContent = lesson.german + ' – ' + lesson.english;
+    document.getElementById('panelTitle').textContent = 'L' + lesson.id + ': ' + lesson.title;
+    document.getElementById('panelSub').textContent = lesson.german + ' \u2013 ' + lesson.english;
 
     // Progress
-    const pct = (lesson.id / LESSONS.length) * 100;
+    var pct = (lesson.id / LESSONS.length) * 100;
     document.getElementById('progressFill').style.width = Math.max(1.5, pct) + '%';
 
-    // Prev / Next
+    // Prev / Next buttons
     document.getElementById('prevBtn').disabled = currentIndex === 0;
     document.getElementById('nextBtn').disabled = currentIndex === LESSONS.length - 1;
 
     // Examples
-    const exBox = document.getElementById('examplesContainer');
-    exBox.innerHTML = (lesson.examples || []).map(ex => `
-      <div class="example-row">
-        <div class="example-de">${ex.de}</div>
-        <div class="example-en">${ex.en}</div>
-      </div>
-    `).join('');
+    var exBox = document.getElementById('examplesContainer');
+    exBox.innerHTML = (lesson.examples || []).map(function(ex) {
+      return '<div class="example-row"><div class="example-de">' + ex.de + '</div><div class="example-en">' + ex.en + '</div></div>';
+    }).join('');
 
     // Vocab list
-    const vcBox = document.getElementById('vocabListContainer');
-    vcBox.innerHTML = (lesson.vocab || []).map((v, vi) => `
-      <div class="vocab-item">
-        <span class="vi-german">${v.de}</span>
-        <span class="vi-english">${v.en}</span>
-        <button class="vi-play" title="Speak German" onclick="speakGerman('${v.de.replace(/'/g,"\\'")}', this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M11 5L6 9H2v6h4l5 4V5z"/>
-            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
-          </svg>
-        </button>
-      </div>
-    `).join('');
+    var vcBox = document.getElementById('vocabListContainer');
+    vcBox.innerHTML = (lesson.vocab || []).map(function(v) {
+      var safe = v.de.replace(/'/g, "\\'");
+      return '<div class="vocab-item">' +
+        '<span class="vi-german">' + v.de + '</span>' +
+        '<span class="vi-english">' + v.en + '</span>' +
+        '<button class="vi-play" title="Speak German" onclick="speakGerman(\'' + safe + '\', this)">' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
+            '<path d="M11 5L6 9H2v6h4l5 4V5z"/>' +
+            '<path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>' +
+          '</svg></button></div>';
+    }).join('');
 
     // Voice buttons
     document.getElementById('btnSpeakDE').onclick = function() { speakGerman(lesson.german, this); };
     document.getElementById('btnSpeakEN').onclick = function() { speakEnglish(lesson.english, this); };
 
-    // Page title
-    document.title = `Lesson ${lesson.id}: ${lesson.title} – Deutsch Lernen`;
-
-    // Hash
+    // Page title & hash
+    document.title = 'Lesson ' + lesson.id + ': ' + lesson.title + ' \u2013 Learning Portal';
     history.replaceState(null, '', '#lesson-' + lesson.id);
 
+    // Refresh sidebar highlight
     buildSidebar(document.getElementById('lessonSearch').value);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // ── Navigation ──
-  document.getElementById('prevBtn').addEventListener('click', () => {
+  // ── Prev / Next navigation ──
+  document.getElementById('prevBtn').addEventListener('click', function() {
     if (currentIndex > 0) { currentIndex--; renderLesson(); }
   });
-  document.getElementById('nextBtn').addEventListener('click', () => {
+  document.getElementById('nextBtn').addEventListener('click', function() {
     if (currentIndex < LESSONS.length - 1) { currentIndex++; renderLesson(); }
   });
 
@@ -231,16 +225,16 @@
 
   // ── Handle deep-link hash ──
   function loadFromHash() {
-    const hash = location.hash;
+    var hash = location.hash;
     if (hash && hash.startsWith('#lesson-')) {
-      const id = parseInt(hash.replace('#lesson-', ''), 10);
-      const idx = LESSONS.findIndex(l => l.id === id);
+      var id = parseInt(hash.replace('#lesson-', ''), 10);
+      var idx = LESSONS.findIndex(function(l) { return l.id === id; });
       if (idx !== -1) currentIndex = idx;
     }
   }
 
   // ── Keyboard navigation ──
-  document.addEventListener('keydown', e => {
+  document.addEventListener('keydown', function(e) {
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
       if (currentIndex < LESSONS.length - 1) { currentIndex++; renderLesson(); }
     }

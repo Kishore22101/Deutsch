@@ -3,35 +3,96 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Deutsch Lernen – Learn German</title>
-  <meta name="description" content="Learn German from scratch. Choose your level and start from A1 to C2."/>
+  <title>Learning Portal – dMAT &amp; Deutsch</title>
+  <meta name="description" content="Select your track: dMAT Medical Admission Test preparation or German language courses from A1 to C2."/>
   <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="dmat.css"/>
 </head>
 <body>
 <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
   <symbol id="ic-world" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
   <symbol id="ic-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="ic-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></symbol>
+  <symbol id="ic-math" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></symbol>
 </svg>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="logo">
       <div class="logo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-world"/></svg></div>
-      <span class="logo-text">Deutsch Lernen</span>
+      <span class="logo-text">Learning Portal</span>
     </a>
   </div>
 </header>
 
 <main>
-  <section class="page-hero container">
-    <div class="badge">German Language Course</div>
-    <h1>Choose Your Level</h1>
-    <p>Start from the basics or jump to your level. Each stage builds on the last — from beginner to mastery.</p>
+  <!-- ══════════════════════════════════════════
+       HOME MENU: ONLY 2 OPTIONS (1. dMAT, 2. German)
+  ══════════════════════════════════════════ -->
+  <section class="container home-menu-section" id="section-home-menu">
+    <div class="page-hero" style="text-align: center; padding: 56px 0 36px;">
+      <div class="badge">Learning Hub</div>
+      <h1>Choose Your Track</h1>
+      <p style="margin: 0 auto; max-width: 500px;">Select your preparation pathway: dMAT entrance examination or German language training.</p>
+    </div>
+
+    <div class="cols-2-hub">
+
+      <!-- 1. dMAT Option -->
+      <a href="dmat.html" class="glass-card hub-option-card hub-dmat" id="hub-opt-dmat">
+        <div class="hub-num-badge">1</div>
+        <div class="card-icon dmat-icon-emerald" style="width: 60px; height: 60px;">
+          <svg width="28" height="28" viewBox="0 0 24 24"><use href="#ic-math"/></svg>
+        </div>
+        <div class="hub-info">
+          <div class="hub-title">dMAT</div>
+          <div class="hub-subtitle">Medical Admissions Test Portal</div>
+          <div class="hub-desc">4 Core Categories: Figure Sequences, Mathematic Equations, Latin Squares, and Subject Modules. Includes official 20Q timed exam with 25-minute timer.</div>
+        </div>
+        <div class="hub-footer">
+          <span class="card-tag tag-primary">4 Categories · 20Q Exam</span>
+          <span class="hub-arrow">Open dMAT →</span>
+        </div>
+      </a>
+
+      <!-- 2. German Option -->
+      <div class="glass-card hub-option-card hub-german" id="hub-opt-german" role="button" tabindex="0">
+        <div class="hub-num-badge">2</div>
+        <div class="card-icon" style="width: 60px; height: 60px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-world"/></svg>
+        </div>
+        <div class="hub-info">
+          <div class="hub-title">German</div>
+          <div class="hub-subtitle">Language Stages</div>
+          <div class="hub-desc">Learn German from scratch through structured stages. From Beginner (A1) everyday essentials up to Native-level Mastery (C2).</div>
+        </div>
+        <div class="hub-footer">
+          <span class="card-tag">A1 · A2 · B1 · B2 · C1 · C2</span>
+          <span class="hub-arrow">View German Levels →</span>
+        </div>
+      </div>
+
+    </div>
   </section>
 
-  <div class="container">
-    <div class="cards-grid cols-6">
+  <!-- ══════════════════════════════════════════
+       GERMAN LEVELS: REVEALED WHEN GERMAN IS CLICKED
+  ══════════════════════════════════════════ -->
+  <section class="container hidden" id="section-german-levels" style="padding-bottom: 64px;">
+    <div style="padding-top: 32px; margin-bottom: 20px;">
+      <button class="back-link-btn" id="btn-back-to-hub">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+        Back to Options (1. dMAT / 2. German)
+      </button>
+    </div>
 
+    <div class="page-hero" style="padding: 12px 0 32px;">
+      <div class="badge">German</div>
+      <h1>Choose Your Level</h1>
+      <p>Start from the basics or jump to your level. Each stage builds on the last — from beginner to mastery.</p>
+    </div>
+
+    <div class="cards-grid cols-6">
       <a href="a1.html" class="glass-card active-card" id="card-a1">
         <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-world"/></svg></div>
         <div class="card-level">A1</div>
@@ -79,13 +140,54 @@
         <div class="card-desc">Native-level proficiency</div>
         <span class="card-tag">Locked</span>
       </div>
-
     </div>
-  </div>
+  </section>
 </main>
 
 <footer class="site-footer">
-  <p>© 2024 Deutsch Lernen · Built for German learners</p>
+  <p>© 2026 Learning Portal · dMAT &amp; Deutsch Lernen</p>
 </footer>
+
+<script>
+  (function () {
+    const menuSection = document.getElementById('section-home-menu');
+    const germanSection = document.getElementById('section-german-levels');
+    const optGerman = document.getElementById('hub-opt-german');
+    const btnBack = document.getElementById('btn-back-to-hub');
+
+    function showGermanLevels() {
+      menuSection.classList.add('hidden');
+      germanSection.classList.remove('hidden');
+      window.location.hash = 'german';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showHomeMenu() {
+      germanSection.classList.add('hidden');
+      menuSection.classList.remove('hidden');
+      history.replaceState(null, '', window.location.pathname);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    if (optGerman) {
+      optGerman.addEventListener('click', showGermanLevels);
+      optGerman.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          showGermanLevels();
+        }
+      });
+    }
+
+    if (btnBack) {
+      btnBack.addEventListener('click', showHomeMenu);
+    }
+
+    // Direct hash check
+    if (window.location.hash === '#german') {
+      showGermanLevels();
+    }
+  })();
+</script>
 </body>
 </html>
