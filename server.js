@@ -22,13 +22,50 @@ const MIME_TYPES = {
   '.ttf': 'font/ttf'
 };
 
+let localSubmissionsMemory = [];
+
 const server = http.createServer((req, res) => {
   // CORS and Cache Headers
   res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   res.setHeader('Cache-Control', 'no-cache');
+
+  if (req.method === 'OPTIONS') {
+    res.writeHead(200);
+    res.end();
+    return;
+  }
 
   let parsedUrl = new URL(req.url, `http://${req.headers.host}`);
   let pathname = decodeURIComponent(parsedUrl.pathname);
+
+  // Handle /api/submissions
+  if (pathname === '/api/submissions') {
+    if (req.method === 'POST') {
+      let body = '';
+      req.on('data', chunk => { body += chunk; });
+      req.on('end', () => {
+        try {
+          const item = JSON.parse(body);
+          if (item && item.id) {
+            localSubmissionsMemory = localSubmissionsMemory.filter(s => s.id !== item.id);
+            localSubmissionsMemory.unshift(item);
+          }
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: true, count: localSubmissionsMemory.length }));
+        } catch (e) {
+          res.writeHead(400, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: e.message }));
+        }
+      });
+      return;
+    }
+
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ submissions: localSubmissionsMemory }));
+    return;
+  }
 
   if (pathname === '/') {
     pathname = '/index.html';

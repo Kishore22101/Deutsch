@@ -1624,27 +1624,29 @@ body.exam-active .site-footer { display: none; }
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
-    overflow: hidden;
   }
   .var-input-group {
     display: flex !important;
     align-items: center !important;
-    justify-content: space-between !important;
+    justify-content: center !important;
     padding: 8px 10px !important;
-    gap: 6px !important;
+    gap: 8px !important;
     border-radius: 8px !important;
     min-width: 0 !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
   .var-input-group label {
-    font-size: 16px !important;
-    font-weight: 900 !important;
+    font-size: 15px !important;
+    font-weight: 800 !important;
     flex-shrink: 0 !important;
-    width: 24px !important;
+    white-space: nowrap !important;
+    width: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
   }
   .var-input-group input {
-    font-size: 20px !important;
+    font-size: 18px !important;
     min-width: 0 !important;
     width: 100% !important;
     flex: 1 !important;

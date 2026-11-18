@@ -58,6 +58,66 @@
     ensureSubmissionsData();
     renderDashboard();
     bindEvents();
+    initCrossDeviceSync();
+  }
+
+  function initCrossDeviceSync() {
+    if (typeof CloudSync === 'undefined') return;
+
+    // 1. Live status indicator update
+    CloudSync.onStatusChange((status, text) => {
+      const label = document.querySelector('.live-text');
+      const dot = document.querySelector('.live-dot');
+      if (label) label.textContent = text;
+      if (dot) {
+        if (status === 'connected') {
+          dot.style.background = '#10b981';
+          dot.style.boxShadow = '0 0 8px #10b981';
+        } else if (status === 'syncing') {
+          dot.style.background = '#fbbf24';
+          dot.style.boxShadow = '0 0 8px #fbbf24';
+        } else {
+          dot.style.background = '#6b7280';
+          dot.style.boxShadow = 'none';
+        }
+      }
+    });
+
+    // 2. Fetch remote submissions from other devices on load
+    CloudSync.fetchRemoteSubmissions().then(() => {
+      renderDashboard();
+    }).catch(() => {});
+
+    // 3. Real-time stream subscription (instant toast + update when candidate submits on mobile)
+    CloudSync.subscribeRealTime((newSub) => {
+      renderDashboard();
+      flashLiveNotification(newSub);
+    });
+
+    // 4. Polling fallback every 10 seconds
+    setInterval(() => {
+      CloudSync.fetchRemoteSubmissions().then(() => {
+        renderDashboard();
+      }).catch(() => {});
+    }, 10000);
+  }
+
+  function flashLiveNotification(sub) {
+    if (!sub || !sub.candidateName) return;
+    const toast = document.createElement('div');
+    toast.className = 'admin-live-toast';
+    toast.innerHTML = `
+      <div class="toast-dot"></div>
+      <div class="toast-body">
+        <strong>New Candidate Submission!</strong>
+        <span>${escapeHtml(sub.candidateName)} completed ${escapeHtml(sub.difficulty)} (${sub.score}/${sub.total} · ${sub.percentage}%)</span>
+      </div>
+    `;
+    document.body.appendChild(toast);
+    setTimeout(() => {
+      toast.classList.add('toast-hide');
+      setTimeout(() => toast.remove(), 400);
+    }, 4500);
   }
 
   // Live real-time clock
@@ -275,8 +335,12 @@
   // Inspect Modal
   function openInspectModal(id) {
     const list = getSubmissions();
-    const item = list.find(s => s.id === id);
+    let item = list.find(s => s.id === id);
     if (!item) return;
+
+    if (typeof CloudSync !== 'undefined' && CloudSync.enrichSubmissionDetails) {
+      item = CloudSync.enrichSubmissionDetails(item);
+    }
 
     dom.detailsTitle.textContent = `${item.candidateName} – Answer Sheet (${item.difficulty})`;
     dom.detailsMeta.innerHTML = `
@@ -297,17 +361,20 @@
       item.details.forEach((d, i) => {
         const card = document.createElement('div');
         card.className = `sub-q-detail ${d.isCorrect ? 'q-correct' : 'q-wrong'}`;
+        const eqs = Array.isArray(d.equations) ? d.equations : [];
+        const userAns = d.userAnswer || {};
+        const sol = d.solution || {};
         card.innerHTML = `
           <div class="q-detail-head">
             <span>Question ${i + 1}</span>
             <span class="q-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">${d.isCorrect ? 'Correct' : 'Incorrect'}</span>
           </div>
           <div class="q-detail-eqs">
-            ${(d.equations || []).map(e => `<div>${escapeHtml(e)}</div>`).join('')}
+            ${eqs.map(e => `<div>${escapeHtml(e)}</div>`).join('')}
           </div>
           <div class="q-detail-ans">
-            <div>Submitted Answer: <strong>A=${d.userAnswer.A || '—'}, B=${d.userAnswer.B || '—'}, C=${d.userAnswer.C || '—'}, D=${d.userAnswer.D || '—'}</strong></div>
-            <div>Official Solution: <strong>A=${d.solution.A}, B=${d.solution.B}, C=${d.solution.C}, D=${d.solution.D}</strong></div>
+            <div>Submitted Answer: <strong>A=${userAns.A || '—'}, B=${userAns.B || '—'}, C=${userAns.C || '—'}, D=${userAns.D || '—'}</strong></div>
+            <div>Official Solution: <strong>A=${sol.A !== undefined ? sol.A : '—'}, B=${sol.B !== undefined ? sol.B : '—'}, C=${sol.C !== undefined ? sol.C : '—'}, D=${sol.D !== undefined ? sol.D : '—'}</strong></div>
           </div>
           ${d.stepByStep && d.stepByStep.length ? `
             <div style="margin-top: 8px; font-size: 11px; color: var(--t-45); line-height: 1.4;">
@@ -395,6 +462,12 @@
     const list = getSubmissions();
     list.unshift(newSub);
     saveSubmissions(list);
+
+    // Broadcast live across all devices
+    if (typeof CloudSync !== 'undefined' && CloudSync.broadcastSubmission) {
+      CloudSync.broadcastSubmission(newSub).catch(() => {});
+    }
+
     closeAddModal();
     renderDashboard();
   }
@@ -435,11 +508,14 @@
 
   // Reset to live initial data
   function resetLiveSubmissions() {
-    if (confirm('Reload and stamp realistic candidate submission records with live real-time timestamps?')) {
+    if (confirm('Reload and stamp realistic candidate submission records with live real-time timestamps across all devices?')) {
       if (typeof getRealTimeSubmissions === 'function') {
         const live = getRealTimeSubmissions();
         saveSubmissions(live);
         renderDashboard();
+        if (typeof CloudSync !== 'undefined') {
+          live.forEach(s => CloudSync.broadcastSubmission(s).catch(() => {}));
+        }
       }
     }
   }

@@ -98,6 +98,23 @@
   function initSubmissionsStorage() {
     const list = getSubmissions();
     updateSubmissionsCount();
+
+    // Live cross-device synchronization
+    if (typeof CloudSync !== 'undefined') {
+      CloudSync.fetchRemoteSubmissions().then(merged => {
+        updateSubmissionsCount();
+        if (dom.subTableBody && dom.submissionsModal && !dom.submissionsModal.classList.contains('hidden')) {
+          renderSubmissionsTable();
+        }
+      }).catch(() => {});
+
+      CloudSync.subscribeRealTime((newSub) => {
+        updateSubmissionsCount();
+        if (dom.subTableBody && dom.submissionsModal && !dom.submissionsModal.classList.contains('hidden')) {
+          renderSubmissionsTable();
+        }
+      });
+    }
   }
 
   function getSubmissions() {
@@ -655,6 +672,13 @@
     list.unshift(submission);
     saveSubmissions(list);
 
+    // Broadcast live across all devices in real-time
+    if (typeof CloudSync !== 'undefined' && CloudSync.broadcastSubmission) {
+      CloudSync.broadcastSubmission(submission).catch(err => {
+        console.warn('Real-time sync broadcast notice:', err);
+      });
+    }
+
     state.lastResult = submission;
     renderResults(submission);
     setView('results');
@@ -807,10 +831,14 @@
 
   function viewSubmissionDetails(id) {
     const list = getSubmissions();
-    const item = list.find(s => s.id === id);
-    if (!item || !item.details) {
-      alert('Detailed answer sheet not available for this entry.');
+    let item = list.find(s => s.id === id);
+    if (!item) {
+      alert('Submission record not found.');
       return;
+    }
+
+    if (typeof CloudSync !== 'undefined' && CloudSync.enrichSubmissionDetails) {
+      item = CloudSync.enrichSubmissionDetails(item);
     }
 
     document.getElementById('sub-details-title').textContent = `${item.candidateName} – Answer Sheet (${item.difficulty})`;
@@ -821,24 +849,36 @@
     `;
 
     dom.subDetailsBody.innerHTML = '';
-    item.details.forEach((d, i) => {
-      const card = document.createElement('div');
-      card.className = `sub-q-detail ${d.isCorrect ? 'q-correct' : 'q-wrong'}`;
-      card.innerHTML = `
-        <div class="q-detail-head">
-          <span>Question ${i + 1}</span>
-          <span class="q-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">${d.isCorrect ? 'Correct' : 'Incorrect'}</span>
-        </div>
-        <div class="q-detail-eqs">
-          ${d.equations.map(e => `<div>${e}</div>`).join('')}
-        </div>
-        <div class="q-detail-ans">
-          <div>Your Answer: A=${d.userAnswer.A || '—'}, B=${d.userAnswer.B || '—'}, C=${d.userAnswer.C || '—'}, D=${d.userAnswer.D || '—'}</div>
-          <div>Solution: <strong>A=${d.solution.A}, B=${d.solution.B}, C=${d.solution.C}, D=${d.solution.D}</strong></div>
+    const details = item.details || [];
+    if (details.length === 0) {
+      dom.subDetailsBody.innerHTML = `
+        <div style="text-align: center; padding: 24px; color: var(--t-45);">
+          No question-by-question breakdown recorded for this candidate.
         </div>
       `;
-      dom.subDetailsBody.appendChild(card);
-    });
+    } else {
+      details.forEach((d, i) => {
+        const card = document.createElement('div');
+        card.className = `sub-q-detail ${d.isCorrect ? 'q-correct' : 'q-wrong'}`;
+        const eqs = Array.isArray(d.equations) ? d.equations : [];
+        const userAns = d.userAnswer || {};
+        const sol = d.solution || {};
+        card.innerHTML = `
+          <div class="q-detail-head">
+            <span>Question ${i + 1}</span>
+            <span class="q-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">${d.isCorrect ? 'Correct' : 'Incorrect'}</span>
+          </div>
+          <div class="q-detail-eqs">
+            ${eqs.map(e => `<div>${e}</div>`).join('')}
+          </div>
+          <div class="q-detail-ans">
+            <div>Your Answer: A=${userAns.A || '—'}, B=${userAns.B || '—'}, C=${userAns.C || '—'}, D=${userAns.D || '—'}</div>
+            <div>Solution: <strong>A=${sol.A !== undefined ? sol.A : '—'}, B=${sol.B !== undefined ? sol.B : '—'}, C=${sol.C !== undefined ? sol.C : '—'}, D=${sol.D !== undefined ? sol.D : '—'}</strong></div>
+          </div>
+        `;
+        dom.subDetailsBody.appendChild(card);
+      });
+    }
 
     dom.detailsModal.classList.remove('hidden');
   }
