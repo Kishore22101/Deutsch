@@ -207,6 +207,12 @@
       });
     }
 
+    // Test 1 / Test 2 radio selector inside candidate modal
+    const radioT1 = document.getElementById('radio-test-1');
+    const radioT2 = document.getElementById('radio-test-2');
+    if (radioT1) radioT1.addEventListener('change', syncTestSetSelection);
+    if (radioT2) radioT2.addEventListener('change', syncTestSetSelection);
+
     // Exam question answers input
     [dom.inputA, dom.inputB, dom.inputC, dom.inputD].forEach((inp, idx, arr) => {
       if (!inp) return;
@@ -356,6 +362,40 @@
     }
   }
 
+  function syncTestSetSelection() {
+    const radioT1 = document.getElementById('radio-test-1');
+    const radioT2 = document.getElementById('radio-test-2');
+    const labelT1 = document.getElementById('label-test-1');
+    const labelT2 = document.getElementById('label-test-2');
+    const label = document.getElementById('name-modal-diff-label');
+
+    if (radioT2 && radioT2.checked) {
+      if (state.selectedDifficulty.startsWith('hard')) state.selectedDifficulty = 'hard_t2';
+      if (label) label.textContent = 'Hard Mode · Test 2 (New Questions)';
+      if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Test 2 (25m) ➔';
+      if (labelT2) {
+        labelT2.style.borderColor = '#10b981';
+        labelT2.style.background = 'rgba(16, 185, 129, 0.08)';
+      }
+      if (labelT1) {
+        labelT1.style.borderColor = 'var(--border-lo)';
+        labelT1.style.background = 'var(--bg-02)';
+      }
+    } else {
+      if (state.selectedDifficulty.startsWith('hard')) state.selectedDifficulty = 'hard';
+      if (label) label.textContent = 'Hard Mode · Test 1 (dMAT Standard)';
+      if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Test 1 (25m) ➔';
+      if (labelT1) {
+        labelT1.style.borderColor = '#10b981';
+        labelT1.style.background = 'rgba(16, 185, 129, 0.08)';
+      }
+      if (labelT2) {
+        labelT2.style.borderColor = 'var(--border-lo)';
+        labelT2.style.background = 'var(--bg-02)';
+      }
+    }
+  }
+
   function promptCandidateName(difficulty) {
     state.selectedDifficulty = difficulty;
     dom.nameModalError.textContent = '';
@@ -364,23 +404,21 @@
     const label = document.getElementById('name-modal-diff-label');
     const timerLabel = document.getElementById('name-modal-timer-label');
     const qCountLabel = document.getElementById('name-modal-qcount-label');
+    const testSetWrap = document.getElementById('test-set-selector-wrap');
 
-    if (difficulty === 'hard_t2') {
-      label.textContent = 'Hard Mode · Test 2 (New Questions)';
+    if (difficulty === 'hard' || difficulty === 'hard_t1' || difficulty === 'hard_t2') {
+      if (testSetWrap) testSetWrap.style.display = 'block';
       timerLabel.textContent = '25 Minutes';
       qCountLabel.textContent = '20 System Questions';
-      if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Test 2 (25m) ➔';
-    } else if (difficulty === 'hard' || difficulty === 'hard_t1') {
-      label.textContent = 'Hard Mode · Test 1 (dMAT Standard)';
-      timerLabel.textContent = '25 Minutes';
-      qCountLabel.textContent = '20 System Questions';
-      if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Test 1 (25m) ➔';
+      syncTestSetSelection();
     } else if (difficulty === 'medium') {
+      if (testSetWrap) testSetWrap.style.display = 'none';
       label.textContent = 'Medium Mode · Intermediate';
       timerLabel.textContent = '15 Minutes';
       qCountLabel.textContent = '4 System Questions';
       if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Medium Test (15m) ➔';
     } else {
+      if (testSetWrap) testSetWrap.style.display = 'none';
       label.textContent = 'Easy Mode · Warm-Up';
       timerLabel.textContent = '10 Minutes';
       qCountLabel.textContent = '5 System Questions';
@@ -400,6 +438,11 @@
       dom.nameModalError.textContent = 'Please enter your name to start the exam.';
       dom.candidateNameInput.focus();
       return;
+    }
+
+    if (state.selectedDifficulty.startsWith('hard')) {
+      const radioT2 = document.getElementById('radio-test-2');
+      state.selectedDifficulty = (radioT2 && radioT2.checked) ? 'hard_t2' : 'hard';
     }
 
     state.candidateName = name;

@@ -175,7 +175,7 @@
     </div>
 
     <div class="container">
-      <div class="cards-grid cols-4">
+      <div class="cards-grid cols-3">
 
         <!-- Easy -->
         <div class="glass-card diff-card" data-difficulty="easy">
@@ -203,30 +203,17 @@
           <button class="btn-diff-action">Start Medium</button>
         </div>
 
-        <!-- Hard - Test 1 -->
+        <!-- Hard -->
         <div class="glass-card diff-card diff-card-hard" data-difficulty="hard">
-          <div class="diff-badge badge-hard">Official Test 1</div>
-          <div class="diff-title">Hard – Test 1</div>
-          <div class="diff-desc">20 Unique Systems of equations. Exact official dMAT speed standard (1.25 min / question).</div>
+          <div class="diff-badge badge-hard">Official dMAT Exam</div>
+          <div class="diff-title">Hard</div>
+          <div class="diff-desc">20 Unique Systems of equations (Test 1 &amp; Test 2). Official dMAT speed standard (1.25 min / question).</div>
           <div class="diff-specs">
-            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Test 1)</strong></div>
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Test 1 &amp; 2)</strong></div>
             <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 mins</strong></div>
             <div class="spec-row"><span>Type Answers:</span><strong>A, B, C, D in numbers</strong></div>
           </div>
-          <button class="btn-diff-action btn-hard-primary">Start Test 1 →</button>
-        </div>
-
-        <!-- Hard - Test 2 -->
-        <div class="glass-card diff-card diff-card-hard" data-difficulty="hard_t2">
-          <div class="diff-badge badge-hard" style="background:rgba(59, 130, 246, 0.15); border-color:rgba(59, 130, 246, 0.4); color:#60a5fa;">Official Test 2</div>
-          <div class="diff-title">Hard – Test 2</div>
-          <div class="diff-desc">20 Brand-New Systems of equations. Non-repeating problem set for complete exam readiness.</div>
-          <div class="diff-specs">
-            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Test 2)</strong></div>
-            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 mins</strong></div>
-            <div class="spec-row"><span>Type Answers:</span><strong>A, B, C, D in numbers</strong></div>
-          </div>
-          <button class="btn-diff-action btn-hard-primary" style="background:#2563eb; color:#fff;">Start Test 2 →</button>
+          <button class="btn-diff-action btn-hard-primary">Start 25m Exam</button>
         </div>
 
       </div>
@@ -463,6 +450,27 @@
         <label for="input-candidate-name">Enter Candidate / Student Name:</label>
         <input type="text" id="input-candidate-name" class="modal-input" placeholder="e.g. Kishore K. / Alex Bauer" autofocus/>
         <div class="error-msg" id="name-modal-error"></div>
+      </div>
+
+      <!-- Test 1 / Test 2 selection below the name -->
+      <div class="form-group" id="test-set-selector-wrap" style="margin-top: 16px;">
+        <label style="display:block; margin-bottom:8px; font-weight:700; font-size:13px; color:var(--t-90);">Select Test Set:</label>
+        <div class="test-set-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+          <label class="test-set-label active" id="label-test-1" style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:rgba(16, 185, 129, 0.08); border:1.5px solid #10b981; border-radius:8px; cursor:pointer; transition:0.2s;">
+            <input type="radio" name="radio-test-set" id="radio-test-1" value="hard" checked style="accent-color:#10b981; width:16px; height:16px; cursor:pointer;"/>
+            <div>
+              <div style="font-weight:700; font-size:13px; color:#fff;">Test 1</div>
+              <div style="font-size:11px; color:var(--t-45);">Official Set (20Q)</div>
+            </div>
+          </label>
+          <label class="test-set-label" id="label-test-2" style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:var(--bg-02); border:1.5px solid var(--border-lo); border-radius:8px; cursor:pointer; transition:0.2s;">
+            <input type="radio" name="radio-test-set" id="radio-test-2" value="hard_t2" style="accent-color:#10b981; width:16px; height:16px; cursor:pointer;"/>
+            <div>
+              <div style="font-weight:700; font-size:13px; color:#fff;">Test 2</div>
+              <div style="font-size:11px; color:var(--t-45);">New Question Set (20Q)</div>
+            </div>
+          </label>
+        </div>
       </div>
 
       <p class="modal-note">

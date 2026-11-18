@@ -1118,6 +1118,33 @@ html, body {
   outline: none;
   transition: var(--ease);
 }
+
+/* Test Set Selector in Start Modal */
+.test-set-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.test-set-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--bg-02);
+  border: 1.5px solid var(--border-lo);
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: var(--ease);
+  user-select: none;
+}
+.test-set-label:hover {
+  background: var(--bg-03);
+  border-color: var(--border-md);
+}
+.test-set-label.active {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.08);
+}
 .modal-input:focus {
   border-color: #10b981;
   box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
