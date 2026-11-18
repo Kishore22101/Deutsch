@@ -281,8 +281,14 @@
       dom.viewCatInfo.classList.remove('hidden');
     } else if (viewName === 'exam' && dom.viewExam) {
       dom.viewExam.classList.remove('hidden');
+      document.body.classList.add('exam-active');
     } else if (viewName === 'results' && dom.viewResults) {
       dom.viewResults.classList.remove('hidden');
+    }
+
+    // Hide footer during exam
+    if (viewName !== 'exam') {
+      document.body.classList.remove('exam-active');
     }
   }
 

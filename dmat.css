@@ -1416,253 +1416,224 @@
   gap: 8px;
 }
 
+/* Hide footer during exam on mobile */
+body.exam-active .site-footer { display: none; }
+
 /* ═══════════════════════════════════════
    MOBILE-FIRST RESPONSIVE DESIGN
-   Full coverage: 1024px → 375px
+   Full coverage: 900px → 380px
 ═══════════════════════════════════════ */
 
 /* ── Tablet / Small Desktop (≤900px) ── */
 @media (max-width: 900px) {
-  /* Exam layout: stack palette above stage */
-  .exam-container { padding: 12px; }
-  .exam-layout {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
+  .exam-container { padding: 10px; }
+  .exam-layout { grid-template-columns: 1fr; gap: 10px; }
   .exam-palette-sidebar {
     position: static;
-    padding: 14px 16px;
+    padding: 10px 12px;
     border-radius: var(--r-md);
-    order: -1; /* palette above question */
+    order: -1;
   }
   .palette-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 8px;
   }
-  /* Horizontal scrolling palette row */
+  .palette-head h3 { font-size: 10px; margin: 0; }
   .palette-grid {
     display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    gap: 7px;
-    padding: 8px 0 6px;
-    margin: 8px 0 4px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--border-md) transparent;
+    gap: 6px;
+    padding: 6px 0 4px;
+    margin: 4px 0 0;
+    scrollbar-width: none;
   }
+  .palette-grid::-webkit-scrollbar { display: none; }
   .palette-btn {
-    min-width: 46px;
-    width: 46px;
-    height: 46px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    font-size: 15px;
+    min-width: 38px; width: 38px; height: 38px;
+    flex-shrink: 0; border-radius: 8px; font-size: 13px;
   }
-  /* Show compact inline legend */
-  .palette-legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding-top: 10px;
-    border-top: 1px solid var(--border-lo);
-    font-size: 11px;
-    color: var(--t-45);
-  }
-  .legend-item { gap: 5px; }
-
-  /* Topbar a bit more compact */
-  .exam-topbar-inner { padding: 0 16px; gap: 10px; }
-  .timer-display { font-size: 24px; }
+  .palette-legend { display: none; }
+  .palette-sub { display: none; }
+  .exam-topbar-inner { padding: 0 12px; gap: 8px; }
+  .timer-display { font-size: 22px; }
 }
 
 /* ── Mobile (≤640px) ── */
 @media (max-width: 640px) {
-  /* ─ Site Header ─ */
-  .site-header { padding: 8px 0; }
-  .header-inner { padding: 0 14px; gap: 8px; }
+  /* ─ Header ─ */
+  .site-header { padding: 6px 0; }
+  .header-inner { padding: 0 10px; gap: 6px; }
+  .logo-text { font-size: 14px; }
   .portal-badge { display: none; }
-  /* Submissions button: show icon + badge only */
   .dmat-btn-sub span:not(.badge-count) { display: none; }
-  .dmat-btn-sub { padding: 7px 10px; gap: 6px; min-height: 44px; }
-  .back-btn { padding: 7px 12px; font-size: 12px; min-height: 44px; }
+  .dmat-btn-sub { padding: 6px 8px; gap: 4px; min-height: 36px; }
+  .back-btn { padding: 6px 10px; font-size: 11px; min-height: 36px; }
 
-  /* ─ Hero Section ─ */
-  .page-hero { padding: 24px 14px 14px; }
-  .page-hero h1 { font-size: clamp(1.6rem, 7vw, 2.2rem); }
-  .page-hero p { font-size: 13px; }
+  /* ─ Hero ─ */
+  .page-hero { padding: 20px 12px 12px; }
+  .page-hero h1 { font-size: clamp(1.5rem, 7vw, 2rem); }
+  .page-hero p { font-size: 12px; }
   .hero-stats-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    width: 100%;
-    margin-top: 16px;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 6px; width: 100%; margin-top: 12px;
   }
-  .h-stat-item { padding: 10px 12px; }
-  .h-stat-num { font-size: 18px; }
+  .h-stat-item { padding: 8px 10px; }
+  .h-stat-num { font-size: 16px; }
   .h-stat-btn {
-    grid-column: 1 / -1;
-    width: 100%;
-    justify-content: center;
-    padding: 11px 14px;
-    font-size: 12px;
-    min-height: 44px;
+    grid-column: 1 / -1; width: 100%; justify-content: center;
+    padding: 10px 12px; font-size: 11px; min-height: 40px;
   }
 
   /* ─ Category Cards ─ */
   .cols-2-dmat { grid-template-columns: 1fr; gap: 10px; }
-  .dmat-cat-card { padding: 20px 16px 14px; min-height: auto; }
-  .card-num-pill { top: 12px; right: 12px; width: 24px; height: 24px; font-size: 11px; }
-  .featured-ribbon { top: 10px; left: 16px; font-size: 9px; padding: 2px 8px; }
-  .dmat-cat-card .card-level { font-size: 18px; }
+  .dmat-cat-card { padding: 18px 14px 12px; min-height: auto; }
+  .card-num-pill { top: 10px; right: 10px; width: 22px; height: 22px; font-size: 10px; }
+  .featured-ribbon { top: 8px; left: 14px; font-size: 8px; padding: 2px 7px; }
+  .dmat-cat-card .card-level { font-size: 17px; }
   .dmat-cat-card .card-desc { font-size: 12px; }
 
   /* ─ Difficulty Cards ─ */
   .cards-grid.cols-3 { grid-template-columns: 1fr; gap: 10px; }
-  .diff-card { padding: 20px 16px; }
-  .diff-title { font-size: 22px; }
-  .diff-specs { padding: 10px 14px; font-size: 12px; }
-  .btn-diff-action { padding: 13px 16px; font-size: 13px; min-height: 48px; }
+  .diff-card { padding: 18px 14px; }
+  .diff-title { font-size: 20px; }
+  .diff-specs { padding: 8px 12px; font-size: 11px; }
+  .btn-diff-action { padding: 12px 14px; font-size: 13px; min-height: 44px; }
 
-  /* ─ Exam Topbar ─ */
-  .exam-topbar { padding: 6px 0; }
+  /* ─ Exam Topbar: compact 3-row stack ─ */
+  .exam-topbar { padding: 5px 0; }
   .exam-topbar-inner {
-    padding: 0 10px;
-    flex-wrap: wrap;
-    gap: 6px;
-    row-gap: 6px;
+    padding: 0 10px; flex-wrap: wrap; gap: 4px; row-gap: 4px;
   }
-  /* Row 1: exam badge + candidate */
   .exam-meta {
-    order: 1;
-    width: 100%;
-    justify-content: space-between;
-    gap: 8px;
+    order: 1; width: 100%;
+    justify-content: space-between; gap: 6px;
   }
-  .exam-badge { font-size: 10px; padding: 3px 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 180px; }
-  .candidate-pill { font-size: 11px; padding: 3px 10px; }
-  /* Row 2: timer full-width */
+  .exam-badge {
+    font-size: 9px; padding: 2px 7px;
+    white-space: nowrap; overflow: hidden;
+    text-overflow: ellipsis; max-width: 55%;
+  }
+  .candidate-pill { font-size: 10px; padding: 2px 8px; }
   .timer-box {
-    order: 2;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    min-width: 0;
+    order: 2; width: 100%;
+    flex-direction: row; align-items: center;
+    gap: 8px; min-width: 0;
   }
-  .timer-display { font-size: 20px; letter-spacing: .04em; white-space: nowrap; }
-  .timer-progress-wrap { flex: 1; height: 5px; }
-  /* Row 3: submit button full-width */
-  .exam-topbar-actions {
-    order: 3;
-    width: 100%;
-  }
+  .timer-display { font-size: 18px; letter-spacing: .03em; white-space: nowrap; }
+  .timer-progress-wrap { flex: 1; height: 4px; }
+  .exam-topbar-actions { order: 3; width: 100%; }
   .btn-submit-exam {
-    width: 100%;
-    justify-content: center;
-    padding: 10px 16px;
-    font-size: 13px;
-    min-height: 44px;
-    border-radius: var(--r-md);
+    width: 100%; justify-content: center;
+    padding: 8px 12px; font-size: 12px;
+    min-height: 40px; border-radius: var(--r-md);
   }
 
-  /* ─ Palette (mobile horizontal) ─ */
-  .exam-palette-sidebar { padding: 12px 14px; }
-  .palette-btn { min-width: 44px; width: 44px; height: 44px; font-size: 14px; }
+  /* ─ Palette: ultra-compact ─ */
+  .exam-palette-sidebar { padding: 8px 10px; }
+  .palette-head h3 { font-size: 9px; }
+  .palette-btn { min-width: 36px; width: 36px; height: 36px; font-size: 13px; }
 
-  /* ─ Exam Stage Card ─ */
-  .exam-stage-card { padding: 16px 12px; gap: 14px; border-radius: var(--r-md); }
-  .q-stage-sub { font-size: 10px; }
-  .q-stage-title { font-size: 20px; margin: 4px 0 6px; }
-  .q-stage-instruction { font-size: 12px; line-height: 1.5; }
+  /* ─ Exam Stage ─ */
+  .exam-stage-card { padding: 12px 10px; gap: 10px; border-radius: var(--r-md); }
+  .q-stage-head { padding-bottom: 10px; }
+  .q-stage-sub { font-size: 9px; }
+  .q-stage-title { font-size: 18px; margin: 2px 0 4px; }
+  .q-stage-instruction { font-size: 11px; line-height: 1.4; }
 
-  /* ─ Equations Box ─ */
-  .equations-stage-box { padding: 22px 10px; gap: 12px; border-radius: var(--r-md); }
-  .equation-line { font-size: clamp(1.1rem, 5.5vw, 1.65rem); }
+  /* ─ Equations Box: tighter ─ */
+  .equations-stage-box {
+    padding: 14px 8px; gap: 8px; border-radius: var(--r-md);
+    margin: 0;
+  }
+  .equation-line { font-size: clamp(1rem, 5vw, 1.5rem); }
 
-  /* ─ Answer Inputs ─ */
-  .answer-entry-card { padding: 14px 10px; border-radius: var(--r-md); }
-  .entry-header { margin-bottom: 14px; }
-  .entry-header h4 { font-size: 13px; }
-  .inputs-row-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
-  .var-input-group { padding: 10px 10px; gap: 8px; }
-  .var-input-group label { font-size: 18px; }
-  .var-input-group input { font-size: 22px; }
+  /* ─ Answer Inputs: ALWAYS 2×2 grid ─ */
+  .answer-entry-card { padding: 10px 8px; border-radius: var(--r-md); }
+  .entry-header { margin-bottom: 8px; }
+  .entry-header h4 { font-size: 12px; }
+  .entry-note { font-size: 10px; }
+  .inputs-row-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px;
+  }
+  .var-input-group { padding: 8px 8px; gap: 6px; border-radius: 8px; }
+  .var-input-group label { font-size: 16px; }
+  .var-input-group input { font-size: 20px; }
 
-  /* ─ Exam Navigation Buttons ─ */
-  .exam-actions-bar { gap: 6px; padding-top: 12px; flex-wrap: nowrap; }
-  .exam-btn { padding: 10px 12px; font-size: 12px; gap: 5px; min-height: 44px; flex: 1; justify-content: center; }
-  .btn-flag span { display: none; } /* flag button: icon only on mobile */
+  /* ─ Nav Buttons: flex row, no overflow ─ */
+  .exam-actions-bar {
+    gap: 6px; padding-top: 8px;
+    flex-wrap: nowrap; overflow: hidden;
+  }
+  .exam-btn {
+    padding: 9px 0; font-size: 11px; gap: 4px;
+    min-height: 40px; flex: 1; justify-content: center;
+    white-space: nowrap; border-radius: 10px;
+  }
+  .btn-flag span { display: none; }
+  .btn-next span { display: inline; }
+
+  /* ─ Hide footer during exam ─ */
+  #view-exam ~ .site-footer { display: none; }
+  .site-footer { padding: 12px 10px; font-size: 11px; }
 
   /* ─ Results ─ */
-  .results-hero-card { padding: 22px 14px; }
-  .results-hero-card h1 { font-size: clamp(2rem, 8vw, 3rem); }
-  .results-metrics-grid { grid-template-columns: 1fr 1fr; gap: 8px; margin: 18px auto; }
-  .metric-card { padding: 12px 10px; }
-  .m-val { font-size: 20px; }
-  .results-actions-row { flex-direction: column; gap: 8px; }
+  .results-hero-card { padding: 18px 12px; }
+  .results-hero-card h1 { font-size: clamp(1.8rem, 8vw, 2.6rem); }
+  .results-metrics-grid { grid-template-columns: 1fr 1fr; gap: 6px; margin: 14px auto; }
+  .metric-card { padding: 10px 8px; }
+  .m-val { font-size: 18px; }
+  .results-actions-row { flex-direction: column; gap: 6px; }
   .results-actions-row .btn-primary,
   .results-actions-row .btn-secondary { width: 100%; justify-content: center; min-height: 44px; }
-  .breakdown-card { padding: 14px 12px; }
-  .breakdown-q-title { font-size: 14px; }
-  .breakdown-eqs { font-size: 13px; }
+  .breakdown-card { padding: 12px 10px; }
+  .breakdown-header { flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .breakdown-q-title { font-size: 13px; }
+  .breakdown-eqs { font-size: 12px; padding: 10px 12px; }
+  .breakdown-comparison { grid-template-columns: 1fr; gap: 10px; }
 
-  /* ─ Modals ─ */
-  .dmat-modal-overlay { align-items: flex-end; padding: 0; } /* sheet-style from bottom */
+  /* ─ Modals: bottom sheet ─ */
+  .dmat-modal-overlay { align-items: flex-end; padding: 0; }
   .dmat-modal-card {
-    max-height: 94vh;
-    width: 100%;
-    margin: 0;
-    border-radius: var(--r-xl) var(--r-xl) 0 0;
-    display: flex;
-    flex-direction: column;
+    max-height: 92vh; width: 100%; margin: 0;
+    border-radius: 16px 16px 0 0;
+    display: flex; flex-direction: column;
   }
-  .modal-large { max-height: 96vh; }
-  .modal-body { overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 14px 14px; flex: 1; }
-  .modal-header { padding: 14px 16px; }
-  .modal-footer { padding: 12px 16px; flex-wrap: wrap; gap: 8px; }
+  .modal-large { max-height: 95vh; }
+  .modal-body { overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 12px; flex: 1; }
+  .modal-header { padding: 12px 14px; }
+  .modal-header h3 { font-size: 16px; }
+  .modal-footer { padding: 10px 14px; flex-wrap: wrap; gap: 6px; }
   .modal-footer .btn-primary,
-  .modal-footer .btn-secondary { flex: 1; min-height: 44px; justify-content: center; text-align: center; }
-  .sub-controls-row { flex-direction: column; align-items: stretch; gap: 8px; }
+  .modal-footer .btn-secondary { flex: 1; min-height: 44px; justify-content: center; }
+  .sub-controls-row { flex-direction: column; align-items: stretch; gap: 6px; }
   .search-wrap input { width: 100%; }
   .sub-export-btns { display: flex; }
-  .sub-export-btns .btn-sm { flex: 1; justify-content: center; min-height: 40px; }
-
-  /* Submissions table: hide Difficulty col */
+  .sub-export-btns .btn-sm { flex: 1; justify-content: center; min-height: 38px; }
   .sub-table th:nth-child(3),
   .sub-table td:nth-child(3) { display: none; }
+  .sub-table { font-size: 12px; }
 
-  /* Info card wrap */
-  .info-card-wrap { padding: 20px 16px; border-radius: var(--r-lg); }
-  .info-card-wrap h2 { font-size: 22px; }
+  /* Info card */
+  .info-card-wrap { padding: 16px 14px; border-radius: var(--r-lg); }
+  .info-card-wrap h2 { font-size: 20px; }
   .info-action-row .btn-primary { width: 100%; text-align: center; }
 }
 
-/* ── Extra-small phones (≤400px) ── */
-@media (max-width: 400px) {
-  /* Single-column answer inputs */
-  .inputs-row-grid { grid-template-columns: 1fr; gap: 8px; }
-
-  /* Even smaller equation text */
-  .equation-line { font-size: clamp(1rem, 6vw, 1.3rem); }
-
-  /* Page hero heading */
-  .page-hero h1 { font-size: 1.5rem; }
-
-  /* Timer tighter */
-  .timer-display { font-size: 18px; }
-  .exam-badge { max-width: 140px; font-size: 9px; }
-
-  /* Modal full-screen */
+/* ── Extra-small phones (≤380px) ── */
+@media (max-width: 380px) {
+  .exam-badge { max-width: 50%; font-size: 8px; }
+  .timer-display { font-size: 16px; }
+  .equation-line { font-size: clamp(0.95rem, 5.5vw, 1.25rem); }
+  .page-hero h1 { font-size: 1.4rem; }
+  .q-stage-title { font-size: 16px; }
   .dmat-modal-card { max-height: 100vh; border-radius: 0; }
-
-  /* Hide Date & Time column in submissions */
   .sub-table th:nth-child(6),
   .sub-table td:nth-child(6) { display: none; }
-
-  /* Results: 1 col metrics */
-  .results-metrics-grid { grid-template-columns: 1fr 1fr; }
-  .m-val { font-size: 18px; }
+  .m-val { font-size: 16px; }
+  .palette-btn { min-width: 34px; width: 34px; height: 34px; font-size: 12px; }
 }
 
