@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"/>
+  <title>Mathematic Equations – dMAT Practice &amp; Exam</title>
+  <meta name="description" content="dMAT Mathematic Equations testing module: Solve 4-variable linear systems (A, B, C, D) with whole numbers 1–20. Practice Set 1 &amp; Set 2."/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="dmat.css"/>
+  <style>
+    /* ── Solid White Button ── */
+    .btn-white-solid {
+      background: #ffffff !important;
+      color: #0f172a !important;
+      font-weight: 800 !important;
+      border: none !important;
+      box-shadow: 0 4px 14px rgba(255, 255, 255, 0.25);
+    }
+    .btn-white-solid:hover {
+      background: #f1f5f9 !important;
+      transform: translateY(-2px);
+    }
+
+    /* ── Compact Question Palette (Desktop & General) ── */
+    .exam-layout {
+      display: grid !important;
+      grid-template-columns: 210px 1fr !important;
+      gap: 18px !important;
+      align-items: start !important;
+    }
+
+    .exam-palette-sidebar {
+      background: rgba(15, 23, 42, 0.8) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      border-radius: 12px !important;
+      padding: 12px 14px !important;
+      box-sizing: border-box !important;
+      position: sticky !important;
+      top: 80px !important;
+    }
+
+    .palette-head {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding-bottom: 6px !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+      margin-bottom: 8px !important;
+    }
+
+    .palette-title-text {
+      font-size: 11px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase !important;
+      color: #94a3b8 !important;
+    }
+
+    .palette-sub-text {
+      font-size: 10px !important;
+      color: #64748b !important;
+    }
+
+    .palette-grid {
+      display: grid !important;
+      grid-template-columns: repeat(5, 1fr) !important;
+      gap: 5px !important;
+      margin: 8px 0 !important;
+    }
+
+    .palette-btn {
+      width: 100% !important;
+      height: 32px !important;
+      min-width: 0 !important;
+      aspect-ratio: auto !important;
+      border-radius: 6px !important;
+      background: rgba(30, 41, 59, 0.6) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      color: #94a3b8 !important;
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 0 !important;
+      cursor: pointer !important;
+      transition: all 0.15s ease !important;
+      position: relative !important;
+    }
+
+    .palette-btn:hover {
+      background: rgba(51, 65, 85, 0.8) !important;
+      color: #f8fafc !important;
+      border-color: rgba(255, 255, 255, 0.25) !important;
+    }
+
+    .palette-btn.current {
+      background: #ffffff !important;
+      color: #0f172a !important;
+      font-weight: 900 !important;
+      border-color: #ffffff !important;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .palette-btn.answered {
+      background: rgba(16, 185, 129, 0.25) !important;
+      border-color: #10b981 !important;
+      color: #34d399 !important;
+    }
+
+    .palette-btn.partial {
+      background: rgba(245, 158, 11, 0.2) !important;
+      border-color: #f59e0b !important;
+      color: #fbbf24 !important;
+    }
+
+    .palette-btn.flagged::after {
+      content: '' !important;
+      position: absolute !important;
+      top: 2px !important;
+      right: 2px !important;
+      width: 5px !important;
+      height: 5px !important;
+      border-radius: 50% !important;
+      background: #c084fc !important;
+    }
+
+    .palette-legend {
+      display: flex !important;
+      justify-content: space-between !important;
+      gap: 4px !important;
+      margin-top: 8px !important;
+      padding-top: 6px !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
+      font-size: 10px !important;
+      color: #64748b !important;
+    }
+
+    .palette-legend .legend-item {
+      display: flex !important;
+      align-items: center !important;
+      gap: 4px !important;
+    }
+
+    .palette-legend .leg-box {
+      width: 7px !important;
+      height: 7px !important;
+      border-radius: 2px !important;
+    }
+
+    /* ── Responsive Grids for Difficulties & Sets ── */
+    .math-diff-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 18px !important;
+      max-width: 1080px !important;
+      margin: 0 auto 50px !important;
+    }
+
+    .math-sets-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 18px !important;
+      max-width: 920px !important;
+      margin: 0 auto 50px !important;
+    }
+
+    /* ── Mobile & Tablet Responsiveness (<= 860px) ── */
+    @media (max-width: 860px) {
+      .math-diff-grid,
+      .math-sets-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+        padding: 0 12px !important;
+      }
+
+      .exam-container {
+        padding: 10px 10px 30px !important;
+      }
+
+      .exam-layout {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+      }
+
+      /* Compact Horizontal Palette on Mobile */
+      .exam-palette-sidebar {
+        position: static !important;
+        order: -1 !important;
+        padding: 8px 10px !important;
+        border-radius: 10px !important;
+        margin-bottom: 2px !important;
+      }
+
+      .palette-head {
+        margin-bottom: 4px !important;
+        padding-bottom: 4px !important;
+      }
+
+      .palette-title-text {
+        font-size: 10px !important;
+      }
+
+      .palette-sub-text {
+        font-size: 9px !important;
+      }
+
+      .palette-grid {
+        display: flex !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 6px !important;
+        margin: 4px 0 !important;
+        padding-bottom: 4px !important;
+        scrollbar-width: none !important;
+      }
+
+      .palette-grid::-webkit-scrollbar {
+        display: none !important;
+      }
+
+      .palette-btn {
+        min-width: 34px !important;
+        width: 34px !important;
+        height: 34px !important;
+        flex-shrink: 0 !important;
+        font-size: 12px !important;
+        border-radius: 8px !important;
+      }
+
+      .palette-legend {
+        display: none !important;
+      }
+
+      /* Topbar Mobile */
+      .exam-topbar {
+        padding: 6px 0 !important;
+      }
+
+      .exam-topbar-inner {
+        padding: 0 10px !important;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+      }
+
+      .exam-meta {
+        gap: 6px !important;
+      }
+
+      .exam-badge {
+        font-size: 10px !important;
+        padding: 2px 8px !important;
+      }
+
+      .candidate-pill {
+        font-size: 10px !important;
+        padding: 2px 8px !important;
+      }
+
+      .timer-display {
+        font-size: 19px !important;
+      }
+
+      .btn-submit-exam {
+        padding: 6px 12px !important;
+        font-size: 12px !important;
+      }
+
+      /* Stage Card */
+      .exam-stage-card {
+        padding: 14px 12px !important;
+        border-radius: 12px !important;
+        gap: 12px !important;
+      }
+
+      .q-stage-head {
+        padding-bottom: 8px !important;
+      }
+
+      .q-stage-sub {
+        font-size: 9px !important;
+      }
+
+      .q-stage-title {
+        font-size: 1.15rem !important;
+      }
+
+      .q-stage-instruction {
+        font-size: 0.82rem !important;
+        line-height: 1.4 !important;
+      }
+
+      /* Equations Box */
+      .equations-stage-box {
+        padding: 20px 12px !important;
+        border-radius: 12px !important;
+        margin: 8px 0 !important;
+      }
+
+      .equation-line {
+        font-size: clamp(1.15rem, 5.5vw, 1.6rem) !important;
+        line-height: 1.6 !important;
+      }
+
+      /* Inputs Row */
+      .answer-entry-card {
+        padding: 14px 12px !important;
+        border-radius: 12px !important;
+      }
+
+      .entry-header h4 {
+        font-size: 0.85rem !important;
+      }
+
+      .entry-note {
+        font-size: 0.72rem !important;
+      }
+
+      .inputs-row-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 8px !important;
+      }
+
+      .var-input-group label {
+        font-size: 0.85rem !important;
+      }
+
+      .var-input-group input {
+        height: 46px !important;
+        font-size: 1.15rem !important;
+        text-align: center !important;
+      }
+
+      /* Actions Bar */
+      .exam-actions-bar {
+        margin-top: 14px !important;
+        gap: 8px !important;
+      }
+
+      .exam-btn {
+        padding: 10px 14px !important;
+        font-size: 0.85rem !important;
+        min-height: 42px !important;
+      }
+
+      /* Modals */
+      .dmat-modal-card {
+        width: 94% !important;
+        max-width: 440px !important;
+        margin: auto !important;
+        padding: 16px !important;
+        border-radius: 16px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .inputs-row-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- SVG Defs -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="ic-world" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="ic-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></symbol>
+  <symbol id="ic-math" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></symbol>
+  <symbol id="ic-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+</svg>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-world"/></svg></div>
+        <span class="logo-text">Learning Portal</span>
+      </a>
+      <span class="portal-badge" style="background:rgba(16,185,129,0.15); border-color:rgba(16,185,129,0.3); color:#10b981;">Mathematic Equations</span>
+    </div>
+
+    <div class="header-actions">
+      <a href="dmat.html" class="dmat-btn-sub" title="Back to dMAT Core Modules">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+        <span>dMAT Hub</span>
+      </a>
+      <a href="admin.html" class="dmat-btn-sub" title="Admin Dashboard">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <span>Admin</span>
+      </a>
+      <button class="dmat-btn-sub" id="btn-nav-submissions">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
+        <span>Submissions &amp; Times</span>
+        <span class="badge-count sub-count-display" id="sub-count-badge">0</span>
+      </button>
+      <a href="index.html" class="back-btn">Home</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ══════════════════════════════════════════
+       VIEW 1: CHOOSE DIFFICULTY LEVEL (Easy, Medium, Hard)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view" id="view-difficulties">
+    <div class="page-hero container">
+      <h1>Choose Difficulty Level</h1>
+      <p>Test your algebraic deduction and system substitution skills. Select your level to begin.</p>
+      
+      <div class="hero-stats-row" style="margin-top: 20px;">
+        <div class="h-stat-item">
+          <span class="h-stat-num">3 Levels</span>
+          <span class="h-stat-lbl">Easy · Med · Hard</span>
+        </div>
+        <div class="h-stat-item">
+          <span class="h-stat-num">20 Q</span>
+          <span class="h-stat-lbl">Hard Sets</span>
+        </div>
+        <div class="h-stat-item">
+          <span class="h-stat-num">25 min</span>
+          <span class="h-stat-lbl">Exam Timer</span>
+        </div>
+        <button class="h-stat-btn" id="btn-hero-submissions">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
+          <span>Submissions Log (<span id="hero-sub-count">0</span>)</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cards-grid cols-3 math-diff-grid">
+
+        <!-- Easy -->
+        <div class="glass-card diff-card" id="diff-card-easy" style="cursor: pointer;">
+          <div class="diff-badge badge-easy">WARM-UP</div>
+          <div class="diff-title">Easy</div>
+          <div class="diff-desc">5 Systems of equations. Single-variable substitutions and basic relations.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>5 Q</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>10 mins</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A, B, C, D in numbers</strong></div>
+          </div>
+          <button class="btn-diff-action" id="btn-start-easy">Start Easy</button>
+        </div>
+
+        <!-- Medium -->
+        <div class="glass-card diff-card" id="diff-card-medium" style="cursor: pointer;">
+          <div class="diff-badge badge-medium">INTERMEDIATE</div>
+          <div class="diff-title">Medium</div>
+          <div class="diff-desc">4 Systems of equations. Chained substitutions and multi-step balance equations.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>4 Q</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>15 mins</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A, B, C, D in numbers</strong></div>
+          </div>
+          <button class="btn-diff-action" id="btn-start-med">Start Medium</button>
+        </div>
+
+        <!-- Hard -->
+        <div class="glass-card diff-card diff-card-hard" id="diff-card-hard" style="cursor: pointer;">
+          <div class="diff-badge badge-hard">OFFICIAL DMAT EXAM</div>
+          <div class="diff-title">Hard</div>
+          <div class="diff-desc">20 Unique Systems of equations (Test 1 &amp; Test 2). Official dMAT speed standard.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Test 1 &amp; 2)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 mins</strong></div>
+            <div class="spec-row"><span>Type Answers:</span><strong>A, B, C, D in numbers</strong></div>
+          </div>
+          <button class="btn-diff-action btn-white-solid" id="btn-start-hard">Start 25m Exam</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 1b: HARD SET SELECTION (Set 1 & Set 2)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-sets">
+    <div class="page-hero container">
+      <button class="back-link-btn" id="btn-back-to-diff" style="margin-bottom: 16px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+        Back to Difficulty Level
+      </button>
+      <div class="badge" style="background:rgba(16,185,129,0.12); color:#10b981; border-color:rgba(16,185,129,0.3);">
+        Hard Level · Official dMAT Standard · 25 Minutes
+      </div>
+      <h1>Choose Practice Set</h1>
+      <p>Both sets contain 20 unique equation systems. Select the set you want to attempt — the 25-minute countdown begins after you enter your name.</p>
+    </div>
+
+    <div class="container">
+      <div class="cards-grid math-sets-grid">
+
+        <!-- SET 1 -->
+        <div class="glass-card diff-card diff-card-hard" style="cursor: pointer;" data-start-set="hard_t1" id="card-set-1">
+          <div class="diff-badge badge-hard">Official Practice</div>
+          <div class="diff-title">Set 1</div>
+          <div class="diff-desc">20 Unique systems of equations from official dMAT practice bank. Chained single-variable substitutions and balance equations.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Answer Mode:</span><strong>A, B, C, D (Whole numbers 1–20)</strong></div>
+          </div>
+          <button class="btn-diff-action btn-hard-primary" data-start-set="hard_t1">Start Set 1 (25m) ➔</button>
+        </div>
+
+        <!-- SET 2 -->
+        <div class="glass-card diff-card diff-card-hard" style="cursor: pointer;" data-start-set="hard_t2" id="card-set-2">
+          <div class="diff-badge badge-hard">Official Practice</div>
+          <div class="diff-title">Set 2</div>
+          <div class="diff-desc">20 Unique systems of equations from official dMAT practice bank. Master equation multi-variable balance and speed substitution.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Answer Mode:</span><strong>A, B, C, D (Whole numbers 1–20)</strong></div>
+          </div>
+          <button class="btn-diff-action btn-hard-primary" data-start-set="hard_t2">Start Set 2 (25m) ➔</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 2: EXAM ENGINE (20Q · 25m Countdown)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-exam">
+    <!-- Topbar -->
+    <div class="exam-topbar">
+      <div class="exam-topbar-inner">
+        <div class="exam-meta">
+          <span class="exam-badge" id="exam-title">Mathematic Equations – Set 1</span>
+          <div class="candidate-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
+            <span id="exam-candidate-name">Candidate</span>
+          </div>
+        </div>
+
+        <div class="timer-box">
+          <div class="timer-display" id="exam-timer">25:00</div>
+          <div class="timer-progress-wrap">
+            <div class="timer-progress-fill" id="exam-timer-progress"></div>
+          </div>
+        </div>
+
+        <div class="exam-topbar-actions">
+          <button class="btn-submit-exam" id="btn-submit-exam">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-check"/></svg>
+            <span>Finish &amp; Submit</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exam Stage Layout -->
+    <div class="exam-container">
+      <div class="exam-layout">
+
+        <!-- Question Palette (Left / Sidebar) - Compact & Sleek -->
+        <aside class="exam-palette-sidebar">
+          <div class="palette-head">
+            <span class="palette-title-text">Questions (1–20)</span>
+            <span class="palette-sub-text">Tap to jump</span>
+          </div>
+          <div class="palette-grid" id="q-palette">
+            <!-- 20 Buttons dynamically created -->
+          </div>
+          <div class="palette-legend">
+            <div class="legend-item"><span class="leg-box leg-answered"></span>Done</div>
+            <div class="legend-item"><span class="leg-box leg-flagged"></span>Flag</div>
+            <div class="legend-item"><span class="leg-box leg-current"></span>Current</div>
+          </div>
+        </aside>
+
+        <!-- Main Question Stage -->
+        <div class="exam-stage">
+          <div class="exam-stage-card">
+
+            <!-- Question Header -->
+            <div class="q-stage-head">
+              <div class="q-stage-sub">CORE MODULE · MATHEMATICAL EQUATIONS</div>
+              <h2 class="q-stage-title" id="q-current-number">Question 1 of 20</h2>
+              <p class="q-stage-instruction">
+                Solve the system. Every letter is a whole number from 1 to 20; there is exactly one solution.
+              </p>
+            </div>
+
+            <!-- Big Equation Box (Centered Bold PDF Style) -->
+            <div class="equations-stage-box" id="q-equations-box">
+              <!-- Equation lines dynamically rendered -->
+            </div>
+
+            <!-- Input Fields for A, B, C, D in numbers -->
+            <div class="answer-entry-card" id="q-math-answer-card">
+              <div class="entry-header">
+                <h4>Type the value for each letter in numbers:</h4>
+                <span class="entry-note">Whole numbers 1 to 20</span>
+              </div>
+
+              <div class="inputs-row-grid">
+                <div class="var-input-group">
+                  <label for="ans-A">A =</label>
+                  <input type="number" id="ans-A" min="1" max="20" inputmode="numeric" pattern="[0-9]*" placeholder="?" autocomplete="off"/>
+                </div>
+
+                <div class="var-input-group">
+                  <label for="ans-B">B =</label>
+                  <input type="number" id="ans-B" min="1" max="20" inputmode="numeric" pattern="[0-9]*" placeholder="?" autocomplete="off"/>
+                </div>
+
+                <div class="var-input-group">
+                  <label for="ans-C">C =</label>
+                  <input type="number" id="ans-C" min="1" max="20" inputmode="numeric" pattern="[0-9]*" placeholder="?" autocomplete="off"/>
+                </div>
+
+                <div class="var-input-group">
+                  <label for="ans-D">D =</label>
+                  <input type="number" id="ans-D" min="1" max="20" inputmode="numeric" pattern="[0-9]*" placeholder="?" autocomplete="off"/>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Controls -->
+            <div class="exam-actions-bar">
+              <button class="exam-btn" id="btn-prev-q">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+                <span>Previous</span>
+              </button>
+
+              <button class="exam-btn btn-flag" id="btn-flag-q">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                <span>Flag for Review</span>
+              </button>
+
+              <button class="exam-btn btn-next" id="btn-next-q">
+                <span>Next</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="transform:rotate(180deg);"><use href="#ic-back"/></svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 3: RESULTS & BREAKDOWN
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-results">
+    <div class="container" style="max-width: 900px; padding: 40px 20px 80px;">
+
+      <div class="results-hero-card">
+        <div class="res-badge">Exam Performance Report</div>
+        <h1>Test Complete</h1>
+        <p class="res-candidate-name">Candidate: <strong id="res-candidate">—</strong></p>
+
+        <div class="results-metrics-grid">
+          <div class="metric-card">
+            <span class="m-label">Score</span>
+            <span class="m-val" id="res-score">0 / 20</span>
+          </div>
+          <div class="metric-card">
+            <span class="m-label">Percentage</span>
+            <span class="m-val" id="res-percent">0%</span>
+          </div>
+          <div class="metric-card">
+            <span class="m-label">Time Taken</span>
+            <span class="m-val" id="res-time-taken">0m 00s</span>
+          </div>
+          <div class="metric-card">
+            <span class="m-label">Time Left</span>
+            <span class="m-val" id="res-time-left">0m 00s</span>
+          </div>
+        </div>
+
+        <div class="results-actions-row">
+          <button class="btn-primary" id="btn-results-submissions">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
+            <span>View All Submissions &amp; Times Log</span>
+          </button>
+          <button class="btn-secondary" id="btn-retake-exam">Retake Test</button>
+          <a href="dmat.html" class="btn-secondary" style="text-decoration:none;">dMAT Hub</a>
+        </div>
+      </div>
+
+      <div class="results-breakdown-section">
+        <h3>Question-by-Question Solution Breakdown</h3>
+        <p class="breakdown-subtitle">Review every equation system, your entered answers, and complete mathematical derivations.</p>
+        <div class="breakdown-list" id="res-breakdown">
+          <!-- Dynamically filled with 20 items -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- ══════════════════════════════════════════
+     MODAL 1: CANDIDATE NAME (WITHOUT PRACTICE SET CHOICES)
+══════════════════════════════════════════ -->
+<div class="dmat-modal-overlay hidden" id="modal-candidate-name">
+  <div class="dmat-modal-card">
+    <div class="modal-header">
+      <h3>Start Exam Simulation</h3>
+      <span class="modal-sub" id="name-modal-set-label">Practice Set 1 · 20 Questions</span>
+    </div>
+
+    <div class="modal-body">
+      <div class="modal-specs-strip">
+        <div><span>Questions:</span> <strong>20 System Questions</strong></div>
+        <div><span>Countdown:</span> <strong>25 Minutes</strong></div>
+      </div>
+
+      <div class="form-group" style="margin-top: 20px;">
+        <label for="input-candidate-name">Enter Candidate / Student Name:</label>
+        <input type="text" id="input-candidate-name" class="modal-input" placeholder="e.g. Kishore K. / Alex Bauer" autofocus/>
+        <div class="error-msg" id="name-modal-error"></div>
+      </div>
+
+      <p class="modal-note">
+        Your completion time, final score, and detailed answers will be recorded in the test submissions log.
+      </p>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-secondary" id="btn-cancel-start">Cancel</button>
+      <button class="btn-primary" id="btn-confirm-start">Begin Set 1 (25m) ➔</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     MODAL 2: SUBMISSIONS & TIMES DASHBOARD
+══════════════════════════════════════════ -->
+<div class="dmat-modal-overlay hidden" id="modal-submissions">
+  <div class="dmat-modal-card modal-large">
+    <div class="modal-header modal-header-flex">
+      <div>
+        <h3>Candidate Submissions &amp; Completion Times</h3>
+        <span class="modal-sub">View candidates who answered Mathematic Equations tests, completion times, and scores.</span>
+      </div>
+      <button class="modal-close-x" id="btn-close-submissions">✕</button>
+    </div>
+
+    <div class="modal-body" style="padding: 20px 24px;">
+      <div class="sub-controls-row">
+        <div class="search-wrap">
+          <input type="text" id="sub-search-input" placeholder="Search candidate by name or date..."/>
+        </div>
+        <div class="sub-export-btns">
+          <a href="admin.html" class="btn-sm" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+            <span>Admin Page</span>
+          </a>
+          <button class="btn-sm" id="btn-export-csv" title="Download Excel/CSV sheet">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Export CSV</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="sub-table-wrap">
+        <table class="sub-table">
+          <thead>
+            <tr>
+              <th style="width: 45px;">#</th>
+              <th>Candidate Name</th>
+              <th>Test Set</th>
+              <th>Score</th>
+              <th>Time Taken</th>
+              <th>Date &amp; Time</th>
+              <th style="text-align: right;">Action</th>
+            </tr>
+          </thead>
+          <tbody id="submissions-table-body"></tbody>
+        </table>
+
+        <div class="sub-empty hidden" id="submissions-empty-state">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#ic-users"/></svg>
+          <p>No candidate submissions found yet. Take a test to record your results!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     MODAL 3: CANDIDATE ANSWER SHEET INSPECT
+══════════════════════════════════════════ -->
+<div class="dmat-modal-overlay hidden" id="modal-sub-details">
+  <div class="dmat-modal-card modal-large">
+    <div class="modal-header modal-header-flex">
+      <div>
+        <h3 id="sub-details-title">Candidate Answer Sheet</h3>
+        <div class="sub-details-meta" id="sub-details-meta"></div>
+      </div>
+      <button class="modal-close-x" id="btn-close-sub-details">✕</button>
+    </div>
+    <div class="modal-body" style="padding: 20px 24px; max-height: 70vh; overflow-y: auto;" id="sub-details-body">
+      <!-- Detailed question list -->
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="dmat_data.js"></script>
+<script src="cloud_sync.js"></script>
+<script src="math.js"></script>
+</body>
+</html>

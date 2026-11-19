@@ -37,6 +37,7 @@
       // Views
       viewCategories: document.getElementById('view-categories'),
       viewDifficulties: document.getElementById('view-difficulties'),
+      viewHardSets: document.getElementById('view-hard-sets'),
       viewCatInfo: document.getElementById('view-category-info'),
       viewExam: document.getElementById('view-exam'),
       viewResults: document.getElementById('view-results'),
@@ -222,6 +223,28 @@
       dom.btnBackFromInfo.addEventListener('click', () => setView('categories'));
     }
 
+    // Back from hard-set view to difficulties
+    const btnBackToDiff = document.getElementById('btn-back-to-difficulties');
+    if (btnBackToDiff) {
+      btnBackToDiff.addEventListener('click', () => setView('difficulties'));
+    }
+
+    // Hard set cards (Set 1 / Set 2)
+    const hardSet1 = document.getElementById('hard-set-card-1');
+    const hardSet2 = document.getElementById('hard-set-card-2');
+    if (hardSet1) {
+      hardSet1.addEventListener('click', () => {
+        state.selectedCategory = 'math';
+        promptCandidateName('hard_t1');
+      });
+    }
+    if (hardSet2) {
+      hardSet2.addEventListener('click', () => {
+        state.selectedCategory = 'math';
+        promptCandidateName('hard_t2');
+      });
+    }
+
     // Category clicks
     document.querySelectorAll('[data-category]').forEach(card => {
       card.addEventListener('click', () => {
@@ -234,7 +257,12 @@
     document.querySelectorAll('[data-difficulty]').forEach(btn => {
       btn.addEventListener('click', () => {
         const diff = btn.getAttribute('data-difficulty');
-        promptCandidateName(diff);
+        // For math Hard: show Set 1/Set 2 selection view first
+        if (diff === 'hard' && state.selectedCategory === 'math') {
+          setView('hard-sets');
+        } else {
+          promptCandidateName(diff);
+        }
       });
     });
 
@@ -335,6 +363,7 @@
     const views = [
       dom.viewCategories,
       dom.viewDifficulties,
+      dom.viewHardSets,
       dom.viewCatInfo,
       dom.viewExam,
       dom.viewResults
@@ -350,6 +379,8 @@
       dom.viewCategories.classList.remove('hidden');
     } else if (viewName === 'difficulties' && dom.viewDifficulties) {
       dom.viewDifficulties.classList.remove('hidden');
+    } else if (viewName === 'hard-sets' && dom.viewHardSets) {
+      dom.viewHardSets.classList.remove('hidden');
     } else if (viewName === 'category-info' && dom.viewCatInfo) {
       dom.viewCatInfo.classList.remove('hidden');
     } else if (viewName === 'exam' && dom.viewExam) {
@@ -366,12 +397,25 @@
 
   function updateDifficultyView() {
     const isFigures = state.selectedCategory === 'figures';
+    const diffGrid = document.querySelector('#view-difficulties .cards-grid');
+    const cardEasy = document.getElementById('diff-card-easy');
+    const cardMed = document.getElementById('diff-card-medium');
+    const cardHard = document.getElementById('diff-card-hard');
+
     if (isFigures) {
+      if (diffGrid) diffGrid.style.gridTemplateColumns = '';
       if (dom.diffCatBadge) dom.diffCatBadge.textContent = 'Category 1 · Figure Sequences (Formenreihen)';
       if (dom.diffCatTitle) dom.diffCatTitle.textContent = 'Choose Difficulty Level';
       if (dom.diffCatDesc)  dom.diffCatDesc.textContent  = 'Analyze official 3×3 matrix sequence rules. Find the 5th and 6th figures in each series.';
 
       // Easy
+      if (cardEasy) {
+        cardEasy.setAttribute('data-difficulty', 'easy');
+        const b = cardEasy.querySelector('.diff-badge');
+        if (b) { b.textContent = 'Warm-Up'; b.className = 'diff-badge badge-easy'; }
+        const btn = cardEasy.querySelector('.btn-diff-action');
+        if (btn) btn.textContent = 'Start Easy';
+      }
       if (dom.diffCardEasyTitle) dom.diffCardEasyTitle.textContent = 'Easy';
       if (dom.diffCardEasyDesc)  dom.diffCardEasyDesc.textContent  = 'Single moving element. Direct clockwise and counter-clockwise shifts.';
       if (dom.diffEasyQcount)    dom.diffEasyQcount.textContent    = '20 Q';
@@ -379,6 +423,13 @@
       if (dom.diffEasyInputs)    dom.diffEasyInputs.textContent    = 'Matrix 5 & 6 Options';
 
       // Medium
+      if (cardMed) {
+        cardMed.setAttribute('data-difficulty', 'medium');
+        const b = cardMed.querySelector('.diff-badge');
+        if (b) { b.textContent = 'Intermediate'; b.className = 'diff-badge badge-medium'; }
+        const btn = cardMed.querySelector('.btn-diff-action');
+        if (btn) btn.textContent = 'Start Medium';
+      }
       if (dom.diffCardMedTitle) dom.diffCardMedTitle.textContent = 'Medium';
       if (dom.diffCardMedDesc)  dom.diffCardMedDesc.textContent  = 'Two alternating elements. Parity steps, directional rotations, and shape changes.';
       if (dom.diffMedQcount)    dom.diffMedQcount.textContent    = '20 Q';
@@ -386,36 +437,51 @@
       if (dom.diffMedInputs)    dom.diffMedInputs.textContent    = 'Matrix 5 & 6 Options';
 
       // Hard
+      if (cardHard) {
+        cardHard.style.display = '';
+        cardHard.setAttribute('data-difficulty', 'hard');
+      }
       if (dom.diffCardHardTitle) dom.diffCardHardTitle.textContent = 'Hard (5 Tests)';
       if (dom.diffCardHardDesc)  dom.diffCardHardDesc.textContent  = '5 Complete Official Practice Tests (Test 1 to 5). Complex multi-element cyclic permutations.';
       if (dom.diffHardQcount)    dom.diffHardQcount.textContent    = '20 Q (5 Tests)';
       if (dom.diffHardTimer)     dom.diffHardTimer.textContent     = '25 mins';
       if (dom.diffHardInputs)    dom.diffHardInputs.textContent    = 'Matrix 5 & 6 Options';
     } else {
+      if (diffGrid) diffGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
       if (dom.diffCatBadge) dom.diffCatBadge.textContent = 'Category 2 · Mathematic Equations';
-      if (dom.diffCatTitle) dom.diffCatTitle.textContent = 'Choose Difficulty Level';
-      if (dom.diffCatDesc)  dom.diffCatDesc.textContent  = 'Test your algebraic deduction and system substitution skills. Select your level to begin.';
+      if (dom.diffCatTitle) dom.diffCatTitle.textContent = 'Choose Practice Set';
+      if (dom.diffCatDesc)  dom.diffCatDesc.textContent  = 'Solve 4-variable linear systems (A, B, C, D) with whole numbers 1–20. Select Set 1 or Set 2.';
 
-      // Easy
-      if (dom.diffCardEasyTitle) dom.diffCardEasyTitle.textContent = 'Easy';
-      if (dom.diffCardEasyDesc)  dom.diffCardEasyDesc.textContent  = '5 Systems of equations. Single-variable substitutions and basic relations.';
-      if (dom.diffEasyQcount)    dom.diffEasyQcount.textContent    = '5 Q';
-      if (dom.diffEasyTimer)     dom.diffEasyTimer.textContent     = '10 mins';
-      if (dom.diffEasyInputs)    dom.diffEasyInputs.textContent    = 'A, B, C, D in numbers';
+      // Set 1 (using card 1)
+      if (cardEasy) {
+        cardEasy.setAttribute('data-difficulty', 'hard_t1');
+        const b = cardEasy.querySelector('.diff-badge');
+        if (b) { b.textContent = 'Official Practice'; b.className = 'diff-badge badge-hard'; }
+        const btn = cardEasy.querySelector('.btn-diff-action');
+        if (btn) btn.textContent = 'Start Set 1 (25m)';
+      }
+      if (dom.diffCardEasyTitle) dom.diffCardEasyTitle.textContent = 'Set 1';
+      if (dom.diffCardEasyDesc)  dom.diffCardEasyDesc.textContent  = '20 Official practice questions. Chained substitutions and multi-step balance equations.';
+      if (dom.diffEasyQcount)    dom.diffEasyQcount.textContent    = '20 Q';
+      if (dom.diffEasyTimer)     dom.diffEasyTimer.textContent     = '25 mins';
+      if (dom.diffEasyInputs)    dom.diffEasyInputs.textContent    = 'A, B, C, D (1–20)';
 
-      // Medium
-      if (dom.diffCardMedTitle) dom.diffCardMedTitle.textContent = 'Medium';
-      if (dom.diffCardMedDesc)  dom.diffCardMedDesc.textContent  = '4 Systems of equations. Chained substitutions and multi-step balance equations.';
-      if (dom.diffMedQcount)    dom.diffMedQcount.textContent    = '4 Q';
-      if (dom.diffMedTimer)     dom.diffMedTimer.textContent     = '15 mins';
-      if (dom.diffMedInputs)    dom.diffMedInputs.textContent    = 'A, B, C, D in numbers';
+      // Set 2 (using card 2)
+      if (cardMed) {
+        cardMed.setAttribute('data-difficulty', 'hard_t2');
+        const b = cardMed.querySelector('.diff-badge');
+        if (b) { b.textContent = 'Official Practice'; b.className = 'diff-badge badge-hard'; }
+        const btn = cardMed.querySelector('.btn-diff-action');
+        if (btn) btn.textContent = 'Start Set 2 (25m)';
+      }
+      if (dom.diffCardMedTitle) dom.diffCardMedTitle.textContent = 'Set 2';
+      if (dom.diffCardMedDesc)  dom.diffCardMedDesc.textContent  = '20 Official practice questions. Linear equation systems and algebraic substitution.';
+      if (dom.diffMedQcount)    dom.diffMedQcount.textContent    = '20 Q';
+      if (dom.diffMedTimer)     dom.diffMedTimer.textContent     = '25 mins';
+      if (dom.diffMedInputs)    dom.diffMedInputs.textContent    = 'A, B, C, D (1–20)';
 
-      // Hard
-      if (dom.diffCardHardTitle) dom.diffCardHardTitle.textContent = 'Hard';
-      if (dom.diffCardHardDesc)  dom.diffCardHardDesc.textContent  = '20 Unique Systems of equations (Test 1 & Test 2). Official dMAT speed standard.';
-      if (dom.diffHardQcount)    dom.diffHardQcount.textContent    = '20 Q (Test 1 & 2)';
-      if (dom.diffHardTimer)     dom.diffHardTimer.textContent     = '25 mins';
-      if (dom.diffHardInputs)    dom.diffHardInputs.textContent    = 'A, B, C, D in numbers';
+      // Hide card 3 in math mode so Set 1 & Set 2 are shown cleanly side by side
+      if (cardHard) cardHard.style.display = 'none';
     }
   }
 
@@ -428,9 +494,7 @@
       renderCategoryInfo(catKey);
       setView('category-info');
     }
-  }
-
-  function renderCategoryInfo(catKey) {
+  }  function renderCategoryInfo(catKey) {
     const info = (typeof DMAT_DATA !== 'undefined' && DMAT_DATA.categoryInfo) ? DMAT_DATA.categoryInfo[catKey] : null;
     if (!info) return;
 
@@ -505,48 +569,44 @@
         dom.testSetWrap.style.display = 'none';
       }
     } else if (category === 'math') {
-      if (difficulty.startsWith('hard')) {
-        dom.testSetWrap.style.display = 'block';
-        if (dom.testSetLabelHeading) dom.testSetLabelHeading.textContent = 'Select Mathematic Equations Test (20Q · 25 mins):';
+      dom.testSetWrap.style.display = 'block';
+      if (dom.testSetLabelHeading) dom.testSetLabelHeading.textContent = 'Select Practice Set (20Q · 25 mins):';
 
-        const tests = [
-          { id: 'hard_t1', label: 'Test 1', sub: 'dMAT Standard (20Q)' },
-          { id: 'hard_t2', label: 'Test 2', sub: 'New Systems (20Q)' }
-        ];
+      const tests = [
+        { id: 'hard_t1', label: 'Set 1', sub: 'Practice Set 1 (20Q)' },
+        { id: 'hard_t2', label: 'Set 2', sub: 'Practice Set 2 (20Q)' }
+      ];
 
-        let grid = document.createElement('div');
-        grid.style.cssText = 'display: grid; grid-template-columns: 1fr 1fr; gap: 10px;';
+      let grid = document.createElement('div');
+      grid.style.cssText = 'display: grid; grid-template-columns: 1fr 1fr; gap: 10px;';
 
-        tests.forEach((t) => {
-          const isSelected = (state.selectedDifficulty === t.id) || (state.selectedDifficulty === 'hard' && t.id === 'hard_t1');
-          const card = document.createElement('label');
-          card.className = `test-set-card-radio ${isSelected ? 'active' : ''}`;
-          card.style.cssText = `
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            padding: 12px 10px; border-radius: 8px; border: 2px solid ${isSelected ? '#10b981' : 'var(--border-lo)'};
-            background: ${isSelected ? 'rgba(16, 185, 129, 0.12)' : 'var(--bg-02)'};
-            cursor: pointer; text-align: center; transition: all 0.2s; user-select: none;
-          `;
+      tests.forEach((t) => {
+        const isSelected = (state.selectedDifficulty === t.id) || (state.selectedDifficulty === 'hard' && t.id === 'hard_t1');
+        const card = document.createElement('label');
+        card.className = `test-set-card-radio ${isSelected ? 'active' : ''}`;
+        card.style.cssText = `
+          display: flex; flex-direction: column; align-items: center; justify-content: center;
+          padding: 12px 10px; border-radius: 8px; border: 2px solid ${isSelected ? '#10b981' : 'var(--border-lo)'};
+          background: ${isSelected ? 'rgba(16, 185, 129, 0.12)' : 'var(--bg-02)'};
+          cursor: pointer; text-align: center; transition: all 0.2s; user-select: none;
+        `;
 
-          card.innerHTML = `
-            <input type="radio" name="math_test_radio" value="${t.id}" ${isSelected ? 'checked' : ''} style="display:none;"/>
-            <strong style="font-size:13px; color:${isSelected ? '#10b981' : 'var(--t-100)'};">${t.label}</strong>
-            <span style="font-size:11px; color:var(--t-60); margin-top:2px;">${t.sub}</span>
-          `;
+        card.innerHTML = `
+          <input type="radio" name="math_test_radio" value="${t.id}" ${isSelected ? 'checked' : ''} style="display:none;"/>
+          <strong style="font-size:13px; color:${isSelected ? '#10b981' : 'var(--t-100)'};">${t.label}</strong>
+          <span style="font-size:11px; color:var(--t-60); margin-top:2px;">${t.sub}</span>
+        `;
 
-          card.addEventListener('click', () => {
-            state.selectedDifficulty = t.id;
-            renderTestSetSelector(category, 'hard');
-            updateModalLabels();
-          });
-
-          grid.appendChild(card);
+        card.addEventListener('click', () => {
+          state.selectedDifficulty = t.id;
+          renderTestSetSelector(category, 'hard');
+          updateModalLabels();
         });
 
-        dom.testSetContainer.appendChild(grid);
-      } else {
-        dom.testSetWrap.style.display = 'none';
-      }
+        grid.appendChild(card);
+      });
+
+      dom.testSetContainer.appendChild(grid);
     }
   }
 
@@ -575,23 +635,11 @@
         if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Easy Test (25m) ➔';
       }
     } else {
-      if (diff.startsWith('hard')) {
-        timerLabel.textContent = '25 Minutes';
-        qCountLabel.textContent = '20 System Questions';
-        const isT2 = (diff === 'hard_t2');
-        label.textContent = isT2 ? 'Mathematic Equations · Hard Test 2' : 'Mathematic Equations · Hard Test 1';
-        if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = isT2 ? 'Begin Test 2 (25m) ➔' : 'Begin Test 1 (25m) ➔';
-      } else if (diff === 'medium') {
-        timerLabel.textContent = '15 Minutes';
-        qCountLabel.textContent = '4 System Questions';
-        label.textContent = 'Mathematic Equations · Medium Mode';
-        if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Medium Test (15m) ➔';
-      } else {
-        timerLabel.textContent = '10 Minutes';
-        qCountLabel.textContent = '5 System Questions';
-        label.textContent = 'Mathematic Equations · Easy Mode';
-        if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = 'Begin Easy Test (10m) ➔';
-      }
+      timerLabel.textContent = '25 Minutes';
+      qCountLabel.textContent = '20 System Questions';
+      const isT2 = (diff === 'hard_t2');
+      label.textContent = isT2 ? 'Mathematic Equations · Practice Set 2' : 'Mathematic Equations · Practice Set 1';
+      if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = isT2 ? 'Begin Set 2 (25m) ➔' : 'Begin Set 1 (25m) ➔';
     }
   }
 
@@ -605,7 +653,10 @@
     dom.nameModalError.textContent = '';
     dom.candidateNameInput.value = state.candidateName || '';
 
-    renderTestSetSelector(state.selectedCategory, difficulty);
+    // Hide the old test-set-selector — set is chosen before modal now
+    const testSetWrap = document.getElementById('test-set-selector-wrap');
+    if (testSetWrap) testSetWrap.style.display = 'none';
+
     updateModalLabels();
 
     dom.nameModal.classList.remove('hidden');
@@ -662,19 +713,11 @@
       if (difficulty === 'hard_t2') {
         state.questions = (mathData.hard_t2 || []).slice(0, 20);
         state.timerTotalSeconds = 25 * 60;
-        dom.examTitle.textContent = 'Mathematic Equations – Hard Test 2';
-      } else if (difficulty === 'hard' || difficulty === 'hard_t1') {
-        state.questions = (mathData.hard || []).slice(0, 20);
-        state.timerTotalSeconds = 25 * 60;
-        dom.examTitle.textContent = 'Mathematic Equations – Hard Test 1';
-      } else if (difficulty === 'medium') {
-        state.questions = (mathData.medium || []).slice(0, 4);
-        state.timerTotalSeconds = 15 * 60;
-        dom.examTitle.textContent = 'Mathematic Equations – Medium Mode';
+        dom.examTitle.textContent = 'Mathematic Equations – Set 2';
       } else {
-        state.questions = (mathData.easy || []).slice(0, 5);
-        state.timerTotalSeconds = 10 * 60;
-        dom.examTitle.textContent = 'Mathematic Equations – Easy Mode';
+        state.questions = (mathData.hard_t1 || mathData.hard || []).slice(0, 20);
+        state.timerTotalSeconds = 25 * 60;
+        dom.examTitle.textContent = 'Mathematic Equations – Set 1';
       }
       state.timerRemainingSeconds = state.timerTotalSeconds;
     }
@@ -859,9 +902,18 @@
       renderFigureQuestion(q);
     } else {
       // Hide figure stage wrap
-      if (dom.qFiguresStageWrap) dom.qFiguresStageWrap.classList.add('hidden');
-      if (dom.qEquationsBox) dom.qEquationsBox.classList.remove('hidden');
-      if (dom.qMathAnswerCard) dom.qMathAnswerCard.classList.remove('hidden');
+      if (dom.qFiguresStageWrap) {
+        dom.qFiguresStageWrap.classList.add('hidden');
+        dom.qFiguresStageWrap.style.display = 'none';
+      }
+      if (dom.qEquationsBox) {
+        dom.qEquationsBox.classList.remove('hidden');
+        dom.qEquationsBox.style.display = 'flex';
+      }
+      if (dom.qMathAnswerCard) {
+        dom.qMathAnswerCard.classList.remove('hidden');
+        dom.qMathAnswerCard.style.display = 'block';
+      }
 
       if (dom.qStageSub) dom.qStageSub.textContent = 'CORE MODULE · MATHEMATICAL EQUATIONS';
       if (dom.qStageInstruction) dom.qStageInstruction.textContent = 'Solve the system. Every letter is a whole number from 1 to 20; there is exactly one solution.';
@@ -1039,13 +1091,9 @@
       }
     } else {
       if (state.selectedDifficulty === 'hard_t2') {
-        diffDisplay = 'Equations – Hard Test 2';
-      } else if (state.selectedDifficulty === 'hard' || state.selectedDifficulty === 'hard_t1') {
-        diffDisplay = 'Equations – Hard Test 1';
-      } else if (state.selectedDifficulty === 'medium') {
-        diffDisplay = 'Equations – Medium';
+        diffDisplay = 'Equations – Set 2';
       } else {
-        diffDisplay = 'Equations – Easy';
+        diffDisplay = 'Equations – Set 1';
       }
     }
 

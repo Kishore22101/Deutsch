@@ -1,588 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"/>
-  <meta name="mobile-web-app-capable" content="yes"/>
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <title>dMAT – Germany Master Degree Preparation</title>
-  <meta name="description" content="dMAT test preparation for Master's degrees in Germany: Figure Sequences, Mathematic Equations, Latin Squares, and Subject Modules."/>
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="stylesheet" href="dmat.css"/>
+  <meta name="description"
+    content="dMAT test preparation for Master's degrees in Germany: Figure Sequences, Mathematic Equations, Latin Squares, and Subject Modules." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="dmat.css" />
 </head>
+
 <body>
 
-<!-- SVG Defs -->
-<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
-  <symbol id="ic-world" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
-  <symbol id="ic-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></symbol>
-  <symbol id="ic-shapes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><circle cx="17.5" cy="6.5" r="3.5"/><polygon points="12 14 7 21 17 21"/></symbol>
-  <symbol id="ic-math" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></symbol>
-  <symbol id="ic-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></symbol>
-  <symbol id="ic-atom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-30 12 12)"/></symbol>
-  <symbol id="ic-timer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
-  <symbol id="ic-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
-  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
-</svg>
+  <!-- SVG Defs -->
+  <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="ic-world" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <line x1="2" y1="12" x2="22" y2="12" />
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    </symbol>
+    <symbol id="ic-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <line x1="19" y1="12" x2="5" y2="12" />
+      <polyline points="12 19 5 12 12 5" />
+    </symbol>
+    <symbol id="ic-shapes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <rect x="3" y="3" width="7" height="7" />
+      <circle cx="17.5" cy="6.5" r="3.5" />
+      <polygon points="12 14 7 21 17 21" />
+    </symbol>
+    <symbol id="ic-math" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <line x1="4" y1="9" x2="20" y2="9" />
+      <line x1="4" y1="15" x2="20" y2="15" />
+      <line x1="10" y1="3" x2="8" y2="21" />
+      <line x1="16" y1="3" x2="14" y2="21" />
+    </symbol>
+    <symbol id="ic-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <line x1="3" y1="9" x2="21" y2="9" />
+      <line x1="3" y1="15" x2="21" y2="15" />
+      <line x1="9" y1="3" x2="9" y2="21" />
+      <line x1="15" y1="3" x2="15" y2="21" />
+    </symbol>
+    <symbol id="ic-atom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <circle cx="12" cy="12" r="2" />
+      <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" />
+      <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)" />
+      <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-30 12 12)" />
+    </symbol>
+    <symbol id="ic-timer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <polyline points="12 6 12 12 16 14" />
+    </symbol>
+    <symbol id="ic-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    </symbol>
+    <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12" />
+    </symbol>
+  </svg>
 
-<!-- Header -->
-<header class="site-header">
-  <div class="header-inner">
-    <div class="header-left">
-      <a href="index.html" class="logo">
-        <div class="logo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-world"/></svg></div>
-        <span class="logo-text">Learning Portal</span>
-      </a>
-      <span class="portal-badge">dMAT Portal</span>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5">
+              <use href="#ic-world" />
+            </svg></div>
+          <span class="logo-text">Learning Portal</span>
+        </a>
+        <span class="portal-badge">dMAT Portal</span>
+      </div>
+
+      <div class="header-actions">
+        <a href="math.html" class="dmat-btn-sub" title="Open Mathematic Equations Portal"
+          style="border-color: rgba(16,185,129,0.4); color: #10b981;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <use href="#ic-math" />
+          </svg>
+          <span>Math Portal</span>
+        </a>
+        <a href="admin.html" class="dmat-btn-sub" title="Admin Dashboard">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 20h9" />
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+          </svg>
+          <span>Admin Dashboard</span>
+        </a>
+        <button class="dmat-btn-sub" id="btn-nav-submissions">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <use href="#ic-users" />
+          </svg>
+          <span>Submissions &amp; Times</span>
+          <span class="badge-count sub-count-display" id="sub-count-badge">0</span>
+        </button>
+        <a href="index.html" class="back-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <use href="#ic-back" />
+          </svg>
+          Home
+        </a>
+      </div>
     </div>
+  </header>
 
-    <div class="header-actions">
-      <a href="admin.html" class="dmat-btn-sub" title="Admin Dashboard">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-        <span>Admin Dashboard</span>
-      </a>
-      <button class="dmat-btn-sub" id="btn-nav-submissions">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
-        <span>Submissions &amp; Times</span>
-        <span class="badge-count sub-count-display" id="sub-count-badge">0</span>
-      </button>
-      <a href="index.html" class="back-btn">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
-        Home
-      </a>
-    </div>
-  </div>
-</header>
-
-<main>
-  <!-- ══════════════════════════════════════════
+  <main>
+    <!-- ══════════════════════════════════════════
        VIEW 1: CATEGORIES
   ══════════════════════════════════════════ -->
-  <section class="dmat-view" id="view-categories">
-    <div class="page-hero container">
-      <div class="badge">Germany Master's Degree Preparation · dMAT</div>
-      <h1>dMAT Core Modules</h1>
-      <p>Master the cognitive subtests and quantitative skills with structured drills and official-standard timed simulations for German Master's admissions.</p>
-      <div class="hero-stats-row">
-        <div class="h-stat-item">
-          <span class="h-stat-num">4</span>
-          <span class="h-stat-lbl">Core Categories</span>
-        </div>
-        <div class="h-stat-item">
-          <span class="h-stat-num">20 Q</span>
-          <span class="h-stat-lbl">Hard Exam System</span>
-        </div>
-        <div class="h-stat-item">
-          <span class="h-stat-num">25 min</span>
-          <span class="h-stat-lbl">Exact Exam Timer</span>
-        </div>
-        <button class="h-stat-btn" id="btn-hero-submissions">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
-          <span>View Submissions Log (<span class="sub-count-display">0</span>)</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="cards-grid cols-2-dmat">
-
-        <!-- 1. Figure Sequences -->
-        <div class="glass-card dmat-cat-card dmat-featured-card" data-category="figures" id="cat-figures">
-          <div class="card-num-pill">1</div>
-          <div class="featured-ribbon">Active Testing Module</div>
-          <div class="card-icon dmat-icon-blue">
-            <svg width="30" height="30" viewBox="0 0 24 24"><use href="#ic-shapes"/></svg>
+    <section class="dmat-view" id="view-categories">
+      <div class="page-hero container">
+        <div class="badge">Germany Master's Degree Preparation · dMAT</div>
+        <h1>dMAT Core Modules</h1>
+        <p>Master the cognitive subtests and quantitative skills with structured drills and official-standard timed
+          simulations for German Master's admissions.</p>
+        <div class="hero-stats-row">
+          <div class="h-stat-item">
+            <span class="h-stat-num">4</span>
+            <span class="h-stat-lbl">Core Categories</span>
           </div>
-          <div class="cat-content">
-            <div class="card-level">Figure Sequences</div>
-            <div class="card-title">Formenreihen</div>
-            <div class="card-desc">Identify underlying transformation rules, geometric rotation, perimeter progression, and color cycles. Includes Easy, Medium, and 5 Hard practice tests (20Q · 25m each).</div>
+          <div class="h-stat-item">
+            <span class="h-stat-num">25 Q</span>
+            <span class="h-stat-lbl">Hard Exam System</span>
           </div>
-          <div class="cat-footer">
-            <span class="card-tag tag-primary">Easy · Medium · Hard (5 Tests)</span>
-            <span class="cat-arrow">→</span>
+          <div class="h-stat-item">
+            <span class="h-stat-num">25 min</span>
+            <span class="h-stat-lbl">Exact Exam Timer</span>
           </div>
-        </div>
-
-        <!-- 2. Mathematic Equations -->
-        <div class="glass-card dmat-cat-card dmat-featured-card" data-category="math" id="cat-math">
-          <div class="card-num-pill">2</div>
-          <div class="featured-ribbon">Active Testing Module</div>
-          <div class="card-icon dmat-icon-emerald">
-            <svg width="30" height="30" viewBox="0 0 24 24"><use href="#ic-math"/></svg>
-          </div>
-          <div class="cat-content">
-            <div class="card-level">Mathematic Equations</div>
-            <div class="card-title">Mathematische Gleichungen</div>
-            <div class="card-desc">Solve 4-variable linear systems (A, B, C, D) with whole numbers 1–20. Includes Easy, Medium, and 20Q Hard exams (Test 1 &amp; Test 2) with 25m timer.</div>
-          </div>
-          <div class="cat-footer">
-            <span class="card-tag tag-primary">Easy · Medium · Hard (Test 1 &amp; 2)</span>
-            <span class="cat-arrow">→</span>
-          </div>
-        </div>
-
-        <!-- 3. Latin Squares -->
-        <div class="glass-card dmat-cat-card" data-category="latin" id="cat-latin">
-          <div class="card-num-pill">3</div>
-          <div class="card-icon dmat-icon-purple">
-            <svg width="30" height="30" viewBox="0 0 24 24"><use href="#ic-grid"/></svg>
-          </div>
-          <div class="cat-content">
-            <div class="card-level">Latin Squares</div>
-            <div class="card-title">Lateinische Quadrate</div>
-            <div class="card-desc">Deduce row-and-column constraint logic puzzles and matrix completion rules under speed pressure.</div>
-          </div>
-          <div class="cat-footer">
-            <span class="card-tag">Overview &amp; Syllabus</span>
-            <span class="cat-arrow">→</span>
-          </div>
-        </div>
-
-        <!-- 4. Subject Modules -->
-        <div class="glass-card dmat-cat-card" data-category="modules" id="cat-modules">
-          <div class="card-num-pill">4</div>
-          <div class="card-icon dmat-icon-amber">
-            <svg width="30" height="30" viewBox="0 0 24 24"><use href="#ic-atom"/></svg>
-          </div>
-          <div class="cat-content">
-            <div class="card-level">Subject Modules</div>
-            <div class="card-title">Fachmodule (Master)</div>
-            <div class="card-desc">Curriculum-aligned quantitative and scientific question sets for German university Master's degree entry.</div>
-          </div>
-          <div class="cat-footer">
-            <span class="card-tag">Overview &amp; Syllabus</span>
-            <span class="cat-arrow">→</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       VIEW 2: EXAMINATION DIFFICULTIES
-  ══════════════════════════════════════════ -->
-  <section class="dmat-view hidden" id="view-difficulties">
-    <div class="page-hero container">
-      <button class="back-link-btn" id="btn-back-to-categories">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
-        Back to All 4 Categories
-      </button>
-      <div class="badge" style="margin-top:16px;" id="diff-cat-badge">Category 2 · Mathematic Equations</div>
-      <h1 id="diff-cat-title">Choose Difficulty Level</h1>
-      <p id="diff-cat-desc">Test your algebraic deduction and system substitution skills. Select your level to begin.</p>
-    </div>
-
-    <div class="container">
-      <div class="cards-grid cols-3">
-
-        <!-- Easy -->
-        <div class="glass-card diff-card" data-difficulty="easy" id="diff-card-easy">
-          <div class="diff-badge badge-easy">Warm-Up</div>
-          <div class="diff-title" id="diff-card-easy-title">Easy</div>
-          <div class="diff-desc" id="diff-card-easy-desc">5 Systems of equations. Single-variable substitutions and basic relations.</div>
-          <div class="diff-specs" id="diff-card-easy-specs">
-            <div class="spec-row"><span>Questions:</span><strong id="diff-easy-qcount">5 Q</strong></div>
-            <div class="spec-row"><span>Timer:</span><strong id="diff-easy-timer">10 mins</strong></div>
-            <div class="spec-row"><span>Inputs:</span><strong id="diff-easy-inputs">A, B, C, D</strong></div>
-          </div>
-          <button class="btn-diff-action">Start Easy</button>
-        </div>
-
-        <!-- Medium -->
-        <div class="glass-card diff-card" data-difficulty="medium" id="diff-card-medium">
-          <div class="diff-badge badge-medium">Intermediate</div>
-          <div class="diff-title" id="diff-card-med-title">Medium</div>
-          <div class="diff-desc" id="diff-card-med-desc">4 Systems of equations. Chained substitutions and multi-step balance equations.</div>
-          <div class="diff-specs" id="diff-card-med-specs">
-            <div class="spec-row"><span>Questions:</span><strong id="diff-med-qcount">4 Q</strong></div>
-            <div class="spec-row"><span>Timer:</span><strong id="diff-med-timer">15 mins</strong></div>
-            <div class="spec-row"><span>Inputs:</span><strong id="diff-med-inputs">A, B, C, D</strong></div>
-          </div>
-          <button class="btn-diff-action">Start Medium</button>
-        </div>
-
-        <!-- Hard -->
-        <div class="glass-card diff-card diff-card-hard" data-difficulty="hard" id="diff-card-hard">
-          <div class="diff-badge badge-hard">Official dMAT Exam</div>
-          <div class="diff-title" id="diff-card-hard-title">Hard</div>
-          <div class="diff-desc" id="diff-card-hard-desc">20 Unique Systems of equations (Test 1 &amp; Test 2). Official dMAT speed standard (1.25 min / question).</div>
-          <div class="diff-specs" id="diff-card-hard-specs">
-            <div class="spec-row"><span>Questions:</span><strong class="text-glow" id="diff-hard-qcount">20 Q (Test 1 &amp; 2)</strong></div>
-            <div class="spec-row"><span>Timer:</span><strong class="text-glow" id="diff-hard-timer">25 mins</strong></div>
-            <div class="spec-row"><span>Type Answers:</span><strong id="diff-hard-inputs">A, B, C, D in numbers</strong></div>
-          </div>
-          <button class="btn-diff-action btn-hard-primary" id="btn-diff-hard-action">Start 25m Exam</button>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       VIEW 3: CATEGORY INFO / PREVIEW
-  ══════════════════════════════════════════ -->
-  <section class="dmat-view hidden" id="view-category-info">
-    <div class="container" style="padding-top: 36px; padding-bottom: 60px;">
-      <button class="back-link-btn" id="btn-back-from-info">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
-        Back to Categories
-      </button>
-
-      <div class="info-card-wrap">
-        <h2 id="cat-info-title">Category Information</h2>
-        <p class="info-lead" id="cat-info-desc">Category description...</p>
-
-        <div class="info-features-box">
-          <h3>Subtest Requirements &amp; Structure</h3>
-          <ul id="cat-info-features"></ul>
-        </div>
-
-        <div class="info-sample-box" id="cat-info-sample-wrap">
-          <h3>Sample Question Concept</h3>
-          <div class="sample-content" id="cat-info-sample"></div>
-        </div>
-
-        <div class="info-action-row">
-          <button class="btn-primary" onclick="document.getElementById('cat-math').click()">
-            Go to Mathematic Equations (Active 20Q Exam) →
+          <button class="h-stat-btn" id="btn-hero-submissions">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <use href="#ic-users" />
+            </svg>
+            <span>View Submissions Log (<span class="sub-count-display">0</span>)</span>
           </button>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ══════════════════════════════════════════
-       VIEW 4: EXAM ENGINE (Hard: 20Q · 25m Timer)
-  ══════════════════════════════════════════ -->
-  <section class="dmat-view hidden" id="view-exam">
-    <!-- Sticky Exam Topbar -->
-    <div class="exam-topbar">
-      <div class="exam-topbar-inner">
-        <div class="exam-meta">
-          <span class="exam-badge" id="exam-title">Mathematic Equations – HARD</span>
-          <div class="candidate-pill">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
-            <span id="exam-candidate-name">Candidate</span>
-          </div>
-        </div>
+      <div class="container">
+        <div class="cards-grid cols-2-dmat">
 
-        <div class="timer-box">
-          <div class="timer-display" id="exam-timer">25:00</div>
-          <div class="timer-progress-wrap">
-            <div class="timer-progress-fill" id="exam-timer-progress"></div>
-          </div>
-        </div>
-
-        <div class="exam-topbar-actions">
-          <button class="btn-submit-exam" id="btn-submit-exam">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-check"/></svg>
-            <span>Finish &amp; Submit</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Exam Content Area -->
-    <div class="exam-container">
-      <div class="exam-layout">
-
-        <!-- Question Palette (Left / Sidebar) -->
-        <aside class="exam-palette-sidebar">
-          <div class="palette-head">
-            <h3>Question Palette</h3>
-            <span class="palette-sub">Jump to any question</span>
-          </div>
-          <div class="palette-grid" id="q-palette">
-            <!-- 20 Buttons dynamically created -->
-          </div>
-          <div class="palette-legend">
-            <div class="legend-item"><span class="leg-box leg-answered"></span>Answered</div>
-            <div class="legend-item"><span class="leg-box leg-partial"></span>Partial</div>
-            <div class="legend-item"><span class="leg-box leg-flagged"></span>Flagged</div>
-            <div class="legend-item"><span class="leg-box leg-current"></span>Current</div>
-          </div>
-        </aside>
-
-        <!-- Main Question Stage -->
-        <div class="exam-stage">
-          <div class="exam-stage-card">
-
-            <!-- Question Header -->
-            <div class="q-stage-head">
-              <div class="q-stage-sub" id="q-stage-sub">CORE MODULE · MATHEMATICAL EQUATIONS</div>
-              <h2 class="q-stage-title" id="q-current-number">Question 1 of 20</h2>
-              <p class="q-stage-instruction" id="q-stage-instruction">
-                Solve the system. Every letter is a whole number from 1 to 20; there is exactly one solution.
-              </p>
+          <!-- 1. Figure Sequences -->
+          <a href="figures.html" class="glass-card dmat-cat-card" style="text-decoration: none; color: inherit;"
+            id="cat-figures">
+            <div class="card-num-pill">1</div>
+            <div class="card-icon dmat-icon-blue">
+              <svg width="30" height="30" viewBox="0 0 24 24">
+                <use href="#ic-shapes" />
+              </svg>
             </div>
-
-            <!-- Figure Sequences Stage Wrap (dMAT Subtest 1) -->
-            <div class="figures-stage-wrap hidden" id="q-figures-stage-wrap">
-              <!-- Sequence Strip: Matrices 1 to 6 -->
-              <div class="figures-sequence-strip" id="q-figures-sequence-strip"></div>
-
-              <!-- Options Grid: Matrix 5 and Matrix 6 -->
-              <div class="figures-options-grid">
-                <div class="figures-opt-col">
-                  <div class="figures-opt-col-head">
-                    <h4>Options for Matrix 5</h4>
-                    <span class="opt-hint">Choose 1, 2, or 3</span>
-                  </div>
-                  <div class="figures-opts-list" id="figures-opts-m5"></div>
-                </div>
-
-                <div class="figures-opt-col">
-                  <div class="figures-opt-col-head">
-                    <h4>Options for Matrix 6</h4>
-                    <span class="opt-hint">Choose 1, 2, or 3</span>
-                  </div>
-                  <div class="figures-opts-list" id="figures-opts-m6"></div>
-                </div>
-              </div>
+            <div class="cat-content">
+              <div class="card-level">Figure Sequences</div>
+              <div class="card-title">Formenreihen</div>
+              <div class="card-desc">Identify underlying transformation rules, geometric rotation, perimeter
+                progression, and color cycles. Questions will be updated soon.</div>
             </div>
-
-            <!-- Big Equation Box (PDF standard - dMAT Subtest 2) -->
-            <div class="equations-stage-box" id="q-equations-box">
-              <!-- Equation lines dynamically rendered -->
+            <div class="cat-footer">
+              <span class="card-tag"
+                style="background: rgba(148,163,184,0.12); color: #94a3b8; border-color: rgba(148,163,184,0.25);">Questions
+                Updated Soon</span>
+              <span class="cat-arrow">→</span>
             </div>
-
-            <!-- Input Fields for A, B, C, D in numbers -->
-            <div class="answer-entry-card" id="q-math-answer-card">
-              <div class="entry-header">
-                <h4>Type the value for each letter in numbers:</h4>
-                <span class="entry-note">Whole numbers 1 to 20</span>
-              </div>
-
-              <div class="inputs-row-grid">
-                <div class="var-input-group">
-                  <label for="ans-A">A =</label>
-                  <input type="number" id="ans-A" min="1" max="20" inputmode="numeric" pattern="[0-9]*" placeholder="?" autocomplete="off"/>
-                </div>
-
-                <div class="var-input-group">
-                  <label for="ans-B">B =</label>
-                  <input type="number" id="ans-B" min="1" max="20" inputmode="numeric" pattern="[0-9]*" placeholder="?" autocomplete="off"/>
-                </div>
-
-                <div class="var-input-group">
-                  <label for="ans-C">C =</label>
-                  <input type="number" id="ans-C" min="1" max="20" inputmode="numeric" pattern="[0-9]*" placeholder="?" autocomplete="off"/>
-                </div>
-
-                <div class="var-input-group">
-                  <label for="ans-D">D =</label>
-                  <input type="number" id="ans-D" min="1" max="20" inputmode="numeric" pattern="[0-9]*" placeholder="?" autocomplete="off"/>
-                </div>
-              </div>
-            </div>
-
-            <!-- Action Controls -->
-            <div class="exam-actions-bar">
-              <button class="exam-btn" id="btn-prev-q">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
-                <span>Previous</span>
-              </button>
-
-              <button class="exam-btn btn-flag" id="btn-flag-q">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-                <span>Flag for Review</span>
-              </button>
-
-              <button class="exam-btn btn-next" id="btn-next-q">
-                <span>Next</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="transform:rotate(180deg);"><use href="#ic-back"/></svg>
-              </button>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       VIEW 5: RESULTS & STEP-BY-STEP REVIEW
-  ══════════════════════════════════════════ -->
-  <section class="dmat-view hidden" id="view-results">
-    <div class="container" style="padding-top: 36px; padding-bottom: 60px;">
-
-      <div class="results-hero-card">
-        <div class="res-badge">Exam Performance Report</div>
-        <h1>Test Complete</h1>
-        <p class="res-candidate-name">Candidate: <strong id="res-candidate">—</strong></p>
-
-        <div class="results-metrics-grid">
-          <div class="metric-card">
-            <span class="m-label">Score</span>
-            <span class="m-val" id="res-score">0 / 20</span>
-          </div>
-          <div class="metric-card">
-            <span class="m-label">Percentage</span>
-            <span class="m-val" id="res-percent">0%</span>
-          </div>
-          <div class="metric-card">
-            <span class="m-label">Time Taken</span>
-            <span class="m-val" id="res-time-taken">0m 00s</span>
-          </div>
-          <div class="metric-card">
-            <span class="m-label">Time Left</span>
-            <span class="m-val" id="res-time-left">0m 00s</span>
-          </div>
-        </div>
-
-        <div class="results-actions-row">
-          <button class="btn-primary" id="btn-results-submissions">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
-            <span>View All Submissions &amp; Times Log</span>
-          </button>
-          <button class="btn-secondary" id="btn-retake-exam">Retake Test</button>
-          <button class="btn-secondary" id="btn-results-home">dMAT Hub</button>
-        </div>
-      </div>
-
-      <div class="results-breakdown-section">
-        <h3>Question-by-Question Solution Breakdown</h3>
-        <p class="breakdown-subtitle">Review every equation system, your entered answers, and complete mathematical derivations.</p>
-        <div class="breakdown-list" id="res-breakdown">
-          <!-- Dynamically filled with 20 items -->
-        </div>
-      </div>
-
-    </div>
-  </section>
-</main>
-
-<!-- ══════════════════════════════════════════
-     MODAL 1: CANDIDATE NAME PROMPT
-══════════════════════════════════════════ -->
-<div class="dmat-modal-overlay hidden" id="modal-candidate-name">
-  <div class="dmat-modal-card">
-    <div class="modal-header">
-      <h3>Start Exam Simulation</h3>
-      <span class="modal-sub" id="name-modal-diff-label">Hard Mode · dMAT Official Standard</span>
-    </div>
-
-    <div class="modal-body">
-      <div class="modal-specs-strip">
-        <div><span>Questions:</span> <strong id="name-modal-qcount-label">20 System Questions</strong></div>
-        <div><span>Countdown:</span> <strong id="name-modal-timer-label">25 Minutes</strong></div>
-      </div>
-
-      <div class="form-group" style="margin-top: 20px;">
-        <label for="input-candidate-name">Enter Candidate / Student Name:</label>
-        <input type="text" id="input-candidate-name" class="modal-input" placeholder="e.g. Kishore K. / Alex Bauer" autofocus/>
-        <div class="error-msg" id="name-modal-error"></div>
-      </div>
-
-      <!-- Test Selection below candidate name -->
-      <div class="form-group" id="test-set-selector-wrap" style="margin-top: 16px;">
-        <label style="display:block; margin-bottom:8px; font-weight:700; font-size:13px; color:var(--t-90);" id="test-set-label-heading">Select Practice Test:</label>
-        <div id="test-set-selector-container"></div>
-      </div>
-
-      <p class="modal-note">
-        Your completion time, final score, and detailed answers will be recorded in the test submissions log.
-      </p>
-    </div>
-
-    <div class="modal-footer">
-      <button class="btn-secondary" id="btn-cancel-start">Cancel</button>
-      <button class="btn-primary" id="btn-confirm-start">Begin 25m Test ➔</button>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════
-     MODAL 2: SUBMISSIONS & TIMES DASHBOARD
-     ("i need to see who are all answered and times")
-══════════════════════════════════════════ -->
-<div class="dmat-modal-overlay hidden" id="modal-submissions">
-  <div class="dmat-modal-card modal-large">
-    <div class="modal-header modal-header-flex">
-      <div>
-        <h3>Candidate Submissions &amp; Completion Times</h3>
-        <span class="modal-sub">View who answered the test, their completion times, and overall scores.</span>
-      </div>
-      <button class="modal-close-x" id="btn-close-submissions">✕</button>
-    </div>
-
-    <div class="modal-body" style="padding: 20px 24px;">
-      <!-- Controls Bar -->
-      <div class="sub-controls-row">
-        <div class="search-wrap">
-          <input type="text" id="sub-search-input" placeholder="Search candidate by name or date..."/>
-        </div>
-        <div class="sub-export-btns">
-          <a href="admin.html" class="btn-sm" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px;" title="Open full admin page">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            <span>Admin Page</span>
           </a>
-          <button class="btn-sm" id="btn-export-csv" title="Download Excel/CSV sheet">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span>Export CSV</span>
-          </button>
+
+          <!-- 2. Mathematic Equations -->
+          <a href="math.html" class="glass-card dmat-cat-card dmat-featured-card"
+            style="text-decoration: none; color: inherit; border-color: rgba(16,185,129,0.4);" id="cat-math">
+            <div class="card-num-pill">2</div>
+            <div class="featured-ribbon">Active Testing Module (Hard)</div>
+            <div class="card-icon dmat-icon-emerald">
+              <svg width="30" height="30" viewBox="0 0 24 24">
+                <use href="#ic-math" />
+              </svg>
+            </div>
+            <div class="cat-content">
+              <div class="card-level">Mathematic Equations</div>
+              <div class="card-title">Mathematische Gleichungen</div>
+              <div class="card-desc">Solve 4-variable linear systems (A, B, C, D) with whole numbers 1–20. Hard:
+                Practice Set 1 &amp; Set 2 (20Q · 25m each). Easy &amp; Medium coming soon.</div>
+            </div>
+            <div class="cat-footer">
+              <span class="card-tag tag-primary">Hard: Set 1 &amp; Set 2 (Active)</span>
+              <span class="cat-arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 3. Latin Squares -->
+          <a href="latin.html" class="glass-card dmat-cat-card" style="text-decoration: none; color: inherit;"
+            id="cat-latin">
+            <div class="card-num-pill">3</div>
+            <div class="card-icon dmat-icon-purple">
+              <svg width="30" height="30" viewBox="0 0 24 24">
+                <use href="#ic-grid" />
+              </svg>
+            </div>
+            <div class="cat-content">
+              <div class="card-level">Latin Squares</div>
+              <div class="card-title">Lateinische Quadrate</div>
+              <div class="card-desc">Deduce row-and-column constraint logic puzzles and matrix completion rules under
+                speed pressure. Questions will be updated soon.</div>
+            </div>
+            <div class="cat-footer">
+              <span class="card-tag"
+                style="background: rgba(148,163,184,0.12); color: #94a3b8; border-color: rgba(148,163,184,0.25);">Questions
+                Updated Soon</span>
+              <span class="cat-arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 4. Subject Modules -->
+          <a href="subject.html" class="glass-card dmat-cat-card" style="text-decoration: none; color: inherit;"
+            id="cat-modules">
+            <div class="card-num-pill">4</div>
+            <div class="card-icon dmat-icon-amber">
+              <svg width="30" height="30" viewBox="0 0 24 24">
+                <use href="#ic-atom" />
+              </svg>
+            </div>
+            <div class="cat-content">
+              <div class="card-level">Subject Modules</div>
+              <div class="card-title">Fachmodule (Master)</div>
+              <div class="card-desc">Curriculum-aligned quantitative and scientific question sets for German university
+                Master's degree entry. Questions will be updated soon.</div>
+            </div>
+            <div class="cat-footer">
+              <span class="card-tag"
+                style="background: rgba(148,163,184,0.12); color: #94a3b8; border-color: rgba(148,163,184,0.25);">Questions
+                Updated Soon</span>
+              <span class="cat-arrow">→</span>
+            </div>
+          </a>
+
         </div>
       </div>
+    </section>
+  </main>
 
-      <!-- Submissions Table -->
-      <div class="sub-table-wrap">
-        <table class="sub-table">
-          <thead>
-            <tr>
-              <th style="width: 45px;">#</th>
-              <th>Candidate Name</th>
-              <th>Difficulty</th>
-              <th>Score</th>
-              <th>Time Taken</th>
-              <th>Date &amp; Time</th>
-              <th style="text-align: right;">Action</th>
-            </tr>
-          </thead>
-          <tbody id="submissions-table-body">
-            <!-- Dynamically populated -->
-          </tbody>
-        </table>
+  <!-- ══════════════════════════════════════════
+     MODAL: SUBMISSIONS & TIMES DASHBOARD
+══════════════════════════════════════════ -->
+  <div class="dmat-modal-overlay hidden" id="modal-submissions">
+    <div class="dmat-modal-card modal-large">
+      <div class="modal-header modal-header-flex">
+        <div>
+          <h3>Candidate Submissions &amp; Completion Times</h3>
+          <span class="modal-sub">View who answered the test, their completion times, and overall scores.</span>
+        </div>
+        <button class="modal-close-x" id="btn-close-submissions">✕</button>
+      </div>
 
-        <div class="sub-empty hidden" id="submissions-empty-state">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#ic-users"/></svg>
-          <p>No candidate submissions found yet. Take a test to record your results!</p>
+      <div class="modal-body" style="padding: 20px 24px;">
+        <!-- Controls Bar -->
+        <div class="sub-controls-row">
+          <div class="search-wrap">
+            <input type="text" id="sub-search-input" placeholder="Search candidate by name or date..." />
+          </div>
+          <div class="sub-export-btns">
+            <a href="admin.html" class="btn-sm"
+              style="text-decoration:none; display:inline-flex; align-items:center; gap:6px;"
+              title="Open full admin page">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              <span>Admin Page</span>
+            </a>
+            <button class="btn-sm" id="btn-export-csv" title="Download Excel/CSV sheet">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              <span>Export CSV</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Submissions Table -->
+        <div class="sub-table-wrap">
+          <table class="sub-table">
+            <thead>
+              <tr>
+                <th style="width: 45px;">#</th>
+                <th>Candidate Name</th>
+                <th>Difficulty</th>
+                <th>Score</th>
+                <th>Time Taken</th>
+                <th>Date &amp; Time</th>
+                <th style="text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody id="submissions-table-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+
+          <div class="sub-empty hidden" id="submissions-empty-state">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <use href="#ic-users" />
+            </svg>
+            <p>No candidate submissions found yet. Take a test to record your results!</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- ══════════════════════════════════════════
+  <!-- ══════════════════════════════════════════
      MODAL 3: CANDIDATE ANSWER SHEET INSPECT
 ══════════════════════════════════════════ -->
-<div class="dmat-modal-overlay hidden" id="modal-sub-details">
-  <div class="dmat-modal-card modal-large">
-    <div class="modal-header modal-header-flex">
-      <div>
-        <h3 id="sub-details-title">Candidate Answer Sheet</h3>
-        <div class="sub-details-meta" id="sub-details-meta"></div>
+  <div class="dmat-modal-overlay hidden" id="modal-sub-details">
+    <div class="dmat-modal-card modal-large">
+      <div class="modal-header modal-header-flex">
+        <div>
+          <h3 id="sub-details-title">Candidate Answer Sheet</h3>
+          <div class="sub-details-meta" id="sub-details-meta"></div>
+        </div>
+        <button class="modal-close-x" id="btn-close-sub-details">✕</button>
       </div>
-      <button class="modal-close-x" id="btn-close-sub-details">✕</button>
-    </div>
-    <div class="modal-body" style="padding: 20px 24px; max-height: 70vh; overflow-y: auto;" id="sub-details-body">
-      <!-- Detailed question list for this candidate -->
+      <div class="modal-body" style="padding: 20px 24px; max-height: 70vh; overflow-y: auto;" id="sub-details-body">
+        <!-- Detailed question list for this candidate -->
+      </div>
     </div>
   </div>
-</div>
 
-<footer class="site-footer">
-  <p>© 2026 Learning Portal · dMAT &amp; German</p>
-</footer>
+  <footer class="site-footer">
+    <p>© 2026 Learning Portal · dMAT &amp; German</p>
+  </footer>
 
-<!-- Scripts -->
-<script src="figures_render.js"></script>
-<script src="figures_data.js"></script>
-<script src="dmat_data.js"></script>
-<script src="cloud_sync.js"></script>
-<script src="dmat.js"></script>
+  <!-- Scripts -->
+  <script src="figures_render.js"></script>
+  <script src="figures_data.js"></script>
+  <script src="dmat_data.js"></script>
+  <script src="cloud_sync.js"></script>
+  <script src="dmat.js"></script>
 </body>
+
 </html>
