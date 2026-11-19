@@ -139,7 +139,12 @@
     if (!s || !s.id) return true;
     if (s.id.startsWith('sub-live-')) return true;
     const name = (s.candidateName || '').trim().toLowerCase();
-        if (name === 'nithyasree' || name.includes('nithyasree')) return true;
+    if (name === 'nithyasree' || name.includes('nithyasree')) return true;
+    // Targeted removal: specific test records from 2026-11-19
+    const diff = (s.difficulty || '').toLowerCase();
+    const at = (s.submittedAt || '');
+    if (name === 'k' && diff.includes('medium') && diff.includes('set 2') && at.startsWith('2026-11-19')) return true;
+    if (name === 'a' && diff.includes('hard') && at.startsWith('2026-11-19')) return true;
     return false;
   }
 

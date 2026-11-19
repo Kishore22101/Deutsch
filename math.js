@@ -1,4 +1,4 @@
-﻿// math.js - Dedicated Controller for dMAT Mathematical Equations
+// math.js - Dedicated Controller for dMAT Mathematical Equations
 // Practice Set 1 & Practice Set 2 (20 Questions · 25 Minutes each)
 
 // ── One-time clear of old submissions (Nov 2026 reset) ──
@@ -682,7 +682,12 @@
     if (!sub || !sub.id) return true;
     if (sub.id.startsWith('sub-live-')) return true;
     const name = (sub.candidateName || '').trim().toLowerCase();
-        if (name === 'nithyasree' || name.includes('nithyasree')) return true;
+    if (name === 'nithyasree' || name.includes('nithyasree')) return true;
+    // Targeted removal: specific test records from 2026-11-19
+    const diff = (sub.difficulty || '').toLowerCase();
+    const at = (sub.submittedAt || '');
+    if (name === 'k' && diff.includes('medium') && diff.includes('set 2') && at.startsWith('2026-11-19')) return true;
+    if (name === 'a' && diff.includes('hard') && at.startsWith('2026-11-19')) return true;
     return false;
   }
 

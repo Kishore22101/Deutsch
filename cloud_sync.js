@@ -23,6 +23,26 @@
     }
   } catch (e) {}
 
+  // One-time targeted removal of two specific test records (2026-11-19)
+  try {
+    if (localStorage.getItem('dmat_v4_cleaned') !== '1') {
+      const _raw = localStorage.getItem(LOCAL_STORAGE_KEY);
+      if (_raw) {
+        const _parsed = JSON.parse(_raw);
+        const _cleaned = _parsed.filter(s => {
+          const n = (s.candidateName || '').trim().toLowerCase();
+          const diff = (s.difficulty || '').toLowerCase();
+          const at = (s.submittedAt || '');
+          if (n === 'k' && diff.includes('medium') && diff.includes('set 2') && at.startsWith('2026-11-19')) return false;
+          if (n === 'a' && diff.includes('hard') && at.startsWith('2026-11-19')) return false;
+          return true;
+        });
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(_cleaned));
+      }
+      localStorage.setItem('dmat_v4_cleaned', '1');
+    }
+  } catch (e) {}
+
   let eventSource = null;
   let statusListeners = [];
   let currentStatus = 'connecting'; // 'connected', 'syncing', 'offline'
@@ -158,7 +178,12 @@
     if (!sub) return true;
     if (sub.id && sub.id.startsWith('sub-live-')) return true;
     const name = (sub.candidateName || '').trim().toLowerCase();
-        if (name === 'nithyasree' || name.includes('nithyasree')) return true;
+    if (name === 'nithyasree' || name.includes('nithyasree')) return true;
+    // Targeted removal: specific test records from 2026-11-19
+    const diff = (sub.difficulty || '').toLowerCase();
+    const at = (sub.submittedAt || '');
+    if (name === 'k' && diff.includes('medium') && diff.includes('set 2') && at.startsWith('2026-11-19')) return true;
+    if (name === 'a' && diff.includes('hard') && at.startsWith('2026-11-19')) return true;
     return false;
   }
 
