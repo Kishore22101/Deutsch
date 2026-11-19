@@ -255,6 +255,24 @@
     return merged;
   }
 
+  // Broadcast a deletion to ALL devices so they also hide this record
+  async function broadcastDelete(id) {
+    if (!id) return;
+    // Save tombstone locally
+    try {
+      const existing = JSON.parse(localStorage.getItem(DELETED_KEY) || '[]');
+      if (!existing.includes(id)) { existing.push(id); localStorage.setItem(DELETED_KEY, JSON.stringify(existing)); }
+    } catch(e) {}
+    // Broadcast delete event via ntfy
+    try {
+      await fetch(NTFY_BASE, {
+        method: 'POST',
+        headers: { 'Title': 'dMAT Delete', 'Tags': 'x,wastebasket' },
+        body: JSON.stringify({ __delete__: true, id: id })
+      });
+    } catch(err) { console.warn('broadcastDelete failed:', err); }
+  }
+
   // Broadcast a new submission from THIS device to ALL devices in real time
   async function broadcastSubmission(submission) {
     if (!submission || isSampleRecord(submission)) return false;
@@ -301,6 +319,27 @@
   // Helper to parse line from ntfy json stream/poll
   async function parseNtfyEntry(parsed) {
     if (!parsed) return null;
+    // 0. Delete event — apply tombstone and signal deletion
+    if (parsed.event === 'message' && parsed.message) {
+      try {
+        const msg = JSON.parse(parsed.message);
+        if (msg && msg.__delete__ && msg.id) {
+          // Save tombstone on this device too
+          try {
+            const existing = JSON.parse(localStorage.getItem(DELETED_KEY) || '[]');
+            if (!existing.includes(msg.id)) { existing.push(msg.id); localStorage.setItem(DELETED_KEY, JSON.stringify(existing)); }
+            // Also remove from local submissions list
+            const stored = localStorage.getItem(LOCAL_STORAGE_KEY);
+            if (stored) {
+              const list = JSON.parse(stored);
+              const filtered = list.filter(s => s.id !== msg.id);
+              if (filtered.length !== list.length) localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(filtered));
+            }
+          } catch(e) {}
+          return { __delete__: true, id: msg.id };
+        }
+      } catch(e) {}
+    }
     // 1. Direct message JSON
     if (parsed.event === 'message' && parsed.message) {
       try {
@@ -358,9 +397,11 @@
         }
       } catch (e) {}
 
+      // Filter out __delete__ signals (tombstone already applied inside parseNtfyEntry)
+      const realRemote = remoteSubmissions.filter(s => !s.__delete__);
       // Merge remote with local
       const local = getLocalList();
-      const merged = mergeSubmissions(local, remoteSubmissions);
+      const merged = mergeSubmissions(local, realRemote);
       saveLocalList(merged);
       notifyStatus('connected', `Live Synced (${merged.length} candidate records)`);
       return merged;
@@ -394,6 +435,13 @@
           const data = JSON.parse(event.data);
           const newSub = await parseNtfyEntry(data);
           if (newSub) {
+            // Delete event — just refresh UI, don't add to list
+            if (newSub.__delete__) {
+              if (typeof onNewSubmission === 'function') {
+                onNewSubmission({ __delete__: true, id: newSub.id }, getLocalList());
+              }
+              return;
+            }
             // Add to local storage
             const current = getLocalList();
             const merged = mergeSubmissions(current, [newSub]);
@@ -426,6 +474,7 @@
     saveLocalList,
     mergeSubmissions,
     broadcastSubmission,
+    broadcastDelete,
     fetchRemoteSubmissions,
     subscribeRealTime,
     onStatusChange,

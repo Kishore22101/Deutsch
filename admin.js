@@ -485,14 +485,16 @@
     let list = getSubmissions();
     list = list.filter(s => s.id !== id);
     saveSubmissions(list);
+    // Save tombstone locally
     try {
       const delKey = 'dmat_deleted_ids';
       const existing = JSON.parse(localStorage.getItem(delKey) || '[]');
-      if (!existing.includes(id)) {
-        existing.push(id);
-        localStorage.setItem(delKey, JSON.stringify(existing));
-      }
+      if (!existing.includes(id)) { existing.push(id); localStorage.setItem(delKey, JSON.stringify(existing)); }
     } catch(e) {}
+    // Broadcast deletion to ALL other devices via cloud
+    if (typeof CloudSync !== 'undefined' && CloudSync.broadcastDelete) {
+      CloudSync.broadcastDelete(id);
+    }
     renderDashboard();
   }
 
