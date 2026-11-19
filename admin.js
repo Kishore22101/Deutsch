@@ -198,6 +198,12 @@
   function isSampleRecord(sub) {
     if (!sub) return true;
     if (sub.id && sub.id.startsWith('sub-live-')) return true;
+    // Check admin-deleted tombstone IDs
+    try {
+      const deleted = JSON.parse(localStorage.getItem('dmat_deleted_ids') || '[]');
+      if (sub.id && deleted.includes(sub.id)) return true;
+    } catch(e) {}
+
     const name = (sub.candidateName || '').trim().toLowerCase();
     if (name === 'nithyasree' || name.includes('nithyasree')) return true;
     // Targeted removal: specific test records from 2026-11-19

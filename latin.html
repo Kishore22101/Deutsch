@@ -127,6 +127,12 @@
       const isSample = s => {
         if (!s || !s.id) return true;
         if (s.id.startsWith('sub-live-')) return true;
+        // Check admin-deleted tombstone IDs
+        try {
+          const deleted = JSON.parse(localStorage.getItem('dmat_deleted_ids') || '[]');
+          if (s.id && deleted.includes(s.id)) return true;
+        } catch(e) {}
+
         const n = (s.candidateName || '').toLowerCase().trim();
         const d = (s.difficulty || '').toLowerCase();
         const a = (s.submittedAt || '');

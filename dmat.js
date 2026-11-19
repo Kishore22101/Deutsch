@@ -1,4 +1,4 @@
-﻿// dmat.js – Complete Controller for dMAT Testing & Submissions
+// dmat.js – Complete Controller for dMAT Testing & Submissions
 // Supports Figure Sequences (Formenreihen) with 5 Practice Tests (20Q, 25m) & Mathematic Equations
 
 (function () {
@@ -138,6 +138,12 @@
   function isSampleRecord(s) {
     if (!s || !s.id) return true;
     if (s.id.startsWith('sub-live-')) return true;
+    // Check admin-deleted tombstone IDs
+    try {
+      const deleted = JSON.parse(localStorage.getItem('dmat_deleted_ids') || '[]');
+      if (s && s.id && deleted.includes(s.id)) return true;
+    } catch(e) {}
+
     const name = (s.candidateName || '').trim().toLowerCase();
     if (name === 'nithyasree' || name.includes('nithyasree')) return true;
     // Targeted removal: specific test records from 2026-11-19
