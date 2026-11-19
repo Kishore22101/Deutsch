@@ -449,8 +449,9 @@
     dom.inputC.value = saved.C || '';
     dom.inputD.value = saved.D || '';
 
-    // Show/hide input D based on whether this question has D
-    const hasD = (q.solution && q.solution.D !== undefined);
+    // Show/hide input D: hidden for medium (3-variable), shown only for hard (4-variable)
+    const isMediumTest = state.selectedSet && state.selectedSet.startsWith('medium_t');
+    const hasD = !isMediumTest && (q.solution && q.solution.D !== undefined);
     const inputDGroup = dom.inputD ? dom.inputD.closest('.var-input-group') : null;
     if (inputDGroup) {
       inputDGroup.style.display = hasD ? '' : 'none';
@@ -487,11 +488,12 @@
   function saveCurrentAnswers() {
     const q = state.questions[state.currentIndex];
     if (!q) return;
+    const isMediumTest = state.selectedSet && state.selectedSet.startsWith('medium_t');
     state.userAnswers[q.id] = {
       A: dom.inputA.value.trim(),
       B: dom.inputB.value.trim(),
       C: dom.inputC.value.trim(),
-      D: dom.inputD.value.trim()
+      D: isMediumTest ? '' : dom.inputD.value.trim()
     };
   }
 
