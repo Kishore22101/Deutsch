@@ -38,6 +38,49 @@
     bindEvents();
     renderSubmissionsCount();
     showView('difficulties');
+    initCloudSync();
+  }
+
+  function initCloudSync() {
+    if (typeof CloudSync === 'undefined') return;
+
+    CloudSync.onStatusChange((status, text) => {
+      updateSyncStatusUI(status, text);
+    });
+
+    CloudSync.fetchRemoteSubmissions().then(() => {
+      renderSubmissionsCount();
+      if (dom.modalSubmissions && !dom.modalSubmissions.classList.contains('hidden')) {
+        renderSubmissionsTable();
+      }
+    }).catch(() => {});
+
+    CloudSync.subscribeRealTime(() => {
+      renderSubmissionsCount();
+      if (dom.modalSubmissions && !dom.modalSubmissions.classList.contains('hidden')) {
+        renderSubmissionsTable();
+      }
+    });
+  }
+
+  function updateSyncStatusUI(status, text) {
+    const headerPill = document.getElementById('math-header-sync-pill');
+    const headerDot = document.getElementById('math-live-sync-dot');
+    const headerText = document.getElementById('math-live-sync-text');
+
+    const modalPill = document.getElementById('math-modal-sync-pill');
+    const modalDot = document.getElementById('math-modal-live-sync-dot');
+    const modalText = document.getElementById('math-modal-live-sync-text');
+
+    const statusClass = (status === 'connected' ? 'connected' : (status === 'syncing' ? 'syncing' : 'offline'));
+
+    if (headerText) headerText.textContent = text;
+    if (headerDot) headerDot.className = 'live-dot ' + (statusClass === 'connected' ? '' : statusClass);
+    if (headerPill) headerPill.className = 'live-status-pill ' + (statusClass === 'connected' ? '' : statusClass);
+
+    if (modalText) modalText.textContent = text;
+    if (modalDot) modalDot.className = 'live-dot ' + (statusClass === 'connected' ? '' : statusClass);
+    if (modalPill) modalPill.className = 'live-status-pill ' + (statusClass === 'connected' ? '' : statusClass);
   }
 
   function cacheDom() {
