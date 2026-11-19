@@ -1,12 +1,13 @@
-﻿// figures.js - Dedicated Controller for Figure Sequences (Formenreihen)
-// Official dMAT Subtest 1 (Tests 1–5 · 20 Questions · 25 Minutes each)
+﻿// figures.js – Dedicated Controller for dMAT Figure Sequences (Formenreihen)
+// Supports Easy, Medium, Hard (5 Sets each · 20 Questions · 25 Minutes each)
 
 (function () {
   'use strict';
 
   const state = {
-    view: 'tests', // 'tests' | 'exam' | 'results'
-    selectedDifficulty: 'hard_t1', // 'hard_t1' .. 'hard_t5', 'medium', 'easy'
+    view: 'difficulties', // 'difficulties' | 'sets-easy' | 'sets-medium' | 'sets-hard' | 'exam' | 'results'
+    selectedTrack: 'hard', // 'easy' | 'medium' | 'hard'
+    selectedSet: 'hard_t1', // 'easy_t1'..'easy_t5', 'medium_t1'..'medium_t5', 'hard_t1'..'hard_t5'
     candidateName: localStorage.getItem('dmat_last_candidate') || '',
     questions: [],
     currentIndex: 0,
@@ -26,30 +27,50 @@
     cacheDom();
     bindEvents();
     renderSubmissionsCount();
-    showView('tests');
+    showView('difficulties');
   }
 
   function cacheDom() {
     dom = {
-      viewTests: document.getElementById('view-tests'),
+      // Views
+      viewDifficulties: document.getElementById('view-difficulties'),
+      viewSetsEasy: document.getElementById('view-sets-easy'),
+      viewSetsMedium: document.getElementById('view-sets-medium'),
+      viewSetsHard: document.getElementById('view-sets-hard'),
       viewExam: document.getElementById('view-exam'),
       viewResults: document.getElementById('view-results'),
+
+      // Modals
       modalName: document.getElementById('modal-candidate-name'),
       modalSubmissions: document.getElementById('modal-submissions'),
-      modalSubDetails: document.getElementById('modal-sub-details'),
 
+      // Nav and Hero Buttons
       btnNavSubmissions: document.getElementById('btn-nav-submissions'),
       subCountBadge: document.getElementById('sub-count-badge'),
       heroSubCount: document.getElementById('hero-sub-count'),
       btnHeroSubmissions: document.getElementById('btn-hero-submissions'),
 
+      // Difficulty cards & buttons
+      diffCardEasy: document.getElementById('diff-card-easy'),
+      diffCardMedium: document.getElementById('diff-card-medium'),
+      diffCardHard: document.getElementById('diff-card-hard'),
+      btnStartEasy: document.getElementById('btn-start-easy'),
+      btnStartMed: document.getElementById('btn-start-med'),
+      btnStartHard: document.getElementById('btn-start-hard'),
+
+      // Back buttons
+      btnBackToDiffEasy: document.getElementById('btn-back-to-diff-easy'),
+      btnBackToDiffMed: document.getElementById('btn-back-to-diff-med'),
+      btnBackToDiffHard: document.getElementById('btn-back-to-diff-hard'),
+
+      // Candidate Name Modal
       candidateNameInput: document.getElementById('input-candidate-name'),
       nameModalError: document.getElementById('name-modal-error'),
-      nameModalTestLabel: document.getElementById('name-modal-test-label'),
+      nameModalSetLabel: document.getElementById('name-modal-set-label'),
       btnConfirmStart: document.getElementById('btn-confirm-start'),
       btnCancelStart: document.getElementById('btn-cancel-start'),
-      testSelectorContainer: document.getElementById('test-selector-container'),
 
+      // Exam UI
       examTitle: document.getElementById('exam-title'),
       examCandidateName: document.getElementById('exam-candidate-name'),
       examTimer: document.getElementById('exam-timer'),
@@ -64,6 +85,7 @@
       btnNextQ: document.getElementById('btn-next-q'),
       btnFlagQ: document.getElementById('btn-flag-q'),
 
+      // Results UI
       resCandidate: document.getElementById('res-candidate'),
       resScore: document.getElementById('res-score'),
       resPercent: document.getElementById('res-percent'),
@@ -73,26 +95,56 @@
       btnRetakeExam: document.getElementById('btn-retake-exam'),
       btnResultsSubmissions: document.getElementById('btn-results-submissions'),
 
+      // Submissions Modal
       subTableBody: document.getElementById('submissions-table-body'),
       subEmptyState: document.getElementById('submissions-empty-state'),
       btnCloseSubmissions: document.getElementById('btn-close-submissions'),
       subSearchInput: document.getElementById('sub-search-input'),
-      btnExportCsv: document.getElementById('btn-export-csv'),
-      subDetailsBody: document.getElementById('sub-details-body'),
-      subDetailsTitle: document.getElementById('sub-details-title'),
-      subDetailsMeta: document.getElementById('sub-details-meta'),
-      btnCloseSubDetails: document.getElementById('btn-close-sub-details')
+      btnExportCsv: document.getElementById('btn-export-csv')
     };
   }
 
   function bindEvents() {
-    document.querySelectorAll('[data-start-fig-test]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const diff = btn.getAttribute('data-start-fig-test');
-        openStartModal(diff);
+    // Top-level difficulty card clicks
+    if (dom.diffCardEasy) dom.diffCardEasy.addEventListener('click', () => showView('sets-easy'));
+    if (dom.btnStartEasy) {
+      dom.btnStartEasy.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showView('sets-easy');
+      });
+    }
+
+    if (dom.diffCardMedium) dom.diffCardMedium.addEventListener('click', () => showView('sets-medium'));
+    if (dom.btnStartMed) {
+      dom.btnStartMed.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showView('sets-medium');
+      });
+    }
+
+    if (dom.diffCardHard) dom.diffCardHard.addEventListener('click', () => showView('sets-hard'));
+    if (dom.btnStartHard) {
+      dom.btnStartHard.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showView('sets-hard');
+      });
+    }
+
+    // Back buttons
+    if (dom.btnBackToDiffEasy) dom.btnBackToDiffEasy.addEventListener('click', () => showView('difficulties'));
+    if (dom.btnBackToDiffMed) dom.btnBackToDiffMed.addEventListener('click', () => showView('difficulties'));
+    if (dom.btnBackToDiffHard) dom.btnBackToDiffHard.addEventListener('click', () => showView('difficulties'));
+
+    // Set card click handlers (data-start-fig-set)
+    document.querySelectorAll('[data-start-fig-set]').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const setKey = el.getAttribute('data-start-fig-set');
+        if (setKey) openStartModal(setKey);
       });
     });
 
+    // Submissions modal
     if (dom.btnNavSubmissions) dom.btnNavSubmissions.addEventListener('click', openSubmissionsModal);
     if (dom.btnHeroSubmissions) dom.btnHeroSubmissions.addEventListener('click', openSubmissionsModal);
     if (dom.btnCloseSubmissions) dom.btnCloseSubmissions.addEventListener('click', closeSubmissionsModal);
@@ -102,6 +154,7 @@
       });
     }
 
+    // Candidate Name modal
     if (dom.btnCancelStart) dom.btnCancelStart.addEventListener('click', () => dom.modalName.classList.add('hidden'));
     if (dom.btnConfirmStart) dom.btnConfirmStart.addEventListener('click', confirmStartExam);
     if (dom.candidateNameInput) {
@@ -110,32 +163,34 @@
       });
     }
 
+    // Exam stage controls
     if (dom.btnPrevQ) dom.btnPrevQ.addEventListener('click', () => goToQuestion(state.currentIndex - 1));
     if (dom.btnNextQ) dom.btnNextQ.addEventListener('click', () => goToQuestion(state.currentIndex + 1));
     if (dom.btnFlagQ) dom.btnFlagQ.addEventListener('click', toggleFlagCurrentQuestion);
     if (dom.btnSubmitExam) dom.btnSubmitExam.addEventListener('click', handleManualSubmit);
 
-    if (dom.btnRetakeExam) dom.btnRetakeExam.addEventListener('click', () => openStartModal(state.selectedDifficulty));
+    // Results controls
+    if (dom.btnRetakeExam) dom.btnRetakeExam.addEventListener('click', () => openStartModal(state.selectedSet));
     if (dom.btnResultsSubmissions) dom.btnResultsSubmissions.addEventListener('click', openSubmissionsModal);
 
-    if (dom.btnCloseSubDetails) {
-      dom.btnCloseSubDetails.addEventListener('click', () => dom.modalSubDetails.classList.add('hidden'));
-    }
+    // Submissions search & export
     if (dom.subSearchInput) dom.subSearchInput.addEventListener('input', renderSubmissionsTable);
     if (dom.btnExportCsv) dom.btnExportCsv.addEventListener('click', exportSubmissionsCsv);
   }
 
   function showView(viewName) {
     state.view = viewName;
-    if (dom.viewTests) dom.viewTests.classList.toggle('hidden', viewName !== 'tests');
+    if (dom.viewDifficulties) dom.viewDifficulties.classList.toggle('hidden', viewName !== 'difficulties');
+    if (dom.viewSetsEasy) dom.viewSetsEasy.classList.toggle('hidden', viewName !== 'sets-easy');
+    if (dom.viewSetsMedium) dom.viewSetsMedium.classList.toggle('hidden', viewName !== 'sets-medium');
+    if (dom.viewSetsHard) dom.viewSetsHard.classList.toggle('hidden', viewName !== 'sets-hard');
     if (dom.viewExam) dom.viewExam.classList.toggle('hidden', viewName !== 'exam');
     if (dom.viewResults) dom.viewResults.classList.toggle('hidden', viewName !== 'results');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  function openStartModal(diff) {
-    state.selectedDifficulty = diff || 'hard_t1';
-    renderTestGridSelector();
+  function openStartModal(setKey) {
+    state.selectedSet = setKey || 'hard_t1';
     updateModalLabels();
 
     dom.nameModalError.textContent = '';
@@ -147,53 +202,27 @@
     }, 100);
   }
 
-  function renderTestGridSelector() {
-    if (!dom.testSelectorContainer) return;
-    dom.testSelectorContainer.innerHTML = '';
-    const tests = [
-      { id: 'hard_t1', label: 'Test 1', sub: 'dMAT Standard' },
-      { id: 'hard_t2', label: 'Test 2', sub: 'Pattern Set 2' },
-      { id: 'hard_t3', label: 'Test 3', sub: 'Pattern Set 3' },
-      { id: 'hard_t4', label: 'Test 4', sub: 'Pattern Set 4' },
-      { id: 'hard_t5', label: 'Test 5', sub: 'Mastery Challenge' }
-    ];
-
-    const grid = document.createElement('div');
-    grid.style.cssText = 'display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px;';
-
-    tests.forEach(t => {
-      const isSelected = (state.selectedDifficulty === t.id);
-      const card = document.createElement('div');
-      card.className = `test-set-card-radio ${isSelected ? 'active' : ''}`;
-      card.style.cssText = `
-        display: flex; flex-direction: column; align-items: center; justify-content: center;
-        padding: 8px 4px; border-radius: 6px; border: 2px solid ${isSelected ? '#38bdf8' : 'var(--border-lo)'};
-        background: ${isSelected ? 'rgba(56, 189, 248, 0.15)' : 'var(--bg-02)'};
-        cursor: pointer; text-align: center;
-      `;
-      card.innerHTML = `
-        <strong style="font-size:12px; color:${isSelected ? '#38bdf8' : 'var(--t-100)'};">${t.label}</strong>
-        <span style="font-size:10px; color:var(--t-60);">${t.sub}</span>
-      `;
-      card.addEventListener('click', () => {
-        state.selectedDifficulty = t.id;
-        renderTestGridSelector();
-        updateModalLabels();
-      });
-      grid.appendChild(card);
-    });
-    dom.testSelectorContainer.appendChild(grid);
-  }
-
   function updateModalLabels() {
-    const diff = state.selectedDifficulty;
-    let num = diff.replace('hard_t', '');
-    if (diff === 'hard') num = '1';
-    if (dom.nameModalTestLabel) {
-      dom.nameModalTestLabel.textContent = `Hard Mode · Practice Test ${num} of 5 (20 Questions)`;
+    const s = state.selectedSet;
+    let track = 'Hard';
+    let num = '1';
+
+    if (s.startsWith('easy_t')) {
+      track = 'Easy';
+      num = s.replace('easy_t', '');
+    } else if (s.startsWith('medium_t')) {
+      track = 'Medium';
+      num = s.replace('medium_t', '');
+    } else if (s.startsWith('hard_t')) {
+      track = 'Hard';
+      num = s.replace('hard_t', '');
+    }
+
+    if (dom.nameModalSetLabel) {
+      dom.nameModalSetLabel.textContent = `Figure Sequences · ${track} Level · Set ${num} (20 Questions · 25 Minutes)`;
     }
     if (dom.btnConfirmStart) {
-      dom.btnConfirmStart.textContent = `Begin Test ${num} (25m) ➔`;
+      dom.btnConfirmStart.textContent = `Begin ${track} Set ${num} (25m) ➔`;
     }
   }
 
@@ -207,26 +236,35 @@
     state.candidateName = name;
     localStorage.setItem('dmat_last_candidate', name);
     dom.modalName.classList.add('hidden');
-    startExam(state.selectedDifficulty);
+    startExam(state.selectedSet);
   }
 
-  function startExam(diffKey) {
-    state.selectedDifficulty = diffKey;
+  function getSetDisplayName(setKey) {
+    if (setKey.startsWith('easy_t')) {
+      return `Figure Sequences – Easy Set ${setKey.replace('easy_t', '')}`;
+    } else if (setKey.startsWith('medium_t')) {
+      return `Figure Sequences – Medium Set ${setKey.replace('medium_t', '')}`;
+    } else if (setKey.startsWith('hard_t')) {
+      return `Figure Sequences – Hard Set ${setKey.replace('hard_t', '')}`;
+    }
+    return `Figure Sequences – Set 1`;
+  }
+
+  function startExam(setKey) {
+    state.selectedSet = setKey;
     state.userAnswers = {};
     state.flagged.clear();
     state.currentIndex = 0;
     state.examStartTime = new Date();
 
-    const figData = (typeof FIGURES_DATA !== 'undefined') ? FIGURES_DATA : {};
-    const dataset = figData[diffKey] || figData.hard_t1 || figData.easy || [];
+    const data = (typeof FIGURES_DATA !== 'undefined') ? FIGURES_DATA : {};
+    const dataset = data[setKey] || data.hard_t1 || data.easy || [];
     state.questions = dataset.slice(0, 20);
 
     state.timerTotalSeconds = 25 * 60;
     state.timerRemainingSeconds = 25 * 60;
 
-    let testNum = diffKey.replace('hard_t', '');
-    if (testNum === 'hard') testNum = '1';
-    dom.examTitle.textContent = `Figure Sequences (Formenreihen) – Test ${testNum}`;
+    dom.examTitle.textContent = getSetDisplayName(setKey);
     dom.examCandidateName.textContent = state.candidateName;
 
     if (state.timerInterval) clearInterval(state.timerInterval);
@@ -307,13 +345,10 @@
     dom.qSequenceStrip.innerHTML = '';
     const sequence = q.matrices || q.sequence || [];
 
-    sequence.forEach((mat, mIdx) => {
-      const isM5 = (mIdx === 4);
-      const isM6 = (mIdx === 5);
-      const hasChosen = isM5 ? userAns.m5 : (isM6 ? userAns.m6 : null);
-
+    // Render Matrix 1 to 4
+    for (let mIdx = 0; mIdx < 4; mIdx++) {
       const col = document.createElement('div');
-      col.className = `matrix-seq-item ${isM5 || isM6 ? 'highlight-unknown' : ''}`;
+      col.className = 'matrix-seq-item';
 
       const title = document.createElement('div');
       title.className = 'matrix-seq-title';
@@ -322,34 +357,84 @@
 
       const wrap = document.createElement('div');
       wrap.className = 'matrix-svg-wrap';
-
-      if ((isM5 || isM6) && !hasChosen) {
-        wrap.classList.add('unknown-box');
-        wrap.innerHTML = `<span class="unknown-qmark">?</span>`;
-      } else {
-        let shapesToRender = mat;
-        if (isM5 && hasChosen && q.optionsM5 && q.optionsM5[hasChosen - 1]) {
-          shapesToRender = q.optionsM5[hasChosen - 1];
-        } else if (isM6 && hasChosen && q.optionsM6 && q.optionsM6[hasChosen - 1]) {
-          shapesToRender = q.optionsM6[hasChosen - 1];
-        }
-        if (typeof FiguresRender !== 'undefined') {
-          wrap.innerHTML = FiguresRender.renderMatrixSVG(shapesToRender, 96);
-        }
+      if (typeof FiguresRender !== 'undefined') {
+        wrap.innerHTML = FiguresRender.renderMatrixSvg(sequence[mIdx] || [], 96);
       }
-
       col.appendChild(wrap);
-
-      if (isM5 || isM6) {
-        const choiceBadge = document.createElement('span');
-        choiceBadge.className = 'seq-choice-pill';
-        choiceBadge.textContent = hasChosen ? `Choice: Option ${hasChosen}` : 'Not selected';
-        if (hasChosen) choiceBadge.classList.add('pill-selected');
-        col.appendChild(choiceBadge);
-      }
-
       dom.qSequenceStrip.appendChild(col);
-    });
+
+      // Add arrow divider
+      const arrow = document.createElement('div');
+      arrow.className = 'seq-arrow-divider';
+      arrow.textContent = '➔';
+      dom.qSequenceStrip.appendChild(arrow);
+    }
+
+    // Matrix 5 (Unknown / Chosen)
+    const hasChosenM5 = userAns.m5 ? parseInt(userAns.m5, 10) : null;
+    const col5 = document.createElement('div');
+    col5.className = 'matrix-seq-item highlight-unknown';
+
+    const title5 = document.createElement('div');
+    title5.className = 'matrix-seq-title';
+    title5.textContent = 'Matrix 5 (?)';
+    col5.appendChild(title5);
+
+    const wrap5 = document.createElement('div');
+    wrap5.className = 'matrix-svg-wrap';
+    if (hasChosenM5 && q.optionsM5 && q.optionsM5[hasChosenM5 - 1]) {
+      wrap5.innerHTML = FiguresRender.renderMatrixSvg(q.optionsM5[hasChosenM5 - 1], 96);
+    } else {
+      wrap5.innerHTML = `
+        <div class="matrix-seq-unknown-box" style="width:96px; height:96px;">
+          <span class="unknown-qmark">?</span>
+          <span class="unknown-sub">Select Below</span>
+        </div>
+      `;
+    }
+    col5.appendChild(wrap5);
+
+    const pill5 = document.createElement('span');
+    pill5.className = `seq-choice-pill ${hasChosenM5 ? 'pill-selected' : ''}`;
+    pill5.textContent = hasChosenM5 ? `Choice: Option ${hasChosenM5}` : 'Not selected';
+    col5.appendChild(pill5);
+    dom.qSequenceStrip.appendChild(col5);
+
+    // Arrow divider
+    const arrow5 = document.createElement('div');
+    arrow5.className = 'seq-arrow-divider';
+    arrow5.textContent = '➔';
+    dom.qSequenceStrip.appendChild(arrow5);
+
+    // Matrix 6 (Unknown / Chosen)
+    const hasChosenM6 = userAns.m6 ? parseInt(userAns.m6, 10) : null;
+    const col6 = document.createElement('div');
+    col6.className = 'matrix-seq-item highlight-unknown';
+
+    const title6 = document.createElement('div');
+    title6.className = 'matrix-seq-title';
+    title6.textContent = 'Matrix 6 (?)';
+    col6.appendChild(title6);
+
+    const wrap6 = document.createElement('div');
+    wrap6.className = 'matrix-svg-wrap';
+    if (hasChosenM6 && q.optionsM6 && q.optionsM6[hasChosenM6 - 1]) {
+      wrap6.innerHTML = FiguresRender.renderMatrixSvg(q.optionsM6[hasChosenM6 - 1], 96);
+    } else {
+      wrap6.innerHTML = `
+        <div class="matrix-seq-unknown-box" style="width:96px; height:96px;">
+          <span class="unknown-qmark">?</span>
+          <span class="unknown-sub">Select Below</span>
+        </div>
+      `;
+    }
+    col6.appendChild(wrap6);
+
+    const pill6 = document.createElement('span');
+    pill6.className = `seq-choice-pill ${hasChosenM6 ? 'pill-selected' : ''}`;
+    pill6.textContent = hasChosenM6 ? `Choice: Option ${hasChosenM6}` : 'Not selected';
+    col6.appendChild(pill6);
+    dom.qSequenceStrip.appendChild(col6);
 
     // 2. Render Options for Matrix 5
     dom.optsListM5.innerHTML = '';
@@ -358,7 +443,7 @@
       const isSelected = (userAns.m5 === optNum);
       const cardWrap = document.createElement('div');
       if (typeof FiguresRender !== 'undefined') {
-        cardWrap.innerHTML = FiguresRender.renderOptionCard(optShapes, optNum, isSelected, 78);
+        cardWrap.innerHTML = FiguresRender.renderOptionCard(optShapes, optNum, isSelected, 82);
       }
       const card = cardWrap.firstElementChild;
       card.addEventListener('click', () => {
@@ -377,7 +462,7 @@
       const isSelected = (userAns.m6 === optNum);
       const cardWrap = document.createElement('div');
       if (typeof FiguresRender !== 'undefined') {
-        cardWrap.innerHTML = FiguresRender.renderOptionCard(optShapes, optNum, isSelected, 78);
+        cardWrap.innerHTML = FiguresRender.renderOptionCard(optShapes, optNum, isSelected, 82);
       }
       const card = cardWrap.firstElementChild;
       card.addEventListener('click', () => {
@@ -389,7 +474,7 @@
       dom.optsListM6.appendChild(card);
     });
 
-    // Flag button
+    // Flag button state
     if (state.flagged.has(q.id)) {
       dom.btnFlagQ.classList.add('flagged-active');
       dom.btnFlagQ.innerHTML = `
@@ -406,7 +491,6 @@
 
     dom.btnPrevQ.disabled = (idx === 0);
     dom.btnNextQ.disabled = (idx === state.questions.length - 1);
-
     updateAllPaletteItems();
   }
 
@@ -430,9 +514,9 @@
       if (!a || !a.m5 || !a.m6) unans++;
     });
 
-    let msg = 'Are you ready to submit your exam?';
+    let msg = 'Are you ready to submit your Figure Sequences exam?';
     if (unans > 0) {
-      msg = `You have ${unans} incomplete question(s). Both Matrix 5 and Matrix 6 must be answered. Are you sure you want to finish and submit?`;
+      msg = `You have ${unans} incomplete question(s). Both Matrix 5 and Matrix 6 must be answered to score each question. Are you sure you want to finish and submit?`;
     }
     if (confirm(msg)) {
       finishExam('Completed');
@@ -460,8 +544,8 @@
       return {
         questionId: q.id,
         subtest: 'figures',
-        title: q.title || 'Figure Sequence',
-        sequence: q.matrices || q.sequence,
+        title: `Question ${q.id}`,
+        sequence: q.matrices || q.sequence || [],
         optionsM5: q.optionsM5,
         optionsM6: q.optionsM6,
         solution: sol,
@@ -474,15 +558,13 @@
 
     const total = state.questions.length;
     const percentage = Math.round((correctCount / total) * 100);
-    let testNum = state.selectedDifficulty.replace('hard_t', '');
-    if (testNum === 'hard') testNum = '1';
-    const diffDisplay = `Figures – Test ${testNum}`;
+    const diffDisplay = getSetDisplayName(state.selectedSet);
 
     const submission = {
       id: 'sub-' + Date.now(),
       candidateName: state.candidateName,
       difficulty: diffDisplay,
-      difficultyKey: state.selectedDifficulty,
+      difficultyKey: state.selectedSet,
       subtest: 'figures',
       questionCount: total,
       score: correctCount,
@@ -527,6 +609,7 @@
     });
   }
 
+  // --- Submissions Persistence & Modal ---
   function isSampleRecord(sub) {
     if (!sub || !sub.id) return true;
     if (sub.id.startsWith('sub-live-')) return true;
@@ -573,84 +656,106 @@
   }
 
   function renderSubmissionsTable() {
-    const subs = getSubmissions();
-    const query = (dom.subSearchInput ? dom.subSearchInput.value : '').toLowerCase().trim();
-    const filtered = subs.filter(s => {
+    if (!dom.subTableBody) return;
+    const query = dom.subSearchInput ? dom.subSearchInput.value.toLowerCase().trim() : '';
+    const all = getSubmissions();
+
+    const filtered = all.filter(s => {
       if (!query) return true;
-      return (s.candidateName || '').toLowerCase().includes(query) ||
-             (s.difficulty || '').toLowerCase().includes(query) ||
-             (s.submittedAt || '').toLowerCase().includes(query);
+      const name = (s.candidateName || '').toLowerCase();
+      const diff = (s.difficulty || '').toLowerCase();
+      const date = (s.submittedAt || '').toLowerCase();
+      return name.includes(query) || diff.includes(query) || date.includes(query);
     });
 
-    if (dom.subTableBody) dom.subTableBody.innerHTML = '';
-    if (filtered.length === 0) {
-      if (dom.subEmptyState) dom.subEmptyState.classList.remove('hidden');
-      return;
+    dom.subTableBody.innerHTML = '';
+    if (dom.subEmptyState) {
+      dom.subEmptyState.classList.toggle('hidden', filtered.length > 0);
     }
-    if (dom.subEmptyState) dom.subEmptyState.classList.add('hidden');
 
     filtered.forEach((sub, idx) => {
       const tr = document.createElement('tr');
+      const pct = sub.percentage !== undefined ? `${sub.percentage}%` : '—';
+      const initials = (sub.candidateName || 'U').split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+
       tr.innerHTML = `
-        <td style="color:var(--t-45);">${idx + 1}</td>
-        <td><strong>${escapeHtml(sub.candidateName)}</strong></td>
-        <td><span class="badge-tag-diff">${sub.difficulty}</span></td>
-        <td><strong style="color:#38bdf8;">${sub.score} / ${sub.total}</strong> (${sub.percentage}%)</td>
-        <td>${sub.timeTakenFormatted}</td>
-        <td style="color:var(--t-60); font-size:12px;">${sub.submittedAt}</td>
+        <td class="sub-td-rank">#${idx + 1}</td>
+        <td>
+          <div class="cand-cell">
+            <span class="cand-avatar">${initials}</span>
+            <span class="cand-name">${escapeHtml(sub.candidateName || 'Unknown')}</span>
+          </div>
+        </td>
+        <td><span class="sub-diff-tag">${escapeHtml(sub.difficulty || 'Figure Sequences')}</span></td>
+        <td><strong>${sub.score} / ${sub.total}</strong> <span class="sub-pct">(${pct})</span></td>
+        <td>${escapeHtml(sub.timeTakenFormatted || '—')}</td>
+        <td class="sub-td-date">${escapeHtml(sub.submittedAt || '—')}</td>
+        <td><span class="status-pill status-completed">${escapeHtml(sub.status || 'Completed')}</span></td>
       `;
       dom.subTableBody.appendChild(tr);
     });
   }
 
-  function openSubDetails(sub) {
-    // Admin only
-  }
-
   function exportSubmissionsCsv() {
-    const subs = getSubmissions();
-    if (!subs.length) {
-      alert('No submissions available to export.');
+    const list = getSubmissions();
+    if (!list.length) {
+      alert('No submissions to export.');
       return;
     }
-    const headers = ['ID', 'Candidate Name', 'Difficulty', 'Score', 'Total', 'Percentage', 'Time Taken', 'Submitted At'];
-    const rows = subs.map(s => [
-      s.id,
+    const headers = ['Rank', 'Candidate Name', 'Difficulty / Test', 'Score', 'Total', 'Percentage', 'Time Taken', 'Submitted At', 'Status'];
+    const rows = list.map((s, idx) => [
+      idx + 1,
       `"${(s.candidateName || '').replace(/"/g, '""')}"`,
-      s.difficulty,
+      `"${(s.difficulty || '').replace(/"/g, '""')}"`,
       s.score,
       s.total,
       `${s.percentage}%`,
-      s.timeTakenFormatted,
-      s.submittedAt
+      `"${s.timeTakenFormatted || ''}"`,
+      `"${s.submittedAt || ''}"`,
+      `"${s.status || ''}"`
     ]);
-    const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const csvContent = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `dmat_figures_submissions_${Date.now()}.csv`;
-    a.click();
-    URL.revokeObjectURL(url);
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', `dmat_figure_sequences_submissions_${Date.now()}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 
-  function formatDuration(sec) {
-    const m = Math.floor(sec / 60);
-    const s = sec % 60;
+  function formatDuration(totalSeconds) {
+    if (isNaN(totalSeconds) || totalSeconds < 0) totalSeconds = 0;
+    const m = Math.floor(totalSeconds / 60);
+    const s = Math.floor(totalSeconds % 60);
     return `${m}m ${s.toString().padStart(2, '0')}s`;
   }
 
   function formatDateTime(d) {
     if (!d) d = new Date();
-    const pad = n => n.toString().padStart(2, '0');
-    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+    if (typeof d === 'string') d = new Date(d);
+    const y = d.getFullYear();
+    const mo = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    const h = String(d.getHours()).padStart(2, '0');
+    const mi = String(d.getMinutes()).padStart(2, '0');
+    return `${y}-${mo}-${day} ${h}:${mi}`;
   }
 
   function escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str || '';
-    return div.innerHTML;
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
   }
 
-  document.addEventListener('DOMContentLoaded', init);
+  // Auto-init on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();

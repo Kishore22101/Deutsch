@@ -145,15 +145,78 @@
     `;
   }
 
+  function renderBreakdownItem(item, idx) {
+    const qNum = idx + 1;
+    const isCorrect = !!item.isCorrect;
+    const user = item.userAnswer || {};
+    const sol = item.solution || {};
+    const m5Correct = item.fieldCorrectness ? item.fieldCorrectness.m5 : (parseInt(user.m5, 10) === sol.m5);
+    const m6Correct = item.fieldCorrectness ? item.fieldCorrectness.m6 : (parseInt(user.m6, 10) === sol.m6);
+
+    const seq = item.sequence || [];
+    let seqStripHtml = '';
+    for (let i = 0; i < Math.min(4, seq.length); i++) {
+      seqStripHtml += `
+        <div class="bd-matrix-item">
+          <span class="bd-matrix-lbl">M${i + 1}</span>
+          ${renderMatrixSvg(seq[i], 56)}
+        </div>
+      `;
+    }
+
+    return `
+      <div class="breakdown-card-head">
+        <div class="bd-title-wrap">
+          <span class="bd-qnum">Question ${qNum}</span>
+          <span class="bd-badge ${isCorrect ? 'bd-correct' : 'bd-incorrect'}">
+            ${isCorrect ? '✓ Correct (+1 pt)' : '✕ Incorrect (0 pt)'}
+          </span>
+        </div>
+      </div>
+
+      <div class="bd-seq-strip">
+        ${seqStripHtml}
+      </div>
+
+      <div class="bd-answers-grid">
+        <div class="bd-ans-block ${m5Correct ? 'ans-pass' : 'ans-fail'}">
+          <div class="bd-ans-head">
+            <strong>Matrix 5:</strong>
+            <span>Your Choice: Option ${user.m5 || 'None'} ${m5Correct ? '✓' : '✕'}</span>
+          </div>
+          <div class="bd-ans-correct">Correct Answer: <strong>Option ${sol.m5}</strong></div>
+        </div>
+
+        <div class="bd-ans-block ${m6Correct ? 'ans-pass' : 'ans-fail'}">
+          <div class="bd-ans-head">
+            <strong>Matrix 6:</strong>
+            <span>Your Choice: Option ${user.m6 || 'None'} ${m6Correct ? '✓' : '✕'}</span>
+          </div>
+          <div class="bd-ans-correct">Correct Answer: <strong>Option ${sol.m6}</strong></div>
+        </div>
+      </div>
+
+      ${item.explanation ? `
+        <div class="bd-explanation-box">
+          <strong>Rule Explanation:</strong>
+          <p>${item.explanation}</p>
+        </div>
+      ` : ''}
+    `;
+  }
+
   const exportObj = {
     renderMatrixSvg,
+    renderMatrixSVG: renderMatrixSvg,
     renderFigureSequenceStrip,
-    renderOptionCard
+    renderOptionCard,
+    renderBreakdownItem
   };
 
   if (typeof window !== 'undefined') {
     window.FiguresRender = exportObj;
     window.renderMatrixSvg = renderMatrixSvg;
+    window.renderMatrixSVG = renderMatrixSvg;
   }
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = exportObj;

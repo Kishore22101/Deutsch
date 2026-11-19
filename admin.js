@@ -293,6 +293,12 @@
         const itemDiff = (item.difficulty || '').toLowerCase();
         if (diffFilter === 'figures') {
           matchesDiff = item.subtest === 'figures' || itemDiff.includes('figure');
+        } else if (diffFilter === 'fig_easy') {
+          matchesDiff = (item.subtest === 'figures' || itemDiff.includes('figure')) && itemDiff.includes('easy');
+        } else if (diffFilter === 'fig_med') {
+          matchesDiff = (item.subtest === 'figures' || itemDiff.includes('figure')) && (itemDiff.includes('medium') || itemDiff.includes('med'));
+        } else if (diffFilter === 'fig_hard') {
+          matchesDiff = (item.subtest === 'figures' || itemDiff.includes('figure')) && itemDiff.includes('hard');
         } else if (diffFilter === 'hard_all') {
           matchesDiff = itemDiff.includes('hard') || (item.difficultyKey || '').startsWith('hard');
         } else if (diffFilter === 'hard' || diffFilter === 'hard_t1') {

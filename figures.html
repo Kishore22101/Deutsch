@@ -3,73 +3,464 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"/>
-  <title>Figure Sequences (Formenreihen) – dMAT</title>
-  <meta name="description" content="dMAT Figure Sequences testing module. Questions will be updated soon."/>
+  <title>Figure Sequences (Formenreihen) – dMAT Practice &amp; Exam</title>
+  <meta name="description" content="dMAT Figure Sequences testing module: 15 Practice Sets across Easy, Medium, and Hard tracks. 20 Questions in 25 Minutes."/>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="dmat.css"/>
   <style>
-    .placeholder-container {
-      max-width: 720px;
-      margin: 60px auto 40px;
-      text-align: center;
-      padding: 48px 32px;
-      border-radius: 20px;
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    /* ── Solid White Button ── */
+    .btn-white-solid {
+      background: #ffffff !important;
+      color: #0f172a !important;
+      font-weight: 800 !important;
+      border: none !important;
+      box-shadow: 0 4px 14px rgba(255, 255, 255, 0.25);
     }
-    .placeholder-icon {
-      width: 72px;
-      height: 72px;
-      border-radius: 20px;
-      background: rgba(56, 189, 248, 0.15);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: #38bdf8;
-      margin-bottom: 24px;
+    .btn-white-solid:hover {
+      background: #f1f5f9 !important;
+      transform: translateY(-2px);
     }
-    .placeholder-title {
-      font-size: 2rem;
-      font-weight: 800;
-      color: #f8fafc;
-      margin: 0 0 12px;
+
+    /* ── Compact Question Palette (Desktop & General) ── */
+    .exam-layout {
+      display: grid !important;
+      grid-template-columns: 210px 1fr !important;
+      gap: 18px !important;
+      align-items: start !important;
     }
-    .placeholder-badge {
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      background: rgba(56, 189, 248, 0.15);
-      color: #38bdf8;
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      margin-bottom: 16px;
+
+    .exam-palette-sidebar {
+      background: rgba(15, 23, 42, 0.8) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      border-radius: 12px !important;
+      padding: 12px 14px !important;
+      box-sizing: border-box !important;
+      position: sticky !important;
+      top: 80px !important;
     }
-    .placeholder-desc {
-      color: #94a3b8;
-      font-size: 1.05rem;
-      line-height: 1.6;
-      margin: 0 auto 32px;
-      max-width: 540px;
+
+    .palette-head {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding-bottom: 6px !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+      margin-bottom: 8px !important;
     }
-    .placeholder-actions {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
+
+    .palette-title-text {
+      font-size: 11px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase !important;
+      color: #94a3b8 !important;
+    }
+
+    .palette-sub-text {
+      font-size: 10px !important;
+      color: #64748b !important;
+    }
+
+    .palette-grid {
+      display: grid !important;
+      grid-template-columns: repeat(5, 1fr) !important;
+      gap: 5px !important;
+      margin: 8px 0 !important;
+    }
+
+    .palette-btn {
+      width: 100% !important;
+      height: 32px !important;
+      min-width: 0 !important;
+      aspect-ratio: auto !important;
+      border-radius: 6px !important;
+      background: rgba(30, 41, 59, 0.6) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      color: #94a3b8 !important;
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 0 !important;
+      cursor: pointer !important;
+      transition: all 0.15s ease !important;
+      position: relative !important;
+    }
+
+    .palette-btn:hover {
+      background: rgba(51, 65, 85, 0.8) !important;
+      color: #f8fafc !important;
+      border-color: rgba(255, 255, 255, 0.25) !important;
+    }
+
+    .palette-btn.current {
+      background: #38bdf8 !important;
+      color: #0f172a !important;
+      font-weight: 900 !important;
+      border-color: #38bdf8 !important;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.4) !important;
+    }
+
+    .palette-btn.answered {
+      background: rgba(16, 185, 129, 0.25) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.45) !important;
+    }
+
+    .palette-btn.partial {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.4) !important;
+    }
+
+    .palette-btn.flagged::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #f59e0b;
+    }
+
+    .palette-legend {
+      display: flex !important;
+      gap: 10px !important;
+      justify-content: space-between !important;
+      margin-top: 8px !important;
+      padding-top: 8px !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+      font-size: 10px !important;
+      color: #94a3b8 !important;
+    }
+
+    .legend-item {
+      display: flex !important;
+      align-items: center !important;
+      gap: 4px !important;
+    }
+
+    .leg-box {
+      width: 8px !important;
+      height: 8px !important;
+      border-radius: 2px !important;
+      display: inline-block !important;
+    }
+
+    .leg-answered { background: #34d399 !important; }
+    .leg-flagged { background: #f59e0b !important; }
+    .leg-current { background: #38bdf8 !important; }
+
+    /* ── Sets Grid Layout ── */
+    .fig-sets-grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+      gap: 18px !important;
+    }
+
+    /* ── Figures Stage & Strip ── */
+    .figures-stage-wrap {
+      margin: 18px 0 !important;
+    }
+
+    .figures-sequence-strip {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      flex-wrap: wrap !important;
+      padding: 16px !important;
+      background: rgba(15, 23, 42, 0.6) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      border-radius: 14px !important;
+    }
+
+    .matrix-seq-item {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 6px !important;
+    }
+
+    .matrix-seq-title {
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      color: #94a3b8 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.5px !important;
+    }
+
+    .matrix-seq-item.highlight-unknown .matrix-seq-title {
+      color: #38bdf8 !important;
+    }
+
+    .seq-arrow-divider {
+      color: #475569 !important;
+      font-size: 14px !important;
+      font-weight: 700 !important;
+      user-select: none !important;
+    }
+
+    .seq-choice-pill {
+      font-size: 10px !important;
+      font-weight: 700 !important;
+      padding: 2px 8px !important;
+      border-radius: 999px !important;
+      background: rgba(255, 255, 255, 0.06) !important;
+      color: #64748b !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+
+    .seq-choice-pill.pill-selected {
+      background: rgba(56, 189, 248, 0.15) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(56, 189, 248, 0.3) !important;
+    }
+
+    /* Options Grid */
+    .figures-options-grid {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 20px !important;
+      margin-top: 20px !important;
+    }
+
+    .figures-opt-col {
+      background: rgba(15, 23, 42, 0.5) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      border-radius: 12px !important;
+      padding: 14px !important;
+    }
+
+    .figures-opt-col-head {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      margin-bottom: 12px !important;
+      padding-bottom: 8px !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+    }
+
+    .figures-opt-col-head h4 {
+      margin: 0 !important;
+      font-size: 14px !important;
+      font-weight: 800 !important;
+      color: #f8fafc !important;
+    }
+
+    .figures-opt-col-head .opt-hint {
+      font-size: 11px !important;
+      color: #38bdf8 !important;
+      font-weight: 600 !important;
+    }
+
+    .figures-opts-list {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 10px !important;
+    }
+
+    .figure-opt-card {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      padding: 10px 6px !important;
+      border-radius: 10px !important;
+      border: 2px solid rgba(255, 255, 255, 0.08) !important;
+      background: rgba(30, 41, 59, 0.4) !important;
+      cursor: pointer !important;
+      transition: all 0.15s ease !important;
+      text-align: center !important;
+    }
+
+    .figure-opt-card:hover {
+      border-color: rgba(56, 189, 248, 0.4) !important;
+      background: rgba(56, 189, 248, 0.08) !important;
+      transform: translateY(-2px);
+    }
+
+    .figure-opt-card.selected {
+      border-color: #38bdf8 !important;
+      background: rgba(56, 189, 248, 0.18) !important;
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.3) !important;
+    }
+
+    .figure-opt-card .opt-badge {
+      font-size: 11px !important;
+      font-weight: 800 !important;
+      color: #94a3b8 !important;
+      margin-bottom: 4px !important;
+    }
+
+    .figure-opt-card.selected .opt-badge {
+      color: #38bdf8 !important;
+    }
+
+    .figure-opt-card .opt-status {
+      font-size: 10px !important;
+      font-weight: 700 !important;
+      color: #64748b !important;
+      margin-top: 6px !important;
+    }
+
+    .figure-opt-card.selected .opt-status {
+      color: #38bdf8 !important;
+    }
+
+    /* ── Breakdown Item Styles ── */
+    .breakdown-card-head {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      margin-bottom: 12px !important;
+    }
+
+    .bd-title-wrap {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+    }
+
+    .bd-qnum {
+      font-size: 14px !important;
+      font-weight: 800 !important;
+      color: #f8fafc !important;
+    }
+
+    .bd-badge {
+      padding: 3px 10px !important;
+      border-radius: 999px !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+    }
+
+    .bd-badge.bd-correct {
+      background: rgba(16, 185, 129, 0.15) !important;
+      color: #34d399 !important;
+      border: 1px solid rgba(16, 185, 129, 0.3) !important;
+    }
+
+    .bd-badge.bd-incorrect {
+      background: rgba(239, 68, 68, 0.15) !important;
+      color: #f87171 !important;
+      border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    }
+
+    .bd-seq-strip {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      overflow-x: auto !important;
+      padding: 10px 0 !important;
+      margin-bottom: 12px !important;
+    }
+
+    .bd-matrix-item {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 4px !important;
+    }
+
+    .bd-matrix-lbl {
+      font-size: 10px !important;
+      font-weight: 700 !important;
+      color: #64748b !important;
+    }
+
+    .bd-answers-grid {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 12px !important;
+      margin: 12px 0 !important;
+    }
+
+    .bd-ans-block {
+      padding: 10px 12px !important;
+      border-radius: 8px !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      background: rgba(15, 23, 42, 0.4) !important;
+    }
+
+    .bd-ans-block.ans-pass {
+      border-color: rgba(16, 185, 129, 0.3) !important;
+      background: rgba(16, 185, 129, 0.06) !important;
+    }
+
+    .bd-ans-block.ans-fail {
+      border-color: rgba(239, 68, 68, 0.3) !important;
+      background: rgba(239, 68, 68, 0.06) !important;
+    }
+
+    .bd-ans-head {
+      display: flex !important;
+      justify-content: space-between !important;
+      font-size: 12px !important;
+      margin-bottom: 4px !important;
+    }
+
+    .bd-ans-correct {
+      font-size: 12px !important;
+      color: #94a3b8 !important;
+    }
+
+    .bd-explanation-box {
+      margin-top: 12px !important;
+      padding: 10px 14px !important;
+      border-radius: 8px !important;
+      background: rgba(30, 41, 59, 0.4) !important;
+      border: 1px solid rgba(255, 255, 255, 0.06) !important;
+      font-size: 12px !important;
+      line-height: 1.5 !important;
+      color: #cbd5e1 !important;
+    }
+
+    .bd-explanation-box strong {
+      color: #38bdf8 !important;
+      display: block !important;
+      margin-bottom: 4px !important;
+    }
+
+    .bd-explanation-box p {
+      margin: 0 !important;
+    }
+
+    /* Mobile Responsive Adjustments */
+    @media (max-width: 768px) {
+      .exam-layout {
+        grid-template-columns: 1fr !important;
+      }
+      .exam-palette-sidebar {
+        position: static !important;
+        margin-bottom: 16px !important;
+      }
+      .figures-options-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .bd-answers-grid {
+        grid-template-columns: 1fr !important;
+      }
     }
   </style>
 </head>
 <body>
+
+<!-- SVG Defs -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="ic-world" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="ic-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></symbol>
+  <symbol id="ic-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+</svg>
 
 <!-- Header -->
 <header class="site-header">
   <div class="header-inner">
     <div class="header-left">
       <a href="index.html" class="logo">
+        <div class="logo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-world"/></svg></div>
         <span class="logo-text">Learning Portal</span>
       </a>
       <span class="portal-badge" style="background:rgba(56,189,248,0.15); border-color:rgba(56,189,248,0.3); color:#38bdf8;">Figure Sequences</span>
@@ -80,50 +471,595 @@
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         <span>Admin Dashboard</span>
       </a>
-      <a href="dmat.html#submissions" class="dmat-btn-sub" title="Submissions & Times">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <button class="dmat-btn-sub" id="btn-nav-submissions">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
         <span>Submissions &amp; Times</span>
         <span class="badge-count sub-count-display" id="sub-count-badge">0</span>
-      </a>
+      </button>
       <a href="index.html" class="back-btn">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
         Home
       </a>
     </div>
   </div>
 </header>
 
-<main class="container">
-  <div class="placeholder-container">
-    <div class="placeholder-icon">
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="3" width="7" height="7"/>
-        <circle cx="17.5" cy="6.5" r="3.5"/>
-        <polygon points="12 14 7 21 17 21"/>
-      </svg>
+<main>
+  <!-- ══════════════════════════════════════════
+       VIEW 1: CHOOSE DIFFICULTY LEVEL (Easy, Medium, Hard)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view" id="view-difficulties">
+    <div class="page-hero container">
+      <h1>Choose Difficulty Level</h1>
+      <p>Master pattern progression, geometric rotation, and color cycles. Select your track to begin.</p>
+      
+      <div class="hero-stats-row" style="margin-top: 20px;">
+        <div class="h-stat-item">
+          <span class="h-stat-num">3 Tracks</span>
+          <span class="h-stat-lbl">Easy · Med · Hard</span>
+        </div>
+        <div class="h-stat-item">
+          <span class="h-stat-num">15 Sets</span>
+          <span class="h-stat-lbl">300 Questions</span>
+        </div>
+        <div class="h-stat-item">
+          <span class="h-stat-num">25 min</span>
+          <span class="h-stat-lbl">Exam Timer</span>
+        </div>
+        <button class="h-stat-btn" id="btn-hero-submissions">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
+          <span>Submissions Log (<span id="hero-sub-count">0</span>)</span>
+        </button>
+      </div>
     </div>
-    <div class="placeholder-badge">dMAT Subtest 1</div>
-    <h1 class="placeholder-title">Figure Sequences (Formenreihen)</h1>
-    <p class="placeholder-desc">Questions will be updated soon. In the meantime, you can practice with the active Mathematic Equations module.</p>
-    
-    <div class="placeholder-actions">
-      <a href="math.html" class="btn-diff-action btn-hard-primary" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none; background: linear-gradient(135deg, #059669, #047857);">
-        <span>Practice Mathematic Equations (Hard) ➔</span>
-      </a>
-      <a href="dmat.html" class="dmat-btn-sub" style="text-decoration:none;">
-        <span>Back to dMAT Hub</span>
-      </a>
+
+    <div class="container">
+      <div class="cards-grid cols-3 math-diff-grid">
+
+        <!-- Easy -->
+        <div class="glass-card diff-card" id="diff-card-easy" style="cursor: pointer;">
+          <div class="diff-badge badge-easy">WARM-UP</div>
+          <div class="diff-title">Easy</div>
+          <div class="diff-desc">5 Sets (100 Q). 2 figures per matrix with single-variable perimeter rules and linear tracks.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (5 Sets)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 mins</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>2 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action" id="btn-start-easy">Start Easy (5 Sets)</button>
+        </div>
+
+        <!-- Medium -->
+        <div class="glass-card diff-card" id="diff-card-medium" style="cursor: pointer;">
+          <div class="diff-badge badge-medium">INTERMEDIATE</div>
+          <div class="diff-title">Medium</div>
+          <div class="diff-desc">5 Sets (100 Q). 3 figures per matrix with geometric rotation, color alternation &amp; 2-field movement.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (5 Sets)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 mins</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>3 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action" id="btn-start-med">Start Medium (5 Sets)</button>
+        </div>
+
+        <!-- Hard -->
+        <div class="glass-card diff-card diff-card-hard" id="diff-card-hard" style="cursor: pointer;">
+          <div class="diff-badge badge-hard">OFFICIAL DMAT EXAM</div>
+          <div class="diff-title">Hard</div>
+          <div class="diff-desc">5 Sets (100 Q). 4 figures per matrix with complex multi-rule transformations &amp; color cycles.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (5 Sets)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 mins</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>4 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action btn-white-solid" id="btn-start-hard">Start Hard (5 Sets)</button>
+        </div>
+
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 1a: EASY SET SELECTION (Set 1 to Set 5)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-sets-easy">
+    <div class="page-hero container">
+      <button class="back-link-btn" id="btn-back-to-diff-easy" style="margin-bottom: 16px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+        Back to Difficulty Level
+      </button>
+      <div class="badge" style="background:rgba(56,189,248,0.12); color:#38bdf8; border-color:rgba(56,189,248,0.3);">
+        Easy Level · 5 Practice Sets (100 Questions) · 25 Minutes Each
+      </div>
+      <h1>Choose Easy Practice Set</h1>
+      <p>5 practice sets with 20 questions each. 2 shapes per matrix with simple 1-step perimeter/boundary rules. Select a set to begin.</p>
+    </div>
+
+    <div class="container">
+      <div class="cards-grid fig-sets-grid">
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-fig-set="easy_t1">
+          <div class="diff-badge badge-easy">Set 1</div>
+          <div class="diff-title">Easy Set 1</div>
+          <div class="diff-desc">20 Questions. Clockwise border movement &amp; linear perimeter tracks.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>2 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-fig-set="easy_t1">Start Set 1 (25m) ➔</button>
+        </div>
+
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-fig-set="easy_t2">
+          <div class="diff-badge badge-easy">Set 2</div>
+          <div class="diff-title">Easy Set 2</div>
+          <div class="diff-desc">20 Questions. Single-field movements and corner bouncing rules.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>2 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-fig-set="easy_t2">Start Set 2 (25m) ➔</button>
+        </div>
+
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-fig-set="easy_t3">
+          <div class="diff-badge badge-easy">Set 3</div>
+          <div class="diff-title">Easy Set 3</div>
+          <div class="diff-desc">20 Questions. Counter-clockwise progressions and shape balance.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>2 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-fig-set="easy_t3">Start Set 3 (25m) ➔</button>
+        </div>
+
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-fig-set="easy_t4">
+          <div class="diff-badge badge-easy">Set 4</div>
+          <div class="diff-title">Easy Set 4</div>
+          <div class="diff-desc">20 Questions. Perimeter tracking with arrows and polygon shapes.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>2 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-fig-set="easy_t4">Start Set 4 (25m) ➔</button>
+        </div>
+
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-fig-set="easy_t5">
+          <div class="diff-badge badge-easy">Set 5</div>
+          <div class="diff-title">Easy Set 5</div>
+          <div class="diff-desc">20 Questions. Speed deduction test with 2-variable boundary patterns.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>2 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-fig-set="easy_t5">Start Set 5 (25m) ➔</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 1b: MEDIUM SET SELECTION (Set 1 to Set 5)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-sets-medium">
+    <div class="page-hero container">
+      <button class="back-link-btn" id="btn-back-to-diff-med" style="margin-bottom: 16px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+        Back to Difficulty Level
+      </button>
+      <div class="badge" style="background:rgba(245,158,11,0.12); color:#fbbf24; border-color:rgba(245,158,11,0.3);">
+        Medium Level · 5 Practice Sets (100 Questions) · 25 Minutes Each
+      </div>
+      <h1>Choose Medium Practice Set</h1>
+      <p>5 practice sets with 20 questions each. 3 shapes per matrix with rotation (arrows/brackets), 2-field leaps, and alternating color rules.</p>
+    </div>
+
+    <div class="container">
+      <div class="cards-grid fig-sets-grid">
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-fig-set="medium_t1">
+          <div class="diff-badge badge-medium">Set 1</div>
+          <div class="diff-title">Medium Set 1</div>
+          <div class="diff-desc">20 Questions. 3 figures with 90° arrow rotation and 2-step leaps.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>3 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-fig-set="medium_t1">Start Set 1 (25m) ➔</button>
+        </div>
+
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-fig-set="medium_t2">
+          <div class="diff-badge badge-medium">Set 2</div>
+          <div class="diff-title">Medium Set 2</div>
+          <div class="diff-desc">20 Questions. Rotating brackets and 2-color alternation cycles.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>3 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-fig-set="medium_t2">Start Set 2 (25m) ➔</button>
+        </div>
+
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-fig-set="medium_t3">
+          <div class="diff-badge badge-medium">Set 3</div>
+          <div class="diff-title">Medium Set 3</div>
+          <div class="diff-desc">20 Questions. Multi-directional perimeter rules &amp; bracket step shifts.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>3 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-fig-set="medium_t3">Start Set 3 (25m) ➔</button>
+        </div>
+
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-fig-set="medium_t4">
+          <div class="diff-badge badge-medium">Set 4</div>
+          <div class="diff-title">Medium Set 4</div>
+          <div class="diff-desc">20 Questions. Dual 2-step figure movements and directional tracking.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>3 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-fig-set="medium_t4">Start Set 4 (25m) ➔</button>
+        </div>
+
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-fig-set="medium_t5">
+          <div class="diff-badge badge-medium">Set 5</div>
+          <div class="diff-title">Medium Set 5</div>
+          <div class="diff-desc">20 Questions. Advanced intermediate combinations with color switching.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>3 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-fig-set="medium_t5">Start Set 5 (25m) ➔</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 1c: HARD SET SELECTION (Set 1 to Set 5)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-sets-hard">
+    <div class="page-hero container">
+      <button class="back-link-btn" id="btn-back-to-diff-hard" style="margin-bottom: 16px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+        Back to Difficulty Level
+      </button>
+      <div class="badge" style="background:rgba(16,185,129,0.12); color:#10b981; border-color:rgba(16,185,129,0.3);">
+        Hard Level · Official dMAT Standard · 5 Practice Sets (100 Questions) · 25 Minutes Each
+      </div>
+      <h1>Choose Hard Practice Set</h1>
+      <p>5 official standard practice sets with 20 questions each. 4 figures per matrix with multi-transformations, rotations, 2-step jumps, and 3-color cycles.</p>
+    </div>
+
+    <div class="container">
+      <div class="cards-grid fig-sets-grid">
+        <div class="glass-card diff-card diff-card-hard" style="cursor: pointer;" data-start-fig-set="hard_t1">
+          <div class="diff-badge badge-hard">Set 1</div>
+          <div class="diff-title">Hard Set 1</div>
+          <div class="diff-desc">20 Questions. 4 figures per matrix: rotations, 2-step jumps, and 3-color cycle.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>4 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action btn-hard-primary" data-start-fig-set="hard_t1">Start Set 1 (25m) ➔</button>
+        </div>
+
+        <div class="glass-card diff-card diff-card-hard" style="cursor: pointer;" data-start-fig-set="hard_t2">
+          <div class="diff-badge badge-hard">Set 2</div>
+          <div class="diff-title">Hard Set 2</div>
+          <div class="diff-desc">20 Questions. Complex 4-variable tracks with counter-rotating brackets.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>4 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action btn-hard-primary" data-start-fig-set="hard_t2">Start Set 2 (25m) ➔</button>
+        </div>
+
+        <div class="glass-card diff-card diff-card-hard" style="cursor: pointer;" data-start-fig-set="hard_t3">
+          <div class="diff-badge badge-hard">Set 3</div>
+          <div class="diff-title">Hard Set 3</div>
+          <div class="diff-desc">20 Questions. Alternating arrow colors and dual 2-field step jumps.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>4 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action btn-hard-primary" data-start-fig-set="hard_t3">Start Set 3 (25m) ➔</button>
+        </div>
+
+        <div class="glass-card diff-card diff-card-hard" style="cursor: pointer;" data-start-fig-set="hard_t4">
+          <div class="diff-badge badge-hard">Set 4</div>
+          <div class="diff-title">Hard Set 4</div>
+          <div class="diff-desc">20 Questions. High-speed 4-figure matrix sequences under 25-minute clock.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>4 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action btn-hard-primary" data-start-fig-set="hard_t4">Start Set 4 (25m) ➔</button>
+        </div>
+
+        <div class="glass-card diff-card diff-card-hard" style="cursor: pointer;" data-start-fig-set="hard_t5">
+          <div class="diff-badge badge-hard">Set 5</div>
+          <div class="diff-title">Hard Set 5</div>
+          <div class="diff-desc">20 Questions. Master challenge with 4-figure multi-rule tracking.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>4 Figures / Matrix</strong></div>
+          </div>
+          <button class="btn-diff-action btn-hard-primary" data-start-fig-set="hard_t5">Start Set 5 (25m) ➔</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 2: ACTIVE EXAM STAGE
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-exam">
+    <!-- Topbar -->
+    <div class="exam-topbar">
+      <div class="exam-topbar-inner">
+        <div class="exam-meta">
+          <span class="exam-badge" id="exam-title">Figure Sequences – Hard Set 1</span>
+          <div class="candidate-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
+            <span id="exam-candidate-name">Candidate</span>
+          </div>
+        </div>
+
+        <div class="timer-box">
+          <div class="timer-display" id="exam-timer">25:00</div>
+          <div class="timer-progress-wrap">
+            <div class="timer-progress-fill" id="exam-timer-progress"></div>
+          </div>
+        </div>
+
+        <div class="exam-topbar-actions">
+          <button class="btn-submit-exam" id="btn-submit-exam">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-check"/></svg>
+            <span>Finish &amp; Submit</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exam Stage Layout -->
+    <div class="exam-container">
+      <div class="exam-layout">
+
+        <!-- Question Palette Sidebar -->
+        <aside class="exam-palette-sidebar">
+          <div class="palette-head">
+            <span class="palette-title-text">Questions (1–20)</span>
+            <span class="palette-sub-text">Tap to jump</span>
+          </div>
+          <div class="palette-grid" id="q-palette">
+            <!-- 20 Buttons dynamically created -->
+          </div>
+          <div class="palette-legend">
+            <div class="legend-item"><span class="leg-box leg-answered"></span>Done</div>
+            <div class="legend-item"><span class="leg-box leg-flagged"></span>Flag</div>
+            <div class="legend-item"><span class="leg-box leg-current"></span>Current</div>
+          </div>
+        </aside>
+
+        <!-- Main Question Stage -->
+        <div class="exam-stage">
+          <div class="exam-stage-card">
+
+            <!-- Question Header -->
+            <div class="q-stage-head">
+              <div class="q-stage-sub">CORE MODULE · FIGURE SEQUENCES (FORMENREIHEN)</div>
+              <h2 class="q-stage-title" id="q-current-number">Question 1 of 20</h2>
+              <p class="q-stage-instruction">
+                Study Matrices 1–4, then choose the correct option for Matrix 5 and for Matrix 6. Both options must be correct to score the point.
+              </p>
+            </div>
+
+            <!-- Sequence Strip: Matrices 1 to 6 -->
+            <div class="figures-stage-wrap">
+              <div class="figures-sequence-strip" id="q-figures-sequence-strip">
+                <!-- Dynamically rendered -->
+              </div>
+            </div>
+
+            <!-- Options Grid: Matrix 5 and Matrix 6 -->
+            <div class="figures-options-grid">
+              <div class="figures-opt-col">
+                <div class="figures-opt-col-head">
+                  <h4>Options for Matrix 5</h4>
+                  <span class="opt-hint">Choose 1, 2, or 3</span>
+                </div>
+                <div class="figures-opts-list" id="figures-opts-m5"></div>
+              </div>
+
+              <div class="figures-opt-col">
+                <div class="figures-opt-col-head">
+                  <h4>Options for Matrix 6</h4>
+                  <span class="opt-hint">Choose 1, 2, or 3</span>
+                </div>
+                <div class="figures-opts-list" id="figures-opts-m6"></div>
+              </div>
+            </div>
+
+            <!-- Navigation Bar -->
+            <div class="exam-actions-bar" style="margin-top: 24px;">
+              <button class="exam-btn" id="btn-prev-q">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+                <span>Previous</span>
+              </button>
+
+              <button class="btn-flag-q" id="btn-flag-q">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                <span>Flag for Review</span>
+              </button>
+
+              <button class="exam-btn btn-primary" id="btn-next-q">
+                <span>Next</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="transform: rotate(180deg);"><use href="#ic-back"/></svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 3: RESULTS & BREAKDOWN
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-results">
+    <div class="container" style="max-width: 900px; padding: 40px 20px 80px;">
+
+      <div class="results-hero-card">
+        <div class="res-badge">Exam Performance Report</div>
+        <h1>Test Complete</h1>
+        <p class="res-candidate-name">Candidate: <strong id="res-candidate">—</strong></p>
+
+        <div class="results-metrics-grid">
+          <div class="metric-card">
+            <span class="m-label">Score</span>
+            <span class="m-val" id="res-score">0 / 20</span>
+          </div>
+          <div class="metric-card">
+            <span class="m-label">Percentage</span>
+            <span class="m-val" id="res-percent">0%</span>
+          </div>
+          <div class="metric-card">
+            <span class="m-label">Time Taken</span>
+            <span class="m-val" id="res-time-taken">0m 00s</span>
+          </div>
+          <div class="metric-card">
+            <span class="m-label">Time Left</span>
+            <span class="m-val" id="res-time-left">0m 00s</span>
+          </div>
+        </div>
+
+        <div class="results-actions-row">
+          <button class="btn-primary" id="btn-results-submissions">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
+            <span>View All Submissions &amp; Times Log</span>
+          </button>
+          <button class="btn-secondary" id="btn-retake-exam">Retake Test</button>
+          <a href="dmat.html" class="btn-secondary" style="text-decoration:none;">dMAT Hub</a>
+        </div>
+      </div>
+
+      <div class="results-breakdown-section">
+        <h3>Question-by-Question Solution Breakdown</h3>
+        <p class="breakdown-subtitle">Review every figure matrix sequence, your selected options for M5 &amp; M6, and worked rule explanations.</p>
+        <div class="breakdown-list" id="res-breakdown">
+          <!-- Dynamically filled with 20 items -->
+        </div>
+      </div>
+
+    </div>
+  </section>
 </main>
 
-<script>
-  try {
-    const raw = localStorage.getItem('dmat_submissions_v1');
-    const cnt = raw ? JSON.parse(raw).length : 0;
-    const b = document.getElementById('sub-count-badge');
-    if (b) b.textContent = cnt;
-  } catch(e) {}
-</script>
+<!-- ══════════════════════════════════════════
+     MODAL 1: CANDIDATE NAME MODAL
+══════════════════════════════════════════ -->
+<div class="dmat-modal-overlay hidden" id="modal-candidate-name">
+  <div class="dmat-modal-card">
+    <div class="modal-header">
+      <h3>Start Exam Simulation</h3>
+      <span class="modal-sub" id="name-modal-set-label">Figure Sequences · Set 1 · 20 Questions</span>
+    </div>
+
+    <div class="modal-body">
+      <div class="modal-specs-strip">
+        <div><span>Questions:</span> <strong>20 Matrix Series</strong></div>
+        <div><span>Countdown:</span> <strong>25 Minutes</strong></div>
+      </div>
+
+      <div class="form-group" style="margin-top: 20px;">
+        <label for="input-candidate-name">Enter Candidate / Student Name:</label>
+        <input type="text" id="input-candidate-name" class="modal-input" placeholder="e.g. Kishore K. / Alex Bauer" autofocus/>
+        <div class="error-msg" id="name-modal-error"></div>
+      </div>
+
+      <p class="modal-note">
+        Your completion time, final score, and detailed answers will be recorded in the test submissions log.
+      </p>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-secondary" id="btn-cancel-start">Cancel</button>
+      <button class="btn-primary" id="btn-confirm-start">Begin Test (25m) ➔</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     MODAL 2: SUBMISSIONS & TIMES DASHBOARD
+══════════════════════════════════════════ -->
+<div class="dmat-modal-overlay hidden" id="modal-submissions">
+  <div class="dmat-modal-card modal-large">
+    <div class="modal-header modal-header-flex">
+      <div>
+        <h3>Candidate Submissions &amp; Completion Times</h3>
+        <span class="modal-sub">View candidates who took Figure Sequences tests, completion times, and scores.</span>
+      </div>
+      <button class="modal-close-x" id="btn-close-submissions">✕</button>
+    </div>
+
+    <div class="modal-body" style="padding: 20px 24px;">
+      <div class="sub-controls-row">
+        <div class="search-wrap">
+          <input type="text" id="sub-search-input" placeholder="Search candidate by name or date..."/>
+        </div>
+        <div class="sub-export-btns">
+          <a href="admin.html" class="btn-sm" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+            <span>Admin Page</span>
+          </a>
+          <button class="btn-sm" id="btn-export-csv" title="Download Excel/CSV sheet">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Export CSV</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="sub-table-wrap">
+        <table class="sub-table">
+          <thead>
+            <tr>
+              <th style="width: 45px;">#</th>
+              <th>Candidate Name</th>
+              <th>Test Set</th>
+              <th>Score</th>
+              <th>Time Taken</th>
+              <th>Date &amp; Time</th>
+            </tr>
+          </thead>
+          <tbody id="submissions-table-body"></tbody>
+        </table>
+
+        <div class="sub-empty hidden" id="submissions-empty-state">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#ic-users"/></svg>
+          <p>No candidate submissions found yet. Take a test to record your results!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="figures_render.js"></script>
+<script src="figures_data.js"></script>
+<script src="cloud_sync.js"></script>
+<script src="figures.js"></script>
 </body>
 </html>
