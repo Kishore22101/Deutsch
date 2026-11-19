@@ -179,6 +179,18 @@
     if (cardSet2) {
       cardSet2.addEventListener('click', () => openStartModal('hard_t2'));
     }
+    const cardSet3 = document.getElementById('card-set-3');
+    if (cardSet3) {
+      cardSet3.addEventListener('click', () => openStartModal('hard_t3'));
+    }
+    const cardSet4 = document.getElementById('card-set-4');
+    if (cardSet4) {
+      cardSet4.addEventListener('click', () => openStartModal('hard_t4'));
+    }
+    const cardSet5 = document.getElementById('card-set-5');
+    if (cardSet5) {
+      cardSet5.addEventListener('click', () => openStartModal('hard_t5'));
+    }
 
     // Medium set card click handlers
     for (let s = 1; s <= 5; s++) {
@@ -289,6 +301,15 @@
     if (state.selectedSet === 'hard_t2') {
       title = 'Hard Level · Practice Set 2 · 20 Questions';
       btnText = 'Begin Hard Set 2 (25m) ➔';
+    } else if (state.selectedSet === 'hard_t3') {
+      title = 'Hard Level · Practice Set 3 · 20 Questions';
+      btnText = 'Begin Hard Set 3 (25m) ➔';
+    } else if (state.selectedSet === 'hard_t4') {
+      title = 'Hard Level · Practice Set 4 · 20 Questions';
+      btnText = 'Begin Hard Set 4 (25m) ➔';
+    } else if (state.selectedSet === 'hard_t5') {
+      title = 'Hard Level · Practice Set 5 · 20 Questions';
+      btnText = 'Begin Hard Set 5 (25m) ➔';
     } else if (state.selectedSet === 'hard_t1' || state.selectedSet === 'hard') {
       title = 'Hard Level · Practice Set 1 · 20 Questions';
       btnText = 'Begin Hard Set 1 (25m) ➔';
@@ -328,6 +349,15 @@
     if (setKey === 'hard_t2') {
       dataset = data.hard_t2 || [];
       setDisplayName = 'Hard – Set 2';
+    } else if (setKey === 'hard_t3') {
+      dataset = data.hard_t3 || [];
+      setDisplayName = 'Hard – Set 3';
+    } else if (setKey === 'hard_t4') {
+      dataset = data.hard_t4 || [];
+      setDisplayName = 'Hard – Set 4';
+    } else if (setKey === 'hard_t5') {
+      dataset = data.hard_t5 || [];
+      setDisplayName = 'Hard – Set 5';
     } else if (setKey === 'hard_t1' || setKey === 'hard') {
       dataset = data.hard_t1 || data.hard || [];
       setDisplayName = 'Hard – Set 1';
@@ -567,6 +597,9 @@
 
     let setDisplayName = 'Equations – Practice';
     if (state.selectedSet === 'hard_t2') setDisplayName = 'Equations – Hard Set 2';
+    else if (state.selectedSet === 'hard_t3') setDisplayName = 'Equations – Hard Set 3';
+    else if (state.selectedSet === 'hard_t4') setDisplayName = 'Equations – Hard Set 4';
+    else if (state.selectedSet === 'hard_t5') setDisplayName = 'Equations – Hard Set 5';
     else if (state.selectedSet === 'hard_t1' || state.selectedSet === 'hard') setDisplayName = 'Equations – Hard Set 1';
     else if (state.selectedSet.startsWith('medium_t')) {
       const num = state.selectedSet.replace('medium_t', '');
