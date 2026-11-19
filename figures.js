@@ -527,12 +527,20 @@
     });
   }
 
+  function isSampleRecord(sub) {
+    if (!sub || !sub.id) return true;
+    if (sub.id.startsWith('sub-live-')) return true;
+    const name = (sub.candidateName || '').trim().toLowerCase();
+    if (!name || name === 'k' || name === 'kishore k' || name === 'kishore k.' || name === 'kaviyan' || name === 'summa' || name === 'nithyasree' || name.includes('nithyasree')) return true;
+    return false;
+  }
+
   function getSubmissions() {
     try {
       const s = localStorage.getItem('dmat_submissions');
       if (s) {
         const arr = JSON.parse(s);
-        return arr.filter(x => x && x.id && !x.id.startsWith('sub-live-'));
+        return arr.filter(x => !isSampleRecord(x));
       }
     } catch (e) {}
     return [];
@@ -585,28 +593,13 @@
         <td><strong style="color:#38bdf8;">${sub.score} / ${sub.total}</strong> (${sub.percentage}%)</td>
         <td>${sub.timeTakenFormatted}</td>
         <td style="color:var(--t-60); font-size:12px;">${sub.submittedAt}</td>
-        <td style="text-align:right;">
-          <button class="btn-inspect-sub" data-sub-id="${sub.id}">Inspect Sheet</button>
-        </td>
       `;
-      tr.querySelector('.btn-inspect-sub').addEventListener('click', () => openSubDetails(sub));
       dom.subTableBody.appendChild(tr);
     });
   }
 
   function openSubDetails(sub) {
-    dom.subDetailsTitle.textContent = `Candidate Sheet · ${sub.candidateName}`;
-    dom.subDetailsMeta.textContent = `${sub.difficulty} · Score: ${sub.score}/${sub.total} (${sub.percentage}%) · Time: ${sub.timeTakenFormatted} · ${sub.submittedAt}`;
-    dom.subDetailsBody.innerHTML = '';
-    (sub.details || []).forEach((d, idx) => {
-      const item = document.createElement('div');
-      item.className = `breakdown-item ${d.isCorrect ? 'correct' : 'incorrect'}`;
-      if (typeof FiguresRender !== 'undefined') {
-        item.innerHTML = FiguresRender.renderBreakdownItem(d, idx);
-      }
-      dom.subDetailsBody.appendChild(item);
-    });
-    dom.modalSubDetails.classList.remove('hidden');
+    // Admin only
   }
 
   function exportSubmissionsCsv() {

@@ -4,10 +4,10 @@
 // ── One-time clear of old submissions (Nov 2026 reset) ──
 (function () {
   try {
-    if (!localStorage.getItem('dmat_submissions_cleared_v1')) {
+    if (localStorage.getItem('dmat_v3_cleared') !== '1') {
       localStorage.removeItem('dmat_submissions');
       localStorage.removeItem('dmat_submissions_v1');
-      localStorage.setItem('dmat_submissions_cleared_v1', '1');
+      localStorage.setItem('dmat_v3_cleared', '1');
     }
   } catch (e) {}
 })();
@@ -603,12 +603,20 @@
   }
 
   // --- Submissions Persistence & Modal ---
+  function isSampleRecord(sub) {
+    if (!sub || !sub.id) return true;
+    if (sub.id.startsWith('sub-live-')) return true;
+    const name = (sub.candidateName || '').trim().toLowerCase();
+    if (!name || name === 'k' || name === 'kishore k' || name === 'kishore k.' || name === 'kaviyan' || name === 'summa' || name === 'nithyasree' || name.includes('nithyasree')) return true;
+    return false;
+  }
+
   function getSubmissions() {
     try {
       const s = localStorage.getItem('dmat_submissions');
       if (s) {
         const arr = JSON.parse(s);
-        return arr.filter(x => x && x.id && !x.id.startsWith('sub-live-'));
+        return arr.filter(x => !isSampleRecord(x));
       }
     } catch (e) {}
     return [];

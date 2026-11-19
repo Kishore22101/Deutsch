@@ -10,9 +10,18 @@
 })(typeof window !== 'undefined' ? window : this, function () {
   'use strict';
 
-  const SYNC_TOPIC = 'dmat_deutsch_master_prep_2026';
+  const SYNC_TOPIC = 'dmat_deutsch_master_prep_2026_v3';
   const NTFY_BASE = 'https://ntfy.sh/' + SYNC_TOPIC;
   const LOCAL_STORAGE_KEY = 'dmat_submissions';
+
+  // One-time clear of old test entries on topic change
+  try {
+    if (localStorage.getItem('dmat_v3_cleared') !== '1') {
+      localStorage.removeItem(LOCAL_STORAGE_KEY);
+      localStorage.removeItem('dmat_submissions_v1');
+      localStorage.setItem('dmat_v3_cleared', '1');
+    }
+  } catch (e) {}
 
   let eventSource = null;
   let statusListeners = [];
@@ -139,7 +148,7 @@
     if (!sub) return true;
     if (sub.id && sub.id.startsWith('sub-live-')) return true;
     const name = (sub.candidateName || '').trim().toLowerCase();
-    if (name === 'nithyasree' || name.includes('nithyasree')) return true;
+    if (!name || name === 'k' || name === 'kishore k' || name === 'kishore k.' || name === 'kaviyan' || name === 'summa' || name === 'nithyasree' || name.includes('nithyasree')) return true;
     return false;
   }
 
@@ -151,6 +160,9 @@
         const parsed = JSON.parse(stored);
         if (Array.isArray(parsed)) {
           const real = parsed.filter(s => !isSampleRecord(s));
+          if (real.length !== parsed.length) {
+            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(real));
+          }
           return real.map(enrichSubmissionDetails);
         }
       }

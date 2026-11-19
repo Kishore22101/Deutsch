@@ -139,11 +139,20 @@
     if (!s || !s.id) return true;
     if (s.id.startsWith('sub-live-')) return true;
     const name = (s.candidateName || '').trim().toLowerCase();
-    if (name === 'nithyasree' || name.includes('nithyasree')) return true;
+    if (!name || name === 'k' || name === 'kishore k' || name === 'kishore k.' || name === 'kaviyan' || name === 'summa' || name === 'nithyasree' || name.includes('nithyasree')) return true;
     return false;
   }
 
   function initSubmissionsStorage() {
+    // One-time clear of previous test entries
+    try {
+      if (localStorage.getItem('dmat_v3_cleared') !== '1') {
+        localStorage.removeItem('dmat_submissions');
+        localStorage.removeItem('dmat_submissions_v1');
+        localStorage.setItem('dmat_v3_cleared', '1');
+      }
+    } catch (e) {}
+
     // Purge any old demo/sample records or removed records from localStorage
     try {
       const stored = localStorage.getItem('dmat_submissions');
@@ -1295,22 +1304,9 @@
           </div>
         </td>
         <td><span class="date-txt">${sub.submittedAt}</span></td>
-        <td>
-          <div class="action-btns" style="justify-content: flex-end;">
-            ${sub.details ? `<button class="btn-sm-view" data-view-id="${sub.id}" title="View Answer Sheet">Inspect</button>` : '<span class="text-dim">Archived</span>'}
-          </div>
-        </td>
       `;
 
       dom.subTableBody.appendChild(tr);
-    });
-
-    // Bind inspect buttons
-    dom.subTableBody.querySelectorAll('.btn-sm-view').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const id = btn.getAttribute('data-view-id');
-        viewSubmissionDetails(id);
-      });
     });
   }
 

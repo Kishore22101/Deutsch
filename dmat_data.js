@@ -1649,44 +1649,10 @@ function buildDetailsForCandidate(questions, correctCount) {
 }
 
 function getRealTimeSubmissions() {
-  const now = Date.now();
-  const set1Qs = (typeof DMAT_DATA !== 'undefined' && DMAT_DATA.hard) ? DMAT_DATA.hard : [];
-
-  return [
-    {
-      id: 'sub-live-1',
-      candidateName: 'Kishore K.',
-      difficulty: 'Set 1',
-      questionCount: 20,
-      score: 19,
-      total: 20,
-      percentage: 95,
-      timeTakenSeconds: 1122,
-      timeTakenFormatted: '18m 42s',
-      timeLeftFormatted: '6m 18s',
-      submittedAt: formatDateTimeRealtime(new Date(now - 28 * 60 * 1000)),
-      status: 'Completed',
-      details: buildDetailsForCandidate(set1Qs, 19)
-    },
-    {
-      id: 'sub-live-2',
-      candidateName: 'Alex Bauer',
-      difficulty: 'Set 2',
-      questionCount: 20,
-      score: 18,
-      total: 20,
-      percentage: 90,
-      timeTakenSeconds: 1215,
-      timeTakenFormatted: '20m 15s',
-      timeLeftFormatted: '4m 45s',
-      submittedAt: formatDateTimeRealtime(new Date(now - 75 * 60 * 1000)),
-      status: 'Completed',
-      details: buildDetailsForCandidate(set1Qs, 18)
-    }
-  ];
+  return [];
 }
 
-const INITIAL_SUBMISSIONS = getRealTimeSubmissions();
+const INITIAL_SUBMISSIONS = [];
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { DMAT_DATA, INITIAL_SUBMISSIONS, getRealTimeSubmissions };
