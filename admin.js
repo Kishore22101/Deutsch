@@ -1,4 +1,4 @@
-// admin.js – Admin Dashboard Controller with Login Gate & Live Sync
+﻿// admin.js – Admin Dashboard Controller with Login Gate & Live Sync
 
 // ── One-time clear of old submissions (Nov 2026 reset) ──
 (function () {
@@ -199,7 +199,7 @@
     if (!sub) return true;
     if (sub.id && sub.id.startsWith('sub-live-')) return true;
     const name = (sub.candidateName || '').trim().toLowerCase();
-    if (!name || name === 'k' || name === 'kishore k' || name === 'kishore k.' || name === 'kaviyan' || name === 'summa' || name === 'nithyasree' || name.includes('nithyasree')) return true;
+        if (name === 'nithyasree' || name.includes('nithyasree')) return true;
     return false;
   }
 
