@@ -1,4 +1,4 @@
-﻿// admin.js – Admin Dashboard Controller with Login Gate & Live Sync
+// admin.js – Admin Dashboard Controller with Login Gate & Live Sync
 
 // ── One-time clear of old submissions (Nov 2026 reset) ──
 (function () {
@@ -293,10 +293,18 @@
         const itemDiff = (item.difficulty || '').toLowerCase();
         if (diffFilter === 'figures') {
           matchesDiff = item.subtest === 'figures' || itemDiff.includes('figure');
-        } else if (diffFilter === 'hard') {
-          matchesDiff = itemDiff.includes('test 1') || itemDiff === 'hard';
+        } else if (diffFilter === 'hard_all') {
+          matchesDiff = itemDiff.includes('hard') || (item.difficultyKey || '').startsWith('hard');
+        } else if (diffFilter === 'hard' || diffFilter === 'hard_t1') {
+          matchesDiff = (itemDiff.includes('hard') && (itemDiff.includes('set 1') || itemDiff.includes('test 1'))) || itemDiff === 'hard' || item.difficultyKey === 'hard' || item.difficultyKey === 'hard_t1';
         } else if (diffFilter === 'hard_t2') {
-          matchesDiff = itemDiff.includes('test 2') || itemDiff === 'hard_t2';
+          matchesDiff = (itemDiff.includes('hard') && (itemDiff.includes('set 2') || itemDiff.includes('test 2'))) || itemDiff === 'hard_t2' || item.difficultyKey === 'hard_t2';
+        } else if (diffFilter === 'hard_t3') {
+          matchesDiff = (itemDiff.includes('hard') && (itemDiff.includes('set 3') || itemDiff.includes('test 3'))) || itemDiff === 'hard_t3' || item.difficultyKey === 'hard_t3';
+        } else if (diffFilter === 'hard_t4') {
+          matchesDiff = (itemDiff.includes('hard') && (itemDiff.includes('set 4') || itemDiff.includes('test 4'))) || itemDiff === 'hard_t4' || item.difficultyKey === 'hard_t4';
+        } else if (diffFilter === 'hard_t5') {
+          matchesDiff = (itemDiff.includes('hard') && (itemDiff.includes('set 5') || itemDiff.includes('test 5'))) || itemDiff === 'hard_t5' || item.difficultyKey === 'hard_t5';
         } else if (diffFilter === 'medium') {
           matchesDiff = itemDiff.includes('medium') || itemDiff.includes('med');
         } else if (diffFilter === 'medium_t1') {
@@ -497,11 +505,48 @@
     const timeSeconds = Math.round(timeMinutes * 60);
 
     const isHard = diff.toLowerCase().includes('hard');
-    const isT2   = diff.toLowerCase().includes('test 2') || diff.toLowerCase().includes('hard_t2');
-    const questions = (typeof DMAT_DATA !== 'undefined')
-      ? (isT2 ? (DMAT_DATA.hard_t2 || []) : (isHard ? (DMAT_DATA.hard || []) : (diff === 'Medium' ? DMAT_DATA.medium : DMAT_DATA.easy)))
-      : [];
-    const total      = (questions && questions.length) || (isHard ? 20 : (diff === 'Medium' ? 4 : 5));
+    let questions = [];
+    let diffKey = 'hard';
+    if (typeof DMAT_DATA !== 'undefined') {
+      if (diff.includes('Set 5') || diff.includes('hard_t5')) {
+        questions = DMAT_DATA.hard_t5 || [];
+        diffKey = 'hard_t5';
+      } else if (diff.includes('Set 4') || diff.includes('hard_t4')) {
+        questions = DMAT_DATA.hard_t4 || [];
+        diffKey = 'hard_t4';
+      } else if (diff.includes('Set 3') || diff.includes('hard_t3')) {
+        questions = DMAT_DATA.hard_t3 || [];
+        diffKey = 'hard_t3';
+      } else if (diff.includes('Set 2') || diff.includes('Test 2') || diff.includes('hard_t2')) {
+        questions = DMAT_DATA.hard_t2 || [];
+        diffKey = 'hard_t2';
+      } else if (isHard) {
+        questions = DMAT_DATA.hard_t1 || DMAT_DATA.hard || [];
+        diffKey = 'hard_t1';
+      } else if (diff.includes('Medium – Set 1')) {
+        questions = DMAT_DATA.medium_t1 || [];
+        diffKey = 'medium_t1';
+      } else if (diff.includes('Medium – Set 2')) {
+        questions = DMAT_DATA.medium_t2 || [];
+        diffKey = 'medium_t2';
+      } else if (diff.includes('Medium – Set 3')) {
+        questions = DMAT_DATA.medium_t3 || [];
+        diffKey = 'medium_t3';
+      } else if (diff.includes('Medium – Set 4')) {
+        questions = DMAT_DATA.medium_t4 || [];
+        diffKey = 'medium_t4';
+      } else if (diff.includes('Medium – Set 5')) {
+        questions = DMAT_DATA.medium_t5 || [];
+        diffKey = 'medium_t5';
+      } else if (diff === 'Medium') {
+        questions = DMAT_DATA.medium || [];
+        diffKey = 'medium';
+      } else {
+        questions = DMAT_DATA.easy || [];
+        diffKey = 'easy';
+      }
+    }
+    const total      = (questions && questions.length) || (isHard ? 20 : (diff.includes('Medium') ? 20 : 5));
     const score      = Math.min(scoreVal, total);
     const percentage = Math.round((score / total) * 100);
     const details    = typeof buildDetailsForCandidate === 'function' ? buildDetailsForCandidate(questions, score) : [];
@@ -510,7 +555,7 @@
       id: 'sub-' + Date.now(),
       candidateName: name,
       difficulty: diff,
-      difficultyKey: isT2 ? 'hard_t2' : (isHard ? 'hard' : (diff === 'Medium' ? 'medium' : 'easy')),
+      difficultyKey: diffKey,
       questionCount: total,
       score, total, percentage,
       timeTakenSeconds: timeSeconds,

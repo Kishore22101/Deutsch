@@ -1,4 +1,4 @@
-﻿// cloud_sync.js – Real-Time Cross-Device Submissions Sync Engine
+// cloud_sync.js – Real-Time Cross-Device Submissions Sync Engine
 // Connects Candidate Mobile/Desktop Devices with Admin Dashboard in Real Time
 
 (function (root, factory) {
@@ -81,16 +81,16 @@
       diffKey = 'medium_t2';
     } else if (rawKey.includes('medium_t1') || (rawKey.includes('med') && rawKey.includes('1'))) {
       diffKey = 'medium_t1';
-    } else if (rawKey.includes('test 5') || rawKey.includes('test5') || rawKey === 'hard_t5') {
+    } else if (rawKey.includes('test 5') || rawKey.includes('set 5') || rawKey === 'hard_t5') {
       diffKey = 'hard_t5';
-    } else if (rawKey.includes('test 4') || rawKey.includes('test4') || rawKey === 'hard_t4') {
+    } else if (rawKey.includes('test 4') || rawKey.includes('set 4') || rawKey === 'hard_t4') {
       diffKey = 'hard_t4';
-    } else if (rawKey.includes('test 3') || rawKey.includes('test3') || rawKey === 'hard_t3') {
+    } else if (rawKey.includes('test 3') || rawKey.includes('set 3') || rawKey === 'hard_t3') {
       diffKey = 'hard_t3';
-    } else if (rawKey.includes('test 2') || rawKey.includes('test2') || rawKey === 'hard_t2') {
+    } else if (rawKey.includes('test 2') || rawKey.includes('set 2') || rawKey === 'hard_t2') {
       diffKey = 'hard_t2';
-    } else if (rawKey.includes('test 1') || rawKey.includes('test1') || rawKey.includes('hard')) {
-      diffKey = isFigures ? 'hard_t1' : 'hard';
+    } else if (rawKey.includes('test 1') || rawKey.includes('set 1') || rawKey.includes('hard')) {
+      diffKey = isFigures ? 'hard_t1' : (DMAT_DATA.hard_t1 ? 'hard_t1' : 'hard');
     } else if (rawKey.includes('med')) {
       diffKey = 'medium_t1';
     } else if (rawKey.includes('easy')) {
