@@ -205,6 +205,7 @@
     const at = (sub.submittedAt || '');
     if (name === 'k' && diff.includes('medium') && diff.includes('set 2') && at.startsWith('2026-11-19')) return true;
     if (name === 'a' && diff.includes('hard') && at.startsWith('2026-11-19')) return true;
+    if ((name === 'summa' || name === 'su' || name.includes('summa')) && (diff.includes('figure') || diff.includes('easy') || at.includes('23:42') || at.startsWith('2026-11-19'))) return true;
     return false;
   }
 
@@ -478,6 +479,14 @@
     let list = getSubmissions();
     list = list.filter(s => s.id !== id);
     saveSubmissions(list);
+    try {
+      const delKey = 'dmat_deleted_ids';
+      const existing = JSON.parse(localStorage.getItem(delKey) || '[]');
+      if (!existing.includes(id)) {
+        existing.push(id);
+        localStorage.setItem(delKey, JSON.stringify(existing));
+      }
+    } catch(e) {}
     renderDashboard();
   }
 

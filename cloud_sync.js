@@ -192,9 +192,17 @@
   }
 
   // Check if a record is a seeded sample/demo or requested to be removed
+  const DELETED_KEY = 'dmat_deleted_ids';
+  function isDeletedId(id) {
+    try {
+      const d = localStorage.getItem(DELETED_KEY);
+      return d ? JSON.parse(d).includes(id) : false;
+    } catch(e) { return false; }
+  }
+
   function isSampleRecord(sub) {
     if (!sub) return true;
-    if (sub.id && sub.id.startsWith('sub-live-')) return true;
+    if (sub.id && (sub.id.startsWith('sub-live-') || isDeletedId(sub.id))) return true;
     const name = (sub.candidateName || '').trim().toLowerCase();
     if (name === 'nithyasree' || name.includes('nithyasree')) return true;
     // Targeted removal: specific test records from 2026-11-19
@@ -202,6 +210,7 @@
     const at = (sub.submittedAt || '');
     if (name === 'k' && diff.includes('medium') && diff.includes('set 2') && at.startsWith('2026-11-19')) return true;
     if (name === 'a' && diff.includes('hard') && at.startsWith('2026-11-19')) return true;
+    if ((name === 'summa' || name === 'su' || name.includes('summa')) && (diff.includes('figure') || diff.includes('easy') || at.includes('23:42') || at.startsWith('2026-11-19'))) return true;
     return false;
   }
 
