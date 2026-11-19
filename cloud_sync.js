@@ -1,4 +1,4 @@
-// cloud_sync.js – Real-Time Cross-Device Submissions Sync Engine
+﻿// cloud_sync.js – Real-Time Cross-Device Submissions Sync Engine
 // Connects Candidate Mobile/Desktop Devices with Admin Dashboard in Real Time
 
 (function (root, factory) {
@@ -158,7 +158,7 @@
     if (!sub) return true;
     if (sub.id && sub.id.startsWith('sub-live-')) return true;
     const name = (sub.candidateName || '').trim().toLowerCase();
-    if (!name || name === 'k' || name === 'kishore k' || name === 'kishore k.' || name === 'kaviyan' || name === 'summa' || name === 'nithyasree' || name.includes('nithyasree')) return true;
+        if (name === 'nithyasree' || name.includes('nithyasree')) return true;
     return false;
   }
 
