@@ -665,14 +665,6 @@
       if (sub && sub.id && deleted.includes(sub.id)) return true;
     } catch(e) {}
 
-    const name = (sub.candidateName || '').trim().toLowerCase();
-    if (name === 'nithyasree' || name.includes('nithyasree')) return true;
-    // Targeted removal: specific test records from 2026-11-19
-    const diff = (sub.difficulty || '').toLowerCase();
-    const at = (sub.submittedAt || '');
-    if (name === 'k' && diff.includes('medium') && diff.includes('set 2') && at.startsWith('2026-11-19')) return true;
-    if (name === 'a' && diff.includes('hard') && at.startsWith('2026-11-19')) return true;
-    if ((name === 'summa' || name === 'su' || name.includes('summa')) && (diff.includes('figure') || diff.includes('easy') || at.includes('23:42') || at.startsWith('2026-11-19'))) return true;
     return false;
   }
 

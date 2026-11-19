@@ -133,13 +133,6 @@
           if (s.id && deleted.includes(s.id)) return true;
         } catch(e) {}
 
-        const n = (s.candidateName || '').toLowerCase().trim();
-        const d = (s.difficulty || '').toLowerCase();
-        const a = (s.submittedAt || '');
-        if (n === 'nithyasree' || n.includes('nithyasree')) return true;
-        if (n === 'k' && d.includes('medium') && d.includes('set 2') && a.startsWith('2026-11-19')) return true;
-        if (n === 'a' && d.includes('hard') && a.startsWith('2026-11-19')) return true;
-        if ((n === 'summa' || n === 'su' || n.includes('summa')) && (d.includes('figure') || d.includes('easy') || a.includes('23:42') || a.startsWith('2026-11-19'))) return true;
         return false;
       };
       const clean = Array.isArray(arr) ? arr.filter(x => !isSample(x)) : [];
