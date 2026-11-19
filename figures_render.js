@@ -1,70 +1,102 @@
-// figures_render.js – SVG Matrix Renderer for dMAT Figure Sequences
+// figures_render.js – SVG Matrix Renderer for dMAT Figure Sequences (4x4 Grid Standard)
 (function() {
-  const POS_MAP = [
-    { r: 0, c: 0 }, // 0: top-left
-    { r: 0, c: 1 }, // 1: top-center
-    { r: 0, c: 2 }, // 2: top-right
-    { r: 1, c: 2 }, // 3: mid-right
-    { r: 2, c: 2 }, // 4: bottom-right
-    { r: 2, c: 1 }, // 5: bottom-center
-    { r: 2, c: 0 }, // 6: bottom-left
-    { r: 1, c: 0 }, // 7: mid-left
-    { r: 1, c: 1 }  // 8: center
-  ];
-
   const COLOR_MAP = {
-    yellow: '#fbbf24',
+    red: '#ef4444',
     blue: '#3b82f6',
     green: '#10b981',
+    yellow: '#eab308',
     orange: '#f97316',
-    pink: '#f472b6',
-    black: '#f8fafc',
-    white: '#ffffff'
+    pink: '#ec4899',
+    white: '#f8fafc',
+    black: '#1e293b',
+    dark: '#0f172a'
   };
 
+  function getShapeCenter(s) {
+    let r = 0;
+    let c = 0;
+    if (typeof s.r === 'number' && typeof s.c === 'number') {
+      r = s.r;
+      c = s.c;
+    } else if (typeof s.pos === 'number') {
+      r = Math.floor(s.pos / 4);
+      c = s.pos % 4;
+    } else if (s.pos && typeof s.pos.r === 'number' && typeof s.pos.c === 'number') {
+      r = s.pos.r;
+      c = s.pos.c;
+    }
+    // Clamp to 0..3
+    r = Math.max(0, Math.min(3, r));
+    c = Math.max(0, Math.min(3, c));
+    return {
+      r,
+      c,
+      cx: c * 25 + 12.5,
+      cy: r * 25 + 12.5
+    };
+  }
+
+  function getRotationAngle(s) {
+    if (typeof s.rot === 'number') return s.rot;
+    if (typeof s.angle === 'number') return s.angle;
+    if (s.dir === 'up') return 0;
+    if (s.dir === 'right') return 90;
+    if (s.dir === 'down') return 180;
+    if (s.dir === 'left') return 270;
+    if (s.bracketRot === 'bl') return 0;
+    if (s.bracketRot === 'tl') return 90;
+    if (s.bracketRot === 'tr') return 180;
+    if (s.bracketRot === 'br') return 270;
+    return 0;
+  }
+
   function renderMatrixSvg(shapes, size) {
-    if (!size) size = 90;
-    if (!shapes) shapes = [];
-    let svg = `<svg viewBox="0 0 90 90" width="${size}" height="${size}" class="matrix-grid-svg" xmlns="http://www.w3.org/2000/svg">`;
-    // Outer border & grid lines
-    svg += `<rect x="1" y="1" width="88" height="88" rx="4" fill="#0b0f19" stroke="#334155" stroke-width="1.5"/>`;
-    svg += `<line x1="30" y1="1" x2="30" y2="89" stroke="#1e293b" stroke-width="1"/>`;
-    svg += `<line x1="60" y1="1" x2="60" y2="89" stroke="#1e293b" stroke-width="1"/>`;
-    svg += `<line x1="1" y1="30" x2="89" y2="30" stroke="#1e293b" stroke-width="1"/>`;
-    svg += `<line x1="1" y1="60" x2="89" y2="60" stroke="#1e293b" stroke-width="1"/>`;
+    if (!size) size = 96;
+    if (!Array.isArray(shapes)) shapes = [];
+
+    let svg = `<svg viewBox="0 0 100 100" width="${size}" height="${size}" class="matrix-grid-svg" xmlns="http://www.w3.org/2000/svg">`;
+    // Outer border & 4x4 grid cells
+    svg += `<rect x="1" y="1" width="98" height="98" rx="4" fill="#0b0f19" stroke="#334155" stroke-width="1.5"/>`;
+    // Vertical grid lines (4 columns -> lines at 25, 50, 75)
+    svg += `<line x1="25" y1="1" x2="25" y2="99" stroke="#1e293b" stroke-width="1"/>`;
+    svg += `<line x1="50" y1="1" x2="50" y2="99" stroke="#1e293b" stroke-width="1"/>`;
+    svg += `<line x1="75" y1="1" x2="75" y2="99" stroke="#1e293b" stroke-width="1"/>`;
+    // Horizontal grid lines (4 rows -> lines at 25, 50, 75)
+    svg += `<line x1="1" y1="25" x2="99" y2="25" stroke="#1e293b" stroke-width="1"/>`;
+    svg += `<line x1="1" y1="50" x2="99" y2="50" stroke="#1e293b" stroke-width="1"/>`;
+    svg += `<line x1="1" y1="75" x2="99" y2="75" stroke="#1e293b" stroke-width="1"/>`;
 
     for (const s of shapes) {
-      const p = POS_MAP[s.pos];
-      if (!p) continue;
-      const cx = p.c * 30 + 15;
-      const cy = p.r * 30 + 15;
-      const fill = COLOR_MAP[s.color] || s.color || '#fff';
+      if (!s) continue;
+      const { cx, cy } = getShapeCenter(s);
+      const rawColor = s.color || 'white';
+      const fill = COLOR_MAP[rawColor] || rawColor;
+      const isBlack = (rawColor === 'black' || fill === '#1e293b' || fill === '#0f172a');
+      const stroke = isBlack ? '#94a3b8' : 'rgba(0,0,0,0.7)';
+      const strokeWidth = isBlack ? '1.2' : '0.8';
+      const rot = getRotationAngle(s);
 
-      if (s.shape === 'circle') {
-        svg += `<circle cx="${cx}" cy="${cy}" r="8" fill="${fill}" stroke="rgba(0,0,0,0.5)" stroke-width="1"/>`;
-      } else if (s.shape === 'square') {
-        svg += `<rect x="${cx - 7}" y="${cy - 7}" width="14" height="14" rx="2" fill="${fill}" stroke="rgba(0,0,0,0.5)" stroke-width="1"/>`;
-      } else if (s.shape === 'diamond') {
-        svg += `<polygon points="${cx},${cy - 9} ${cx + 9},${cy} ${cx},${cy + 9} ${cx - 9},${cy}" fill="${fill}" stroke="rgba(0,0,0,0.5)" stroke-width="1"/>`;
-      } else if (s.shape === 'hexagon') {
-        svg += `<polygon points="${cx},${cy - 9} ${cx + 8},${cy - 4} ${cx + 8},${cy + 4} ${cx},${cy + 9} ${cx - 8},${cy + 4} ${cx - 8},${cy - 4}" fill="${fill}" stroke="rgba(0,0,0,0.5)" stroke-width="1"/>`;
-      } else if (s.shape === 'arrow') {
-        let angle = 0;
-        if (s.dir === 'up') angle = -90;
-        else if (s.dir === 'right') angle = 0;
-        else if (s.dir === 'down') angle = 90;
-        else if (s.dir === 'left') angle = 180;
-        svg += `<g transform="rotate(${angle} ${cx} ${cy})">`;
-        svg += `<polygon points="${cx + 8},${cy} ${cx - 6},${cy - 7} ${cx - 6},${cy + 7}" fill="${fill}" stroke="rgba(0,0,0,0.5)" stroke-width="0.8"/>`;
+      const shapeType = (s.shape || 'circle').toLowerCase();
+
+      if (shapeType === 'circle') {
+        svg += `<circle cx="${cx}" cy="${cy}" r="7" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
+      } else if (shapeType === 'square') {
+        svg += `<rect x="${cx - 6.5}" y="${cy - 6.5}" width="13" height="13" rx="1.5" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
+      } else if (shapeType === 'diamond') {
+        svg += `<polygon points="${cx},${cy - 8.5} ${cx + 8.5},${cy} ${cx},${cy + 8.5} ${cx - 8.5},${cy}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
+      } else if (shapeType === 'hexagon') {
+        svg += `<polygon points="${cx},${cy - 8} ${cx + 7},${cy - 4} ${cx + 7},${cy + 4} ${cx},${cy + 8} ${cx - 7},${cy + 4} ${cx - 7},${cy - 4}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
+      } else if (shapeType === 'triangle') {
+        svg += `<g transform="rotate(${rot} ${cx} ${cy})">`;
+        svg += `<polygon points="${cx},${cy - 8} ${cx + 7.5},${cy + 6.5} ${cx - 7.5},${cy + 6.5}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
         svg += `</g>`;
-      } else if (s.shape === 'bracket') {
-        let angle = 0;
-        if (s.bracketRot === 'bl') angle = 0;
-        else if (s.bracketRot === 'tl') angle = 90;
-        else if (s.bracketRot === 'tr') angle = 180;
-        else if (s.bracketRot === 'br') angle = 270;
-        svg += `<g transform="rotate(${angle} ${cx} ${cy})">`;
-        svg += `<path d="M${cx - 6},${cy - 6} L${cx - 6},${cy + 6} L${cx + 6},${cy + 6}" fill="none" stroke="${fill}" stroke-width="4.5" stroke-linecap="square"/>`;
+      } else if (shapeType === 'arrow') {
+        svg += `<g transform="rotate(${rot} ${cx} ${cy})">`;
+        svg += `<polygon points="${cx},${cy - 8} ${cx + 6.5},${cy + 1} ${cx + 2.5},${cy + 1} ${cx + 2.5},${cy + 8} ${cx - 2.5},${cy + 8} ${cx - 2.5},${cy + 1} ${cx - 6.5},${cy + 1}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
+        svg += `</g>`;
+      } else if (shapeType === 'bracket' || shapeType === 'l-shape' || shapeType === 'l_shape') {
+        svg += `<g transform="rotate(${rot} ${cx} ${cy})">`;
+        svg += `<path d="M${cx - 5.5},${cy - 6} L${cx - 5.5},${cy + 5.5} L${cx + 6},${cy + 5.5}" fill="none" stroke="${fill}" stroke-width="3.8" stroke-linecap="square" stroke-linejoin="miter"/>`;
         svg += `</g>`;
       }
     }
@@ -74,7 +106,7 @@
   }
 
   function renderFigureSequenceStrip(q, userAns, size) {
-    if (!size) size = 88;
+    if (!size) size = 92;
     if (!q) return '';
     const seq = q.matrices || q.sequence;
     if (!Array.isArray(seq)) return '';
@@ -133,7 +165,7 @@
   }
 
   function renderOptionCard(opt, optNum, isSelected, size) {
-    if (!size) size = 76;
+    if (!size) size = 80;
     return `
       <div class="figure-opt-card ${isSelected ? 'selected' : ''}" data-opt="${optNum}">
         <span class="opt-badge">${optNum}</span>
@@ -159,7 +191,7 @@
       seqStripHtml += `
         <div class="bd-matrix-item">
           <span class="bd-matrix-lbl">M${i + 1}</span>
-          ${renderMatrixSvg(seq[i], 56)}
+          ${renderMatrixSvg(seq[i], 60)}
         </div>
       `;
     }

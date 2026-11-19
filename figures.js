@@ -1,4 +1,4 @@
-﻿// figures.js – Dedicated Controller for dMAT Figure Sequences (Formenreihen)
+// figures.js – Dedicated Controller for dMAT Figure Sequences (Formenreihen)
 // Supports Easy, Medium, Hard (5 Sets each · 20 Questions · 25 Minutes each)
 
 (function () {
@@ -675,54 +675,45 @@
 
     filtered.forEach((sub, idx) => {
       const tr = document.createElement('tr');
-      const pct = sub.percentage !== undefined ? `${sub.percentage}%` : '—';
-      const initials = (sub.candidateName || 'U').split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+      const pct = sub.percentage !== undefined ? sub.percentage : (sub.total ? Math.round((sub.score / sub.total) * 100) : 0);
 
       tr.innerHTML = `
-        <td class="sub-td-rank">#${idx + 1}</td>
-        <td>
-          <div class="cand-cell">
-            <span class="cand-avatar">${initials}</span>
-            <span class="cand-name">${escapeHtml(sub.candidateName || 'Unknown')}</span>
-          </div>
-        </td>
-        <td><span class="sub-diff-tag">${escapeHtml(sub.difficulty || 'Figure Sequences')}</span></td>
-        <td><strong>${sub.score} / ${sub.total}</strong> <span class="sub-pct">(${pct})</span></td>
+        <td style="color:var(--t-45);">${idx + 1}</td>
+        <td><strong>${escapeHtml(sub.candidateName || 'Unknown')}</strong></td>
+        <td><span class="badge-tag-diff">${escapeHtml(sub.difficulty || 'Figure Sequences')}</span></td>
+        <td><strong style="color:#10b981;">${sub.score} / ${sub.total}</strong> (${pct}%)</td>
         <td>${escapeHtml(sub.timeTakenFormatted || '—')}</td>
-        <td class="sub-td-date">${escapeHtml(sub.submittedAt || '—')}</td>
-        <td><span class="status-pill status-completed">${escapeHtml(sub.status || 'Completed')}</span></td>
+        <td style="color:var(--t-60); font-size:12px;">${escapeHtml(sub.submittedAt || '—')}</td>
       `;
       dom.subTableBody.appendChild(tr);
     });
   }
 
   function exportSubmissionsCsv() {
-    const list = getSubmissions();
-    if (!list.length) {
-      alert('No submissions to export.');
+    const subs = getSubmissions();
+    if (!subs.length) {
+      alert('No submissions available to export.');
       return;
     }
-    const headers = ['Rank', 'Candidate Name', 'Difficulty / Test', 'Score', 'Total', 'Percentage', 'Time Taken', 'Submitted At', 'Status'];
-    const rows = list.map((s, idx) => [
-      idx + 1,
+    const headers = ['ID', 'Candidate Name', 'Difficulty', 'Score', 'Total', 'Percentage', 'Time Taken', 'Submitted At'];
+    const rows = subs.map(s => [
+      s.id,
       `"${(s.candidateName || '').replace(/"/g, '""')}"`,
       `"${(s.difficulty || '').replace(/"/g, '""')}"`,
       s.score,
       s.total,
       `${s.percentage}%`,
       `"${s.timeTakenFormatted || ''}"`,
-      `"${s.submittedAt || ''}"`,
-      `"${s.status || ''}"`
+      `"${s.submittedAt || ''}"`
     ]);
     const csvContent = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.setAttribute('href', url);
-    link.setAttribute('download', `dmat_figure_sequences_submissions_${Date.now()}.csv`);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `dmat_figure_submissions_${Date.now()}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
   }
 
   function formatDuration(totalSeconds) {
