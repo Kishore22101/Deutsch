@@ -539,56 +539,59 @@
     dom.resBreakdown.innerHTML = '';
     (res.details || []).forEach((item, idx) => {
       const card = document.createElement('div');
-      card.className = `breakdown-item ${item.isCorrect ? 'correct' : 'incorrect'}`;
+      card.className = `breakdown-card ${item.isCorrect ? 'correct-card' : 'wrong-card'}`;
 
-      const eqList = (item.equations || []).map(eq => `<div class="b-eq-line">${eq}</div>`).join('');
+      const eqList = (item.equations || []).map(eq => `<div>${eq}</div>`).join('');
       const sol = item.solution || {};
       const u = item.userAnswer || {};
       const fc = item.fieldCorrectness || {};
-
       const steps = (item.stepByStep || []).map(s => `<li>${s}</li>`).join('');
 
       card.innerHTML = `
-        <div class="b-item-head">
-          <div class="b-head-left">
-            <span class="b-q-num">Q${idx + 1}</span>
-            <span class="b-status-badge ${item.isCorrect ? 'badge-correct' : 'badge-wrong'}">
+        <div class="breakdown-header">
+          <div class="breakdown-q-title">
+            <span class="breakdown-status-badge ${item.isCorrect ? 'badge-correct' : 'badge-wrong'}">
               ${item.isCorrect ? '✓ Correct' : '✕ Incorrect'}
             </span>
+            <strong>Question ${idx + 1} of ${res.details.length}</strong>
           </div>
-          <div class="b-head-right">
-            <span>Score: ${item.isCorrect ? '1 / 1' : '0 / 1'}</span>
+          <div style="font-size:12px; font-weight:800; color:var(--t-45);">
+            Score: ${item.isCorrect ? '1 / 1' : '0 / 1'}
           </div>
         </div>
 
-        <div class="b-equations-box">
-          ${eqList}
-        </div>
+        <div class="breakdown-body">
+          <div class="breakdown-eqs">
+            ${eqList}
+          </div>
 
-        <div class="b-answers-comparison">
-          <div class="b-ans-col">
-            <span class="b-col-lbl">Your Inputs:</span>
-            <div class="b-values-row">
-              <span class="b-val-pill ${fc.A ? 'p-ok' : 'p-err'}">A = ${u.A !== '' && u.A !== undefined ? u.A : '—'}</span>
-              <span class="b-val-pill ${fc.B ? 'p-ok' : 'p-err'}">B = ${u.B !== '' && u.B !== undefined ? u.B : '—'}</span>
-              <span class="b-val-pill ${fc.C ? 'p-ok' : 'p-err'}">C = ${u.C !== '' && u.C !== undefined ? u.C : '—'}</span>
-              <span class="b-val-pill ${fc.D ? 'p-ok' : 'p-err'}">D = ${u.D !== '' && u.D !== undefined ? u.D : '—'}</span>
+          <div class="breakdown-comparison">
+            <div class="user-col">
+              <span class="col-title">Your Answers:</span>
+              <div class="ans-grid">
+                <span class="${fc.A ? 'var-correct' : 'var-wrong'}">A = ${u.A !== '' && u.A !== undefined ? u.A : '—'}</span>
+                <span class="${fc.B ? 'var-correct' : 'var-wrong'}">B = ${u.B !== '' && u.B !== undefined ? u.B : '—'}</span>
+                <span class="${fc.C ? 'var-correct' : 'var-wrong'}">C = ${u.C !== '' && u.C !== undefined ? u.C : '—'}</span>
+                <span class="${fc.D ? 'var-correct' : 'var-wrong'}">D = ${u.D !== '' && u.D !== undefined ? u.D : '—'}</span>
+              </div>
+            </div>
+            <div class="correct-col">
+              <span class="col-title">Official Solution:</span>
+              <div class="ans-grid">
+                <span class="var-sol">A = ${sol.A}</span>
+                <span class="var-sol">B = ${sol.B}</span>
+                <span class="var-sol">C = ${sol.C}</span>
+                <span class="var-sol">D = ${sol.D}</span>
+              </div>
             </div>
           </div>
-          <div class="b-ans-col">
-            <span class="b-col-lbl">Official Solution:</span>
-            <div class="b-values-row">
-              <span class="b-val-pill p-correct">A = ${sol.A}</span>
-              <span class="b-val-pill p-correct">B = ${sol.B}</span>
-              <span class="b-val-pill p-correct">C = ${sol.C}</span>
-              <span class="b-val-pill p-correct">D = ${sol.D}</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="b-solution-steps">
-          <div class="b-steps-title">Step-by-step Solution:</div>
-          <ul class="b-steps-list">${steps}</ul>
+          ${steps ? `
+            <details class="breakdown-steps" open>
+              <summary>Step-by-Step Mathematical Derivation</summary>
+              <ol>${steps}</ol>
+            </details>
+          ` : ''}
         </div>
       `;
 
@@ -671,43 +674,59 @@
     dom.subDetailsBody.innerHTML = '';
     (sub.details || []).forEach((d, idx) => {
       const item = document.createElement('div');
-      item.className = `breakdown-item ${d.isCorrect ? 'correct' : 'incorrect'}`;
+      item.className = `breakdown-card ${d.isCorrect ? 'correct-card' : 'wrong-card'}`;
 
-      const eqList = (d.equations || []).map(eq => `<div class="b-eq-line">${eq}</div>`).join('');
+      const eqList = (d.equations || []).map(eq => `<div>${eq}</div>`).join('');
       const sol = d.solution || {};
       const u = d.userAnswer || {};
       const fc = d.fieldCorrectness || {};
       const steps = (d.stepByStep || []).map(s => `<li>${s}</li>`).join('');
 
       item.innerHTML = `
-        <div class="b-item-head">
-          <span class="b-q-num">Q${idx + 1}</span>
-          <span class="b-status-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">${d.isCorrect ? '✓ Correct' : '✕ Incorrect'}</span>
-        </div>
-        <div class="b-equations-box">${eqList}</div>
-        <div class="b-answers-comparison">
-          <div class="b-ans-col">
-            <span class="b-col-lbl">Candidate Entered:</span>
-            <div class="b-values-row">
-              <span class="b-val-pill ${fc.A ? 'p-ok' : 'p-err'}">A = ${u.A || '—'}</span>
-              <span class="b-val-pill ${fc.B ? 'p-ok' : 'p-err'}">B = ${u.B || '—'}</span>
-              <span class="b-val-pill ${fc.C ? 'p-ok' : 'p-err'}">C = ${u.C || '—'}</span>
-              <span class="b-val-pill ${fc.D ? 'p-ok' : 'p-err'}">D = ${u.D || '—'}</span>
-            </div>
+        <div class="breakdown-header">
+          <div class="breakdown-q-title">
+            <span class="breakdown-status-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">
+              ${d.isCorrect ? '✓ Correct' : '✕ Incorrect'}
+            </span>
+            <strong>Question ${idx + 1} of ${sub.details.length}</strong>
           </div>
-          <div class="b-ans-col">
-            <span class="b-col-lbl">Official Solution:</span>
-            <div class="b-values-row">
-              <span class="b-val-pill p-correct">A = ${sol.A}</span>
-              <span class="b-val-pill p-correct">B = ${sol.B}</span>
-              <span class="b-val-pill p-correct">C = ${sol.C}</span>
-              <span class="b-val-pill p-correct">D = ${sol.D}</span>
-            </div>
+          <div style="font-size:12px; font-weight:800; color:var(--t-45);">
+            Score: ${d.isCorrect ? '1 / 1' : '0 / 1'}
           </div>
         </div>
-        <div class="b-solution-steps">
-          <div class="b-steps-title">Derivation:</div>
-          <ul class="b-steps-list">${steps}</ul>
+
+        <div class="breakdown-body">
+          <div class="breakdown-eqs">
+            ${eqList}
+          </div>
+
+          <div class="breakdown-comparison">
+            <div class="user-col">
+              <span class="col-title">Candidate Entered:</span>
+              <div class="ans-grid">
+                <span class="${fc.A ? 'var-correct' : 'var-wrong'}">A = ${u.A !== '' && u.A !== undefined ? u.A : '—'}</span>
+                <span class="${fc.B ? 'var-correct' : 'var-wrong'}">B = ${u.B !== '' && u.B !== undefined ? u.B : '—'}</span>
+                <span class="${fc.C ? 'var-correct' : 'var-wrong'}">C = ${u.C !== '' && u.C !== undefined ? u.C : '—'}</span>
+                <span class="${fc.D ? 'var-correct' : 'var-wrong'}">D = ${u.D !== '' && u.D !== undefined ? u.D : '—'}</span>
+              </div>
+            </div>
+            <div class="correct-col">
+              <span class="col-title">Official Solution:</span>
+              <div class="ans-grid">
+                <span class="var-sol">A = ${sol.A}</span>
+                <span class="var-sol">B = ${sol.B}</span>
+                <span class="var-sol">C = ${sol.C}</span>
+                <span class="var-sol">D = ${sol.D}</span>
+              </div>
+            </div>
+          </div>
+
+          ${steps ? `
+            <details class="breakdown-steps" open>
+              <summary>Step-by-Step Mathematical Derivation</summary>
+              <ol>${steps}</ol>
+            </details>
+          ` : ''}
         </div>
       `;
       dom.subDetailsBody.appendChild(item);

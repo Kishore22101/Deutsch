@@ -148,6 +148,23 @@
       border-radius: 2px !important;
     }
 
+    /* ── Perfectly Aligned Difficulty Cards ── */
+    .math-diff-grid .diff-card {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .math-diff-grid .diff-desc {
+      min-height: 48px !important;
+      margin-bottom: 20px !important;
+    }
+    .math-diff-grid .diff-specs {
+      margin-top: auto !important;
+      margin-bottom: 20px !important;
+    }
+    .math-diff-grid .btn-diff-action {
+      margin-top: 0 !important;
+    }
+
     /* ── Responsive Grids for Difficulties & Sets ── */
     .math-diff-grid {
       display: grid !important;
@@ -385,20 +402,19 @@
     </div>
 
     <div class="header-actions">
-      <a href="dmat.html" class="dmat-btn-sub" title="Back to dMAT Core Modules">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
-        <span>dMAT Hub</span>
-      </a>
       <a href="admin.html" class="dmat-btn-sub" title="Admin Dashboard">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-        <span>Admin</span>
+        <span>Admin Dashboard</span>
       </a>
       <button class="dmat-btn-sub" id="btn-nav-submissions">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
         <span>Submissions &amp; Times</span>
         <span class="badge-count sub-count-display" id="sub-count-badge">0</span>
       </button>
-      <a href="index.html" class="back-btn">Home</a>
+      <a href="index.html" class="back-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+        Home
+      </a>
     </div>
   </div>
 </header>
@@ -452,7 +468,7 @@
         <div class="glass-card diff-card" id="diff-card-medium" style="cursor: pointer;">
           <div class="diff-badge badge-medium">INTERMEDIATE</div>
           <div class="diff-title">Medium</div>
-          <div class="diff-desc">4 Systems of equations. Chained substitutions and multi-step balance equations.</div>
+          <div class="diff-desc">4 Systems of equations. Chained substitutions and balance relations.</div>
           <div class="diff-specs">
             <div class="spec-row"><span>Questions:</span><strong>4 Q</strong></div>
             <div class="spec-row"><span>Timer:</span><strong>15 mins</strong></div>
@@ -469,7 +485,7 @@
           <div class="diff-specs">
             <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Test 1 &amp; 2)</strong></div>
             <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 mins</strong></div>
-            <div class="spec-row"><span>Type Answers:</span><strong>A, B, C, D in numbers</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A, B, C, D in numbers</strong></div>
           </div>
           <button class="btn-diff-action btn-white-solid" id="btn-start-hard">Start 25m Exam</button>
         </div>

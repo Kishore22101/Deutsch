@@ -76,19 +76,19 @@
     </div>
 
     <div class="header-actions">
-      <a href="dmat.html" class="dmat-btn-sub" title="Back to dMAT Core Modules">
-        <span>← dMAT Hub</span>
-      </a>
-      <a href="figures.html" class="dmat-btn-sub" title="Figure Sequences">
-        <span>Figure Sequences</span>
-      </a>
-      <a href="math.html" class="dmat-btn-sub" title="Mathematic Equations">
-        <span>Mathematic Equations</span>
-      </a>
       <a href="admin.html" class="dmat-btn-sub" title="Admin Dashboard">
-        <span>Admin</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <span>Admin Dashboard</span>
       </a>
-      <a href="index.html" class="back-btn">Home</a>
+      <a href="dmat.html#submissions" class="dmat-btn-sub" title="Submissions & Times">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span>Submissions &amp; Times</span>
+        <span class="badge-count sub-count-display" id="sub-count-badge">0</span>
+      </a>
+      <a href="index.html" class="back-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Home
+      </a>
     </div>
   </div>
 </header>
@@ -109,9 +109,6 @@
     <p class="placeholder-desc">Questions will be updated soon. In the meantime, you can practice with the active Figure Sequences and Mathematic Equations modules.</p>
     
     <div class="placeholder-actions">
-      <a href="figures.html" class="btn-diff-action btn-hard-primary" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none;">
-        <span>Practice Figure Sequences ➔</span>
-      </a>
       <a href="math.html" class="btn-diff-action btn-hard-primary" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none; background: linear-gradient(135deg, #059669, #047857);">
         <span>Practice Mathematic Equations ➔</span>
       </a>
@@ -122,5 +119,13 @@
   </div>
 </main>
 
+<script>
+  try {
+    const raw = localStorage.getItem('dmat_submissions_v1');
+    const cnt = raw ? JSON.parse(raw).length : 0;
+    const b = document.getElementById('sub-count-badge');
+    if (b) b.textContent = cnt;
+  } catch(e) {}
+</script>
 </body>
 </html>
