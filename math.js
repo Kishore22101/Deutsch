@@ -1,6 +1,17 @@
 // math.js - Dedicated Controller for dMAT Mathematical Equations
 // Practice Set 1 & Practice Set 2 (20 Questions · 25 Minutes each)
 
+// ── One-time clear of old submissions (Nov 2026 reset) ──
+(function () {
+  try {
+    if (!localStorage.getItem('dmat_submissions_cleared_v1')) {
+      localStorage.removeItem('dmat_submissions');
+      localStorage.removeItem('dmat_submissions_v1');
+      localStorage.setItem('dmat_submissions_cleared_v1', '1');
+    }
+  } catch (e) {}
+})();
+
 (function () {
   'use strict';
 
@@ -38,7 +49,6 @@
       viewResults: document.getElementById('view-results'),
       modalName: document.getElementById('modal-candidate-name'),
       modalSubmissions: document.getElementById('modal-submissions'),
-      modalSubDetails: document.getElementById('modal-sub-details'),
 
       // Topbar & Nav
       btnNavSubmissions: document.getElementById('btn-nav-submissions'),
@@ -94,11 +104,7 @@
       subEmptyState: document.getElementById('submissions-empty-state'),
       btnCloseSubmissions: document.getElementById('btn-close-submissions'),
       subSearchInput: document.getElementById('sub-search-input'),
-      btnExportCsv: document.getElementById('btn-export-csv'),
-      subDetailsBody: document.getElementById('sub-details-body'),
-      subDetailsTitle: document.getElementById('sub-details-title'),
-      subDetailsMeta: document.getElementById('sub-details-meta'),
-      btnCloseSubDetails: document.getElementById('btn-close-sub-details')
+      btnExportCsv: document.getElementById('btn-export-csv')
     };
   }
 
@@ -226,10 +232,7 @@
       dom.btnResultsSubmissions.addEventListener('click', openSubmissionsModal);
     }
 
-    // Sub Details Close
-    if (dom.btnCloseSubDetails) {
-      dom.btnCloseSubDetails.addEventListener('click', () => dom.modalSubDetails.classList.add('hidden'));
-    }
+    // Sub Details Close - no longer used in this page (inspect is admin-only)
 
     // Search & Export
     if (dom.subSearchInput) {
@@ -658,81 +661,9 @@
         <td><strong style="color:#10b981;">${sub.score} / ${sub.total}</strong> (${sub.percentage}%)</td>
         <td>${sub.timeTakenFormatted}</td>
         <td style="color:var(--t-60); font-size:12px;">${sub.submittedAt}</td>
-        <td style="text-align:right;">
-          <button class="btn-inspect-sub" data-sub-id="${sub.id}">Inspect Sheet</button>
-        </td>
       `;
-      tr.querySelector('.btn-inspect-sub').addEventListener('click', () => openSubDetails(sub));
       dom.subTableBody.appendChild(tr);
     });
-  }
-
-  function openSubDetails(sub) {
-    dom.subDetailsTitle.textContent = `Candidate Sheet · ${sub.candidateName}`;
-    dom.subDetailsMeta.textContent = `${sub.difficulty} · Score: ${sub.score}/${sub.total} (${sub.percentage}%) · Time: ${sub.timeTakenFormatted} · ${sub.submittedAt}`;
-
-    dom.subDetailsBody.innerHTML = '';
-    (sub.details || []).forEach((d, idx) => {
-      const item = document.createElement('div');
-      item.className = `breakdown-card ${d.isCorrect ? 'correct-card' : 'wrong-card'}`;
-
-      const eqList = (d.equations || []).map(eq => `<div>${eq}</div>`).join('');
-      const sol = d.solution || {};
-      const u = d.userAnswer || {};
-      const fc = d.fieldCorrectness || {};
-      const steps = (d.stepByStep || []).map(s => `<li>${s}</li>`).join('');
-
-      item.innerHTML = `
-        <div class="breakdown-header">
-          <div class="breakdown-q-title">
-            <span class="breakdown-status-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">
-              ${d.isCorrect ? '✓ Correct' : '✕ Incorrect'}
-            </span>
-            <strong>Question ${idx + 1} of ${sub.details.length}</strong>
-          </div>
-          <div style="font-size:12px; font-weight:800; color:var(--t-45);">
-            Score: ${d.isCorrect ? '1 / 1' : '0 / 1'}
-          </div>
-        </div>
-
-        <div class="breakdown-body">
-          <div class="breakdown-eqs">
-            ${eqList}
-          </div>
-
-          <div class="breakdown-comparison">
-            <div class="user-col">
-              <span class="col-title">Candidate Entered:</span>
-              <div class="ans-grid">
-                <span class="${fc.A ? 'var-correct' : 'var-wrong'}">A = ${u.A !== '' && u.A !== undefined ? u.A : '—'}</span>
-                <span class="${fc.B ? 'var-correct' : 'var-wrong'}">B = ${u.B !== '' && u.B !== undefined ? u.B : '—'}</span>
-                <span class="${fc.C ? 'var-correct' : 'var-wrong'}">C = ${u.C !== '' && u.C !== undefined ? u.C : '—'}</span>
-                <span class="${fc.D ? 'var-correct' : 'var-wrong'}">D = ${u.D !== '' && u.D !== undefined ? u.D : '—'}</span>
-              </div>
-            </div>
-            <div class="correct-col">
-              <span class="col-title">Official Solution:</span>
-              <div class="ans-grid">
-                <span class="var-sol">A = ${sol.A}</span>
-                <span class="var-sol">B = ${sol.B}</span>
-                <span class="var-sol">C = ${sol.C}</span>
-                <span class="var-sol">D = ${sol.D}</span>
-              </div>
-            </div>
-          </div>
-
-          ${steps ? `
-            <details class="breakdown-steps" open>
-              <summary>Step-by-Step Mathematical Derivation</summary>
-              <ol>${steps}</ol>
-            </details>
-          ` : ''}
-        </div>
-      `;
-      dom.subDetailsBody.appendChild(item);
-    });
-
-    dom.modalSubDetails.classList.remove('hidden');
   }
 
   function exportSubmissionsCsv() {

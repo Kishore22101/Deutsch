@@ -1,5 +1,16 @@
 // admin.js – Admin Dashboard Controller with Login Gate & Live Sync
 
+// ── One-time clear of old submissions (Nov 2026 reset) ──
+(function () {
+  try {
+    if (!localStorage.getItem('dmat_submissions_cleared_v1')) {
+      localStorage.removeItem('dmat_submissions');
+      localStorage.removeItem('dmat_submissions_v1');
+      localStorage.setItem('dmat_submissions_cleared_v1', '1');
+    }
+  } catch (e) {}
+})();
+
 (function () {
   'use strict';
 
