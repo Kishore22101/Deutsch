@@ -286,10 +286,24 @@
       let matchesDiff = true;
       if (diffFilter !== 'all') {
         const itemDiff = (item.difficulty || '').toLowerCase();
-        if (diffFilter === 'hard') {
+        if (diffFilter === 'figures') {
+          matchesDiff = item.subtest === 'figures' || itemDiff.includes('figure');
+        } else if (diffFilter === 'hard') {
           matchesDiff = itemDiff.includes('test 1') || itemDiff === 'hard';
         } else if (diffFilter === 'hard_t2') {
           matchesDiff = itemDiff.includes('test 2') || itemDiff === 'hard_t2';
+        } else if (diffFilter === 'medium') {
+          matchesDiff = itemDiff.includes('medium') || itemDiff.includes('med');
+        } else if (diffFilter === 'medium_t1') {
+          matchesDiff = itemDiff.includes('medium') && (itemDiff.includes('set 1') || itemDiff.includes('1'));
+        } else if (diffFilter === 'medium_t2') {
+          matchesDiff = itemDiff.includes('medium') && (itemDiff.includes('set 2') || itemDiff.includes('2'));
+        } else if (diffFilter === 'medium_t3') {
+          matchesDiff = itemDiff.includes('medium') && (itemDiff.includes('set 3') || itemDiff.includes('3'));
+        } else if (diffFilter === 'medium_t4') {
+          matchesDiff = itemDiff.includes('medium') && (itemDiff.includes('set 4') || itemDiff.includes('4'));
+        } else if (diffFilter === 'medium_t5') {
+          matchesDiff = itemDiff.includes('medium') && (itemDiff.includes('set 5') || itemDiff.includes('5'));
         } else {
           matchesDiff = itemDiff.includes(diffFilter.toLowerCase());
         }
@@ -319,7 +333,7 @@
       const pctBadgeClass = sub.percentage >= 80 ? 'pill-green' : (sub.percentage >= 50 ? 'pill-yellow' : 'pill-red');
       const isHard = (sub.difficulty || '').toLowerCase().includes('hard');
       const diffClass = isHard ? 'hard' : ((sub.difficulty || '').toLowerCase().includes('medium') ? 'medium' : 'easy');
-      const timerCap = isHard ? '25m' : ((sub.difficulty || '').toLowerCase().includes('medium') ? '15m' : '10m');
+      const timerCap = (isHard || (sub.difficulty || '').toLowerCase().includes('medium')) ? '25m' : '10m';
 
       const tr = document.createElement('tr');
       tr.innerHTML = `

@@ -182,10 +182,19 @@
       margin: 0 auto 50px !important;
     }
 
+    .math-sets-medium-grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+      gap: 18px !important;
+      max-width: 1080px !important;
+      margin: 0 auto 50px !important;
+    }
+
     /* ── Mobile & Tablet Responsiveness (<= 860px) ── */
     @media (max-width: 860px) {
       .math-diff-grid,
-      .math-sets-grid {
+      .math-sets-grid,
+      .math-sets-medium-grid {
         grid-template-columns: 1fr !important;
         gap: 14px !important;
         padding: 0 12px !important;
@@ -468,13 +477,13 @@
         <div class="glass-card diff-card" id="diff-card-medium" style="cursor: pointer;">
           <div class="diff-badge badge-medium">INTERMEDIATE</div>
           <div class="diff-title">Medium</div>
-          <div class="diff-desc">4 Systems of equations. Chained substitutions and balance relations.</div>
+          <div class="diff-desc">5 Sets (100 Q). 3-variable substitutions &amp; balance relations.</div>
           <div class="diff-specs">
-            <div class="spec-row"><span>Questions:</span><strong>4 Q</strong></div>
-            <div class="spec-row"><span>Timer:</span><strong>15 mins</strong></div>
-            <div class="spec-row"><span>Inputs:</span><strong>A, B, C, D in numbers</strong></div>
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (5 Sets)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 mins</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A, B, C in numbers</strong></div>
           </div>
-          <button class="btn-diff-action" id="btn-start-med">Start Medium</button>
+          <button class="btn-diff-action" id="btn-start-med">Start Medium (5 Sets)</button>
         </div>
 
         <!-- Hard -->
@@ -537,6 +546,94 @@
             <div class="spec-row"><span>Answer Mode:</span><strong>A, B, C, D (Whole numbers 1–20)</strong></div>
           </div>
           <button class="btn-diff-action btn-hard-primary" data-start-set="hard_t2">Start Set 2 (25m) ➔</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 1c: MEDIUM SET SELECTION (Set 1 to Set 5)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-sets-medium">
+    <div class="page-hero container">
+      <button class="back-link-btn" id="btn-back-to-diff-med" style="margin-bottom: 16px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+        Back to Difficulty Level
+      </button>
+      <div class="badge" style="background:rgba(245,158,11,0.15); color:#fbbf24; border-color:rgba(245,158,11,0.3);">
+        Medium Level · 5 Practice Sets (100 Questions) · 25 Minutes Each
+      </div>
+      <h1>Choose Medium Practice Set</h1>
+      <p>5 Official Medium practice sets with 20 unique 3-variable linear systems each (A, B, C ∈ 1–20). Select your set to begin.</p>
+    </div>
+
+    <div class="container">
+      <div class="cards-grid math-sets-medium-grid">
+
+        <!-- SET 1 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="medium_t1" id="card-med-set-1">
+          <div class="diff-badge badge-medium">Practice Set 1</div>
+          <div class="diff-title">Set 1</div>
+          <div class="diff-desc">Questions 1–20. Chained single-variable substitutions &amp; balance relations.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Q1–Q20)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A, B, C (Whole numbers 1–20)</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="medium_t1">Start Set 1 (25m) ➔</button>
+        </div>
+
+        <!-- SET 2 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="medium_t2" id="card-med-set-2">
+          <div class="diff-badge badge-medium">Practice Set 2</div>
+          <div class="diff-title">Set 2</div>
+          <div class="diff-desc">Questions 21–40. Multi-variable balance and chained speed substitution.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Q21–Q40)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A, B, C (Whole numbers 1–20)</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="medium_t2">Start Set 2 (25m) ➔</button>
+        </div>
+
+        <!-- SET 3 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="medium_t3" id="card-med-set-3">
+          <div class="diff-badge badge-medium">Practice Set 3</div>
+          <div class="diff-title">Set 3</div>
+          <div class="diff-desc">Questions 41–60. Speed substitutions &amp; proportional equation balance.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Q41–Q60)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A, B, C (Whole numbers 1–20)</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="medium_t3">Start Set 3 (25m) ➔</button>
+        </div>
+
+        <!-- SET 4 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="medium_t4" id="card-med-set-4">
+          <div class="diff-badge badge-medium">Practice Set 4</div>
+          <div class="diff-title">Set 4</div>
+          <div class="diff-desc">Questions 61–80. Cross-variable substitution &amp; 3-variable system relations.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Q61–Q80)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A, B, C (Whole numbers 1–20)</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="medium_t4">Start Set 4 (25m) ➔</button>
+        </div>
+
+        <!-- SET 5 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="medium_t5" id="card-med-set-5">
+          <div class="diff-badge badge-medium">Practice Set 5</div>
+          <div class="diff-title">Set 5</div>
+          <div class="diff-desc">Questions 81–100. Advanced 3-variable linear balance and deduction.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Q81–Q100)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A, B, C (Whole numbers 1–20)</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="medium_t5">Start Set 5 (25m) ➔</button>
         </div>
 
       </div>

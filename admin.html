@@ -205,10 +205,12 @@
           <option value="figures">Figure Sequences</option>
           <option value="hard">Hard – Test 1 (20Q)</option>
           <option value="hard_t2">Hard – Test 2 (20Q)</option>
-          <option value="hard_t3">Hard – Test 3 (20Q)</option>
-          <option value="hard_t4">Hard – Test 4 (20Q)</option>
-          <option value="hard_t5">Hard – Test 5 (20Q)</option>
-          <option value="medium">Medium</option>
+          <option value="medium">Medium (All Sets)</option>
+          <option value="medium_t1">Medium – Set 1 (20Q)</option>
+          <option value="medium_t2">Medium – Set 2 (20Q)</option>
+          <option value="medium_t3">Medium – Set 3 (20Q)</option>
+          <option value="medium_t4">Medium – Set 4 (20Q)</option>
+          <option value="medium_t5">Medium – Set 5 (20Q)</option>
           <option value="easy">Easy</option>
         </select>
         <select id="admin-sort-by" class="admin-select">
@@ -329,7 +331,11 @@
           <select id="new-candidate-diff" class="modal-input" style="background:var(--bg-03);color:var(--t-100);">
             <option value="Hard – Test 1">Hard – Test 1 (20 Questions · 25 Minutes)</option>
             <option value="Hard – Test 2">Hard – Test 2 (20 Questions · 25 Minutes)</option>
-            <option value="Medium">Medium (4 Questions · 15 Minutes)</option>
+            <option value="Medium – Set 1">Medium – Set 1 (20 Questions · 25 Minutes)</option>
+            <option value="Medium – Set 2">Medium – Set 2 (20 Questions · 25 Minutes)</option>
+            <option value="Medium – Set 3">Medium – Set 3 (20 Questions · 25 Minutes)</option>
+            <option value="Medium – Set 4">Medium – Set 4 (20 Questions · 25 Minutes)</option>
+            <option value="Medium – Set 5">Medium – Set 5 (20 Questions · 25 Minutes)</option>
             <option value="Easy">Easy (5 Questions · 10 Minutes)</option>
           </select>
         </div>
@@ -337,7 +343,7 @@
         <div class="form-group" style="margin-bottom:14px;">
           <label for="new-candidate-score">Correct Answers (Score) *</label>
           <input type="number" id="new-candidate-score" class="modal-input" min="0" max="20" value="19" required/>
-          <span style="font-size:11px;color:var(--t-45);margin-top:4px;display:block;">Max score: 20 for Hard, 4 for Medium, 5 for Easy</span>
+          <span style="font-size:11px;color:var(--t-45);margin-top:4px;display:block;">Max score: 20 for Hard &amp; Medium, 5 for Easy</span>
         </div>
 
         <div class="form-group" style="margin-bottom:14px;">

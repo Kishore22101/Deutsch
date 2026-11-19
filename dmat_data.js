@@ -1568,7 +1568,617 @@ const DMAT_DATA = {
     ]
   }
 ],
-  medium: [],
+  medium_t1: [
+    {
+      "id": 1,
+      "equations": ["C + B = 7","B = C + 1","C + A = 10"],
+      "solution": {"A":7,"B":4,"C":3},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 7","(2) B = C + 1","(3) C + A = 10","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 7, B = 4, C = 3"]
+    },
+    {
+      "id": 2,
+      "equations": ["C + B = 7","B = C + 3","C + A = 8"],
+      "solution": {"A":6,"B":5,"C":2},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 7","(2) B = C + 3","(3) C + A = 8","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 6, B = 5, C = 2"]
+    },
+    {
+      "id": 3,
+      "equations": ["C + B = 20","B = C + 4","C + A = 22"],
+      "solution": {"A":14,"B":12,"C":8},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 20","(2) B = C + 4","(3) C + A = 22","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 14, B = 12, C = 8"]
+    },
+    {
+      "id": 4,
+      "equations": ["A + B + C = 23","A = 3 × B","C = B + 3"],
+      "solution": {"A":12,"B":4,"C":7},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 23","(2) A = 3 × B","(3) C = B + 3","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 4, C = 7"]
+    },
+    {
+      "id": 5,
+      "equations": ["B + A = 8","A = B + 4","B + C = 8"],
+      "solution": {"A":6,"B":2,"C":6},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 8","(2) A = B + 4","(3) B + C = 8","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 6, B = 2, C = 6"]
+    },
+    {
+      "id": 6,
+      "equations": ["2 × C = B","B + C = 6","B + A = 13"],
+      "solution": {"A":9,"B":4,"C":2},
+      "stepByStep": ["Given System of Equations:","(1) 2 × C = B","(2) B + C = 6","(3) B + A = 13","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 9, B = 4, C = 2"]
+    },
+    {
+      "id": 7,
+      "equations": ["C + B = 20","B = C + 2","C + A = 13"],
+      "solution": {"A":4,"B":11,"C":9},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 20","(2) B = C + 2","(3) C + A = 13","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 4, B = 11, C = 9"]
+    },
+    {
+      "id": 8,
+      "equations": ["A + B + C = 16","A = 2 × B","C = B + 4"],
+      "solution": {"A":6,"B":3,"C":7},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 16","(2) A = 2 × B","(3) C = B + 4","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 6, B = 3, C = 7"]
+    },
+    {
+      "id": 9,
+      "equations": ["B + A = 9","A = B + 3","B + C = 9"],
+      "solution": {"A":6,"B":3,"C":6},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 9","(2) A = B + 3","(3) B + C = 9","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 6, B = 3, C = 6"]
+    },
+    {
+      "id": 10,
+      "equations": ["3 × C = B","B + C = 12","B + A = 17"],
+      "solution": {"A":8,"B":9,"C":3},
+      "stepByStep": ["Given System of Equations:","(1) 3 × C = B","(2) B + C = 12","(3) B + A = 17","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 8, B = 9, C = 3"]
+    },
+    {
+      "id": 11,
+      "equations": ["B + A = 12","A = B + 2","B + C = 11"],
+      "solution": {"A":7,"B":5,"C":6},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 12","(2) A = B + 2","(3) B + C = 11","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 7, B = 5, C = 6"]
+    },
+    {
+      "id": 12,
+      "equations": ["3 × C = B","B + C = 8","B + A = 14"],
+      "solution": {"A":8,"B":6,"C":2},
+      "stepByStep": ["Given System of Equations:","(1) 3 × C = B","(2) B + C = 8","(3) B + A = 14","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 8, B = 6, C = 2"]
+    },
+    {
+      "id": 13,
+      "equations": ["A + B + C = 35","A = 3 × B","C = B + 5"],
+      "solution": {"A":18,"B":6,"C":11},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 35","(2) A = 3 × B","(3) C = B + 5","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 18, B = 6, C = 11"]
+    },
+    {
+      "id": 14,
+      "equations": ["A + B + C = 14","A = 2 × B","C = B + 2"],
+      "solution": {"A":6,"B":3,"C":5},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 14","(2) A = 2 × B","(3) C = B + 2","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 6, B = 3, C = 5"]
+    },
+    {
+      "id": 15,
+      "equations": ["3 × C = B","B + C = 8","B + A = 19"],
+      "solution": {"A":13,"B":6,"C":2},
+      "stepByStep": ["Given System of Equations:","(1) 3 × C = B","(2) B + C = 8","(3) B + A = 19","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 13, B = 6, C = 2"]
+    },
+    {
+      "id": 16,
+      "equations": ["C + B = 15","B = C + 1","C + A = 21"],
+      "solution": {"A":14,"B":8,"C":7},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 15","(2) B = C + 1","(3) C + A = 21","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 14, B = 8, C = 7"]
+    },
+    {
+      "id": 17,
+      "equations": ["A + B + C = 27","A = 3 × B","C = B + 7"],
+      "solution": {"A":12,"B":4,"C":11},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 27","(2) A = 3 × B","(3) C = B + 7","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 4, C = 11"]
+    },
+    {
+      "id": 18,
+      "equations": ["B + A = 15","A = B + 7","B + C = 8"],
+      "solution": {"A":11,"B":4,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 15","(2) A = B + 7","(3) B + C = 8","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 11, B = 4, C = 4"]
+    },
+    {
+      "id": 19,
+      "equations": ["2 × C = B","B + C = 12","B + A = 13"],
+      "solution": {"A":5,"B":8,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) 2 × C = B","(2) B + C = 12","(3) B + A = 13","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 5, B = 8, C = 4"]
+    },
+    {
+      "id": 20,
+      "equations": ["B + A = 23","A = B + 7","B + C = 10"],
+      "solution": {"A":15,"B":8,"C":2},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 23","(2) A = B + 7","(3) B + C = 10","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 15, B = 8, C = 2"]
+    },
+  ],
+  medium_t2: [
+    {
+      "id": 1,
+      "equations": ["C + B = 20","B = C + 4","C + A = 13"],
+      "solution": {"A":5,"B":12,"C":8},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 20","(2) B = C + 4","(3) C + A = 13","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 5, B = 12, C = 8"]
+    },
+    {
+      "id": 2,
+      "equations": ["3 × C = B","B + C = 20","B + A = 24"],
+      "solution": {"A":9,"B":15,"C":5},
+      "stepByStep": ["Given System of Equations:","(1) 3 × C = B","(2) B + C = 20","(3) B + A = 24","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 9, B = 15, C = 5"]
+    },
+    {
+      "id": 3,
+      "equations": ["C + B = 21","B = C + 5","C + A = 15"],
+      "solution": {"A":7,"B":13,"C":8},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 21","(2) B = C + 5","(3) C + A = 15","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 7, B = 13, C = 8"]
+    },
+    {
+      "id": 4,
+      "equations": ["A + B + C = 26","A = 3 × B","C = B + 6"],
+      "solution": {"A":12,"B":4,"C":10},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 26","(2) A = 3 × B","(3) C = B + 6","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 4, C = 10"]
+    },
+    {
+      "id": 5,
+      "equations": ["C + B = 16","B = C + 4","C + A = 17"],
+      "solution": {"A":11,"B":10,"C":6},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 16","(2) B = C + 4","(3) C + A = 17","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 11, B = 10, C = 6"]
+    },
+    {
+      "id": 6,
+      "equations": ["C + B = 10","B = C + 4","C + A = 6"],
+      "solution": {"A":3,"B":7,"C":3},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 10","(2) B = C + 4","(3) C + A = 6","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 3, B = 7, C = 3"]
+    },
+    {
+      "id": 7,
+      "equations": ["B + A = 27","A = B + 7","B + C = 12"],
+      "solution": {"A":17,"B":10,"C":2},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 27","(2) A = B + 7","(3) B + C = 12","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 17, B = 10, C = 2"]
+    },
+    {
+      "id": 8,
+      "equations": ["B + A = 17","A = B + 7","B + C = 8"],
+      "solution": {"A":12,"B":5,"C":3},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 17","(2) A = B + 7","(3) B + C = 8","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 5, C = 3"]
+    },
+    {
+      "id": 9,
+      "equations": ["A + B + C = 22","A = 2 × B","C = B + 6"],
+      "solution": {"A":8,"B":4,"C":10},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 22","(2) A = 2 × B","(3) C = B + 6","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 8, B = 4, C = 10"]
+    },
+    {
+      "id": 10,
+      "equations": ["B + A = 18","A = B + 6","B + C = 14"],
+      "solution": {"A":12,"B":6,"C":8},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 18","(2) A = B + 6","(3) B + C = 14","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 6, C = 8"]
+    },
+    {
+      "id": 11,
+      "equations": ["4 × C = B","B + C = 25","B + A = 34"],
+      "solution": {"A":14,"B":20,"C":5},
+      "stepByStep": ["Given System of Equations:","(1) 4 × C = B","(2) B + C = 25","(3) B + A = 34","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 14, B = 20, C = 5"]
+    },
+    {
+      "id": 12,
+      "equations": ["A + B + C = 30","A = 3 × B","C = B + 5"],
+      "solution": {"A":15,"B":5,"C":10},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 30","(2) A = 3 × B","(3) C = B + 5","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 15, B = 5, C = 10"]
+    },
+    {
+      "id": 13,
+      "equations": ["B + A = 22","A = B + 2","B + C = 15"],
+      "solution": {"A":12,"B":10,"C":5},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 22","(2) A = B + 2","(3) B + C = 15","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 10, C = 5"]
+    },
+    {
+      "id": 14,
+      "equations": ["3 × C = B","B + C = 16","B + A = 25"],
+      "solution": {"A":13,"B":12,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) 3 × C = B","(2) B + C = 16","(3) B + A = 25","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 13, B = 12, C = 4"]
+    },
+    {
+      "id": 15,
+      "equations": ["C + B = 10","B = C + 6","C + A = 14"],
+      "solution": {"A":12,"B":8,"C":2},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 10","(2) B = C + 6","(3) C + A = 14","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 8, C = 2"]
+    },
+    {
+      "id": 16,
+      "equations": ["B + A = 13","A = B + 5","B + C = 7"],
+      "solution": {"A":9,"B":4,"C":3},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 13","(2) A = B + 5","(3) B + C = 7","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 9, B = 4, C = 3"]
+    },
+    {
+      "id": 17,
+      "equations": ["A + B + C = 31","A = 2 × B","C = B + 7"],
+      "solution": {"A":12,"B":6,"C":13},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 31","(2) A = 2 × B","(3) C = B + 7","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 6, C = 13"]
+    },
+    {
+      "id": 18,
+      "equations": ["A + B + C = 12","A = 2 × B","C = B + 4"],
+      "solution": {"A":4,"B":2,"C":6},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 12","(2) A = 2 × B","(3) C = B + 4","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 4, B = 2, C = 6"]
+    },
+    {
+      "id": 19,
+      "equations": ["2 × C = B","B + C = 9","B + A = 20"],
+      "solution": {"A":14,"B":6,"C":3},
+      "stepByStep": ["Given System of Equations:","(1) 2 × C = B","(2) B + C = 9","(3) B + A = 20","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 14, B = 6, C = 3"]
+    },
+    {
+      "id": 20,
+      "equations": ["3 × C = B","B + C = 20","B + A = 18"],
+      "solution": {"A":3,"B":15,"C":5},
+      "stepByStep": ["Given System of Equations:","(1) 3 × C = B","(2) B + C = 20","(3) B + A = 18","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 3, B = 15, C = 5"]
+    },
+  ],
+  medium_t3: [
+    {
+      "id": 1,
+      "equations": ["A + B + C = 21","A = 3 × B","C = B + 6"],
+      "solution": {"A":9,"B":3,"C":9},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 21","(2) A = 3 × B","(3) C = B + 6","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 9, B = 3, C = 9"]
+    },
+    {
+      "id": 2,
+      "equations": ["4 × C = B","B + C = 25","B + A = 35"],
+      "solution": {"A":15,"B":20,"C":5},
+      "stepByStep": ["Given System of Equations:","(1) 4 × C = B","(2) B + C = 25","(3) B + A = 35","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 15, B = 20, C = 5"]
+    },
+    {
+      "id": 3,
+      "equations": ["2 × C = B","B + C = 15","B + A = 17"],
+      "solution": {"A":7,"B":10,"C":5},
+      "stepByStep": ["Given System of Equations:","(1) 2 × C = B","(2) B + C = 15","(3) B + A = 17","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 7, B = 10, C = 5"]
+    },
+    {
+      "id": 4,
+      "equations": ["C + B = 13","B = C + 5","C + A = 16"],
+      "solution": {"A":12,"B":9,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 13","(2) B = C + 5","(3) C + A = 16","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 9, C = 4"]
+    },
+    {
+      "id": 5,
+      "equations": ["A + B + C = 37","A = 3 × B","C = B + 7"],
+      "solution": {"A":18,"B":6,"C":13},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 37","(2) A = 3 × B","(3) C = B + 7","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 18, B = 6, C = 13"]
+    },
+    {
+      "id": 6,
+      "equations": ["C + B = 16","B = C + 6","C + A = 17"],
+      "solution": {"A":12,"B":11,"C":5},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 16","(2) B = C + 6","(3) C + A = 17","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 11, C = 5"]
+    },
+    {
+      "id": 7,
+      "equations": ["A + B + C = 31","A = 2 × B","C = B + 7"],
+      "solution": {"A":12,"B":6,"C":13},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 31","(2) A = 2 × B","(3) C = B + 7","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 6, C = 13"]
+    },
+    {
+      "id": 8,
+      "equations": ["C + B = 9","B = C + 5","C + A = 5"],
+      "solution": {"A":3,"B":7,"C":2},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 9","(2) B = C + 5","(3) C + A = 5","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 3, B = 7, C = 2"]
+    },
+    {
+      "id": 9,
+      "equations": ["3 × C = B","B + C = 8","B + A = 19"],
+      "solution": {"A":13,"B":6,"C":2},
+      "stepByStep": ["Given System of Equations:","(1) 3 × C = B","(2) B + C = 8","(3) B + A = 19","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 13, B = 6, C = 2"]
+    },
+    {
+      "id": 10,
+      "equations": ["C + B = 13","B = C + 5","C + A = 6"],
+      "solution": {"A":2,"B":9,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 13","(2) B = C + 5","(3) C + A = 6","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 2, B = 9, C = 4"]
+    },
+    {
+      "id": 11,
+      "equations": ["2 × C = B","B + C = 15","B + A = 15"],
+      "solution": {"A":5,"B":10,"C":5},
+      "stepByStep": ["Given System of Equations:","(1) 2 × C = B","(2) B + C = 15","(3) B + A = 15","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 5, B = 10, C = 5"]
+    },
+    {
+      "id": 12,
+      "equations": ["4 × C = B","B + C = 20","B + A = 25"],
+      "solution": {"A":9,"B":16,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) 4 × C = B","(2) B + C = 20","(3) B + A = 25","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 9, B = 16, C = 4"]
+    },
+    {
+      "id": 13,
+      "equations": ["A + B + C = 23","A = 2 × B","C = B + 7"],
+      "solution": {"A":8,"B":4,"C":11},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 23","(2) A = 2 × B","(3) C = B + 7","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 8, B = 4, C = 11"]
+    },
+    {
+      "id": 14,
+      "equations": ["B + A = 17","A = B + 3","B + C = 17"],
+      "solution": {"A":10,"B":7,"C":10},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 17","(2) A = B + 3","(3) B + C = 17","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 10, B = 7, C = 10"]
+    },
+    {
+      "id": 15,
+      "equations": ["B + A = 14","A = B + 2","B + C = 19"],
+      "solution": {"A":8,"B":6,"C":13},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 14","(2) A = B + 2","(3) B + C = 19","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 8, B = 6, C = 13"]
+    },
+    {
+      "id": 16,
+      "equations": ["B + A = 8","A = B + 4","B + C = 10"],
+      "solution": {"A":6,"B":2,"C":8},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 8","(2) A = B + 4","(3) B + C = 10","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 6, B = 2, C = 8"]
+    },
+    {
+      "id": 17,
+      "equations": ["B + A = 11","A = B + 7","B + C = 6"],
+      "solution": {"A":9,"B":2,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 11","(2) A = B + 7","(3) B + C = 6","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 9, B = 2, C = 4"]
+    },
+    {
+      "id": 18,
+      "equations": ["C + B = 21","B = C + 5","C + A = 20"],
+      "solution": {"A":12,"B":13,"C":8},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 21","(2) B = C + 5","(3) C + A = 20","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 13, C = 8"]
+    },
+    {
+      "id": 19,
+      "equations": ["B + A = 15","A = B + 5","B + C = 8"],
+      "solution": {"A":10,"B":5,"C":3},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 15","(2) A = B + 5","(3) B + C = 8","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 10, B = 5, C = 3"]
+    },
+    {
+      "id": 20,
+      "equations": ["A + B + C = 26","A = 2 × B","C = B + 2"],
+      "solution": {"A":12,"B":6,"C":8},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 26","(2) A = 2 × B","(3) C = B + 2","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 6, C = 8"]
+    },
+  ],
+  medium_t4: [
+    {
+      "id": 1,
+      "equations": ["C + B = 9","B = C + 5","C + A = 13"],
+      "solution": {"A":11,"B":7,"C":2},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 9","(2) B = C + 5","(3) C + A = 13","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 11, B = 7, C = 2"]
+    },
+    {
+      "id": 2,
+      "equations": ["B + A = 13","A = B + 3","B + C = 17"],
+      "solution": {"A":8,"B":5,"C":12},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 13","(2) A = B + 3","(3) B + C = 17","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 8, B = 5, C = 12"]
+    },
+    {
+      "id": 3,
+      "equations": ["A + B + C = 33","A = 3 × B","C = B + 3"],
+      "solution": {"A":18,"B":6,"C":9},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 33","(2) A = 3 × B","(3) C = B + 3","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 18, B = 6, C = 9"]
+    },
+    {
+      "id": 4,
+      "equations": ["C + B = 16","B = C + 4","C + A = 20"],
+      "solution": {"A":14,"B":10,"C":6},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 16","(2) B = C + 4","(3) C + A = 20","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 14, B = 10, C = 6"]
+    },
+    {
+      "id": 5,
+      "equations": ["B + A = 24","A = B + 4","B + C = 16"],
+      "solution": {"A":14,"B":10,"C":6},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 24","(2) A = B + 4","(3) B + C = 16","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 14, B = 10, C = 6"]
+    },
+    {
+      "id": 6,
+      "equations": ["A + B + C = 18","A = 2 × B","C = B + 6"],
+      "solution": {"A":6,"B":3,"C":9},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 18","(2) A = 2 × B","(3) C = B + 6","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 6, B = 3, C = 9"]
+    },
+    {
+      "id": 7,
+      "equations": ["B + A = 19","A = B + 3","B + C = 16"],
+      "solution": {"A":11,"B":8,"C":8},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 19","(2) A = B + 3","(3) B + C = 16","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 11, B = 8, C = 8"]
+    },
+    {
+      "id": 8,
+      "equations": ["C + B = 20","B = C + 2","C + A = 19"],
+      "solution": {"A":10,"B":11,"C":9},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 20","(2) B = C + 2","(3) C + A = 19","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 10, B = 11, C = 9"]
+    },
+    {
+      "id": 9,
+      "equations": ["C + B = 17","B = C + 5","C + A = 10"],
+      "solution": {"A":4,"B":11,"C":6},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 17","(2) B = C + 5","(3) C + A = 10","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 4, B = 11, C = 6"]
+    },
+    {
+      "id": 10,
+      "equations": ["B + A = 23","A = B + 5","B + C = 19"],
+      "solution": {"A":14,"B":9,"C":10},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 23","(2) A = B + 5","(3) B + C = 19","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 14, B = 9, C = 10"]
+    },
+    {
+      "id": 11,
+      "equations": ["A + B + C = 17","A = 2 × B","C = B + 5"],
+      "solution": {"A":6,"B":3,"C":8},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 17","(2) A = 2 × B","(3) C = B + 5","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 6, B = 3, C = 8"]
+    },
+    {
+      "id": 12,
+      "equations": ["4 × C = B","B + C = 15","B + A = 24"],
+      "solution": {"A":12,"B":12,"C":3},
+      "stepByStep": ["Given System of Equations:","(1) 4 × C = B","(2) B + C = 15","(3) B + A = 24","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 12, C = 3"]
+    },
+    {
+      "id": 13,
+      "equations": ["A + B + C = 15","A = 2 × B","C = B + 3"],
+      "solution": {"A":6,"B":3,"C":6},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 15","(2) A = 2 × B","(3) C = B + 3","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 6, B = 3, C = 6"]
+    },
+    {
+      "id": 14,
+      "equations": ["2 × C = B","B + C = 6","B + A = 19"],
+      "solution": {"A":15,"B":4,"C":2},
+      "stepByStep": ["Given System of Equations:","(1) 2 × C = B","(2) B + C = 6","(3) B + A = 19","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 15, B = 4, C = 2"]
+    },
+    {
+      "id": 15,
+      "equations": ["4 × C = B","B + C = 20","B + A = 19"],
+      "solution": {"A":3,"B":16,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) 4 × C = B","(2) B + C = 20","(3) B + A = 19","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 3, B = 16, C = 4"]
+    },
+    {
+      "id": 16,
+      "equations": ["C + B = 15","B = C + 1","C + A = 21"],
+      "solution": {"A":14,"B":8,"C":7},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 15","(2) B = C + 1","(3) C + A = 21","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 14, B = 8, C = 7"]
+    },
+    {
+      "id": 17,
+      "equations": ["A + B + C = 21","A = 3 × B","C = B + 6"],
+      "solution": {"A":9,"B":3,"C":9},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 21","(2) A = 3 × B","(3) C = B + 6","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 9, B = 3, C = 9"]
+    },
+    {
+      "id": 18,
+      "equations": ["B + A = 21","A = B + 3","B + C = 14"],
+      "solution": {"A":12,"B":9,"C":5},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 21","(2) A = B + 3","(3) B + C = 14","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 9, C = 5"]
+    },
+    {
+      "id": 19,
+      "equations": ["2 × C = B","B + C = 9","B + A = 19"],
+      "solution": {"A":13,"B":6,"C":3},
+      "stepByStep": ["Given System of Equations:","(1) 2 × C = B","(2) B + C = 9","(3) B + A = 19","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 13, B = 6, C = 3"]
+    },
+    {
+      "id": 20,
+      "equations": ["2 × C = B","B + C = 12","B + A = 20"],
+      "solution": {"A":12,"B":8,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) 2 × C = B","(2) B + C = 12","(3) B + A = 20","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 12, B = 8, C = 4"]
+    },
+  ],
+  medium_t5: [
+    {
+      "id": 1,
+      "equations": ["2 × C = B","B + C = 15","B + A = 15"],
+      "solution": {"A":5,"B":10,"C":5},
+      "stepByStep": ["Given System of Equations:","(1) 2 × C = B","(2) B + C = 15","(3) B + A = 15","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 5, B = 10, C = 5"]
+    },
+    {
+      "id": 2,
+      "equations": ["4 × C = B","B + C = 20","B + A = 27"],
+      "solution": {"A":11,"B":16,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) 4 × C = B","(2) B + C = 20","(3) B + A = 27","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 11, B = 16, C = 4"]
+    },
+    {
+      "id": 3,
+      "equations": ["A + B + C = 11","A = 2 × B","C = B + 3"],
+      "solution": {"A":4,"B":2,"C":5},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 11","(2) A = 2 × B","(3) C = B + 3","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 4, B = 2, C = 5"]
+    },
+    {
+      "id": 4,
+      "equations": ["C + B = 15","B = C + 5","C + A = 13"],
+      "solution": {"A":8,"B":10,"C":5},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 15","(2) B = C + 5","(3) C + A = 13","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 8, B = 10, C = 5"]
+    },
+    {
+      "id": 5,
+      "equations": ["4 × C = B","B + C = 20","B + A = 24"],
+      "solution": {"A":8,"B":16,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) 4 × C = B","(2) B + C = 20","(3) B + A = 24","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 8, B = 16, C = 4"]
+    },
+    {
+      "id": 6,
+      "equations": ["B + A = 8","A = B + 2","B + C = 7"],
+      "solution": {"A":5,"B":3,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 8","(2) A = B + 2","(3) B + C = 7","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 5, B = 3, C = 4"]
+    },
+    {
+      "id": 7,
+      "equations": ["C + B = 14","B = C + 6","C + A = 13"],
+      "solution": {"A":9,"B":10,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 14","(2) B = C + 6","(3) C + A = 13","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 9, B = 10, C = 4"]
+    },
+    {
+      "id": 8,
+      "equations": ["C + B = 14","B = C + 6","C + A = 14"],
+      "solution": {"A":10,"B":10,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 14","(2) B = C + 6","(3) C + A = 14","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 10, B = 10, C = 4"]
+    },
+    {
+      "id": 9,
+      "equations": ["C + B = 15","B = C + 3","C + A = 15"],
+      "solution": {"A":9,"B":9,"C":6},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 15","(2) B = C + 3","(3) C + A = 15","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 9, B = 9, C = 6"]
+    },
+    {
+      "id": 10,
+      "equations": ["C + B = 9","B = C + 5","C + A = 7"],
+      "solution": {"A":5,"B":7,"C":2},
+      "stepByStep": ["Given System of Equations:","(1) C + B = 9","(2) B = C + 5","(3) C + A = 7","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 5, B = 7, C = 2"]
+    },
+    {
+      "id": 11,
+      "equations": ["2 × C = B","B + C = 6","B + A = 7"],
+      "solution": {"A":3,"B":4,"C":2},
+      "stepByStep": ["Given System of Equations:","(1) 2 × C = B","(2) B + C = 6","(3) B + A = 7","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 3, B = 4, C = 2"]
+    },
+    {
+      "id": 12,
+      "equations": ["A + B + C = 13","A = 3 × B","C = B + 3"],
+      "solution": {"A":6,"B":2,"C":5},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 13","(2) A = 3 × B","(3) C = B + 3","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 6, B = 2, C = 5"]
+    },
+    {
+      "id": 13,
+      "equations": ["A + B + C = 37","A = 3 × B","C = B + 7"],
+      "solution": {"A":18,"B":6,"C":13},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 37","(2) A = 3 × B","(3) C = B + 7","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 18, B = 6, C = 13"]
+    },
+    {
+      "id": 14,
+      "equations": ["A + B + C = 15","A = 2 × B","C = B + 3"],
+      "solution": {"A":6,"B":3,"C":6},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 15","(2) A = 2 × B","(3) C = B + 3","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 6, B = 3, C = 6"]
+    },
+    {
+      "id": 15,
+      "equations": ["B + A = 11","A = B + 7","B + C = 9"],
+      "solution": {"A":9,"B":2,"C":7},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 11","(2) A = B + 7","(3) B + C = 9","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 9, B = 2, C = 7"]
+    },
+    {
+      "id": 16,
+      "equations": ["A + B + C = 24","A = 2 × B","C = B + 4"],
+      "solution": {"A":10,"B":5,"C":9},
+      "stepByStep": ["Given System of Equations:","(1) A + B + C = 24","(2) A = 2 × B","(3) C = B + 4","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 10, B = 5, C = 9"]
+    },
+    {
+      "id": 17,
+      "equations": ["B + A = 25","A = B + 7","B + C = 13"],
+      "solution": {"A":16,"B":9,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 25","(2) A = B + 7","(3) B + C = 13","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 16, B = 9, C = 4"]
+    },
+    {
+      "id": 18,
+      "equations": ["B + A = 21","A = B + 5","B + C = 12"],
+      "solution": {"A":13,"B":8,"C":4},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 21","(2) A = B + 5","(3) B + C = 12","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 13, B = 8, C = 4"]
+    },
+    {
+      "id": 19,
+      "equations": ["4 × C = B","B + C = 25","B + A = 33"],
+      "solution": {"A":13,"B":20,"C":5},
+      "stepByStep": ["Given System of Equations:","(1) 4 × C = B","(2) B + C = 25","(3) B + A = 33","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 13, B = 20, C = 5"]
+    },
+    {
+      "id": 20,
+      "equations": ["B + A = 8","A = B + 2","B + C = 14"],
+      "solution": {"A":5,"B":3,"C":11},
+      "stepByStep": ["Given System of Equations:","(1) B + A = 8","(2) A = B + 2","(3) B + C = 14","Step 1: Express variables in terms of single substitution from the relational equation.","Step 2: Solve for base variable by substituting into the sum equation.","Step 3: Back-substitute to find all remaining values.","Result: A = 5, B = 3, C = 11"]
+    },
+  ],
+  medium: null, // assigned below
   easy: [],
   categoryInfo: {
   "figures": {
@@ -1652,6 +2262,7 @@ function getRealTimeSubmissions() {
   return [];
 }
 
+DMAT_DATA.medium = DMAT_DATA.medium_t1;
 const INITIAL_SUBMISSIONS = [];
 
 if (typeof module !== 'undefined' && module.exports) {

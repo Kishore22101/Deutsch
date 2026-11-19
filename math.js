@@ -45,6 +45,7 @@
       // Views
       viewDifficulties: document.getElementById('view-difficulties'),
       viewSets: document.getElementById('view-sets'),
+      viewSetsMedium: document.getElementById('view-sets-medium'),
       viewExam: document.getElementById('view-exam'),
       viewResults: document.getElementById('view-results'),
       modalName: document.getElementById('modal-candidate-name'),
@@ -64,6 +65,7 @@
       btnStartMed: document.getElementById('btn-start-med'),
       btnStartHard: document.getElementById('btn-start-hard'),
       btnBackToDiff: document.getElementById('btn-back-to-diff'),
+      btnBackToDiffMed: document.getElementById('btn-back-to-diff-med'),
 
       // Name Modal
       candidateNameInput: document.getElementById('input-candidate-name'),
@@ -122,15 +124,16 @@
       });
     }
 
+    // Medium level click -> show Medium Set 1 to Set 5
     if (dom.diffCardMed) {
       dom.diffCardMed.addEventListener('click', () => {
-        alert('Medium level questions will be updated soon. Please practice with Hard level Set 1 & Set 2.');
+        showView('sets-medium');
       });
     }
     if (dom.btnStartMed) {
       dom.btnStartMed.addEventListener('click', (e) => {
         e.stopPropagation();
-        alert('Medium level questions will be updated soon. Please practice with Hard level Set 1 & Set 2.');
+        showView('sets-medium');
       });
     }
 
@@ -153,8 +156,13 @@
         showView('difficulties');
       });
     }
+    if (dom.btnBackToDiffMed) {
+      dom.btnBackToDiffMed.addEventListener('click', () => {
+        showView('difficulties');
+      });
+    }
 
-    // Start Set buttons on Set 1 / Set 2 cards
+    // Start Set buttons on Set cards
     document.querySelectorAll('[data-start-set]').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -170,6 +178,14 @@
     const cardSet2 = document.getElementById('card-set-2');
     if (cardSet2) {
       cardSet2.addEventListener('click', () => openStartModal('hard_t2'));
+    }
+
+    // Medium set card click handlers
+    for (let s = 1; s <= 5; s++) {
+      const c = document.getElementById(`card-med-set-${s}`);
+      if (c) {
+        c.addEventListener('click', () => openStartModal(`medium_t${s}`));
+      }
     }
 
     // Submissions nav buttons
@@ -247,6 +263,7 @@
     state.view = viewName;
     if (dom.viewDifficulties) dom.viewDifficulties.classList.toggle('hidden', viewName !== 'difficulties');
     if (dom.viewSets) dom.viewSets.classList.toggle('hidden', viewName !== 'sets');
+    if (dom.viewSetsMedium) dom.viewSetsMedium.classList.toggle('hidden', viewName !== 'sets-medium');
     if (dom.viewExam) dom.viewExam.classList.toggle('hidden', viewName !== 'exam');
     if (dom.viewResults) dom.viewResults.classList.toggle('hidden', viewName !== 'results');
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -266,13 +283,22 @@
   }
 
   function updateModalLabels() {
-    const isSet2 = (state.selectedSet === 'hard_t2');
-    if (dom.nameModalSetLabel) {
-      dom.nameModalSetLabel.textContent = isSet2 ? 'Practice Set 2 · 20 Questions' : 'Practice Set 1 · 20 Questions';
+    let title = 'Practice Set 1 · 20 Questions';
+    let btnText = 'Begin Set 1 (25m) ➔';
+
+    if (state.selectedSet === 'hard_t2') {
+      title = 'Hard Level · Practice Set 2 · 20 Questions';
+      btnText = 'Begin Hard Set 2 (25m) ➔';
+    } else if (state.selectedSet === 'hard_t1' || state.selectedSet === 'hard') {
+      title = 'Hard Level · Practice Set 1 · 20 Questions';
+      btnText = 'Begin Hard Set 1 (25m) ➔';
+    } else if (state.selectedSet.startsWith('medium_t')) {
+      const num = state.selectedSet.replace('medium_t', '');
+      title = `Medium Level · Practice Set ${num} · 20 Questions`;
+      btnText = `Begin Medium Set ${num} (25m) ➔`;
     }
-    if (dom.btnConfirmStart) {
-      dom.btnConfirmStart.textContent = isSet2 ? 'Begin Set 2 (25m) ➔' : 'Begin Set 1 (25m) ➔';
-    }
+    if (dom.nameModalSetLabel) dom.nameModalSetLabel.textContent = title;
+    if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = btnText;
   }
 
   function confirmStartExam() {
@@ -296,14 +322,40 @@
     state.examStartTime = new Date();
 
     const data = (typeof DMAT_DATA !== 'undefined') ? DMAT_DATA : {};
-    const dataset = (setKey === 'hard_t2') ? (data.hard_t2 || []) : (data.hard_t1 || data.hard || []);
+    let dataset = [];
+    let setDisplayName = '';
+
+    if (setKey === 'hard_t2') {
+      dataset = data.hard_t2 || [];
+      setDisplayName = 'Hard – Set 2';
+    } else if (setKey === 'hard_t1' || setKey === 'hard') {
+      dataset = data.hard_t1 || data.hard || [];
+      setDisplayName = 'Hard – Set 1';
+    } else if (setKey === 'medium_t1') {
+      dataset = data.medium_t1 || [];
+      setDisplayName = 'Medium – Set 1';
+    } else if (setKey === 'medium_t2') {
+      dataset = data.medium_t2 || [];
+      setDisplayName = 'Medium – Set 2';
+    } else if (setKey === 'medium_t3') {
+      dataset = data.medium_t3 || [];
+      setDisplayName = 'Medium – Set 3';
+    } else if (setKey === 'medium_t4') {
+      dataset = data.medium_t4 || [];
+      setDisplayName = 'Medium – Set 4';
+    } else if (setKey === 'medium_t5') {
+      dataset = data.medium_t5 || [];
+      setDisplayName = 'Medium – Set 5';
+    } else {
+      dataset = data[setKey] || data.medium_t1 || data.hard || [];
+      setDisplayName = setKey;
+    }
     state.questions = dataset.slice(0, 20);
 
     state.timerTotalSeconds = 25 * 60;
     state.timerRemainingSeconds = 25 * 60;
 
-    const setNum = (setKey === 'hard_t2') ? 'Set 2' : 'Set 1';
-    dom.examTitle.textContent = `Mathematic Equations – ${setNum}`;
+    dom.examTitle.textContent = `Mathematic Equations – ${setDisplayName}`;
     dom.examCandidateName.textContent = state.candidateName;
 
     if (state.timerInterval) clearInterval(state.timerInterval);
@@ -365,9 +417,11 @@
     if (state.flagged.has(q.id)) btn.classList.add('flagged');
 
     const ans = state.userAnswers[q.id];
+    const hasD = (q.solution && q.solution.D !== undefined);
     if (ans) {
-      const filled = [ans.A, ans.B, ans.C, ans.D].filter(v => v !== '' && v !== undefined && v !== null).length;
-      if (filled === 4) btn.classList.add('answered');
+      const varsToCheck = hasD ? [ans.A, ans.B, ans.C, ans.D] : [ans.A, ans.B, ans.C];
+      const filled = varsToCheck.filter(v => v !== '' && v !== undefined && v !== null).length;
+      if (filled === varsToCheck.length) btn.classList.add('answered');
       else if (filled > 0) btn.classList.add('partial');
     }
   }
@@ -394,6 +448,13 @@
     dom.inputB.value = saved.B || '';
     dom.inputC.value = saved.C || '';
     dom.inputD.value = saved.D || '';
+
+    // Show/hide input D based on whether this question has D
+    const hasD = (q.solution && q.solution.D !== undefined);
+    const inputDGroup = dom.inputD ? dom.inputD.closest('.var-input-group') : null;
+    if (inputDGroup) {
+      inputDGroup.style.display = hasD ? '' : 'none';
+    }
 
     // Flag button
     if (state.flagged.has(q.id)) {
@@ -478,11 +539,12 @@
     const details = state.questions.map(q => {
       const user = state.userAnswers[q.id] || {};
       const sol = q.solution || {};
+      const hasD = (sol.D !== undefined);
 
       const isACorrect = parseInt(user.A, 10) === sol.A;
       const isBCorrect = parseInt(user.B, 10) === sol.B;
       const isCCorrect = parseInt(user.C, 10) === sol.C;
-      const isDCorrect = parseInt(user.D, 10) === sol.D;
+      const isDCorrect = hasD ? (parseInt(user.D, 10) === sol.D) : true;
       const allCorrect = (isACorrect && isBCorrect && isCCorrect && isDCorrect);
       if (allCorrect) correctCount++;
 
@@ -500,7 +562,14 @@
 
     const total = state.questions.length;
     const percentage = Math.round((correctCount / total) * 100);
-    const setDisplayName = (state.selectedSet === 'hard_t2') ? 'Equations – Set 2' : 'Equations – Set 1';
+
+    let setDisplayName = 'Equations – Practice';
+    if (state.selectedSet === 'hard_t2') setDisplayName = 'Equations – Hard Set 2';
+    else if (state.selectedSet === 'hard_t1' || state.selectedSet === 'hard') setDisplayName = 'Equations – Hard Set 1';
+    else if (state.selectedSet.startsWith('medium_t')) {
+      const num = state.selectedSet.replace('medium_t', '');
+      setDisplayName = `Equations – Medium Set ${num}`;
+    }
 
     const submission = {
       id: 'sub-' + Date.now(),
@@ -548,7 +617,11 @@
       const sol = item.solution || {};
       const u = item.userAnswer || {};
       const fc = item.fieldCorrectness || {};
+      const hasD = (sol.D !== undefined);
       const steps = (item.stepByStep || []).map(s => `<li>${s}</li>`).join('');
+
+      const userDPill = hasD ? `<span class="${fc.D ? 'var-correct' : 'var-wrong'}">D = ${u.D !== '' && u.D !== undefined ? u.D : '—'}</span>` : '';
+      const solDPill = hasD ? `<span class="var-sol">D = ${sol.D}</span>` : '';
 
       card.innerHTML = `
         <div class="breakdown-header">
@@ -575,7 +648,7 @@
                 <span class="${fc.A ? 'var-correct' : 'var-wrong'}">A = ${u.A !== '' && u.A !== undefined ? u.A : '—'}</span>
                 <span class="${fc.B ? 'var-correct' : 'var-wrong'}">B = ${u.B !== '' && u.B !== undefined ? u.B : '—'}</span>
                 <span class="${fc.C ? 'var-correct' : 'var-wrong'}">C = ${u.C !== '' && u.C !== undefined ? u.C : '—'}</span>
-                <span class="${fc.D ? 'var-correct' : 'var-wrong'}">D = ${u.D !== '' && u.D !== undefined ? u.D : '—'}</span>
+                ${userDPill}
               </div>
             </div>
             <div class="correct-col">
@@ -584,7 +657,7 @@
                 <span class="var-sol">A = ${sol.A}</span>
                 <span class="var-sol">B = ${sol.B}</span>
                 <span class="var-sol">C = ${sol.C}</span>
-                <span class="var-sol">D = ${sol.D}</span>
+                ${solDPill}
               </div>
             </div>
           </div>

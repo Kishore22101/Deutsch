@@ -51,7 +51,17 @@
     const isFigures = (sub.subtest === 'figures') || rawKey.includes('figure') || (sub.details[0] && sub.details[0].subtest === 'figures');
 
     let diffKey = 'hard';
-    if (rawKey.includes('test 5') || rawKey.includes('test5') || rawKey === 'hard_t5') {
+    if (rawKey.includes('medium_t5') || (rawKey.includes('med') && rawKey.includes('5'))) {
+      diffKey = 'medium_t5';
+    } else if (rawKey.includes('medium_t4') || (rawKey.includes('med') && rawKey.includes('4'))) {
+      diffKey = 'medium_t4';
+    } else if (rawKey.includes('medium_t3') || (rawKey.includes('med') && rawKey.includes('3'))) {
+      diffKey = 'medium_t3';
+    } else if (rawKey.includes('medium_t2') || (rawKey.includes('med') && rawKey.includes('2'))) {
+      diffKey = 'medium_t2';
+    } else if (rawKey.includes('medium_t1') || (rawKey.includes('med') && rawKey.includes('1'))) {
+      diffKey = 'medium_t1';
+    } else if (rawKey.includes('test 5') || rawKey.includes('test5') || rawKey === 'hard_t5') {
       diffKey = 'hard_t5';
     } else if (rawKey.includes('test 4') || rawKey.includes('test4') || rawKey === 'hard_t4') {
       diffKey = 'hard_t4';
@@ -62,7 +72,7 @@
     } else if (rawKey.includes('test 1') || rawKey.includes('test1') || rawKey.includes('hard')) {
       diffKey = isFigures ? 'hard_t1' : 'hard';
     } else if (rawKey.includes('med')) {
-      diffKey = 'medium';
+      diffKey = 'medium_t1';
     } else if (rawKey.includes('easy')) {
       diffKey = 'easy';
     }

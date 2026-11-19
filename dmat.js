@@ -1280,7 +1280,7 @@
 
       const isHard = (sub.difficulty || '').toLowerCase().includes('hard');
       const diffCss = isHard ? 'hard' : ((sub.difficulty || '').toLowerCase().includes('medium') ? 'medium' : 'easy');
-      const timerCap = isHard ? '25m' : ((sub.difficulty || '').toLowerCase().includes('medium') ? '15m' : '10m');
+      const timerCap = (isHard || (sub.difficulty || '').toLowerCase().includes('medium')) ? '25m' : '10m';
 
       tr.innerHTML = `
         <td><span class="rank-num">#${idx + 1}</span></td>
