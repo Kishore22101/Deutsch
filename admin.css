@@ -327,13 +327,17 @@ html, body, .admin-body, .admin-main, .admin-layout, .container, #admin-dashboar
   text-align: left;
 }
 .admin-table th {
-  padding: 12px 14px;
+  padding: 12px 16px;
+  background: var(--bg-02);
+  color: var(--t-45);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: var(--t-45);
-  border-bottom: 1px solid var(--border-lo);
+  border-bottom: 1px solid var(--border-md);
+  position: sticky;
+  top: 0;
+  z-index: 10;
   white-space: nowrap;
 }
 .admin-table td {
@@ -852,8 +856,7 @@ html, body, .admin-body, .admin-main, .admin-layout, .container, #admin-dashboar
   .admin-table td:nth-child(3) { display: none; } /* Difficulty */
   .admin-table th:nth-child(6),
   .admin-table td:nth-child(6) { display: none; } /* Date (shown under name) */
-  .admin-table th:nth-child(7),
-  .admin-table td:nth-child(7) { display: none; } /* Status */
+  
   .admin-table th { font-size: 9px; padding: 10px 8px; }
   .admin-table td { font-size: 12px; padding: 10px 8px; }
 
@@ -938,3 +941,16 @@ html, body, .admin-body, .admin-main, .admin-layout, .container, #admin-dashboar
   line-height: 1.35;
 }
 
+
+
+/* Test Set Badge matching figure & math page */
+.badge-tag-diff {
+  display: inline-block;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-lo);
+  border-radius: var(--r-full);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--t-80);
+}

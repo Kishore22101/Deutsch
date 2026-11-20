@@ -339,40 +339,16 @@
 
     dom.tableBody.innerHTML = '';
     filtered.forEach((sub, idx) => {
-      const pctBadgeClass = sub.percentage >= 80 ? 'pill-green' : (sub.percentage >= 50 ? 'pill-yellow' : 'pill-red');
-      const isHard = (sub.difficulty || '').toLowerCase().includes('hard');
-      const diffClass = isHard ? 'hard' : ((sub.difficulty || '').toLowerCase().includes('medium') ? 'medium' : 'easy');
-      const timerCap = (isHard || (sub.difficulty || '').toLowerCase().includes('medium')) ? '25m' : '10m';
-
       const tr = document.createElement('tr');
       tr.innerHTML = `
-        <td><span class="rank-num">#${idx + 1}</span></td>
-        <td>
-          <div class="candidate-cell">
-            <span class="c-avatar">${getInitials(sub.candidateName)}</span>
-            <div class="c-info">
-              <span class="c-name">${escapeHtml(sub.candidateName)}</span>
-              <span class="c-date-mobile">${sub.submittedAt || ''}</span>
-            </div>
-          </div>
-        </td>
-        <td><span class="diff-tag ${diffClass}">${escapeHtml(sub.difficulty)} (${sub.questionCount || sub.total || 20}Q)</span></td>
-        <td>
-          <div class="score-cell">
-            <span class="score-badge ${pctBadgeClass}">${sub.score} / ${sub.total} (${sub.percentage}%)</span>
-          </div>
-        </td>
-        <td>
-          <div class="time-cell">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-timer"/></svg>
-            <strong>${sub.timeTakenFormatted || formatDuration(sub.timeTakenSeconds || 0)}</strong>
-            <span class="time-sub">/ ${timerCap}</span>
-          </div>
-        </td>
-        <td><span class="date-txt">${sub.submittedAt || 'Today'}</span></td>
-        <td><span class="status-badge">Completed</span></td>
-        <td>
-          <div class="admin-action-btns">
+        <td style="color:var(--t-45);">${idx + 1}</td>
+        <td><strong>${escapeHtml(sub.candidateName)}</strong></td>
+        <td><span class="badge-tag-diff">${escapeHtml(sub.difficulty)}</span></td>
+        <td><strong style="color:#10b981;">${sub.score} / ${sub.total}</strong> (${sub.percentage}%)</td>
+        <td>${sub.timeTakenFormatted || formatDuration(sub.timeTakenSeconds || 0)}</td>
+        <td style="color:var(--t-60); font-size:12px;">${sub.submittedAt || 'Today'}</td>
+        <td style="text-align:right;">
+          <div class="admin-action-btns" style="display:inline-flex; align-items:center; gap:6px;">
             <button class="btn-inspect" data-inspect-id="${sub.id}" title="Inspect full response sheet">Inspect</button>
             <button class="btn-del" data-del-id="${sub.id}" title="Delete record">✕</button>
           </div>

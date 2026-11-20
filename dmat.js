@@ -1272,36 +1272,14 @@
 
     filtered.forEach((sub, idx) => {
       const tr = document.createElement('tr');
-      const pctBadgeClass = sub.percentage >= 80 ? 'pill-green' : (sub.percentage >= 50 ? 'pill-yellow' : 'pill-red');
-
-      const isHard = (sub.difficulty || '').toLowerCase().includes('hard');
-      const diffCss = isHard ? 'hard' : ((sub.difficulty || '').toLowerCase().includes('medium') ? 'medium' : 'easy');
-      const timerCap = (isHard || (sub.difficulty || '').toLowerCase().includes('medium')) ? '25m' : '10m';
-
       tr.innerHTML = `
-        <td><span class="rank-num">#${idx + 1}</span></td>
-        <td>
-          <div class="candidate-cell">
-            <span class="c-avatar">${getInitials(sub.candidateName)}</span>
-            <span class="c-name">${escapeHtml(sub.candidateName)}</span>
-          </div>
-        </td>
-        <td><span class="diff-tag ${diffCss}">${escapeHtml(sub.difficulty)} (${sub.questionCount}Q)</span></td>
-        <td>
-          <div class="score-cell">
-            <span class="score-badge ${pctBadgeClass}">${sub.score}/${sub.total} (${sub.percentage}%)</span>
-          </div>
-        </td>
-        <td>
-          <div class="time-cell">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <strong>${sub.timeTakenFormatted}</strong>
-            <span class="time-sub">/ ${timerCap}</span>
-          </div>
-        </td>
-        <td><span class="date-txt">${sub.submittedAt}</span></td>
+        <td style="color:var(--t-45);">${idx + 1}</td>
+        <td><strong>${escapeHtml(sub.candidateName)}</strong></td>
+        <td><span class="badge-tag-diff">${escapeHtml(sub.difficulty)}</span></td>
+        <td><strong style="color:#10b981;">${sub.score} / ${sub.total}</strong> (${sub.percentage}%)</td>
+        <td>${sub.timeTakenFormatted}</td>
+        <td style="color:var(--t-60); font-size:12px;">${sub.submittedAt}</td>
       `;
-
       dom.subTableBody.appendChild(tr);
     });
   }
