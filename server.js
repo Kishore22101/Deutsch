@@ -24,7 +24,7 @@ const MIME_TYPES = {
 
 let localSubmissionsMemory = [
   {
-    "id": "sub-1795146286699",
+    "id": "sub-01-kishore-hard3",
     "candidateName": "Kishore",
     "difficulty": "Equations – Hard Set 3",
     "difficultyKey": "hard_t3",
@@ -154,7 +154,7 @@ let localSubmissionsMemory = [
       {
         "q": 8,
         "u": {
-          "A": "13",
+          "A": "15",
           "B": "4",
           "C": "7",
           "D": "11"
@@ -165,7 +165,7 @@ let localSubmissionsMemory = [
           "C": 7,
           "D": 11
         },
-        "c": false
+        "c": true
       },
       {
         "q": 9,
@@ -202,7 +202,7 @@ let localSubmissionsMemory = [
       {
         "q": 11,
         "u": {
-          "A": "8",
+          "A": "10",
           "B": "6",
           "C": "10",
           "D": "12"
@@ -213,7 +213,7 @@ let localSubmissionsMemory = [
           "C": 10,
           "D": 12
         },
-        "c": true
+        "c": false
       },
       {
         "q": 12,
@@ -362,7 +362,7 @@ let localSubmissionsMemory = [
     ]
   },
   {
-    "id": "sub-1795142069385",
+    "id": "sub-02-kishore-hard2",
     "candidateName": "Kishore",
     "difficulty": "Equations – Hard Set 2",
     "difficultyKey": "hard_t2",
@@ -396,10 +396,10 @@ let localSubmissionsMemory = [
       {
         "q": 2,
         "u": {
-          "A": "16",
-          "B": "6",
-          "C": "15",
-          "D": "16"
+          "A": "18",
+          "B": "7",
+          "C": "16",
+          "D": "18"
         },
         "s": {
           "A": 18,
@@ -407,7 +407,7 @@ let localSubmissionsMemory = [
           "C": 16,
           "D": 18
         },
-        "c": false
+        "c": true
       },
       {
         "q": 3,
@@ -476,7 +476,7 @@ let localSubmissionsMemory = [
       {
         "q": 7,
         "u": {
-          "A": "3",
+          "A": "5",
           "B": "3",
           "C": "7",
           "D": "12"
@@ -487,7 +487,7 @@ let localSubmissionsMemory = [
           "C": 7,
           "D": 12
         },
-        "c": true
+        "c": false
       },
       {
         "q": 8,
@@ -556,10 +556,10 @@ let localSubmissionsMemory = [
       {
         "q": 12,
         "u": {
-          "A": "9",
-          "B": "2",
-          "C": "4",
-          "D": "8"
+          "A": "17",
+          "B": "4",
+          "C": "6",
+          "D": "14"
         },
         "s": {
           "A": 17,
@@ -567,12 +567,12 @@ let localSubmissionsMemory = [
           "C": 6,
           "D": 14
         },
-        "c": false
+        "c": true
       },
       {
         "q": 13,
         "u": {
-          "A": "12",
+          "A": "14",
           "B": "3",
           "C": "8",
           "D": "12"
@@ -583,7 +583,7 @@ let localSubmissionsMemory = [
           "C": 8,
           "D": 12
         },
-        "c": true
+        "c": false
       },
       {
         "q": 14,
@@ -700,7 +700,7 @@ let localSubmissionsMemory = [
     ]
   },
   {
-    "id": "sub-1795116660000",
+    "id": "sub-03-dharun-hard1",
     "candidateName": "Dharun S",
     "difficulty": "Equations – Hard Set 1",
     "difficultyKey": "hard_t1",
@@ -1038,7 +1038,7 @@ let localSubmissionsMemory = [
     ]
   },
   {
-    "id": "sub-1795104300000",
+    "id": "sub-04-kishore-med1",
     "candidateName": "Kishore",
     "difficulty": "Equations – Medium Set 1",
     "difficultyKey": "medium_t1",
@@ -1356,7 +1356,7 @@ let localSubmissionsMemory = [
     ]
   },
   {
-    "id": "sub-1795101480000",
+    "id": "sub-05-kaviyan-hard1",
     "candidateName": "Kaviyan",
     "difficulty": "Equations – Hard Set 1",
     "difficultyKey": "hard_t1",
@@ -1694,7 +1694,7 @@ let localSubmissionsMemory = [
     ]
   },
   {
-    "id": "sub-1795096620000",
+    "id": "sub-06-sankara-hard1",
     "candidateName": "Sankara",
     "difficulty": "Equations – Hard Set 1",
     "difficultyKey": "hard_t1",
@@ -2032,7 +2032,7 @@ let localSubmissionsMemory = [
     ]
   },
   {
-    "id": "sub-1795095420000",
+    "id": "sub-07-sankara-med1",
     "candidateName": "Sankara",
     "difficulty": "Equations – Medium Set 1",
     "difficultyKey": "medium_t1",
@@ -2350,7 +2350,7 @@ let localSubmissionsMemory = [
     ]
   },
   {
-    "id": "sub-1795095300000",
+    "id": "sub-08-kishore-hard1",
     "candidateName": "Kishore",
     "difficulty": "Equations – Hard Set 1",
     "difficultyKey": "hard_t1",

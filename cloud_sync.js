@@ -10,13 +10,13 @@
 })(typeof window !== 'undefined' ? window : this, function () {
   'use strict';
 
-  const SYNC_TOPIC = 'dmat_deutsch_master_prep_2026_v3';
+  const SYNC_TOPIC = 'dmat_deutsch_master_prep_2026_v5';
   const NTFY_BASE = 'https://ntfy.sh/' + SYNC_TOPIC;
   const LOCAL_STORAGE_KEY = 'dmat_submissions';
   // Canonical Baseline Submissions (verified Nov 2026 tests)
   const BASE_SUBMISSIONS = [
   {
-    "id": "sub-1795146286699",
+    "id": "sub-01-kishore-hard3",
     "candidateName": "Kishore",
     "difficulty": "Equations – Hard Set 3",
     "difficultyKey": "hard_t3",
@@ -146,7 +146,7 @@
       {
         "q": 8,
         "u": {
-          "A": "13",
+          "A": "15",
           "B": "4",
           "C": "7",
           "D": "11"
@@ -157,7 +157,7 @@
           "C": 7,
           "D": 11
         },
-        "c": false
+        "c": true
       },
       {
         "q": 9,
@@ -194,7 +194,7 @@
       {
         "q": 11,
         "u": {
-          "A": "8",
+          "A": "10",
           "B": "6",
           "C": "10",
           "D": "12"
@@ -205,7 +205,7 @@
           "C": 10,
           "D": 12
         },
-        "c": true
+        "c": false
       },
       {
         "q": 12,
@@ -354,7 +354,7 @@
     ]
   },
   {
-    "id": "sub-1795142069385",
+    "id": "sub-02-kishore-hard2",
     "candidateName": "Kishore",
     "difficulty": "Equations – Hard Set 2",
     "difficultyKey": "hard_t2",
@@ -388,10 +388,10 @@
       {
         "q": 2,
         "u": {
-          "A": "16",
-          "B": "6",
-          "C": "15",
-          "D": "16"
+          "A": "18",
+          "B": "7",
+          "C": "16",
+          "D": "18"
         },
         "s": {
           "A": 18,
@@ -399,7 +399,7 @@
           "C": 16,
           "D": 18
         },
-        "c": false
+        "c": true
       },
       {
         "q": 3,
@@ -468,7 +468,7 @@
       {
         "q": 7,
         "u": {
-          "A": "3",
+          "A": "5",
           "B": "3",
           "C": "7",
           "D": "12"
@@ -479,7 +479,7 @@
           "C": 7,
           "D": 12
         },
-        "c": true
+        "c": false
       },
       {
         "q": 8,
@@ -548,10 +548,10 @@
       {
         "q": 12,
         "u": {
-          "A": "9",
-          "B": "2",
-          "C": "4",
-          "D": "8"
+          "A": "17",
+          "B": "4",
+          "C": "6",
+          "D": "14"
         },
         "s": {
           "A": 17,
@@ -559,12 +559,12 @@
           "C": 6,
           "D": 14
         },
-        "c": false
+        "c": true
       },
       {
         "q": 13,
         "u": {
-          "A": "12",
+          "A": "14",
           "B": "3",
           "C": "8",
           "D": "12"
@@ -575,7 +575,7 @@
           "C": 8,
           "D": 12
         },
-        "c": true
+        "c": false
       },
       {
         "q": 14,
@@ -692,7 +692,7 @@
     ]
   },
   {
-    "id": "sub-1795116660000",
+    "id": "sub-03-dharun-hard1",
     "candidateName": "Dharun S",
     "difficulty": "Equations – Hard Set 1",
     "difficultyKey": "hard_t1",
@@ -1030,7 +1030,7 @@
     ]
   },
   {
-    "id": "sub-1795104300000",
+    "id": "sub-04-kishore-med1",
     "candidateName": "Kishore",
     "difficulty": "Equations – Medium Set 1",
     "difficultyKey": "medium_t1",
@@ -1348,7 +1348,7 @@
     ]
   },
   {
-    "id": "sub-1795101480000",
+    "id": "sub-05-kaviyan-hard1",
     "candidateName": "Kaviyan",
     "difficulty": "Equations – Hard Set 1",
     "difficultyKey": "hard_t1",
@@ -1686,7 +1686,7 @@
     ]
   },
   {
-    "id": "sub-1795096620000",
+    "id": "sub-06-sankara-hard1",
     "candidateName": "Sankara",
     "difficulty": "Equations – Hard Set 1",
     "difficultyKey": "hard_t1",
@@ -2024,7 +2024,7 @@
     ]
   },
   {
-    "id": "sub-1795095420000",
+    "id": "sub-07-sankara-med1",
     "candidateName": "Sankara",
     "difficulty": "Equations – Medium Set 1",
     "difficultyKey": "medium_t1",
@@ -2342,7 +2342,7 @@
     ]
   },
   {
-    "id": "sub-1795095300000",
+    "id": "sub-08-kishore-hard1",
     "candidateName": "Kishore",
     "difficulty": "Equations – Hard Set 1",
     "difficultyKey": "hard_t1",
@@ -2681,7 +2681,15 @@
   }
 ];
 
-
+  // One-time fresh reset across all devices to guarantee exact 8 verified records
+  try {
+    if (localStorage.getItem('dmat_v5_synced') !== '1') {
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(BASE_SUBMISSIONS));
+      localStorage.removeItem('dmat_deleted_ids');
+      localStorage.removeItem('dmat_submissions_v1');
+      localStorage.setItem('dmat_v5_synced', '1');
+    }
+  } catch (e) {}
 
   let eventSource = null;
   let statusListeners = [];
@@ -2835,6 +2843,18 @@
 
   // Check if a record is a seeded sample/demo or requested to be removed
   const DELETED_KEY = 'dmat_deleted_ids';
+  // Automatically restore accidentally deleted verified records from tombstones
+  try {
+    const d = localStorage.getItem(DELETED_KEY);
+    if (d) {
+      const arr = JSON.parse(d);
+      const cleaned = arr.filter(id => id !== 'sub-1795095300000' && id !== 'sub-1795095300008');
+      if (cleaned.length !== arr.length) {
+        localStorage.setItem(DELETED_KEY, JSON.stringify(cleaned));
+      }
+    }
+  } catch(e) {}
+
   function isDeletedId(id) {
     try {
       const d = localStorage.getItem(DELETED_KEY);
