@@ -1346,6 +1346,7 @@ html, body {
   font-size: 11px;
   font-weight: 600;
   color: var(--t-80);
+  white-space: nowrap;
 }
 
 /* Real-Time Live Sync Status Pill */
@@ -1817,8 +1818,6 @@ body.exam-active .site-footer { display: none; }
   .search-wrap input { width: 100%; }
   .sub-export-btns { display: flex; }
   .sub-export-btns .btn-sm { flex: 1; justify-content: center; min-height: 38px; }
-  .sub-table th:nth-child(3),
-  .sub-table td:nth-child(3) { display: none; }
   .sub-table { font-size: 12px; }
 
   /* Info card */

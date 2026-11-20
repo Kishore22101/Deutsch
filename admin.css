@@ -852,8 +852,6 @@ html, body, .admin-body, .admin-main, .admin-layout, .container, #admin-dashboar
 
   /* Table: show candidate sub-date under name, hide Date column */
   .c-date-mobile { display: block; }
-  .admin-table th:nth-child(3),
-  .admin-table td:nth-child(3) { display: none; } /* Difficulty */
   .admin-table th:nth-child(6),
   .admin-table td:nth-child(6) { display: none; } /* Date (shown under name) */
   
@@ -953,4 +951,5 @@ html, body, .admin-body, .admin-main, .admin-layout, .container, #admin-dashboar
   font-size: 11px;
   font-weight: 600;
   color: var(--t-80);
+  white-space: nowrap;
 }
