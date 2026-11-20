@@ -148,14 +148,6 @@
   }
 
   function initSubmissionsStorage() {
-    // One-time clear of previous test entries
-    try {
-      if (localStorage.getItem('dmat_v3_cleared') !== '1') {
-        localStorage.removeItem('dmat_submissions');
-        localStorage.removeItem('dmat_submissions_v1');
-        localStorage.setItem('dmat_v3_cleared', '1');
-      }
-    } catch (e) {}
 
     // Purge any old demo/sample records or removed records from localStorage
     try {

@@ -767,6 +767,9 @@
   }
 
   function getSubmissions() {
+    if (typeof CloudSync !== 'undefined' && CloudSync.getLocalList) {
+      return CloudSync.getLocalList();
+    }
     try {
       const s = localStorage.getItem('dmat_submissions');
       if (s) {

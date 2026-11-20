@@ -135,11 +135,15 @@
 
         return false;
       };
-      const clean = Array.isArray(arr) ? arr.filter(x => !isSample(x)) : [];
+      let clean = Array.isArray(arr) ? arr.filter(x => !isSample(x)) : [];
+      if (clean.length === 0 && typeof CloudSync !== 'undefined' && CloudSync.getLocalList) {
+        clean = CloudSync.getLocalList();
+      }
       const b = document.getElementById('sub-count-badge');
       if (b) b.textContent = clean.length;
     }
   } catch(e) {}
 </script>
+<script src="cloud_sync.js"></script>
 </body>
 </html>
