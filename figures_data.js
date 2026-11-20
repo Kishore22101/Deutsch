@@ -161,10 +161,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "The red circle moves vertically in column 2 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The red circle moves vertically in column 2 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -323,10 +320,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "The black circle moves diagonally upwards to the right by 1 field per matrix along its diagonal until it hits the border, then bounces back.",
       "explanation": "The black circle moves diagonally upwards to the right by 1 field per matrix along its diagonal until it hits the border, then bounces back."
     },
@@ -485,10 +479,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "The blue circle moves along the outer border counter-clockwise by 1 field per matrix.",
       "explanation": "The blue circle moves along the outer border counter-clockwise by 1 field per matrix."
     },
@@ -647,10 +638,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "The green circle moves counter-clockwise within the four middle fields, 1 field per matrix.",
       "explanation": "The green circle moves counter-clockwise within the four middle fields, 1 field per matrix."
     },
@@ -809,10 +797,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "The blue L-shape moves horizontally in row 3 by 1 field per matrix and bounces off the left/right border. It rotates 90° clockwise from matrix to matrix.",
       "explanation": "The blue L-shape moves horizontally in row 3 by 1 field per matrix and bounces off the left/right border. It rotates 90° clockwise from matrix to matrix."
     },
@@ -1133,10 +1118,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "The black square moves along the 12 outer border fields counter-clockwise by 1 field per matrix.",
       "explanation": "The black square moves along the 12 outer border fields counter-clockwise by 1 field per matrix."
     },
@@ -1295,10 +1277,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "The diamond moves clockwise within the four central fields by 1 field per matrix, alternating color between blue and yellow.",
       "explanation": "The diamond moves clockwise within the four central fields by 1 field per matrix, alternating color between blue and yellow."
     },
@@ -1457,10 +1436,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "The yellow hexagon moves vertically in column 4 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The yellow hexagon moves vertically in column 4 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -1619,10 +1595,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "The pink triangle moves horizontally in row 1 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step.",
       "explanation": "The pink triangle moves horizontally in row 1 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step."
     },
@@ -1781,10 +1754,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "The black arrow moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The black arrow moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners."
     },
@@ -1943,10 +1913,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "The blue bracket moves along the 12 outer border fields clockwise by 1 field per matrix.",
       "explanation": "The blue bracket moves along the 12 outer border fields clockwise by 1 field per matrix."
     },
@@ -2105,10 +2072,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "The circle moves counter-clockwise within the four central fields by 1 field per matrix, alternating color between yellow and red.",
       "explanation": "The circle moves counter-clockwise within the four central fields by 1 field per matrix, alternating color between yellow and red."
     },
@@ -2267,10 +2231,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "The pink square moves vertically in column 3 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The pink square moves vertically in column 3 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -2429,10 +2390,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "The black diamond moves horizontally in row 3 by 1 field per matrix and bounces off borders.",
       "explanation": "The black diamond moves horizontally in row 3 by 1 field per matrix and bounces off borders."
     },
@@ -2591,10 +2549,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "The blue hexagon moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The blue hexagon moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners."
     },
@@ -2753,10 +2708,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "The yellow triangle moves along the 12 outer border fields counter-clockwise by 1 field per matrix.",
       "explanation": "The yellow triangle moves along the 12 outer border fields counter-clockwise by 1 field per matrix."
     },
@@ -2915,10 +2867,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "The arrow moves clockwise within the four central fields by 1 field per matrix, alternating color between pink and pink.",
       "explanation": "The arrow moves clockwise within the four central fields by 1 field per matrix, alternating color between pink and pink."
     },
@@ -3077,10 +3026,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "The black bracket moves vertically in column 2 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The black bracket moves vertically in column 2 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -3239,10 +3185,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "The blue circle moves horizontally in row 1 by 1 field per matrix and bounces off borders.",
       "explanation": "The blue circle moves horizontally in row 1 by 1 field per matrix and bounces off borders."
     }
@@ -3403,10 +3346,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "The orange hexagon moves along the 12 outer border fields counter-clockwise by 1 field per matrix.",
       "explanation": "The orange hexagon moves along the 12 outer border fields counter-clockwise by 1 field per matrix."
     },
@@ -3565,10 +3505,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "The triangle moves clockwise within the four central fields by 1 field per matrix, alternating color between white and pink.",
       "explanation": "The triangle moves clockwise within the four central fields by 1 field per matrix, alternating color between white and pink."
     },
@@ -3727,10 +3664,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "The red arrow moves vertically in column 2 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The red arrow moves vertically in column 2 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -3889,10 +3823,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "The green bracket moves horizontally in row 1 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step.",
       "explanation": "The green bracket moves horizontally in row 1 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step."
     },
@@ -4051,10 +3982,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "The orange circle moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The orange circle moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners."
     },
@@ -4213,10 +4141,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "The white square moves along the 12 outer border fields clockwise by 1 field per matrix.",
       "explanation": "The white square moves along the 12 outer border fields clockwise by 1 field per matrix."
     },
@@ -4375,10 +4300,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "The diamond moves counter-clockwise within the four central fields by 1 field per matrix, alternating color between red and green.",
       "explanation": "The diamond moves counter-clockwise within the four central fields by 1 field per matrix, alternating color between red and green."
     },
@@ -4537,10 +4459,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "The green hexagon moves vertically in column 1 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The green hexagon moves vertically in column 1 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -4699,10 +4618,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "The orange triangle moves horizontally in row 3 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step.",
       "explanation": "The orange triangle moves horizontally in row 3 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step."
     },
@@ -4861,10 +4777,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "The white arrow moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The white arrow moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners."
     },
@@ -5023,10 +4936,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "The red bracket moves along the 12 outer border fields counter-clockwise by 1 field per matrix.",
       "explanation": "The red bracket moves along the 12 outer border fields counter-clockwise by 1 field per matrix."
     },
@@ -5347,10 +5257,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "The orange square moves vertically in column 4 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The orange square moves vertically in column 4 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -5509,10 +5416,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "The white diamond moves horizontally in row 1 by 1 field per matrix and bounces off borders.",
       "explanation": "The white diamond moves horizontally in row 1 by 1 field per matrix and bounces off borders."
     },
@@ -5671,10 +5575,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "The red hexagon moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The red hexagon moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners."
     },
@@ -5833,10 +5734,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "The green triangle moves along the 12 outer border fields clockwise by 1 field per matrix.",
       "explanation": "The green triangle moves along the 12 outer border fields clockwise by 1 field per matrix."
     },
@@ -5995,10 +5893,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "The arrow moves counter-clockwise within the four central fields by 1 field per matrix, alternating color between orange and orange.",
       "explanation": "The arrow moves counter-clockwise within the four central fields by 1 field per matrix, alternating color between orange and orange."
     },
@@ -6157,10 +6052,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "The white bracket moves vertically in column 3 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The white bracket moves vertically in column 3 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -6319,10 +6211,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "The red circle moves horizontally in row 3 by 1 field per matrix and bounces off borders.",
       "explanation": "The red circle moves horizontally in row 3 by 1 field per matrix and bounces off borders."
     },
@@ -6481,10 +6370,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "The green square moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The green square moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners."
     }
@@ -6645,10 +6531,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "The triangle moves counter-clockwise within the four central fields by 1 field per matrix, alternating color between pink and orange.",
       "explanation": "The triangle moves counter-clockwise within the four central fields by 1 field per matrix, alternating color between pink and orange."
     },
@@ -6807,10 +6690,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "The black arrow moves vertically in column 3 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The black arrow moves vertically in column 3 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -6969,10 +6849,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "The blue bracket moves horizontally in row 3 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step.",
       "explanation": "The blue bracket moves horizontally in row 3 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step."
     },
@@ -7131,10 +7008,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "The yellow circle moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The yellow circle moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners."
     },
@@ -7293,10 +7167,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "The pink square moves along the 12 outer border fields counter-clockwise by 1 field per matrix.",
       "explanation": "The pink square moves along the 12 outer border fields counter-clockwise by 1 field per matrix."
     },
@@ -7455,10 +7326,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "The diamond moves clockwise within the four central fields by 1 field per matrix, alternating color between black and blue.",
       "explanation": "The diamond moves clockwise within the four central fields by 1 field per matrix, alternating color between black and blue."
     },
@@ -7617,10 +7485,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "The blue hexagon moves vertically in column 2 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The blue hexagon moves vertically in column 2 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -7779,10 +7644,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "The yellow triangle moves horizontally in row 1 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step.",
       "explanation": "The yellow triangle moves horizontally in row 1 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step."
     },
@@ -7941,10 +7803,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "The pink arrow moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The pink arrow moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners."
     },
@@ -8103,10 +7962,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "The black bracket moves along the 12 outer border fields clockwise by 1 field per matrix.",
       "explanation": "The black bracket moves along the 12 outer border fields clockwise by 1 field per matrix."
     },
@@ -8427,10 +8283,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "The yellow square moves vertically in column 1 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The yellow square moves vertically in column 1 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -8589,10 +8442,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "The pink diamond moves horizontally in row 3 by 1 field per matrix and bounces off borders.",
       "explanation": "The pink diamond moves horizontally in row 3 by 1 field per matrix and bounces off borders."
     },
@@ -8751,10 +8601,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "The black hexagon moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The black hexagon moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners."
     },
@@ -8913,10 +8760,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "The blue triangle moves along the 12 outer border fields counter-clockwise by 1 field per matrix.",
       "explanation": "The blue triangle moves along the 12 outer border fields counter-clockwise by 1 field per matrix."
     },
@@ -9075,10 +8919,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "The arrow moves clockwise within the four central fields by 1 field per matrix, alternating color between yellow and yellow.",
       "explanation": "The arrow moves clockwise within the four central fields by 1 field per matrix, alternating color between yellow and yellow."
     },
@@ -9237,10 +9078,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "The pink bracket moves vertically in column 4 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The pink bracket moves vertically in column 4 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -9399,10 +9237,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "The black circle moves horizontally in row 1 by 1 field per matrix and bounces off borders.",
       "explanation": "The black circle moves horizontally in row 1 by 1 field per matrix and bounces off borders."
     },
@@ -9561,10 +9396,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "The blue square moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The blue square moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners."
     },
@@ -9723,10 +9555,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "The yellow diamond moves along the 12 outer border fields clockwise by 1 field per matrix.",
       "explanation": "The yellow diamond moves along the 12 outer border fields clockwise by 1 field per matrix."
     }
@@ -9887,10 +9716,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "The white arrow moves vertically in column 4 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The white arrow moves vertically in column 4 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -10049,10 +9875,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "The red bracket moves horizontally in row 1 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step.",
       "explanation": "The red bracket moves horizontally in row 1 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step."
     },
@@ -10211,10 +10034,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "The green circle moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The green circle moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners."
     },
@@ -10373,10 +10193,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "The orange square moves along the 12 outer border fields clockwise by 1 field per matrix.",
       "explanation": "The orange square moves along the 12 outer border fields clockwise by 1 field per matrix."
     },
@@ -10535,10 +10352,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "The diamond moves counter-clockwise within the four central fields by 1 field per matrix, alternating color between white and red.",
       "explanation": "The diamond moves counter-clockwise within the four central fields by 1 field per matrix, alternating color between white and red."
     },
@@ -10697,10 +10511,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "The red hexagon moves vertically in column 3 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The red hexagon moves vertically in column 3 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -10859,10 +10670,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "The green triangle moves horizontally in row 3 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step.",
       "explanation": "The green triangle moves horizontally in row 3 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step."
     },
@@ -11021,10 +10829,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "The orange arrow moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The orange arrow moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners."
     },
@@ -11183,10 +10988,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "The white bracket moves along the 12 outer border fields counter-clockwise by 1 field per matrix.",
       "explanation": "The white bracket moves along the 12 outer border fields counter-clockwise by 1 field per matrix."
     },
@@ -11345,10 +11147,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "The circle moves clockwise within the four central fields by 1 field per matrix, alternating color between red and pink.",
       "explanation": "The circle moves clockwise within the four central fields by 1 field per matrix, alternating color between red and pink."
     },
@@ -11507,10 +11306,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "The green square moves vertically in column 2 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The green square moves vertically in column 2 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -11669,10 +11465,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "The orange diamond moves horizontally in row 1 by 1 field per matrix and bounces off borders.",
       "explanation": "The orange diamond moves horizontally in row 1 by 1 field per matrix and bounces off borders."
     },
@@ -11993,10 +11786,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "The red triangle moves along the 12 outer border fields clockwise by 1 field per matrix.",
       "explanation": "The red triangle moves along the 12 outer border fields clockwise by 1 field per matrix."
     },
@@ -12317,10 +12107,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "The orange bracket moves vertically in column 1 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The orange bracket moves vertically in column 1 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -12479,10 +12266,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "The white circle moves horizontally in row 3 by 1 field per matrix and bounces off borders.",
       "explanation": "The white circle moves horizontally in row 3 by 1 field per matrix and bounces off borders."
     },
@@ -12641,10 +12425,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "The red square moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The red square moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners."
     },
@@ -12803,10 +12584,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "The green diamond moves along the 12 outer border fields counter-clockwise by 1 field per matrix.",
       "explanation": "The green diamond moves along the 12 outer border fields counter-clockwise by 1 field per matrix."
     },
@@ -12965,10 +12743,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "The hexagon moves clockwise within the four central fields by 1 field per matrix, alternating color between orange and black.",
       "explanation": "The hexagon moves clockwise within the four central fields by 1 field per matrix, alternating color between orange and black."
     }
@@ -13129,10 +12904,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "The black bracket moves horizontally in row 3 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step.",
       "explanation": "The black bracket moves horizontally in row 3 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step."
     },
@@ -13453,10 +13225,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "The yellow square moves along the 12 outer border fields counter-clockwise by 1 field per matrix.",
       "explanation": "The yellow square moves along the 12 outer border fields counter-clockwise by 1 field per matrix."
     },
@@ -13777,10 +13546,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "The black hexagon moves vertically in column 4 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The black hexagon moves vertically in column 4 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -13939,10 +13705,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "The blue triangle moves horizontally in row 1 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step.",
       "explanation": "The blue triangle moves horizontally in row 1 by 1 field per matrix and bounces off borders. It rotates 90° clockwise each step."
     },
@@ -14101,10 +13864,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "The yellow arrow moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The yellow arrow moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners."
     },
@@ -14263,10 +14023,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "The pink bracket moves along the 12 outer border fields clockwise by 1 field per matrix.",
       "explanation": "The pink bracket moves along the 12 outer border fields clockwise by 1 field per matrix."
     },
@@ -14425,10 +14182,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "The circle moves counter-clockwise within the four central fields by 1 field per matrix, alternating color between black and orange.",
       "explanation": "The circle moves counter-clockwise within the four central fields by 1 field per matrix, alternating color between black and orange."
     },
@@ -14587,10 +14341,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "The blue square moves vertically in column 3 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The blue square moves vertically in column 3 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -14749,10 +14500,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "The yellow diamond moves horizontally in row 3 by 1 field per matrix and bounces off borders.",
       "explanation": "The yellow diamond moves horizontally in row 3 by 1 field per matrix and bounces off borders."
     },
@@ -14911,10 +14659,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "The pink hexagon moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The pink hexagon moves along the main diagonal (top-left to bottom-right) by 1 field per matrix and bounces back at the corners."
     },
@@ -15397,10 +15142,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "The yellow bracket moves vertically in column 2 by 1 field per matrix and bounces off the upper and lower borders.",
       "explanation": "The yellow bracket moves vertically in column 2 by 1 field per matrix and bounces off the upper and lower borders."
     },
@@ -15559,10 +15301,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "The pink circle moves horizontally in row 1 by 1 field per matrix and bounces off borders.",
       "explanation": "The pink circle moves horizontally in row 1 by 1 field per matrix and bounces off borders."
     },
@@ -15721,10 +15460,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "The black square moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners.",
       "explanation": "The black square moves along the anti-diagonal (bottom-left to top-right) by 1 field per matrix and bounces back at the corners."
     },
@@ -15883,10 +15619,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "The blue diamond moves along the 12 outer border fields clockwise by 1 field per matrix.",
       "explanation": "The blue diamond moves along the 12 outer border fields clockwise by 1 field per matrix."
     },
@@ -16045,10 +15778,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "The hexagon moves counter-clockwise within the four central fields by 1 field per matrix, alternating color between yellow and white.",
       "explanation": "The hexagon moves counter-clockwise within the four central fields by 1 field per matrix, alternating color between yellow and white."
     },
@@ -16595,10 +16325,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The pink circle moves along the outer border clockwise by 2 fields per matrix and alternates between pink and white.\n• The green hexagon moves counter-clockwise within the four middle fields, 1 field per matrix.\n• The blue arrow moves horizontally in row 3 by 1 field per matrix, bouncing off borders, and rotates 90° clockwise.",
       "explanation": "• The pink circle moves along the outer border clockwise by 2 fields per matrix and alternates between pink and white.\n• The green hexagon moves counter-clockwise within the four middle fields, 1 field per matrix.\n• The blue arrow moves horizontally in row 3 by 1 field per matrix, bouncing off borders, and rotates 90° clockwise."
     },
@@ -16981,10 +16708,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The black hexagon moves 1 field per matrix in the direction cycle: down, right, up, left.\n• The white arrow moves diagonally by 1 field per matrix, bouncing at the border, and rotates 90° counter-clockwise.\n• The orange square moves vertically in column 2 by 1 field per matrix, bouncing off borders, and alternates between orange and pink.",
       "explanation": "• The black hexagon moves 1 field per matrix in the direction cycle: down, right, up, left.\n• The white arrow moves diagonally by 1 field per matrix, bouncing at the border, and rotates 90° counter-clockwise.\n• The orange square moves vertically in column 2 by 1 field per matrix, bouncing off borders, and alternates between orange and pink."
     },
@@ -17367,10 +17091,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The white L-shape moves along the outer border counter-clockwise by 1 field per matrix and rotates 90° clockwise.\n• The blue circle moves horizontally in row 1 by 1 field per matrix, bouncing off borders, cycling blue ➔ black ➔ red.\n• The pink square moves 1 field per matrix in the direction cycle: right, down, left, up.",
       "explanation": "• The white L-shape moves along the outer border counter-clockwise by 1 field per matrix and rotates 90° clockwise.\n• The blue circle moves horizontally in row 1 by 1 field per matrix, bouncing off borders, cycling blue ➔ black ➔ red.\n• The pink square moves 1 field per matrix in the direction cycle: right, down, left, up."
     },
@@ -17753,10 +17474,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The white diamond moves diagonally downwards to the right by 1 field per matrix, bouncing off borders, and alternates white and pink.\n• The yellow L-shape moves vertically in column 4 by 1 field per matrix, bouncing off borders, and rotates 90° clockwise.\n• The red square moves along the outer border clockwise by 1 field per matrix.",
       "explanation": "• The white diamond moves diagonally downwards to the right by 1 field per matrix, bouncing off borders, and alternates white and pink.\n• The yellow L-shape moves vertically in column 4 by 1 field per matrix, bouncing off borders, and rotates 90° clockwise.\n• The red square moves along the outer border clockwise by 1 field per matrix."
     },
@@ -18139,10 +17857,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The red diamond moves clockwise within the four middle fields by 1 field per matrix and alternates between red and orange.\n• The green L-shape moves counter-clockwise along the outer border by 2 fields per matrix and rotates 90° counter-clockwise.\n• The white circle moves horizontally in row 1 by 1 field per matrix, bouncing off borders.",
       "explanation": "• The red diamond moves clockwise within the four middle fields by 1 field per matrix and alternates between red and orange.\n• The green L-shape moves counter-clockwise along the outer border by 2 fields per matrix and rotates 90° counter-clockwise.\n• The white circle moves horizontally in row 1 by 1 field per matrix, bouncing off borders."
     },
@@ -18525,10 +18240,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The bracket moves along the outer border by 2 field(s) per matrix with color alternation.\n• The red square tracks the four central cells by 1 field per matrix.\n• The green hexagon bounces in row 1 by 1 field per matrix.",
       "explanation": "• The bracket moves along the outer border by 2 field(s) per matrix with color alternation.\n• The red square tracks the four central cells by 1 field per matrix.\n• The green hexagon bounces in row 1 by 1 field per matrix."
     },
@@ -18911,10 +18623,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The blue diamond tracks the anti-diagonal by 1 field per matrix.\n• The yellow triangle bounces in column 2 by 1 field per matrix.",
       "explanation": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The blue diamond tracks the anti-diagonal by 1 field per matrix.\n• The yellow triangle bounces in column 2 by 1 field per matrix."
     },
@@ -19297,10 +19006,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green hexagon tracks the four central cells by 1 field per matrix.\n• The orange arrow bounces in row 1 by 1 field per matrix.",
       "explanation": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green hexagon tracks the four central cells by 1 field per matrix.\n• The orange arrow bounces in row 1 by 1 field per matrix."
     },
@@ -19683,10 +19389,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The diamond moves along the outer border by 2 field(s) per matrix with color alternation.\n• The yellow triangle tracks the anti-diagonal by 1 field per matrix.\n• The pink bracket bounces in column 4 by 1 field per matrix.",
       "explanation": "• The diamond moves along the outer border by 2 field(s) per matrix with color alternation.\n• The yellow triangle tracks the anti-diagonal by 1 field per matrix.\n• The pink bracket bounces in column 4 by 1 field per matrix."
     },
@@ -20069,10 +19772,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange arrow tracks the four central cells by 1 field per matrix.\n• The white circle bounces in row 1 by 1 field per matrix.",
       "explanation": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange arrow tracks the four central cells by 1 field per matrix.\n• The white circle bounces in row 1 by 1 field per matrix."
     },
@@ -20841,10 +20541,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The arrow moves along the outer border by 2 field(s) per matrix with color alternation.\n• The white circle tracks the four central cells by 1 field per matrix.\n• The red diamond bounces in row 1 by 1 field per matrix.",
       "explanation": "• The arrow moves along the outer border by 2 field(s) per matrix with color alternation.\n• The white circle tracks the four central cells by 1 field per matrix.\n• The red diamond bounces in row 1 by 1 field per matrix."
     },
@@ -21227,10 +20924,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black square tracks the anti-diagonal by 1 field per matrix.\n• The blue hexagon bounces in column 4 by 1 field per matrix.",
       "explanation": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black square tracks the anti-diagonal by 1 field per matrix.\n• The blue hexagon bounces in column 4 by 1 field per matrix."
     },
@@ -21613,10 +21307,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The red diamond tracks the four central cells by 1 field per matrix.\n• The green triangle bounces in row 1 by 1 field per matrix.",
       "explanation": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The red diamond tracks the four central cells by 1 field per matrix.\n• The green triangle bounces in row 1 by 1 field per matrix."
     },
@@ -21999,10 +21690,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The square moves along the outer border by 2 field(s) per matrix with color alternation.\n• The blue hexagon tracks the anti-diagonal by 1 field per matrix.\n• The yellow arrow bounces in column 2 by 1 field per matrix.",
       "explanation": "• The square moves along the outer border by 2 field(s) per matrix with color alternation.\n• The blue hexagon tracks the anti-diagonal by 1 field per matrix.\n• The yellow arrow bounces in column 2 by 1 field per matrix."
     },
@@ -22385,10 +22073,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The diamond moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green triangle tracks the four central cells by 1 field per matrix.\n• The orange bracket bounces in row 1 by 1 field per matrix.",
       "explanation": "• The diamond moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green triangle tracks the four central cells by 1 field per matrix.\n• The orange bracket bounces in row 1 by 1 field per matrix."
     },
@@ -22771,10 +22456,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow arrow tracks the anti-diagonal by 1 field per matrix.\n• The pink circle bounces in column 4 by 1 field per matrix.",
       "explanation": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow arrow tracks the anti-diagonal by 1 field per matrix.\n• The pink circle bounces in column 4 by 1 field per matrix."
     },
@@ -23157,10 +22839,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The triangle moves along the outer border by 2 field(s) per matrix with color alternation.\n• The orange bracket tracks the four central cells by 1 field per matrix.\n• The white square bounces in row 1 by 1 field per matrix.",
       "explanation": "• The triangle moves along the outer border by 2 field(s) per matrix with color alternation.\n• The orange bracket tracks the four central cells by 1 field per matrix.\n• The white square bounces in row 1 by 1 field per matrix."
     },
@@ -23543,10 +23222,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink circle tracks the anti-diagonal by 1 field per matrix.\n• The black diamond bounces in column 2 by 1 field per matrix.",
       "explanation": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink circle tracks the anti-diagonal by 1 field per matrix.\n• The black diamond bounces in column 2 by 1 field per matrix."
     },
@@ -23929,10 +23605,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white square tracks the four central cells by 1 field per matrix.\n• The red hexagon bounces in row 1 by 1 field per matrix.",
       "explanation": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white square tracks the four central cells by 1 field per matrix.\n• The red hexagon bounces in row 1 by 1 field per matrix."
     }
@@ -24317,10 +23990,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow hexagon tracks the anti-diagonal by 1 field per matrix.\n• The pink arrow bounces in column 4 by 1 field per matrix.",
       "explanation": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow hexagon tracks the anti-diagonal by 1 field per matrix.\n• The pink arrow bounces in column 4 by 1 field per matrix."
     },
@@ -24703,10 +24373,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The diamond moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange triangle tracks the four central cells by 1 field per matrix.\n• The white bracket bounces in row 1 by 1 field per matrix.",
       "explanation": "• The diamond moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange triangle tracks the four central cells by 1 field per matrix.\n• The white bracket bounces in row 1 by 1 field per matrix."
     },
@@ -25089,10 +24756,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The hexagon moves along the outer border by 2 field(s) per matrix with color alternation.\n• The pink arrow tracks the anti-diagonal by 1 field per matrix.\n• The black circle bounces in column 2 by 1 field per matrix.",
       "explanation": "• The hexagon moves along the outer border by 2 field(s) per matrix with color alternation.\n• The pink arrow tracks the anti-diagonal by 1 field per matrix.\n• The black circle bounces in column 2 by 1 field per matrix."
     },
@@ -25475,10 +25139,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The triangle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white bracket tracks the four central cells by 1 field per matrix.\n• The red square bounces in row 1 by 1 field per matrix.",
       "explanation": "• The triangle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white bracket tracks the four central cells by 1 field per matrix.\n• The red square bounces in row 1 by 1 field per matrix."
     },
@@ -25861,10 +25522,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black circle tracks the anti-diagonal by 1 field per matrix.\n• The blue diamond bounces in column 4 by 1 field per matrix.",
       "explanation": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black circle tracks the anti-diagonal by 1 field per matrix.\n• The blue diamond bounces in column 4 by 1 field per matrix."
     },
@@ -26247,10 +25905,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The bracket moves along the outer border by 2 field(s) per matrix with color alternation.\n• The red square tracks the four central cells by 1 field per matrix.\n• The green hexagon bounces in row 1 by 1 field per matrix.",
       "explanation": "• The bracket moves along the outer border by 2 field(s) per matrix with color alternation.\n• The red square tracks the four central cells by 1 field per matrix.\n• The green hexagon bounces in row 1 by 1 field per matrix."
     },
@@ -26633,10 +26288,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The blue diamond tracks the anti-diagonal by 1 field per matrix.\n• The yellow triangle bounces in column 2 by 1 field per matrix.",
       "explanation": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The blue diamond tracks the anti-diagonal by 1 field per matrix.\n• The yellow triangle bounces in column 2 by 1 field per matrix."
     },
@@ -27019,10 +26671,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green hexagon tracks the four central cells by 1 field per matrix.\n• The orange arrow bounces in row 1 by 1 field per matrix.",
       "explanation": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green hexagon tracks the four central cells by 1 field per matrix.\n• The orange arrow bounces in row 1 by 1 field per matrix."
     },
@@ -27405,10 +27054,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "• The diamond moves along the outer border by 2 field(s) per matrix with color alternation.\n• The yellow triangle tracks the anti-diagonal by 1 field per matrix.\n• The pink bracket bounces in column 4 by 1 field per matrix.",
       "explanation": "• The diamond moves along the outer border by 2 field(s) per matrix with color alternation.\n• The yellow triangle tracks the anti-diagonal by 1 field per matrix.\n• The pink bracket bounces in column 4 by 1 field per matrix."
     },
@@ -27791,10 +27437,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange arrow tracks the four central cells by 1 field per matrix.\n• The white circle bounces in row 1 by 1 field per matrix.",
       "explanation": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange arrow tracks the four central cells by 1 field per matrix.\n• The white circle bounces in row 1 by 1 field per matrix."
     },
@@ -28177,10 +27820,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The triangle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink bracket tracks the anti-diagonal by 1 field per matrix.\n• The black square bounces in column 2 by 1 field per matrix.",
       "explanation": "• The triangle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink bracket tracks the anti-diagonal by 1 field per matrix.\n• The black square bounces in column 2 by 1 field per matrix."
     },
@@ -28563,10 +28203,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The arrow moves along the outer border by 2 field(s) per matrix with color alternation.\n• The white circle tracks the four central cells by 1 field per matrix.\n• The red diamond bounces in row 1 by 1 field per matrix.",
       "explanation": "• The arrow moves along the outer border by 2 field(s) per matrix with color alternation.\n• The white circle tracks the four central cells by 1 field per matrix.\n• The red diamond bounces in row 1 by 1 field per matrix."
     },
@@ -28949,10 +28586,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black square tracks the anti-diagonal by 1 field per matrix.\n• The blue hexagon bounces in column 4 by 1 field per matrix.",
       "explanation": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black square tracks the anti-diagonal by 1 field per matrix.\n• The blue hexagon bounces in column 4 by 1 field per matrix."
     },
@@ -29335,10 +28969,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The red diamond tracks the four central cells by 1 field per matrix.\n• The green triangle bounces in row 1 by 1 field per matrix.",
       "explanation": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The red diamond tracks the four central cells by 1 field per matrix.\n• The green triangle bounces in row 1 by 1 field per matrix."
     },
@@ -29721,10 +29352,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The square moves along the outer border by 2 field(s) per matrix with color alternation.\n• The blue hexagon tracks the anti-diagonal by 1 field per matrix.\n• The yellow arrow bounces in column 2 by 1 field per matrix.",
       "explanation": "• The square moves along the outer border by 2 field(s) per matrix with color alternation.\n• The blue hexagon tracks the anti-diagonal by 1 field per matrix.\n• The yellow arrow bounces in column 2 by 1 field per matrix."
     },
@@ -30107,10 +29735,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The diamond moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green triangle tracks the four central cells by 1 field per matrix.\n• The orange bracket bounces in row 1 by 1 field per matrix.",
       "explanation": "• The diamond moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green triangle tracks the four central cells by 1 field per matrix.\n• The orange bracket bounces in row 1 by 1 field per matrix."
     },
@@ -30493,10 +30118,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow arrow tracks the anti-diagonal by 1 field per matrix.\n• The pink circle bounces in column 4 by 1 field per matrix.",
       "explanation": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow arrow tracks the anti-diagonal by 1 field per matrix.\n• The pink circle bounces in column 4 by 1 field per matrix."
     },
@@ -30879,10 +30501,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The triangle moves along the outer border by 2 field(s) per matrix with color alternation.\n• The orange bracket tracks the four central cells by 1 field per matrix.\n• The white square bounces in row 1 by 1 field per matrix.",
       "explanation": "• The triangle moves along the outer border by 2 field(s) per matrix with color alternation.\n• The orange bracket tracks the four central cells by 1 field per matrix.\n• The white square bounces in row 1 by 1 field per matrix."
     },
@@ -31265,10 +30884,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink circle tracks the anti-diagonal by 1 field per matrix.\n• The black diamond bounces in column 2 by 1 field per matrix.",
       "explanation": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink circle tracks the anti-diagonal by 1 field per matrix.\n• The black diamond bounces in column 2 by 1 field per matrix."
     },
@@ -31651,10 +31267,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white square tracks the four central cells by 1 field per matrix.\n• The red hexagon bounces in row 1 by 1 field per matrix.",
       "explanation": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white square tracks the four central cells by 1 field per matrix.\n• The red hexagon bounces in row 1 by 1 field per matrix."
     }
@@ -32039,10 +31652,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow hexagon tracks the anti-diagonal by 1 field per matrix.\n• The pink arrow bounces in column 4 by 1 field per matrix.",
       "explanation": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow hexagon tracks the anti-diagonal by 1 field per matrix.\n• The pink arrow bounces in column 4 by 1 field per matrix."
     },
@@ -32811,10 +32421,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "• The hexagon moves along the outer border by 2 field(s) per matrix with color alternation.\n• The pink arrow tracks the anti-diagonal by 1 field per matrix.\n• The black circle bounces in column 2 by 1 field per matrix.",
       "explanation": "• The hexagon moves along the outer border by 2 field(s) per matrix with color alternation.\n• The pink arrow tracks the anti-diagonal by 1 field per matrix.\n• The black circle bounces in column 2 by 1 field per matrix."
     },
@@ -33197,10 +32804,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The triangle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white bracket tracks the four central cells by 1 field per matrix.\n• The red square bounces in row 1 by 1 field per matrix.",
       "explanation": "• The triangle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white bracket tracks the four central cells by 1 field per matrix.\n• The red square bounces in row 1 by 1 field per matrix."
     },
@@ -33583,10 +33187,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black circle tracks the anti-diagonal by 1 field per matrix.\n• The blue diamond bounces in column 4 by 1 field per matrix.",
       "explanation": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black circle tracks the anti-diagonal by 1 field per matrix.\n• The blue diamond bounces in column 4 by 1 field per matrix."
     },
@@ -33969,10 +33570,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The bracket moves along the outer border by 2 field(s) per matrix with color alternation.\n• The red square tracks the four central cells by 1 field per matrix.\n• The green hexagon bounces in row 1 by 1 field per matrix.",
       "explanation": "• The bracket moves along the outer border by 2 field(s) per matrix with color alternation.\n• The red square tracks the four central cells by 1 field per matrix.\n• The green hexagon bounces in row 1 by 1 field per matrix."
     },
@@ -34355,10 +33953,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The blue diamond tracks the anti-diagonal by 1 field per matrix.\n• The yellow triangle bounces in column 2 by 1 field per matrix.",
       "explanation": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The blue diamond tracks the anti-diagonal by 1 field per matrix.\n• The yellow triangle bounces in column 2 by 1 field per matrix."
     },
@@ -34741,10 +34336,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green hexagon tracks the four central cells by 1 field per matrix.\n• The orange arrow bounces in row 1 by 1 field per matrix.",
       "explanation": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green hexagon tracks the four central cells by 1 field per matrix.\n• The orange arrow bounces in row 1 by 1 field per matrix."
     },
@@ -35127,10 +34719,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The diamond moves along the outer border by 2 field(s) per matrix with color alternation.\n• The yellow triangle tracks the anti-diagonal by 1 field per matrix.\n• The pink bracket bounces in column 4 by 1 field per matrix.",
       "explanation": "• The diamond moves along the outer border by 2 field(s) per matrix with color alternation.\n• The yellow triangle tracks the anti-diagonal by 1 field per matrix.\n• The pink bracket bounces in column 4 by 1 field per matrix."
     },
@@ -35513,10 +35102,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange arrow tracks the four central cells by 1 field per matrix.\n• The white circle bounces in row 1 by 1 field per matrix.",
       "explanation": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange arrow tracks the four central cells by 1 field per matrix.\n• The white circle bounces in row 1 by 1 field per matrix."
     },
@@ -35899,10 +35485,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The triangle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink bracket tracks the anti-diagonal by 1 field per matrix.\n• The black square bounces in column 2 by 1 field per matrix.",
       "explanation": "• The triangle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink bracket tracks the anti-diagonal by 1 field per matrix.\n• The black square bounces in column 2 by 1 field per matrix."
     },
@@ -36285,10 +35868,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The arrow moves along the outer border by 2 field(s) per matrix with color alternation.\n• The white circle tracks the four central cells by 1 field per matrix.\n• The red diamond bounces in row 1 by 1 field per matrix.",
       "explanation": "• The arrow moves along the outer border by 2 field(s) per matrix with color alternation.\n• The white circle tracks the four central cells by 1 field per matrix.\n• The red diamond bounces in row 1 by 1 field per matrix."
     },
@@ -37443,10 +37023,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The square moves along the outer border by 2 field(s) per matrix with color alternation.\n• The blue hexagon tracks the anti-diagonal by 1 field per matrix.\n• The yellow arrow bounces in column 2 by 1 field per matrix.",
       "explanation": "• The square moves along the outer border by 2 field(s) per matrix with color alternation.\n• The blue hexagon tracks the anti-diagonal by 1 field per matrix.\n• The yellow arrow bounces in column 2 by 1 field per matrix."
     },
@@ -37829,10 +37406,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The diamond moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green triangle tracks the four central cells by 1 field per matrix.\n• The orange bracket bounces in row 1 by 1 field per matrix.",
       "explanation": "• The diamond moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green triangle tracks the four central cells by 1 field per matrix.\n• The orange bracket bounces in row 1 by 1 field per matrix."
     },
@@ -38215,10 +37789,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow arrow tracks the anti-diagonal by 1 field per matrix.\n• The pink circle bounces in column 4 by 1 field per matrix.",
       "explanation": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow arrow tracks the anti-diagonal by 1 field per matrix.\n• The pink circle bounces in column 4 by 1 field per matrix."
     },
@@ -38601,10 +38172,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The triangle moves along the outer border by 2 field(s) per matrix with color alternation.\n• The orange bracket tracks the four central cells by 1 field per matrix.\n• The white square bounces in row 1 by 1 field per matrix.",
       "explanation": "• The triangle moves along the outer border by 2 field(s) per matrix with color alternation.\n• The orange bracket tracks the four central cells by 1 field per matrix.\n• The white square bounces in row 1 by 1 field per matrix."
     },
@@ -38987,10 +38555,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink circle tracks the anti-diagonal by 1 field per matrix.\n• The black diamond bounces in column 2 by 1 field per matrix.",
       "explanation": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink circle tracks the anti-diagonal by 1 field per matrix.\n• The black diamond bounces in column 2 by 1 field per matrix."
     },
@@ -39373,10 +38938,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white square tracks the four central cells by 1 field per matrix.\n• The red hexagon bounces in row 1 by 1 field per matrix.",
       "explanation": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white square tracks the four central cells by 1 field per matrix.\n• The red hexagon bounces in row 1 by 1 field per matrix."
     }
@@ -39761,10 +39323,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow hexagon tracks the anti-diagonal by 1 field per matrix.\n• The pink arrow bounces in column 4 by 1 field per matrix.",
       "explanation": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow hexagon tracks the anti-diagonal by 1 field per matrix.\n• The pink arrow bounces in column 4 by 1 field per matrix."
     },
@@ -40147,10 +39706,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The diamond moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange triangle tracks the four central cells by 1 field per matrix.\n• The white bracket bounces in row 1 by 1 field per matrix.",
       "explanation": "• The diamond moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange triangle tracks the four central cells by 1 field per matrix.\n• The white bracket bounces in row 1 by 1 field per matrix."
     },
@@ -40533,10 +40089,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The hexagon moves along the outer border by 2 field(s) per matrix with color alternation.\n• The pink arrow tracks the anti-diagonal by 1 field per matrix.\n• The black circle bounces in column 2 by 1 field per matrix.",
       "explanation": "• The hexagon moves along the outer border by 2 field(s) per matrix with color alternation.\n• The pink arrow tracks the anti-diagonal by 1 field per matrix.\n• The black circle bounces in column 2 by 1 field per matrix."
     },
@@ -41305,10 +40858,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black circle tracks the anti-diagonal by 1 field per matrix.\n• The blue diamond bounces in column 4 by 1 field per matrix.",
       "explanation": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black circle tracks the anti-diagonal by 1 field per matrix.\n• The blue diamond bounces in column 4 by 1 field per matrix."
     },
@@ -41691,10 +41241,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The bracket moves along the outer border by 2 field(s) per matrix with color alternation.\n• The red square tracks the four central cells by 1 field per matrix.\n• The green hexagon bounces in row 1 by 1 field per matrix.",
       "explanation": "• The bracket moves along the outer border by 2 field(s) per matrix with color alternation.\n• The red square tracks the four central cells by 1 field per matrix.\n• The green hexagon bounces in row 1 by 1 field per matrix."
     },
@@ -42077,10 +41624,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The blue diamond tracks the anti-diagonal by 1 field per matrix.\n• The yellow triangle bounces in column 2 by 1 field per matrix.",
       "explanation": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The blue diamond tracks the anti-diagonal by 1 field per matrix.\n• The yellow triangle bounces in column 2 by 1 field per matrix."
     },
@@ -42463,10 +42007,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green hexagon tracks the four central cells by 1 field per matrix.\n• The orange arrow bounces in row 1 by 1 field per matrix.",
       "explanation": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green hexagon tracks the four central cells by 1 field per matrix.\n• The orange arrow bounces in row 1 by 1 field per matrix."
     },
@@ -43235,10 +42776,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange arrow tracks the four central cells by 1 field per matrix.\n• The white circle bounces in row 1 by 1 field per matrix.",
       "explanation": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange arrow tracks the four central cells by 1 field per matrix.\n• The white circle bounces in row 1 by 1 field per matrix."
     },
@@ -43621,10 +43159,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "• The triangle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink bracket tracks the anti-diagonal by 1 field per matrix.\n• The black square bounces in column 2 by 1 field per matrix.",
       "explanation": "• The triangle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink bracket tracks the anti-diagonal by 1 field per matrix.\n• The black square bounces in column 2 by 1 field per matrix."
     },
@@ -44393,10 +43928,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black square tracks the anti-diagonal by 1 field per matrix.\n• The blue hexagon bounces in column 4 by 1 field per matrix.",
       "explanation": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black square tracks the anti-diagonal by 1 field per matrix.\n• The blue hexagon bounces in column 4 by 1 field per matrix."
     },
@@ -44779,10 +44311,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The red diamond tracks the four central cells by 1 field per matrix.\n• The green triangle bounces in row 1 by 1 field per matrix.",
       "explanation": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The red diamond tracks the four central cells by 1 field per matrix.\n• The green triangle bounces in row 1 by 1 field per matrix."
     },
@@ -45165,10 +44694,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The square moves along the outer border by 2 field(s) per matrix with color alternation.\n• The blue hexagon tracks the anti-diagonal by 1 field per matrix.\n• The yellow arrow bounces in column 2 by 1 field per matrix.",
       "explanation": "• The square moves along the outer border by 2 field(s) per matrix with color alternation.\n• The blue hexagon tracks the anti-diagonal by 1 field per matrix.\n• The yellow arrow bounces in column 2 by 1 field per matrix."
     },
@@ -45937,10 +45463,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow arrow tracks the anti-diagonal by 1 field per matrix.\n• The pink circle bounces in column 4 by 1 field per matrix.",
       "explanation": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow arrow tracks the anti-diagonal by 1 field per matrix.\n• The pink circle bounces in column 4 by 1 field per matrix."
     },
@@ -46323,10 +45846,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The triangle moves along the outer border by 2 field(s) per matrix with color alternation.\n• The orange bracket tracks the four central cells by 1 field per matrix.\n• The white square bounces in row 1 by 1 field per matrix.",
       "explanation": "• The triangle moves along the outer border by 2 field(s) per matrix with color alternation.\n• The orange bracket tracks the four central cells by 1 field per matrix.\n• The white square bounces in row 1 by 1 field per matrix."
     },
@@ -46709,10 +46229,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink circle tracks the anti-diagonal by 1 field per matrix.\n• The black diamond bounces in column 2 by 1 field per matrix.",
       "explanation": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink circle tracks the anti-diagonal by 1 field per matrix.\n• The black diamond bounces in column 2 by 1 field per matrix."
     },
@@ -47095,10 +46612,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white square tracks the four central cells by 1 field per matrix.\n• The red hexagon bounces in row 1 by 1 field per matrix.",
       "explanation": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white square tracks the four central cells by 1 field per matrix.\n• The red hexagon bounces in row 1 by 1 field per matrix."
     }
@@ -47483,10 +46997,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow hexagon tracks the anti-diagonal by 1 field per matrix.\n• The pink arrow bounces in column 4 by 1 field per matrix.",
       "explanation": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow hexagon tracks the anti-diagonal by 1 field per matrix.\n• The pink arrow bounces in column 4 by 1 field per matrix."
     },
@@ -47869,10 +47380,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The diamond moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange triangle tracks the four central cells by 1 field per matrix.\n• The white bracket bounces in row 1 by 1 field per matrix.",
       "explanation": "• The diamond moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange triangle tracks the four central cells by 1 field per matrix.\n• The white bracket bounces in row 1 by 1 field per matrix."
     },
@@ -48641,10 +48149,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "• The triangle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white bracket tracks the four central cells by 1 field per matrix.\n• The red square bounces in row 1 by 1 field per matrix.",
       "explanation": "• The triangle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white bracket tracks the four central cells by 1 field per matrix.\n• The red square bounces in row 1 by 1 field per matrix."
     },
@@ -49027,10 +48532,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black circle tracks the anti-diagonal by 1 field per matrix.\n• The blue diamond bounces in column 4 by 1 field per matrix.",
       "explanation": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black circle tracks the anti-diagonal by 1 field per matrix.\n• The blue diamond bounces in column 4 by 1 field per matrix."
     },
@@ -49413,10 +48915,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The bracket moves along the outer border by 2 field(s) per matrix with color alternation.\n• The red square tracks the four central cells by 1 field per matrix.\n• The green hexagon bounces in row 1 by 1 field per matrix.",
       "explanation": "• The bracket moves along the outer border by 2 field(s) per matrix with color alternation.\n• The red square tracks the four central cells by 1 field per matrix.\n• The green hexagon bounces in row 1 by 1 field per matrix."
     },
@@ -49799,10 +49298,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The blue diamond tracks the anti-diagonal by 1 field per matrix.\n• The yellow triangle bounces in column 2 by 1 field per matrix.",
       "explanation": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The blue diamond tracks the anti-diagonal by 1 field per matrix.\n• The yellow triangle bounces in column 2 by 1 field per matrix."
     },
@@ -50185,10 +49681,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green hexagon tracks the four central cells by 1 field per matrix.\n• The orange arrow bounces in row 1 by 1 field per matrix.",
       "explanation": "• The square moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green hexagon tracks the four central cells by 1 field per matrix.\n• The orange arrow bounces in row 1 by 1 field per matrix."
     },
@@ -50571,10 +50064,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "• The diamond moves along the outer border by 2 field(s) per matrix with color alternation.\n• The yellow triangle tracks the anti-diagonal by 1 field per matrix.\n• The pink bracket bounces in column 4 by 1 field per matrix.",
       "explanation": "• The diamond moves along the outer border by 2 field(s) per matrix with color alternation.\n• The yellow triangle tracks the anti-diagonal by 1 field per matrix.\n• The pink bracket bounces in column 4 by 1 field per matrix."
     },
@@ -50957,10 +50447,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange arrow tracks the four central cells by 1 field per matrix.\n• The white circle bounces in row 1 by 1 field per matrix.",
       "explanation": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The orange arrow tracks the four central cells by 1 field per matrix.\n• The white circle bounces in row 1 by 1 field per matrix."
     },
@@ -51343,10 +50830,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The triangle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink bracket tracks the anti-diagonal by 1 field per matrix.\n• The black square bounces in column 2 by 1 field per matrix.",
       "explanation": "• The triangle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink bracket tracks the anti-diagonal by 1 field per matrix.\n• The black square bounces in column 2 by 1 field per matrix."
     },
@@ -51729,10 +51213,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The arrow moves along the outer border by 2 field(s) per matrix with color alternation.\n• The white circle tracks the four central cells by 1 field per matrix.\n• The red diamond bounces in row 1 by 1 field per matrix.",
       "explanation": "• The arrow moves along the outer border by 2 field(s) per matrix with color alternation.\n• The white circle tracks the four central cells by 1 field per matrix.\n• The red diamond bounces in row 1 by 1 field per matrix."
     },
@@ -52115,10 +51596,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black square tracks the anti-diagonal by 1 field per matrix.\n• The blue hexagon bounces in column 4 by 1 field per matrix.",
       "explanation": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The black square tracks the anti-diagonal by 1 field per matrix.\n• The blue hexagon bounces in column 4 by 1 field per matrix."
     },
@@ -52501,10 +51979,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The red diamond tracks the four central cells by 1 field per matrix.\n• The green triangle bounces in row 1 by 1 field per matrix.",
       "explanation": "• The circle moves along the outer border by 1 field(s) per matrix with color alternation.\n• The red diamond tracks the four central cells by 1 field per matrix.\n• The green triangle bounces in row 1 by 1 field per matrix."
     },
@@ -52887,10 +52362,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The square moves along the outer border by 2 field(s) per matrix with color alternation.\n• The blue hexagon tracks the anti-diagonal by 1 field per matrix.\n• The yellow arrow bounces in column 2 by 1 field per matrix.",
       "explanation": "• The square moves along the outer border by 2 field(s) per matrix with color alternation.\n• The blue hexagon tracks the anti-diagonal by 1 field per matrix.\n• The yellow arrow bounces in column 2 by 1 field per matrix."
     },
@@ -53273,10 +52745,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "• The diamond moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green triangle tracks the four central cells by 1 field per matrix.\n• The orange bracket bounces in row 1 by 1 field per matrix.",
       "explanation": "• The diamond moves along the outer border by 1 field(s) per matrix with color alternation.\n• The green triangle tracks the four central cells by 1 field per matrix.\n• The orange bracket bounces in row 1 by 1 field per matrix."
     },
@@ -53659,10 +53128,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow arrow tracks the anti-diagonal by 1 field per matrix.\n• The pink circle bounces in column 4 by 1 field per matrix.",
       "explanation": "• The hexagon moves along the outer border by 1 field(s) per matrix with color alternation.\n• The yellow arrow tracks the anti-diagonal by 1 field per matrix.\n• The pink circle bounces in column 4 by 1 field per matrix."
     },
@@ -54045,10 +53511,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The triangle moves along the outer border by 2 field(s) per matrix with color alternation.\n• The orange bracket tracks the four central cells by 1 field per matrix.\n• The white square bounces in row 1 by 1 field per matrix.",
       "explanation": "• The triangle moves along the outer border by 2 field(s) per matrix with color alternation.\n• The orange bracket tracks the four central cells by 1 field per matrix.\n• The white square bounces in row 1 by 1 field per matrix."
     },
@@ -54431,10 +53894,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink circle tracks the anti-diagonal by 1 field per matrix.\n• The black diamond bounces in column 2 by 1 field per matrix.",
       "explanation": "• The arrow moves along the outer border by 1 field(s) per matrix with color alternation.\n• The pink circle tracks the anti-diagonal by 1 field per matrix.\n• The black diamond bounces in column 2 by 1 field per matrix."
     },
@@ -54817,10 +54277,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white square tracks the four central cells by 1 field per matrix.\n• The red hexagon bounces in row 1 by 1 field per matrix.",
       "explanation": "• The bracket moves along the outer border by 1 field(s) per matrix with color alternation.\n• The white square tracks the four central cells by 1 field per matrix.\n• The red hexagon bounces in row 1 by 1 field per matrix."
     }
@@ -55317,10 +54774,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The pink circle moves along the outer border clockwise by x + 1 fields (1 step, then 2, 3, 4, 5...).\n• The black triangle moves diagonally by 1 field per matrix and rotates x + 1 times by 90° clockwise.\n• The yellow square bounces horizontally in row 2 by 1 field per matrix and alternates between yellow and red.\n• The pink L-shape moves in direction cycle (right, up, left, down) and rotates 90° counter-clockwise.",
       "explanation": "• The pink circle moves along the outer border clockwise by x + 1 fields (1 step, then 2, 3, 4, 5...).\n• The black triangle moves diagonally by 1 field per matrix and rotates x + 1 times by 90° clockwise.\n• The yellow square bounces horizontally in row 2 by 1 field per matrix and alternates between yellow and red.\n• The pink L-shape moves in direction cycle (right, up, left, down) and rotates 90° counter-clockwise."
     },
@@ -55815,10 +55269,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The white L-shape moves vertically in column 1 bouncing by x + 1 fields (1, 2, 3, 4...) and rotates 90° clockwise.\n• The pink circle moves along the outer border clockwise by 1 field per matrix, cycling pink ➔ red ➔ orange.\n• The black hexagon moves diagonally along the main diagonal by x + 1 fields (1, 2, 3...).\n• The orange diamond moves counter-clockwise within the four middle fields, 1 field per matrix.",
       "explanation": "• The white L-shape moves vertically in column 1 bouncing by x + 1 fields (1, 2, 3, 4...) and rotates 90° clockwise.\n• The pink circle moves along the outer border clockwise by 1 field per matrix, cycling pink ➔ red ➔ orange.\n• The black hexagon moves diagonally along the main diagonal by x + 1 fields (1, 2, 3...).\n• The orange diamond moves counter-clockwise within the four middle fields, 1 field per matrix."
     },
@@ -56313,10 +55764,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The black diamond moves horizontally in row 4 bouncing by x + 1 fields, alternating black and yellow.\n• The orange triangle moves diagonally by 1 field per matrix and rotates x + 1 times 90° clockwise.\n• The pink L-shape moves counter-clockwise along the outer border by 2 fields per matrix and rotates 90° clockwise.\n• The black circle moves clockwise within the four middle fields, 1 field per matrix.",
       "explanation": "• The black diamond moves horizontally in row 4 bouncing by x + 1 fields, alternating black and yellow.\n• The orange triangle moves diagonally by 1 field per matrix and rotates x + 1 times 90° clockwise.\n• The pink L-shape moves counter-clockwise along the outer border by 2 fields per matrix and rotates 90° clockwise.\n• The black circle moves clockwise within the four middle fields, 1 field per matrix."
     },
@@ -56811,10 +56259,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The orange L-shape moves clockwise along the outer border by x + 1 fields (1, 2, 3...) and rotates 90° counter-clockwise.\n• The red square bounces vertically in column 1 by 1 field per matrix, alternating red and yellow.\n• The green hexagon moves in direction order (up, right, down, left).\n• The pink triangle moves diagonally by 1 field per matrix and rotates x + 1 times 90° clockwise.",
       "explanation": "• The orange L-shape moves clockwise along the outer border by x + 1 fields (1, 2, 3...) and rotates 90° counter-clockwise.\n• The red square bounces vertically in column 1 by 1 field per matrix, alternating red and yellow.\n• The green hexagon moves in direction order (up, right, down, left).\n• The pink triangle moves diagonally by 1 field per matrix and rotates x + 1 times 90° clockwise."
     },
@@ -57309,10 +56754,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The yellow L-shape moves clockwise within the four middle fields by x + 1 fields and rotates 90° clockwise.\n• The black hexagon moves counter-clockwise along the outer border by x + 1 fields, alternating black and white.\n• The red arrow bounces horizontally in row 1 by 1 field per matrix and rotates 90° counter-clockwise.\n• The green square moves along the anti-diagonal by x + 1 fields (1, 2, 3...).",
       "explanation": "• The yellow L-shape moves clockwise within the four middle fields by x + 1 fields and rotates 90° clockwise.\n• The black hexagon moves counter-clockwise along the outer border by x + 1 fields, alternating black and white.\n• The red arrow bounces horizontally in row 1 by 1 field per matrix and rotates 90° counter-clockwise.\n• The green square moves along the anti-diagonal by x + 1 fields (1, 2, 3...)."
     },
@@ -58305,10 +57747,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The black circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The green hexagon bounces across column 2.\n• The orange arrow rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The black circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The green hexagon bounces across column 2.\n• The orange arrow rotates through the four central fields by 1 field per matrix."
     },
@@ -58803,10 +58242,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The red square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The yellow triangle bounces across row 1.\n• The pink bracket rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The red square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The yellow triangle bounces across row 1.\n• The pink bracket rotates through the four central fields by 1 field per matrix."
     },
@@ -59799,10 +59235,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The green hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink bracket bounces across row 1.\n• The black square rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The green hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink bracket bounces across row 1.\n• The black square rotates through the four central fields by 1 field per matrix."
     },
@@ -60297,10 +59730,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "• The yellow triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white circle bounces across column 2.\n• The red diamond rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The yellow triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white circle bounces across column 2.\n• The red diamond rotates through the four central fields by 1 field per matrix."
     },
@@ -60795,10 +60225,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "• The orange arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black square bounces across row 1.\n• The blue hexagon rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The orange arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black square bounces across row 1.\n• The blue hexagon rotates through the four central fields by 1 field per matrix."
     },
@@ -61293,10 +60720,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "• The pink bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The red diamond bounces across column 4.\n• The green triangle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The pink bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The red diamond bounces across column 4.\n• The green triangle rotates through the four central fields by 1 field per matrix."
     },
@@ -61791,10 +61215,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The white circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The blue hexagon bounces across row 1.\n• The yellow arrow rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The white circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The blue hexagon bounces across row 1.\n• The yellow arrow rotates through the four central fields by 1 field per matrix."
     },
@@ -62289,10 +61710,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The black square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The green triangle bounces across column 2.\n• The orange bracket rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The black square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The green triangle bounces across column 2.\n• The orange bracket rotates through the four central fields by 1 field per matrix."
     },
@@ -62787,10 +62205,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "• The red diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The yellow arrow bounces across row 1.\n• The pink circle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The red diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The yellow arrow bounces across row 1.\n• The pink circle rotates through the four central fields by 1 field per matrix."
     },
@@ -63285,10 +62700,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The blue hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The orange bracket bounces across column 4.\n• The white square rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The blue hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The orange bracket bounces across column 4.\n• The white square rotates through the four central fields by 1 field per matrix."
     },
@@ -63783,10 +63195,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The green triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink circle bounces across row 1.\n• The black diamond rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The green triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink circle bounces across row 1.\n• The black diamond rotates through the four central fields by 1 field per matrix."
     },
@@ -64281,10 +63690,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "• The yellow arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white square bounces across column 2.\n• The red hexagon rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The yellow arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white square bounces across column 2.\n• The red hexagon rotates through the four central fields by 1 field per matrix."
     },
@@ -64779,10 +64185,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "• The orange bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The black diamond bounces across row 1.\n• The blue triangle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The orange bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The black diamond bounces across row 1.\n• The blue triangle rotates through the four central fields by 1 field per matrix."
     }
@@ -65279,10 +64682,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The blue square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The orange triangle bounces across column 4.\n• The white bracket rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The blue square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The orange triangle bounces across column 4.\n• The white bracket rotates through the four central fields by 1 field per matrix."
     },
@@ -65777,10 +65177,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The green diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The pink arrow bounces across row 1.\n• The black circle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The green diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The pink arrow bounces across row 1.\n• The black circle rotates through the four central fields by 1 field per matrix."
     },
@@ -66275,10 +65672,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The yellow hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white bracket bounces across column 2.\n• The red square rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The yellow hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white bracket bounces across column 2.\n• The red square rotates through the four central fields by 1 field per matrix."
     },
@@ -66773,10 +66167,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "• The orange triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black circle bounces across row 1.\n• The blue diamond rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The orange triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black circle bounces across row 1.\n• The blue diamond rotates through the four central fields by 1 field per matrix."
     },
@@ -67271,10 +66662,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The pink arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The red square bounces across column 4.\n• The green hexagon rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The pink arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The red square bounces across column 4.\n• The green hexagon rotates through the four central fields by 1 field per matrix."
     },
@@ -67769,10 +67157,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The white bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The blue diamond bounces across row 1.\n• The yellow triangle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The white bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The blue diamond bounces across row 1.\n• The yellow triangle rotates through the four central fields by 1 field per matrix."
     },
@@ -68267,10 +67652,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The black circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The green hexagon bounces across column 2.\n• The orange arrow rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The black circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The green hexagon bounces across column 2.\n• The orange arrow rotates through the four central fields by 1 field per matrix."
     },
@@ -68765,10 +68147,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The red square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The yellow triangle bounces across row 1.\n• The pink bracket rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The red square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The yellow triangle bounces across row 1.\n• The pink bracket rotates through the four central fields by 1 field per matrix."
     },
@@ -69263,10 +68642,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "• The blue diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The orange arrow bounces across column 4.\n• The white circle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The blue diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The orange arrow bounces across column 4.\n• The white circle rotates through the four central fields by 1 field per matrix."
     },
@@ -69761,10 +69137,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "• The green hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink bracket bounces across row 1.\n• The black square rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The green hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink bracket bounces across row 1.\n• The black square rotates through the four central fields by 1 field per matrix."
     },
@@ -70259,10 +69632,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The yellow triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white circle bounces across column 2.\n• The red diamond rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The yellow triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white circle bounces across column 2.\n• The red diamond rotates through the four central fields by 1 field per matrix."
     },
@@ -70757,10 +70127,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The orange arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black square bounces across row 1.\n• The blue hexagon rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The orange arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black square bounces across row 1.\n• The blue hexagon rotates through the four central fields by 1 field per matrix."
     },
@@ -71255,10 +70622,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The pink bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The red diamond bounces across column 4.\n• The green triangle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The pink bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The red diamond bounces across column 4.\n• The green triangle rotates through the four central fields by 1 field per matrix."
     },
@@ -71753,10 +71117,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The white circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The blue hexagon bounces across row 1.\n• The yellow arrow rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The white circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The blue hexagon bounces across row 1.\n• The yellow arrow rotates through the four central fields by 1 field per matrix."
     },
@@ -72251,10 +71612,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The black square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The green triangle bounces across column 2.\n• The orange bracket rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The black square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The green triangle bounces across column 2.\n• The orange bracket rotates through the four central fields by 1 field per matrix."
     },
@@ -72749,10 +72107,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The red diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The yellow arrow bounces across row 1.\n• The pink circle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The red diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The yellow arrow bounces across row 1.\n• The pink circle rotates through the four central fields by 1 field per matrix."
     },
@@ -73247,10 +72602,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The blue hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The orange bracket bounces across column 4.\n• The white square rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The blue hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The orange bracket bounces across column 4.\n• The white square rotates through the four central fields by 1 field per matrix."
     },
@@ -73745,10 +73097,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The green triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink circle bounces across row 1.\n• The black diamond rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The green triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink circle bounces across row 1.\n• The black diamond rotates through the four central fields by 1 field per matrix."
     },
@@ -74243,10 +73592,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The yellow arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white square bounces across column 2.\n• The red hexagon rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The yellow arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white square bounces across column 2.\n• The red hexagon rotates through the four central fields by 1 field per matrix."
     },
@@ -74741,10 +74087,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The orange bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The black diamond bounces across row 1.\n• The blue triangle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The orange bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The black diamond bounces across row 1.\n• The blue triangle rotates through the four central fields by 1 field per matrix."
     }
@@ -75241,10 +74584,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The blue square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The orange triangle bounces across column 4.\n• The white bracket rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The blue square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The orange triangle bounces across column 4.\n• The white bracket rotates through the four central fields by 1 field per matrix."
     },
@@ -75739,10 +75079,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The green diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The pink arrow bounces across row 1.\n• The black circle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The green diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The pink arrow bounces across row 1.\n• The black circle rotates through the four central fields by 1 field per matrix."
     },
@@ -76237,10 +75574,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The yellow hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white bracket bounces across column 2.\n• The red square rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The yellow hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white bracket bounces across column 2.\n• The red square rotates through the four central fields by 1 field per matrix."
     },
@@ -76735,10 +76069,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The orange triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black circle bounces across row 1.\n• The blue diamond rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The orange triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black circle bounces across row 1.\n• The blue diamond rotates through the four central fields by 1 field per matrix."
     },
@@ -77731,10 +77062,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The white bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The blue diamond bounces across row 1.\n• The yellow triangle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The white bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The blue diamond bounces across row 1.\n• The yellow triangle rotates through the four central fields by 1 field per matrix."
     },
@@ -78229,10 +77557,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The black circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The green hexagon bounces across column 2.\n• The orange arrow rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The black circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The green hexagon bounces across column 2.\n• The orange arrow rotates through the four central fields by 1 field per matrix."
     },
@@ -78727,10 +78052,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The red square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The yellow triangle bounces across row 1.\n• The pink bracket rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The red square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The yellow triangle bounces across row 1.\n• The pink bracket rotates through the four central fields by 1 field per matrix."
     },
@@ -79723,10 +79045,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The green hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink bracket bounces across row 1.\n• The black square rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The green hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink bracket bounces across row 1.\n• The black square rotates through the four central fields by 1 field per matrix."
     },
@@ -80719,10 +80038,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The orange arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black square bounces across row 1.\n• The blue hexagon rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The orange arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black square bounces across row 1.\n• The blue hexagon rotates through the four central fields by 1 field per matrix."
     },
@@ -81217,10 +80533,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 3 },
       "ruleText": "• The pink bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The red diamond bounces across column 4.\n• The green triangle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The pink bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The red diamond bounces across column 4.\n• The green triangle rotates through the four central fields by 1 field per matrix."
     },
@@ -81715,10 +81028,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The white circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The blue hexagon bounces across row 1.\n• The yellow arrow rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The white circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The blue hexagon bounces across row 1.\n• The yellow arrow rotates through the four central fields by 1 field per matrix."
     },
@@ -82213,10 +81523,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The black square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The green triangle bounces across column 2.\n• The orange bracket rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The black square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The green triangle bounces across column 2.\n• The orange bracket rotates through the four central fields by 1 field per matrix."
     },
@@ -82711,10 +82018,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The red diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The yellow arrow bounces across row 1.\n• The pink circle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The red diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The yellow arrow bounces across row 1.\n• The pink circle rotates through the four central fields by 1 field per matrix."
     },
@@ -83209,10 +82513,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The blue hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The orange bracket bounces across column 4.\n• The white square rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The blue hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The orange bracket bounces across column 4.\n• The white square rotates through the four central fields by 1 field per matrix."
     },
@@ -83707,10 +83008,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The green triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink circle bounces across row 1.\n• The black diamond rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The green triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink circle bounces across row 1.\n• The black diamond rotates through the four central fields by 1 field per matrix."
     },
@@ -84205,10 +83503,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 2 },
       "ruleText": "• The yellow arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white square bounces across column 2.\n• The red hexagon rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The yellow arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white square bounces across column 2.\n• The red hexagon rotates through the four central fields by 1 field per matrix."
     },
@@ -84703,10 +83998,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The orange bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The black diamond bounces across row 1.\n• The blue triangle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The orange bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The black diamond bounces across row 1.\n• The blue triangle rotates through the four central fields by 1 field per matrix."
     }
@@ -85203,10 +84495,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The blue square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The orange triangle bounces across column 4.\n• The white bracket rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The blue square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The orange triangle bounces across column 4.\n• The white bracket rotates through the four central fields by 1 field per matrix."
     },
@@ -85701,10 +84990,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The green diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The pink arrow bounces across row 1.\n• The black circle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The green diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The pink arrow bounces across row 1.\n• The black circle rotates through the four central fields by 1 field per matrix."
     },
@@ -86199,10 +85485,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The yellow hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white bracket bounces across column 2.\n• The red square rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The yellow hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white bracket bounces across column 2.\n• The red square rotates through the four central fields by 1 field per matrix."
     },
@@ -86697,10 +85980,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The orange triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black circle bounces across row 1.\n• The blue diamond rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The orange triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black circle bounces across row 1.\n• The blue diamond rotates through the four central fields by 1 field per matrix."
     },
@@ -87693,10 +86973,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The white bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The blue diamond bounces across row 1.\n• The yellow triangle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The white bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The blue diamond bounces across row 1.\n• The yellow triangle rotates through the four central fields by 1 field per matrix."
     },
@@ -88191,10 +87468,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The black circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The green hexagon bounces across column 2.\n• The orange arrow rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The black circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The green hexagon bounces across column 2.\n• The orange arrow rotates through the four central fields by 1 field per matrix."
     },
@@ -88689,10 +87963,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The red square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The yellow triangle bounces across row 1.\n• The pink bracket rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The red square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The yellow triangle bounces across row 1.\n• The pink bracket rotates through the four central fields by 1 field per matrix."
     },
@@ -89187,10 +88458,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The blue diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The orange arrow bounces across column 4.\n• The white circle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The blue diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The orange arrow bounces across column 4.\n• The white circle rotates through the four central fields by 1 field per matrix."
     },
@@ -90681,10 +89949,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The orange arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black square bounces across row 1.\n• The blue hexagon rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The orange arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black square bounces across row 1.\n• The blue hexagon rotates through the four central fields by 1 field per matrix."
     },
@@ -91179,10 +90444,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The pink bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The red diamond bounces across column 4.\n• The green triangle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The pink bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The red diamond bounces across column 4.\n• The green triangle rotates through the four central fields by 1 field per matrix."
     },
@@ -91677,10 +90939,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The white circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The blue hexagon bounces across row 1.\n• The yellow arrow rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The white circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The blue hexagon bounces across row 1.\n• The yellow arrow rotates through the four central fields by 1 field per matrix."
     },
@@ -92175,10 +91434,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The black square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The green triangle bounces across column 2.\n• The orange bracket rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The black square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The green triangle bounces across column 2.\n• The orange bracket rotates through the four central fields by 1 field per matrix."
     },
@@ -92673,10 +91929,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 1 },
       "ruleText": "• The red diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The yellow arrow bounces across row 1.\n• The pink circle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The red diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The yellow arrow bounces across row 1.\n• The pink circle rotates through the four central fields by 1 field per matrix."
     },
@@ -93171,10 +92424,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The blue hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The orange bracket bounces across column 4.\n• The white square rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The blue hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The orange bracket bounces across column 4.\n• The white square rotates through the four central fields by 1 field per matrix."
     },
@@ -93669,10 +92919,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The green triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink circle bounces across row 1.\n• The black diamond rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The green triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink circle bounces across row 1.\n• The black diamond rotates through the four central fields by 1 field per matrix."
     },
@@ -94167,10 +93414,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The yellow arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white square bounces across column 2.\n• The red hexagon rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The yellow arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white square bounces across column 2.\n• The red hexagon rotates through the four central fields by 1 field per matrix."
     },
@@ -94665,10 +93909,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The orange bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The black diamond bounces across row 1.\n• The blue triangle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The orange bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The black diamond bounces across row 1.\n• The blue triangle rotates through the four central fields by 1 field per matrix."
     }
@@ -95165,10 +94406,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The blue square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The orange triangle bounces across column 4.\n• The white bracket rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The blue square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The orange triangle bounces across column 4.\n• The white bracket rotates through the four central fields by 1 field per matrix."
     },
@@ -96161,10 +95399,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The yellow hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white bracket bounces across column 2.\n• The red square rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The yellow hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white bracket bounces across column 2.\n• The red square rotates through the four central fields by 1 field per matrix."
     },
@@ -96659,10 +95894,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The orange triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black circle bounces across row 1.\n• The blue diamond rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The orange triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The black circle bounces across row 1.\n• The blue diamond rotates through the four central fields by 1 field per matrix."
     },
@@ -97157,10 +96389,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 2 },
       "ruleText": "• The pink arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The red square bounces across column 4.\n• The green hexagon rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The pink arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The red square bounces across column 4.\n• The green hexagon rotates through the four central fields by 1 field per matrix."
     },
@@ -97655,10 +96884,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The white bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The blue diamond bounces across row 1.\n• The yellow triangle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The white bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The blue diamond bounces across row 1.\n• The yellow triangle rotates through the four central fields by 1 field per matrix."
     },
@@ -98153,10 +97379,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The black circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The green hexagon bounces across column 2.\n• The orange arrow rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The black circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The green hexagon bounces across column 2.\n• The orange arrow rotates through the four central fields by 1 field per matrix."
     },
@@ -98651,10 +97874,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The red square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The yellow triangle bounces across row 1.\n• The pink bracket rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The red square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The yellow triangle bounces across row 1.\n• The pink bracket rotates through the four central fields by 1 field per matrix."
     },
@@ -99149,10 +98369,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The blue diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The orange arrow bounces across column 4.\n• The white circle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The blue diamond moves along the perimeter by x + 1 fields (step increases each matrix).\n• The hexagon moves along the diagonal with alternating colors.\n• The orange arrow bounces across column 4.\n• The white circle rotates through the four central fields by 1 field per matrix."
     },
@@ -99647,10 +98864,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The green hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink bracket bounces across row 1.\n• The black square rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The green hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink bracket bounces across row 1.\n• The black square rotates through the four central fields by 1 field per matrix."
     },
@@ -100145,10 +99359,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The yellow triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white circle bounces across column 2.\n• The red diamond rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The yellow triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white circle bounces across column 2.\n• The red diamond rotates through the four central fields by 1 field per matrix."
     },
@@ -101141,10 +100352,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The pink bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The red diamond bounces across column 4.\n• The green triangle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The pink bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The red diamond bounces across column 4.\n• The green triangle rotates through the four central fields by 1 field per matrix."
     },
@@ -101639,10 +100847,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 2, "m6": 3 },
       "ruleText": "• The white circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The blue hexagon bounces across row 1.\n• The yellow arrow rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The white circle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The square moves along the diagonal with alternating colors.\n• The blue hexagon bounces across row 1.\n• The yellow arrow rotates through the four central fields by 1 field per matrix."
     },
@@ -102137,10 +101342,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 3 },
       "ruleText": "• The black square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The green triangle bounces across column 2.\n• The orange bracket rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The black square moves along the perimeter by x + 1 fields (step increases each matrix).\n• The diamond moves along the diagonal with alternating colors.\n• The green triangle bounces across column 2.\n• The orange bracket rotates through the four central fields by 1 field per matrix."
     },
@@ -103133,10 +102335,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The blue hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The orange bracket bounces across column 4.\n• The white square rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The blue hexagon moves along the perimeter by x + 1 fields (step increases each matrix).\n• The triangle moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The orange bracket bounces across column 4.\n• The white square rotates through the four central fields by 1 field per matrix."
     },
@@ -103631,10 +102830,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 3,
-        "m6": 3
-      },
+      "solution": { "m5": 1, "m6": 1 },
       "ruleText": "• The green triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink circle bounces across row 1.\n• The black diamond rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The green triangle moves along the perimeter by x + 1 fields (step increases each matrix).\n• The arrow moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The pink circle bounces across row 1.\n• The black diamond rotates through the four central fields by 1 field per matrix."
     },
@@ -104129,10 +103325,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 1,
-        "m6": 1
-      },
+      "solution": { "m5": 2, "m6": 1 },
       "ruleText": "• The yellow arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white square bounces across column 2.\n• The red hexagon rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The yellow arrow moves along the perimeter by x + 1 fields (step increases each matrix).\n• The bracket moves along the diagonal with alternating colors and x + 1 rotational acceleration.\n• The white square bounces across column 2.\n• The red hexagon rotates through the four central fields by 1 field per matrix."
     },
@@ -104627,10 +103820,7 @@ const FIGURES_DATA = {
           }
         ]
       ],
-      "solution": {
-        "m5": 2,
-        "m6": 2
-      },
+      "solution": { "m5": 3, "m6": 2 },
       "ruleText": "• The orange bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The black diamond bounces across row 1.\n• The blue triangle rotates through the four central fields by 1 field per matrix.",
       "explanation": "• The orange bracket moves along the perimeter by x + 1 fields (step increases each matrix).\n• The circle moves along the diagonal with alternating colors.\n• The black diamond bounces across row 1.\n• The blue triangle rotates through the four central fields by 1 field per matrix."
     }
