@@ -7,6 +7,7 @@
     yellow: '#eab308',
     orange: '#f97316',
     pink: '#ec4899',
+    purple: '#a855f7',
     white: '#f8fafc',
     black: '#1e293b',
     dark: '#0f172a'
@@ -80,10 +81,22 @@
 
       if (shapeType === 'circle') {
         svg += `<circle cx="${cx}" cy="${cy}" r="7" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
+      } else if (shapeType === 'semicircle' || shapeType === 'semi-circle') {
+        svg += `<g transform="rotate(${rot} ${cx} ${cy})">`;
+        svg += `<path d="M${cx - 7},${cy + 3} A7,7 0 0,1 ${cx + 7},${cy + 3} Z" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
+        svg += `</g>`;
+      } else if (shapeType === 'quartercircle' || shapeType === 'quarter-circle' || shapeType === 'quadrant') {
+        svg += `<g transform="rotate(${rot} ${cx} ${cy})">`;
+        svg += `<path d="M${cx - 6},${cy + 6} L${cx - 6},${cy - 6} A12,12 0 0,1 ${cx + 6},${cy + 6} Z" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
+        svg += `</g>`;
       } else if (shapeType === 'square') {
         svg += `<rect x="${cx - 6.5}" y="${cy - 6.5}" width="13" height="13" rx="1.5" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
       } else if (shapeType === 'diamond') {
         svg += `<polygon points="${cx},${cy - 8.5} ${cx + 8.5},${cy} ${cx},${cy + 8.5} ${cx - 8.5},${cy}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
+      } else if (shapeType === 'pentagon') {
+        svg += `<g transform="rotate(${rot} ${cx} ${cy})">`;
+        svg += `<polygon points="${cx},${cy - 7.5} ${cx + 7.1},${cy - 2.3} ${cx + 4.4},${cy + 6.1} ${cx - 4.4},${cy + 6.1} ${cx - 7.1},${cy - 2.3}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
+        svg += `</g>`;
       } else if (shapeType === 'hexagon') {
         svg += `<polygon points="${cx},${cy - 8} ${cx + 7},${cy - 4} ${cx + 7},${cy + 4} ${cx},${cy + 8} ${cx - 7},${cy + 4} ${cx - 7},${cy - 4}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
       } else if (shapeType === 'triangle') {
@@ -94,9 +107,9 @@
         svg += `<g transform="rotate(${rot} ${cx} ${cy})">`;
         svg += `<polygon points="${cx},${cy - 8} ${cx + 6.5},${cy + 1} ${cx + 2.5},${cy + 1} ${cx + 2.5},${cy + 8} ${cx - 2.5},${cy + 8} ${cx - 2.5},${cy + 1} ${cx - 6.5},${cy + 1}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
         svg += `</g>`;
-      } else if (shapeType === 'bracket' || shapeType === 'l-shape' || shapeType === 'l_shape') {
+      } else if (shapeType === 'l' || shapeType === 'bracket' || shapeType === 'l-shape' || shapeType === 'l_shape') {
         svg += `<g transform="rotate(${rot} ${cx} ${cy})">`;
-        svg += `<path d="M${cx - 5.5},${cy - 6} L${cx - 5.5},${cy + 5.5} L${cx + 6},${cy + 5.5}" fill="none" stroke="${fill}" stroke-width="3.8" stroke-linecap="square" stroke-linejoin="miter"/>`;
+        svg += `<path d="M${cx - 6},${cy - 6} L${cx - 1},${cy - 6} L${cx - 1},${cy + 1} L${cx + 6},${cy + 1} L${cx + 6},${cy + 6} L${cx - 6},${cy + 6} Z" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
         svg += `</g>`;
       }
     }
