@@ -1,4 +1,4 @@
-/* admin.css – Dedicated Styling for dMAT Admin Dashboard & Live Submissions */
+﻿/* admin.css – Dedicated Styling for dMAT Admin Dashboard & Live Submissions */
 
 html, body, .admin-body, .admin-main, .admin-layout, .container, #admin-dashboard-content, #admin-login-screen {
   background: #000 !important;
@@ -850,13 +850,52 @@ html, body, .admin-body, .admin-main, .admin-layout, .container, #admin-dashboar
   }
   .table-card-head h3 { font-size: 15px; }
 
-  /* Table: show candidate sub-date under name, hide Date column */
+  /* Table: hide Test Set + Date columns on mobile, keep # / Name / Score / Time / Actions */
   .c-date-mobile { display: block; }
+
+  /* Hide Test Set (col 3) - too wide for mobile */
+  .admin-table th:nth-child(3),
+  .admin-table td:nth-child(3) { display: none; }
+
+  /* Hide Date & Time (col 6) */
   .admin-table th:nth-child(6),
-  .admin-table td:nth-child(6) { display: none; } /* Date (shown under name) */
-  
-  .admin-table th { font-size: 9px; padding: 10px 8px; }
-  .admin-table td { font-size: 12px; padding: 10px 8px; }
+  .admin-table td:nth-child(6) { display: none; }
+
+  /* Compact table wrapper */
+  .admin-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Column sizing */
+  .admin-table th:nth-child(1),
+  .admin-table td:nth-child(1) { width: 24px; padding: 10px 4px 10px 8px; }
+
+  .admin-table th:nth-child(2),
+  .admin-table td:nth-child(2) { max-width: 110px; }
+
+  /* Candidate name: truncate if very long */
+  .admin-table td:nth-child(2) strong {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 105px;
+    font-size: 12px;
+  }
+
+  /* Score: prevent wrapping */
+  .admin-table td:nth-child(4) { white-space: nowrap; }
+  .admin-table td:nth-child(4) strong { white-space: nowrap; }
+
+  /* Time Taken: compact */
+  .admin-table td:nth-child(5) { white-space: nowrap; font-size: 11px; }
+
+  /* Actions: row layout */
+  .admin-action-btns { flex-direction: row; gap: 4px; }
+
+  .admin-table th { font-size: 9px; padding: 10px 6px; white-space: nowrap; }
+  .admin-table td { font-size: 12px; padding: 10px 6px; }
 
   .c-avatar {
     width: 28px;
@@ -865,7 +904,7 @@ html, body, .admin-body, .admin-main, .admin-layout, .container, #admin-dashboar
   }
   .c-name { font-size: 12px; }
 
-  .btn-inspect { font-size: 10px; padding: 5px 8px; }
+  .btn-inspect { font-size: 10px; padding: 5px 8px; white-space: nowrap; }
   .btn-del     { font-size: 11px; padding: 5px 7px; }
 
   .score-badge { font-size: 11px; padding: 2px 7px; }
