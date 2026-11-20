@@ -157,13 +157,13 @@
     // Difficulty card clicks
     if (dom.diffCardEasy) {
       dom.diffCardEasy.addEventListener('click', () => {
-        alert('Easy level questions will be updated soon. Please practice with Hard level Set 1 & Set 2.');
+        alert('Easy level questions will be updated soon. Please practice with Hard level Sets 1–5 or Medium level Sets 1–5.');
       });
     }
     if (dom.btnStartEasy) {
       dom.btnStartEasy.addEventListener('click', (e) => {
         e.stopPropagation();
-        alert('Easy level questions will be updated soon. Please practice with Hard level Set 1 & Set 2.');
+        alert('Easy level questions will be updated soon. Please practice with Hard level Sets 1–5 or Medium level Sets 1–5.');
       });
     }
 
