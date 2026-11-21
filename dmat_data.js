@@ -6494,6 +6494,1927 @@ function getRealTimeSubmissions() {
 ];
 }
 
+
+DMAT_DATA.easy_t1 = [
+  {
+    "id": 1,
+    "equations": [
+      "A – B = 6",
+      "4 × A = 44"
+    ],
+    "solution": {
+      "A": 11,
+      "B": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A – B = 6",
+      "(2) 4 × A = 44",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 11, B = 5"
+    ]
+  },
+  {
+    "id": 2,
+    "equations": [
+      "A – B = 15",
+      "23 – A = B"
+    ],
+    "solution": {
+      "A": 19,
+      "B": 4
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A – B = 15",
+      "(2) 23 – A = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 19, B = 4"
+    ]
+  },
+  {
+    "id": 3,
+    "equations": [
+      "A – 13 = B",
+      "10 + A = 28"
+    ],
+    "solution": {
+      "A": 18,
+      "B": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A – 13 = B",
+      "(2) 10 + A = 28",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 18, B = 5"
+    ]
+  },
+  {
+    "id": 4,
+    "equations": [
+      "A + B = 34",
+      "B – A = 4"
+    ],
+    "solution": {
+      "A": 15,
+      "B": 19
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 34",
+      "(2) B – A = 4",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 15, B = 19"
+    ]
+  },
+  {
+    "id": 5,
+    "equations": [
+      "22 – A = B",
+      "7 + B = 26"
+    ],
+    "solution": {
+      "A": 3,
+      "B": 19
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 22 – A = B",
+      "(2) 7 + B = 26",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 3, B = 19"
+    ]
+  },
+  {
+    "id": 6,
+    "equations": [
+      "B + A = 16",
+      "A – 6 = B"
+    ],
+    "solution": {
+      "A": 11,
+      "B": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + A = 16",
+      "(2) A – 6 = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 11, B = 5"
+    ]
+  },
+  {
+    "id": 7,
+    "equations": [
+      "B + A = 32",
+      "A + 8 = B"
+    ],
+    "solution": {
+      "A": 12,
+      "B": 20
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + A = 32",
+      "(2) A + 8 = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 12, B = 20"
+    ]
+  },
+  {
+    "id": 8,
+    "equations": [
+      "5 – B = A",
+      "B + 1 = A"
+    ],
+    "solution": {
+      "A": 3,
+      "B": 2
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 5 – B = A",
+      "(2) B + 1 = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 3, B = 2"
+    ]
+  },
+  {
+    "id": 9,
+    "equations": [
+      "9 – A = B",
+      "A + 5 = B"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 7
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 9 – A = B",
+      "(2) A + 5 = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 7"
+    ]
+  },
+  {
+    "id": 10,
+    "equations": [
+      "3 × B = 9",
+      "19 – B = A"
+    ],
+    "solution": {
+      "A": 16,
+      "B": 3
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 3 × B = 9",
+      "(2) 19 – B = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 16, B = 3"
+    ]
+  },
+  {
+    "id": 11,
+    "equations": [
+      "16 – B = A",
+      "3 × A = 24"
+    ],
+    "solution": {
+      "A": 8,
+      "B": 8
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 16 – B = A",
+      "(2) 3 × A = 24",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 8, B = 8"
+    ]
+  },
+  {
+    "id": 12,
+    "equations": [
+      "15 – B = 2",
+      "A + B = 26"
+    ],
+    "solution": {
+      "A": 13,
+      "B": 13
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 15 – B = 2",
+      "(2) A + B = 26",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 13, B = 13"
+    ]
+  },
+  {
+    "id": 13,
+    "equations": [
+      "B + 8 = A",
+      "18 – B = A"
+    ],
+    "solution": {
+      "A": 13,
+      "B": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + 8 = A",
+      "(2) 18 – B = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 13, B = 5"
+    ]
+  },
+  {
+    "id": 14,
+    "equations": [
+      "B ÷ 4 = A",
+      "B – 12 = A"
+    ],
+    "solution": {
+      "A": 4,
+      "B": 16
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B ÷ 4 = A",
+      "(2) B – 12 = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 4, B = 16"
+    ]
+  },
+  {
+    "id": 15,
+    "equations": [
+      "A – 5 = 2",
+      "B – A = 10"
+    ],
+    "solution": {
+      "A": 7,
+      "B": 17
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A – 5 = 2",
+      "(2) B – A = 10",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 7, B = 17"
+    ]
+  },
+  {
+    "id": 16,
+    "equations": [
+      "9 – B = 1",
+      "B + A = 21"
+    ],
+    "solution": {
+      "A": 13,
+      "B": 8
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 9 – B = 1",
+      "(2) B + A = 21",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 13, B = 8"
+    ]
+  },
+  {
+    "id": 17,
+    "equations": [
+      "B + A = 24",
+      "23 – A = 15"
+    ],
+    "solution": {
+      "A": 8,
+      "B": 16
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + A = 24",
+      "(2) 23 – A = 15",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 8, B = 16"
+    ]
+  },
+  {
+    "id": 18,
+    "equations": [
+      "5 × B = A",
+      "3 × B = 3"
+    ],
+    "solution": {
+      "A": 5,
+      "B": 1
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 5 × B = A",
+      "(2) 3 × B = 3",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 5, B = 1"
+    ]
+  },
+  {
+    "id": 19,
+    "equations": [
+      "B + A = 2",
+      "A + B = 2"
+    ],
+    "solution": {
+      "A": 1,
+      "B": 1
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + A = 2",
+      "(2) A + B = 2",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 1, B = 1"
+    ]
+  },
+  {
+    "id": 20,
+    "equations": [
+      "B – A = 8",
+      "11 – A = 10"
+    ],
+    "solution": {
+      "A": 1,
+      "B": 9
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B – A = 8",
+      "(2) 11 – A = 10",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 1, B = 9"
+    ]
+  }
+];
+DMAT_DATA.easy_t2 = [
+  {
+    "id": 1,
+    "equations": [
+      "27 – A = B",
+      "B – A = 3"
+    ],
+    "solution": {
+      "A": 12,
+      "B": 15
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 27 – A = B",
+      "(2) B – A = 3",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 12, B = 15"
+    ]
+  },
+  {
+    "id": 2,
+    "equations": [
+      "21 – A = B",
+      "A – B = 9"
+    ],
+    "solution": {
+      "A": 15,
+      "B": 6
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 21 – A = B",
+      "(2) A – B = 9",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 15, B = 6"
+    ]
+  },
+  {
+    "id": 3,
+    "equations": [
+      "A – B = 16",
+      "B + 14 = 16"
+    ],
+    "solution": {
+      "A": 18,
+      "B": 2
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A – B = 16",
+      "(2) B + 14 = 16",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 18, B = 2"
+    ]
+  },
+  {
+    "id": 4,
+    "equations": [
+      "B – 13 = A",
+      "A + B = 21"
+    ],
+    "solution": {
+      "A": 4,
+      "B": 17
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B – 13 = A",
+      "(2) A + B = 21",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 4, B = 17"
+    ]
+  },
+  {
+    "id": 5,
+    "equations": [
+      "B + 14 = 28",
+      "B – A = 6"
+    ],
+    "solution": {
+      "A": 8,
+      "B": 14
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + 14 = 28",
+      "(2) B – A = 6",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 8, B = 14"
+    ]
+  },
+  {
+    "id": 6,
+    "equations": [
+      "B ÷ 2 = 2",
+      "12 – B = A"
+    ],
+    "solution": {
+      "A": 8,
+      "B": 4
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B ÷ 2 = 2",
+      "(2) 12 – B = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 8, B = 4"
+    ]
+  },
+  {
+    "id": 7,
+    "equations": [
+      "15 – A = 1",
+      "A – 7 = B"
+    ],
+    "solution": {
+      "A": 14,
+      "B": 7
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 15 – A = 1",
+      "(2) A – 7 = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 14, B = 7"
+    ]
+  },
+  {
+    "id": 8,
+    "equations": [
+      "B ÷ 3 = A",
+      "A + 15 = 17"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 6
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B ÷ 3 = A",
+      "(2) A + 15 = 17",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 6"
+    ]
+  },
+  {
+    "id": 9,
+    "equations": [
+      "A + 2 = B",
+      "3 × A = B"
+    ],
+    "solution": {
+      "A": 1,
+      "B": 3
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + 2 = B",
+      "(2) 3 × A = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 1, B = 3"
+    ]
+  },
+  {
+    "id": 10,
+    "equations": [
+      "A + B = 16",
+      "6 + B = 7"
+    ],
+    "solution": {
+      "A": 15,
+      "B": 1
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 16",
+      "(2) 6 + B = 7",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 15, B = 1"
+    ]
+  },
+  {
+    "id": 11,
+    "equations": [
+      "A + B = 13",
+      "A – B = 11"
+    ],
+    "solution": {
+      "A": 12,
+      "B": 1
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 13",
+      "(2) A – B = 11",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 12, B = 1"
+    ]
+  },
+  {
+    "id": 12,
+    "equations": [
+      "B ÷ 5 = 3",
+      "A + B = 23"
+    ],
+    "solution": {
+      "A": 8,
+      "B": 15
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B ÷ 5 = 3",
+      "(2) A + B = 23",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 8, B = 15"
+    ]
+  },
+  {
+    "id": 13,
+    "equations": [
+      "23 – B = 3",
+      "A + 10 = B"
+    ],
+    "solution": {
+      "A": 10,
+      "B": 20
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 23 – B = 3",
+      "(2) A + 10 = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 10, B = 20"
+    ]
+  },
+  {
+    "id": 14,
+    "equations": [
+      "29 – B = A",
+      "6 + A = 17"
+    ],
+    "solution": {
+      "A": 11,
+      "B": 18
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 29 – B = A",
+      "(2) 6 + A = 17",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 11, B = 18"
+    ]
+  },
+  {
+    "id": 15,
+    "equations": [
+      "A – B = 7",
+      "A + B = 25"
+    ],
+    "solution": {
+      "A": 16,
+      "B": 9
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A – B = 7",
+      "(2) A + B = 25",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 16, B = 9"
+    ]
+  },
+  {
+    "id": 16,
+    "equations": [
+      "8 + A = 11",
+      "8 – A = B"
+    ],
+    "solution": {
+      "A": 3,
+      "B": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 8 + A = 11",
+      "(2) 8 – A = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 3, B = 5"
+    ]
+  },
+  {
+    "id": 17,
+    "equations": [
+      "B + A = 7",
+      "A + 3 = B"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + A = 7",
+      "(2) A + 3 = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 5"
+    ]
+  },
+  {
+    "id": 18,
+    "equations": [
+      "A – B = 1",
+      "B – 4 = 3"
+    ],
+    "solution": {
+      "A": 8,
+      "B": 7
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A – B = 1",
+      "(2) B – 4 = 3",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 8, B = 7"
+    ]
+  },
+  {
+    "id": 19,
+    "equations": [
+      "B + A = 25",
+      "6 – B = 1"
+    ],
+    "solution": {
+      "A": 20,
+      "B": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + A = 25",
+      "(2) 6 – B = 1",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 20, B = 5"
+    ]
+  },
+  {
+    "id": 20,
+    "equations": [
+      "5 × A = 20",
+      "B – 14 = A"
+    ],
+    "solution": {
+      "A": 4,
+      "B": 18
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 5 × A = 20",
+      "(2) B – 14 = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 4, B = 18"
+    ]
+  }
+];
+DMAT_DATA.easy_t3 = [
+  {
+    "id": 1,
+    "equations": [
+      "14 – A = B",
+      "A – 6 = 1"
+    ],
+    "solution": {
+      "A": 7,
+      "B": 7
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 14 – A = B",
+      "(2) A – 6 = 1",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 7, B = 7"
+    ]
+  },
+  {
+    "id": 2,
+    "equations": [
+      "8 + A = 9",
+      "11 – B = A"
+    ],
+    "solution": {
+      "A": 1,
+      "B": 10
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 8 + A = 9",
+      "(2) 11 – B = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 1, B = 10"
+    ]
+  },
+  {
+    "id": 3,
+    "equations": [
+      "4 × B = 36",
+      "B – A = 7"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 9
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 4 × B = 36",
+      "(2) B – A = 7",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 9"
+    ]
+  },
+  {
+    "id": 4,
+    "equations": [
+      "B – A = 16",
+      "B ÷ 3 = 6"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 18
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B – A = 16",
+      "(2) B ÷ 3 = 6",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 18"
+    ]
+  },
+  {
+    "id": 5,
+    "equations": [
+      "B – 1 = 7",
+      "A + B = 15"
+    ],
+    "solution": {
+      "A": 7,
+      "B": 8
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B – 1 = 7",
+      "(2) A + B = 15",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 7, B = 8"
+    ]
+  },
+  {
+    "id": 6,
+    "equations": [
+      "4 + B = 20",
+      "B – A = 14"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 16
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 4 + B = 20",
+      "(2) B – A = 14",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 16"
+    ]
+  },
+  {
+    "id": 7,
+    "equations": [
+      "20 – B = A",
+      "A ÷ 2 = 9"
+    ],
+    "solution": {
+      "A": 18,
+      "B": 2
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 20 – B = A",
+      "(2) A ÷ 2 = 9",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 18, B = 2"
+    ]
+  },
+  {
+    "id": 8,
+    "equations": [
+      "31 – A = 15",
+      "A – 2 = B"
+    ],
+    "solution": {
+      "A": 16,
+      "B": 14
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 31 – A = 15",
+      "(2) A – 2 = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 16, B = 14"
+    ]
+  },
+  {
+    "id": 9,
+    "equations": [
+      "B – 1 = A",
+      "15 – A = B"
+    ],
+    "solution": {
+      "A": 7,
+      "B": 8
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B – 1 = A",
+      "(2) 15 – A = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 7, B = 8"
+    ]
+  },
+  {
+    "id": 10,
+    "equations": [
+      "A + 8 = 21",
+      "B + 11 = A"
+    ],
+    "solution": {
+      "A": 13,
+      "B": 2
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + 8 = 21",
+      "(2) B + 11 = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 13, B = 2"
+    ]
+  },
+  {
+    "id": 11,
+    "equations": [
+      "B – 8 = A",
+      "B ÷ 5 = A"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 10
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B – 8 = A",
+      "(2) B ÷ 5 = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 10"
+    ]
+  },
+  {
+    "id": 12,
+    "equations": [
+      "19 – A = 15",
+      "B + 3 = A"
+    ],
+    "solution": {
+      "A": 4,
+      "B": 1
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 19 – A = 15",
+      "(2) B + 3 = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 4, B = 1"
+    ]
+  },
+  {
+    "id": 13,
+    "equations": [
+      "A – 1 = B",
+      "B + A = 5"
+    ],
+    "solution": {
+      "A": 3,
+      "B": 2
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A – 1 = B",
+      "(2) B + A = 5",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 3, B = 2"
+    ]
+  },
+  {
+    "id": 14,
+    "equations": [
+      "A + 4 = B",
+      "27 – B = 11"
+    ],
+    "solution": {
+      "A": 12,
+      "B": 16
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + 4 = B",
+      "(2) 27 – B = 11",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 12, B = 16"
+    ]
+  },
+  {
+    "id": 15,
+    "equations": [
+      "4 × A = 8",
+      "A + 7 = B"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 9
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 4 × A = 8",
+      "(2) A + 7 = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 9"
+    ]
+  },
+  {
+    "id": 16,
+    "equations": [
+      "25 – A = B",
+      "6 × B = 120"
+    ],
+    "solution": {
+      "A": 5,
+      "B": 20
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 25 – A = B",
+      "(2) 6 × B = 120",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 5, B = 20"
+    ]
+  },
+  {
+    "id": 17,
+    "equations": [
+      "17 – A = 9",
+      "A + B = 22"
+    ],
+    "solution": {
+      "A": 8,
+      "B": 14
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 17 – A = 9",
+      "(2) A + B = 22",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 8, B = 14"
+    ]
+  },
+  {
+    "id": 18,
+    "equations": [
+      "B + A = 23",
+      "6 – B = 3"
+    ],
+    "solution": {
+      "A": 20,
+      "B": 3
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + A = 23",
+      "(2) 6 – B = 3",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 20, B = 3"
+    ]
+  },
+  {
+    "id": 19,
+    "equations": [
+      "A + B = 20",
+      "22 – B = 12"
+    ],
+    "solution": {
+      "A": 10,
+      "B": 10
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 20",
+      "(2) 22 – B = 12",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 10, B = 10"
+    ]
+  },
+  {
+    "id": 20,
+    "equations": [
+      "B + A = 17",
+      "15 + B = 17"
+    ],
+    "solution": {
+      "A": 15,
+      "B": 2
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + A = 17",
+      "(2) 15 + B = 17",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 15, B = 2"
+    ]
+  }
+];
+DMAT_DATA.easy_t4 = [
+  {
+    "id": 1,
+    "equations": [
+      "A + B = 9",
+      "B – A = 5"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 7
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 9",
+      "(2) B – A = 5",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 7"
+    ]
+  },
+  {
+    "id": 2,
+    "equations": [
+      "5 + A = 7",
+      "B – 10 = A"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 12
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 5 + A = 7",
+      "(2) B – 10 = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 12"
+    ]
+  },
+  {
+    "id": 3,
+    "equations": [
+      "A + 14 = B",
+      "15 – A = 9"
+    ],
+    "solution": {
+      "A": 6,
+      "B": 20
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + 14 = B",
+      "(2) 15 – A = 9",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 6, B = 20"
+    ]
+  },
+  {
+    "id": 4,
+    "equations": [
+      "24 – B = A",
+      "B – 4 = A"
+    ],
+    "solution": {
+      "A": 10,
+      "B": 14
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 24 – B = A",
+      "(2) B – 4 = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 10, B = 14"
+    ]
+  },
+  {
+    "id": 5,
+    "equations": [
+      "14 – B = 7",
+      "A + B = 19"
+    ],
+    "solution": {
+      "A": 12,
+      "B": 7
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 14 – B = 7",
+      "(2) A + B = 19",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 12, B = 7"
+    ]
+  },
+  {
+    "id": 6,
+    "equations": [
+      "A – 5 = B",
+      "B + A = 15"
+    ],
+    "solution": {
+      "A": 10,
+      "B": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A – 5 = B",
+      "(2) B + A = 15",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 10, B = 5"
+    ]
+  },
+  {
+    "id": 7,
+    "equations": [
+      "8 + B = 12",
+      "A + B = 17"
+    ],
+    "solution": {
+      "A": 13,
+      "B": 4
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 8 + B = 12",
+      "(2) A + B = 17",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 13, B = 4"
+    ]
+  },
+  {
+    "id": 8,
+    "equations": [
+      "B + 12 = 15",
+      "20 – A = B"
+    ],
+    "solution": {
+      "A": 17,
+      "B": 3
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + 12 = 15",
+      "(2) 20 – A = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 17, B = 3"
+    ]
+  },
+  {
+    "id": 9,
+    "equations": [
+      "14 – B = A",
+      "3 × B = 24"
+    ],
+    "solution": {
+      "A": 6,
+      "B": 8
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 14 – B = A",
+      "(2) 3 × B = 24",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 6, B = 8"
+    ]
+  },
+  {
+    "id": 10,
+    "equations": [
+      "A – 3 = 8",
+      "B – A = 1"
+    ],
+    "solution": {
+      "A": 11,
+      "B": 12
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A – 3 = 8",
+      "(2) B – A = 1",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 11, B = 12"
+    ]
+  },
+  {
+    "id": 11,
+    "equations": [
+      "6 × B = 102",
+      "A + 13 = B"
+    ],
+    "solution": {
+      "A": 4,
+      "B": 17
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 6 × B = 102",
+      "(2) A + 13 = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 4, B = 17"
+    ]
+  },
+  {
+    "id": 12,
+    "equations": [
+      "A – B = 3",
+      "15 – B = 6"
+    ],
+    "solution": {
+      "A": 12,
+      "B": 9
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A – B = 3",
+      "(2) 15 – B = 6",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 12, B = 9"
+    ]
+  },
+  {
+    "id": 13,
+    "equations": [
+      "6 × B = 60",
+      "A – B = 2"
+    ],
+    "solution": {
+      "A": 12,
+      "B": 10
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 6 × B = 60",
+      "(2) A – B = 2",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 12, B = 10"
+    ]
+  },
+  {
+    "id": 14,
+    "equations": [
+      "A – 4 = B",
+      "14 + A = 34"
+    ],
+    "solution": {
+      "A": 20,
+      "B": 16
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A – 4 = B",
+      "(2) 14 + A = 34",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 20, B = 16"
+    ]
+  },
+  {
+    "id": 15,
+    "equations": [
+      "A – 12 = B",
+      "17 – B = 9"
+    ],
+    "solution": {
+      "A": 20,
+      "B": 8
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A – 12 = B",
+      "(2) 17 – B = 9",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 20, B = 8"
+    ]
+  },
+  {
+    "id": 16,
+    "equations": [
+      "B – 3 = 4",
+      "B + A = 11"
+    ],
+    "solution": {
+      "A": 4,
+      "B": 7
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B – 3 = 4",
+      "(2) B + A = 11",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 4, B = 7"
+    ]
+  },
+  {
+    "id": 17,
+    "equations": [
+      "A + 1 = B",
+      "5 × A = 90"
+    ],
+    "solution": {
+      "A": 18,
+      "B": 19
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + 1 = B",
+      "(2) 5 × A = 90",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 18, B = 19"
+    ]
+  },
+  {
+    "id": 18,
+    "equations": [
+      "B + 10 = A",
+      "A ÷ 2 = 8"
+    ],
+    "solution": {
+      "A": 16,
+      "B": 6
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + 10 = A",
+      "(2) A ÷ 2 = 8",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 16, B = 6"
+    ]
+  },
+  {
+    "id": 19,
+    "equations": [
+      "6 + A = 15",
+      "16 – A = B"
+    ],
+    "solution": {
+      "A": 9,
+      "B": 7
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 6 + A = 15",
+      "(2) 16 – A = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 9, B = 7"
+    ]
+  },
+  {
+    "id": 20,
+    "equations": [
+      "29 – A = B",
+      "A + 11 = B"
+    ],
+    "solution": {
+      "A": 9,
+      "B": 20
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 29 – A = B",
+      "(2) A + 11 = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 9, B = 20"
+    ]
+  }
+];
+DMAT_DATA.easy_t5 = [
+  {
+    "id": 1,
+    "equations": [
+      "B – A = 12",
+      "A + B = 14"
+    ],
+    "solution": {
+      "A": 1,
+      "B": 13
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B – A = 12",
+      "(2) A + B = 14",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 1, B = 13"
+    ]
+  },
+  {
+    "id": 2,
+    "equations": [
+      "5 × B = 85",
+      "24 – A = B"
+    ],
+    "solution": {
+      "A": 7,
+      "B": 17
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 5 × B = 85",
+      "(2) 24 – A = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 7, B = 17"
+    ]
+  },
+  {
+    "id": 3,
+    "equations": [
+      "B + A = 22",
+      "5 × A = 45"
+    ],
+    "solution": {
+      "A": 9,
+      "B": 13
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + A = 22",
+      "(2) 5 × A = 45",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 9, B = 13"
+    ]
+  },
+  {
+    "id": 4,
+    "equations": [
+      "B – 4 = 1",
+      "B + 9 = A"
+    ],
+    "solution": {
+      "A": 14,
+      "B": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B – 4 = 1",
+      "(2) B + 9 = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 14, B = 5"
+    ]
+  },
+  {
+    "id": 5,
+    "equations": [
+      "B – 12 = 6",
+      "27 – B = A"
+    ],
+    "solution": {
+      "A": 9,
+      "B": 18
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B – 12 = 6",
+      "(2) 27 – B = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 9, B = 18"
+    ]
+  },
+  {
+    "id": 6,
+    "equations": [
+      "17 – A = B",
+      "B + 7 = A"
+    ],
+    "solution": {
+      "A": 12,
+      "B": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 17 – A = B",
+      "(2) B + 7 = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 12, B = 5"
+    ]
+  },
+  {
+    "id": 7,
+    "equations": [
+      "7 – A = 5",
+      "A ÷ 2 = B"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 1
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 7 – A = 5",
+      "(2) A ÷ 2 = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 1"
+    ]
+  },
+  {
+    "id": 8,
+    "equations": [
+      "30 – B = A",
+      "A – 10 = B"
+    ],
+    "solution": {
+      "A": 20,
+      "B": 10
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 30 – B = A",
+      "(2) A – 10 = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 20, B = 10"
+    ]
+  },
+  {
+    "id": 9,
+    "equations": [
+      "A + B = 36",
+      "B + 2 = A"
+    ],
+    "solution": {
+      "A": 19,
+      "B": 17
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 36",
+      "(2) B + 2 = A",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 19, B = 17"
+    ]
+  },
+  {
+    "id": 10,
+    "equations": [
+      "B + 7 = 10",
+      "10 – A = B"
+    ],
+    "solution": {
+      "A": 7,
+      "B": 3
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + 7 = 10",
+      "(2) 10 – A = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 7, B = 3"
+    ]
+  },
+  {
+    "id": 11,
+    "equations": [
+      "16 – A = 9",
+      "B + A = 13"
+    ],
+    "solution": {
+      "A": 7,
+      "B": 6
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 16 – A = 9",
+      "(2) B + A = 13",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 7, B = 6"
+    ]
+  },
+  {
+    "id": 12,
+    "equations": [
+      "A ÷ 2 = 1",
+      "6 – A = B"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A ÷ 2 = 1",
+      "(2) 6 – A = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 4"
+    ]
+  },
+  {
+    "id": 13,
+    "equations": [
+      "A + 3 = 10",
+      "B + A = 9"
+    ],
+    "solution": {
+      "A": 7,
+      "B": 2
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + 3 = 10",
+      "(2) B + A = 9",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 7, B = 2"
+    ]
+  },
+  {
+    "id": 14,
+    "equations": [
+      "28 – B = A",
+      "A + 6 = 20"
+    ],
+    "solution": {
+      "A": 14,
+      "B": 14
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 28 – B = A",
+      "(2) A + 6 = 20",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 14, B = 14"
+    ]
+  },
+  {
+    "id": 15,
+    "equations": [
+      "B + A = 29",
+      "B ÷ 2 = 6"
+    ],
+    "solution": {
+      "A": 17,
+      "B": 12
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + A = 29",
+      "(2) B ÷ 2 = 6",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 17, B = 12"
+    ]
+  },
+  {
+    "id": 16,
+    "equations": [
+      "B + A = 31",
+      "2 × B = 24"
+    ],
+    "solution": {
+      "A": 19,
+      "B": 12
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + A = 31",
+      "(2) 2 × B = 24",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 19, B = 12"
+    ]
+  },
+  {
+    "id": 17,
+    "equations": [
+      "A + 8 = 25",
+      "A – B = 8"
+    ],
+    "solution": {
+      "A": 17,
+      "B": 9
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + 8 = 25",
+      "(2) A – B = 8",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 17, B = 9"
+    ]
+  },
+  {
+    "id": 18,
+    "equations": [
+      "18 – A = B",
+      "16 – B = 10"
+    ],
+    "solution": {
+      "A": 12,
+      "B": 6
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 18 – A = B",
+      "(2) 16 – B = 10",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 12, B = 6"
+    ]
+  },
+  {
+    "id": 19,
+    "equations": [
+      "28 – A = B",
+      "A – 8 = B"
+    ],
+    "solution": {
+      "A": 18,
+      "B": 10
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) 28 – A = B",
+      "(2) A – 8 = B",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 18, B = 10"
+    ]
+  },
+  {
+    "id": 20,
+    "equations": [
+      "B + 2 = 22",
+      "B + A = 38"
+    ],
+    "solution": {
+      "A": 18,
+      "B": 20
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B + 2 = 22",
+      "(2) B + A = 38",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 18, B = 20"
+    ]
+  }
+];
+DMAT_DATA.easy = DMAT_DATA.easy_t1;
+if (DMAT_DATA.categoryInfo) {
+  DMAT_DATA.categoryInfo.easy = {
+    title: 'Easy - Warm Up (Sets 1–5)',
+    description: '5 sets of 20 systems (100 Q). 2-variable linear systems (A, B ∈ 1–20). 25-minute test timer.',
+    timerMinutes: 25,
+    variableCount: 2
+  };
+}
+
 DMAT_DATA.medium = DMAT_DATA.medium_t1;
 const INITIAL_SUBMISSIONS = getRealTimeSubmissions();
 

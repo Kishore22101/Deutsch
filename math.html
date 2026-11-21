@@ -465,13 +465,13 @@
         <div class="glass-card diff-card" id="diff-card-easy" style="cursor: pointer;">
           <div class="diff-badge badge-easy">WARM-UP</div>
           <div class="diff-title">Easy</div>
-          <div class="diff-desc">5 Systems of equations. Single-variable substitutions and basic relations.</div>
+          <div class="diff-desc">5 Sets (100 Q). 2-variable linear systems (A, B ∈ 1–20). 25-minute test timer.</div>
           <div class="diff-specs">
-            <div class="spec-row"><span>Questions:</span><strong>5 Q</strong></div>
-            <div class="spec-row"><span>Timer:</span><strong>10 mins</strong></div>
-            <div class="spec-row"><span>Inputs:</span><strong>A, B, C, D in numbers</strong></div>
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (5 Sets)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 mins</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A, B in numbers</strong></div>
           </div>
-          <button class="btn-diff-action" id="btn-start-easy">Start Easy</button>
+          <button class="btn-diff-action" id="btn-start-easy">Start Easy (5 Sets)</button>
         </div>
 
         <!-- Medium -->
@@ -498,6 +498,94 @@
             <div class="spec-row"><span>Inputs:</span><strong>A, B, C, D in numbers</strong></div>
           </div>
           <button class="btn-diff-action btn-white-solid" id="btn-start-hard">Start Hard (5 Sets)</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 1a: EASY SET SELECTION (Set 1 to Set 5)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-sets-easy">
+    <div class="page-hero container">
+      <button class="back-link-btn" id="btn-back-to-diff-easy" style="margin-bottom: 16px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+        Back to Difficulty Level
+      </button>
+      <div class="badge" style="background:rgba(59,130,246,0.15); color:#60a5fa; border-color:rgba(59,130,246,0.3);">
+        Easy Level · 5 Practice Sets (100 Questions) · 25 Minutes Each
+      </div>
+      <h1>Choose Easy Practice Set</h1>
+      <p>5 Practice sets with 20 unique 2-variable linear systems each (A, B ∈ 1–20). Select your set to begin — the 25-minute countdown begins after you enter your name.</p>
+    </div>
+
+    <div class="container">
+      <div class="cards-grid math-sets-medium-grid">
+
+        <!-- SET 1 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="easy_t1" id="card-easy-set-1">
+          <div class="diff-badge badge-easy">Practice Set 1</div>
+          <div class="diff-title">Set 1</div>
+          <div class="diff-desc">Questions 1–20. Fundamental 2-variable substitutions and linear balance.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Q1–Q20)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A, B (Whole numbers 1–20)</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="easy_t1">Start Set 1 (25m) ➔</button>
+        </div>
+
+        <!-- SET 2 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="easy_t2" id="card-easy-set-2">
+          <div class="diff-badge badge-easy">Practice Set 2</div>
+          <div class="diff-title">Set 2</div>
+          <div class="diff-desc">Questions 21–40. Direct substitution chains and 2-variable balance.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Q21–Q40)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A, B (Whole numbers 1–20)</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="easy_t2">Start Set 2 (25m) ➔</button>
+        </div>
+
+        <!-- SET 3 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="easy_t3" id="card-easy-set-3">
+          <div class="diff-badge badge-easy">Practice Set 3</div>
+          <div class="diff-title">Set 3</div>
+          <div class="diff-desc">Questions 41–60. Speed substitution and 2-variable algebraic relations.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Q41–Q60)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A, B (Whole numbers 1–20)</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="easy_t3">Start Set 3 (25m) ➔</button>
+        </div>
+
+        <!-- SET 4 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="easy_t4" id="card-easy-set-4">
+          <div class="diff-badge badge-easy">Practice Set 4</div>
+          <div class="diff-title">Set 4</div>
+          <div class="diff-desc">Questions 61–80. Linear equations and two-unknown arithmetic speed drills.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Q61–Q80)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A, B (Whole numbers 1–20)</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="easy_t4">Start Set 4 (25m) ➔</button>
+        </div>
+
+        <!-- SET 5 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="easy_t5" id="card-easy-set-5">
+          <div class="diff-badge badge-easy">Practice Set 5</div>
+          <div class="diff-title">Set 5</div>
+          <div class="diff-desc">Questions 81–100. Rapid 2-variable deduction and boundary value verification.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (Q81–Q100)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A, B (Whole numbers 1–20)</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="easy_t5">Start Set 5 (25m) ➔</button>
         </div>
 
       </div>

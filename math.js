@@ -88,6 +88,7 @@
       // Views
       viewDifficulties: document.getElementById('view-difficulties'),
       viewSets: document.getElementById('view-sets'),
+      viewSetsEasy: document.getElementById('view-sets-easy'),
       viewSetsMedium: document.getElementById('view-sets-medium'),
       viewExam: document.getElementById('view-exam'),
       viewResults: document.getElementById('view-results'),
@@ -108,6 +109,7 @@
       btnStartMed: document.getElementById('btn-start-med'),
       btnStartHard: document.getElementById('btn-start-hard'),
       btnBackToDiff: document.getElementById('btn-back-to-diff'),
+      btnBackToDiffEasy: document.getElementById('btn-back-to-diff-easy'),
       btnBackToDiffMed: document.getElementById('btn-back-to-diff-med'),
 
       // Name Modal
@@ -157,13 +159,13 @@
     // Difficulty card clicks
     if (dom.diffCardEasy) {
       dom.diffCardEasy.addEventListener('click', () => {
-        alert('Easy level questions will be updated soon. Please practice with Hard level Sets 1–5 or Medium level Sets 1–5.');
+        showView('sets-easy');
       });
     }
     if (dom.btnStartEasy) {
       dom.btnStartEasy.addEventListener('click', (e) => {
         e.stopPropagation();
-        alert('Easy level questions will be updated soon. Please practice with Hard level Sets 1–5 or Medium level Sets 1–5.');
+        showView('sets-easy');
       });
     }
 
@@ -199,6 +201,11 @@
         showView('difficulties');
       });
     }
+    if (dom.btnBackToDiffEasy) {
+      dom.btnBackToDiffEasy.addEventListener('click', () => {
+        showView('difficulties');
+      });
+    }
     if (dom.btnBackToDiffMed) {
       dom.btnBackToDiffMed.addEventListener('click', () => {
         showView('difficulties');
@@ -213,6 +220,14 @@
         openStartModal(setKey);
       });
     });
+
+    // Easy set card click handlers
+    for (let s = 1; s <= 5; s++) {
+      const c = document.getElementById(`card-easy-set-${s}`);
+      if (c) {
+        c.addEventListener('click', () => openStartModal(`easy_t${s}`));
+      }
+    }
 
     const cardSet1 = document.getElementById('card-set-1');
     if (cardSet1) {
@@ -318,6 +333,7 @@
     state.view = viewName;
     if (dom.viewDifficulties) dom.viewDifficulties.classList.toggle('hidden', viewName !== 'difficulties');
     if (dom.viewSets) dom.viewSets.classList.toggle('hidden', viewName !== 'sets');
+    if (dom.viewSetsEasy) dom.viewSetsEasy.classList.toggle('hidden', viewName !== 'sets-easy');
     if (dom.viewSetsMedium) dom.viewSetsMedium.classList.toggle('hidden', viewName !== 'sets-medium');
     if (dom.viewExam) dom.viewExam.classList.toggle('hidden', viewName !== 'exam');
     if (dom.viewResults) dom.viewResults.classList.toggle('hidden', viewName !== 'results');
@@ -356,6 +372,10 @@
     } else if (state.selectedSet === 'hard_t1' || state.selectedSet === 'hard') {
       title = 'Hard Level · Practice Set 1 · 20 Questions';
       btnText = 'Begin Hard Set 1 (25m) ➔';
+    } else if (state.selectedSet.startsWith('easy_t')) {
+      const num = state.selectedSet.replace('easy_t', '');
+      title = `Easy Level · Practice Set ${num} · 20 Questions`;
+      btnText = `Begin Easy Set ${num} (25m) ➔`;
     } else if (state.selectedSet.startsWith('medium_t')) {
       const num = state.selectedSet.replace('medium_t', '');
       title = `Medium Level · Practice Set ${num} · 20 Questions`;
@@ -419,6 +439,10 @@
     } else if (setKey === 'medium_t5') {
       dataset = data.medium_t5 || [];
       setDisplayName = 'Medium – Set 5';
+    } else if (setKey.startsWith('easy_t')) {
+      dataset = data[setKey] || [];
+      const num = setKey.replace('easy_t', '');
+      setDisplayName = `Easy – Set ${num}`;
     } else {
       dataset = data[setKey] || data.medium_t1 || data.hard || [];
       setDisplayName = setKey;
@@ -490,9 +514,12 @@
     if (state.flagged.has(q.id)) btn.classList.add('flagged');
 
     const ans = state.userAnswers[q.id];
+    const hasC = (q.solution && q.solution.C !== undefined);
     const hasD = (q.solution && q.solution.D !== undefined);
     if (ans) {
-      const varsToCheck = hasD ? [ans.A, ans.B, ans.C, ans.D] : [ans.A, ans.B, ans.C];
+      const varsToCheck = [ans.A, ans.B];
+      if (hasC) varsToCheck.push(ans.C);
+      if (hasD) varsToCheck.push(ans.D);
       const filled = varsToCheck.filter(v => v !== '' && v !== undefined && v !== null).length;
       if (filled === varsToCheck.length) btn.classList.add('answered');
       else if (filled > 0) btn.classList.add('partial');
@@ -522,11 +549,26 @@
     dom.inputC.value = saved.C || '';
     dom.inputD.value = saved.D || '';
 
-    // Show/hide input D: hidden for medium (3-variable), shown only for hard (4-variable)
+    // Show/hide inputs C and D based on difficulty / solution
+    const isEasyTest = state.selectedSet && state.selectedSet.startsWith('easy_t');
     const isMediumTest = state.selectedSet && state.selectedSet.startsWith('medium_t');
-    const hasD = !isMediumTest && (q.solution && q.solution.D !== undefined);
+    const hasC = !isEasyTest && (q.solution && q.solution.C !== undefined);
+    const hasD = !isEasyTest && !isMediumTest && (q.solution && q.solution.D !== undefined);
+
+    const inputCGroup = dom.inputC ? dom.inputC.closest('.var-input-group') : null;
     const inputDGroup = dom.inputD ? dom.inputD.closest('.var-input-group') : null;
-    const inputsGrid = dom.qMathAnswerCard ? dom.qMathAnswerCard.querySelector('.inputs-row-grid') : null;
+    const inputsGrid = dom.inputA ? dom.inputA.closest('.inputs-row-grid') : null;
+
+    if (inputCGroup) {
+      if (hasC) {
+        inputCGroup.classList.remove('hidden-var');
+        inputCGroup.style.display = '';
+      } else {
+        inputCGroup.classList.add('hidden-var');
+        inputCGroup.style.setProperty('display', 'none', 'important');
+      }
+    }
+
     if (inputDGroup) {
       if (hasD) {
         inputDGroup.classList.remove('hidden-var');
@@ -536,8 +578,10 @@
         inputDGroup.style.setProperty('display', 'none', 'important');
       }
     }
+
     if (inputsGrid) {
-      inputsGrid.classList.toggle('has-3-vars', !hasD);
+      inputsGrid.classList.toggle('has-2-vars', !hasC && !hasD);
+      inputsGrid.classList.toggle('has-3-vars', hasC && !hasD);
     }
 
     // Flag button
@@ -571,12 +615,13 @@
   function saveCurrentAnswers() {
     const q = state.questions[state.currentIndex];
     if (!q) return;
+    const isEasyTest = state.selectedSet && state.selectedSet.startsWith('easy_t');
     const isMediumTest = state.selectedSet && state.selectedSet.startsWith('medium_t');
     state.userAnswers[q.id] = {
       A: dom.inputA.value.trim(),
       B: dom.inputB.value.trim(),
-      C: dom.inputC.value.trim(),
-      D: isMediumTest ? '' : dom.inputD.value.trim()
+      C: isEasyTest ? '' : dom.inputC.value.trim(),
+      D: (isEasyTest || isMediumTest) ? '' : dom.inputD.value.trim()
     };
   }
 
@@ -599,8 +644,11 @@
     let unans = 0;
     state.questions.forEach(q => {
       const a = state.userAnswers[q.id] || {};
+      const hasC = (q.solution && q.solution.C !== undefined);
       const hasD = (q.solution && q.solution.D !== undefined);
-      const vars = hasD ? [a.A, a.B, a.C, a.D] : [a.A, a.B, a.C];
+      const vars = [a.A, a.B];
+      if (hasC) vars.push(a.C);
+      if (hasD) vars.push(a.D);
       const filled = vars.filter(v => v !== '' && v !== undefined && v !== null).length;
       if (filled < vars.length) unans++;
     });
@@ -626,11 +674,12 @@
     const details = state.questions.map(q => {
       const user = state.userAnswers[q.id] || {};
       const sol = q.solution || {};
+      const hasC = (sol.C !== undefined);
       const hasD = (sol.D !== undefined);
 
       const isACorrect = parseInt(user.A, 10) === sol.A;
       const isBCorrect = parseInt(user.B, 10) === sol.B;
-      const isCCorrect = parseInt(user.C, 10) === sol.C;
+      const isCCorrect = hasC ? (parseInt(user.C, 10) === sol.C) : true;
       const isDCorrect = hasD ? (parseInt(user.D, 10) === sol.D) : true;
       const allCorrect = (isACorrect && isBCorrect && isCCorrect && isDCorrect);
       if (allCorrect) correctCount++;
@@ -656,7 +705,10 @@
     else if (state.selectedSet === 'hard_t4') setDisplayName = 'Equations – Hard Set 4';
     else if (state.selectedSet === 'hard_t5') setDisplayName = 'Equations – Hard Set 5';
     else if (state.selectedSet === 'hard_t1' || state.selectedSet === 'hard') setDisplayName = 'Equations – Hard Set 1';
-    else if (state.selectedSet.startsWith('medium_t')) {
+    else if (state.selectedSet.startsWith('easy_t')) {
+      const num = state.selectedSet.replace('easy_t', '');
+      setDisplayName = `Equations – Easy Set ${num}`;
+    } else if (state.selectedSet.startsWith('medium_t')) {
       const num = state.selectedSet.replace('medium_t', '');
       setDisplayName = `Equations – Medium Set ${num}`;
     }
@@ -707,9 +759,12 @@
       const sol = item.solution || {};
       const u = item.userAnswer || {};
       const fc = item.fieldCorrectness || {};
+      const hasC = (sol.C !== undefined);
       const hasD = (sol.D !== undefined);
       const steps = (item.stepByStep || []).map(s => `<li>${s}</li>`).join('');
 
+      const userCPill = hasC ? `<span class="${fc.C ? 'var-correct' : 'var-wrong'}">C = ${u.C !== '' && u.C !== undefined ? u.C : '—'}</span>` : '';
+      const solCPill = hasC ? `<span class="var-sol">C = ${sol.C}</span>` : '';
       const userDPill = hasD ? `<span class="${fc.D ? 'var-correct' : 'var-wrong'}">D = ${u.D !== '' && u.D !== undefined ? u.D : '—'}</span>` : '';
       const solDPill = hasD ? `<span class="var-sol">D = ${sol.D}</span>` : '';
 
@@ -737,7 +792,7 @@
               <div class="ans-grid">
                 <span class="${fc.A ? 'var-correct' : 'var-wrong'}">A = ${u.A !== '' && u.A !== undefined ? u.A : '—'}</span>
                 <span class="${fc.B ? 'var-correct' : 'var-wrong'}">B = ${u.B !== '' && u.B !== undefined ? u.B : '—'}</span>
-                <span class="${fc.C ? 'var-correct' : 'var-wrong'}">C = ${u.C !== '' && u.C !== undefined ? u.C : '—'}</span>
+                ${userCPill}
                 ${userDPill}
               </div>
             </div>
@@ -746,7 +801,7 @@
               <div class="ans-grid">
                 <span class="var-sol">A = ${sol.A}</span>
                 <span class="var-sol">B = ${sol.B}</span>
-                <span class="var-sol">C = ${sol.C}</span>
+                ${solCPill}
                 ${solDPill}
               </div>
             </div>

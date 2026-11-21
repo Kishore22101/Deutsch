@@ -749,6 +749,9 @@ html, body {
 .inputs-row-grid.has-3-vars {
   grid-template-columns: repeat(3, 1fr);
 }
+.inputs-row-grid.has-2-vars {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
 .var-input-group:focus-within {
   border-color: #10b981;
   box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
