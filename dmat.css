@@ -818,11 +818,15 @@ html, body {
   opacity: .25;
   cursor: not-allowed;
 }
-.btn-flag {
+.btn-flag,
+.btn-flag-q,
+#btn-flag-q {
   color: #a855f7;
   border-color: rgba(168, 85, 247, 0.3);
 }
-.btn-flag.flagged-active {
+.btn-flag.flagged-active,
+.btn-flag-q.flagged-active,
+#btn-flag-q.flagged-active {
   background: rgba(168, 85, 247, 0.2);
   border-color: #a855f7;
 }
@@ -1791,7 +1795,9 @@ body.exam-active .site-footer { display: none; }
     min-height: 40px; flex: 1; justify-content: center;
     white-space: nowrap; border-radius: 10px;
   }
-  .btn-flag span { display: none; }
+  .btn-flag span,
+  .btn-flag-q span,
+  #btn-flag-q span { display: none; }
   .btn-next span { display: inline; }
 
   /* ─ Hide footer during exam ─ */
