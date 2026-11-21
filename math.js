@@ -526,8 +526,18 @@
     const isMediumTest = state.selectedSet && state.selectedSet.startsWith('medium_t');
     const hasD = !isMediumTest && (q.solution && q.solution.D !== undefined);
     const inputDGroup = dom.inputD ? dom.inputD.closest('.var-input-group') : null;
+    const inputsGrid = dom.qMathAnswerCard ? dom.qMathAnswerCard.querySelector('.inputs-row-grid') : null;
     if (inputDGroup) {
-      inputDGroup.style.display = hasD ? '' : 'none';
+      if (hasD) {
+        inputDGroup.classList.remove('hidden-var');
+        inputDGroup.style.display = '';
+      } else {
+        inputDGroup.classList.add('hidden-var');
+        inputDGroup.style.setProperty('display', 'none', 'important');
+      }
+    }
+    if (inputsGrid) {
+      inputsGrid.classList.toggle('has-3-vars', !hasD);
     }
 
     // Flag button
@@ -589,8 +599,10 @@
     let unans = 0;
     state.questions.forEach(q => {
       const a = state.userAnswers[q.id] || {};
-      const filled = [a.A, a.B, a.C, a.D].filter(v => v !== '' && v !== undefined && v !== null).length;
-      if (filled < 4) unans++;
+      const hasD = (q.solution && q.solution.D !== undefined);
+      const vars = hasD ? [a.A, a.B, a.C, a.D] : [a.A, a.B, a.C];
+      const filled = vars.filter(v => v !== '' && v !== undefined && v !== null).length;
+      if (filled < vars.length) unans++;
     });
 
     let msg = 'Are you ready to submit your exam?';
