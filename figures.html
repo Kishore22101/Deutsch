@@ -496,12 +496,12 @@
       
       <div class="hero-stats-row" style="margin-top: 20px;">
         <div class="h-stat-item">
-          <span class="h-stat-num">3 Tracks</span>
-          <span class="h-stat-lbl">Easy · Med · Hard</span>
+          <span class="h-stat-num">4 Tracks</span>
+          <span class="h-stat-lbl">Easy · Med · Hard · Sim</span>
         </div>
         <div class="h-stat-item">
-          <span class="h-stat-num">15 Sets</span>
-          <span class="h-stat-lbl">300 Questions</span>
+          <span class="h-stat-num">20 Sets</span>
+          <span class="h-stat-lbl">400 Questions</span>
         </div>
         <div class="h-stat-item">
           <span class="h-stat-num">25 min</span>
@@ -515,7 +515,7 @@
     </div>
 
     <div class="container">
-      <div class="cards-grid cols-3 math-diff-grid">
+      <div class="cards-grid cols-4 math-diff-grid">
 
         <!-- Easy -->
         <div class="glass-card diff-card" id="diff-card-easy" style="cursor: pointer;">
@@ -554,6 +554,19 @@
             <div class="spec-row"><span>Format:</span><strong>4 Figures / Matrix</strong></div>
           </div>
           <button class="btn-diff-action btn-white-solid" id="btn-start-hard">Start Hard (5 Sets)</button>
+        </div>
+
+        <!-- Simulation -->
+        <div class="glass-card diff-card diff-card-sim" id="diff-card-sim" style="cursor: pointer;">
+          <div class="diff-badge badge-sim">FULL EXAM SIMULATION</div>
+          <div class="diff-title">Simulation</div>
+          <div class="diff-desc">5 Sets (100 Q). Exam standard mix: 5 Easy, 5 Medium &amp; 10 Hard questions per set. 25-minute test timer.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Q (5 Sets)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 mins</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>Mixed (1, 3 &amp; 4 Figures)</strong></div>
+          </div>
+          <button class="btn-diff-action btn-sim-primary" id="btn-start-sim">Start Simulation (5 Sets)</button>
         </div>
 
       </div>
@@ -799,6 +812,94 @@
           </div>
           <button class="btn-diff-action btn-hard-primary" data-start-fig-set="hard_t5">Start Set 5 (25m) ➔</button>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 1d: SIMULATION SET SELECTION (Set 1 to Set 5)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-sets-sim">
+    <div class="page-hero container">
+      <button class="back-link-btn" id="btn-back-to-diff-sim" style="margin-bottom: 16px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+        Back to Difficulty Level
+      </button>
+      <div class="badge" style="background:rgba(168,85,247,0.15); color:#c084fc; border-color:rgba(168,85,247,0.3);">
+        Full Simulation · 5 Practice Sets (100 Questions) · 25 Minutes Each
+      </div>
+      <h1>Choose Simulation Practice Set</h1>
+      <p>5 Full Simulation sets containing 20 unique sequences each (5 Easy, 5 Medium, 10 Hard). Select your set to begin — the 25-minute countdown begins after you enter your name.</p>
+    </div>
+
+    <div class="container">
+      <div class="cards-grid math-sets-medium-grid">
+
+        <!-- SET 1 -->
+        <div class="glass-card diff-card diff-card-sim" style="cursor: pointer;" data-start-fig-set="sim_t1" id="card-sim-set-1">
+          <div class="diff-badge badge-sim">Practice Set 1</div>
+          <div class="diff-title">Set 1</div>
+          <div class="diff-desc">20 Questions. Balanced mix: 5 Easy (Q1–5), 5 Medium (Q6–10), and 10 Hard (Q11–20).</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>Mixed (1, 3 &amp; 4 Figures)</strong></div>
+          </div>
+          <button class="btn-diff-action btn-sim-primary" data-start-fig-set="sim_t1">Start Set 1 (25m) ➔</button>
+        </div>
+
+        <!-- SET 2 -->
+        <div class="glass-card diff-card diff-card-sim" style="cursor: pointer;" data-start-fig-set="sim_t2" id="card-sim-set-2">
+          <div class="diff-badge badge-sim">Practice Set 2</div>
+          <div class="diff-title">Set 2</div>
+          <div class="diff-desc">20 Questions. Balanced mix: 5 Easy (Q1–5), 5 Medium (Q6–10), and 10 Hard (Q11–20).</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>Mixed (1, 3 &amp; 4 Figures)</strong></div>
+          </div>
+          <button class="btn-diff-action btn-sim-primary" data-start-fig-set="sim_t2">Start Set 2 (25m) ➔</button>
+        </div>
+
+        <!-- SET 3 -->
+        <div class="glass-card diff-card diff-card-sim" style="cursor: pointer;" data-start-fig-set="sim_t3" id="card-sim-set-3">
+          <div class="diff-badge badge-sim">Practice Set 3</div>
+          <div class="diff-title">Set 3</div>
+          <div class="diff-desc">20 Questions. Balanced mix: 5 Easy (Q1–5), 5 Medium (Q6–10), and 10 Hard (Q11–20).</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>Mixed (1, 3 &amp; 4 Figures)</strong></div>
+          </div>
+          <button class="btn-diff-action btn-sim-primary" data-start-fig-set="sim_t3">Start Set 3 (25m) ➔</button>
+        </div>
+
+        <!-- SET 4 -->
+        <div class="glass-card diff-card diff-card-sim" style="cursor: pointer;" data-start-fig-set="sim_t4" id="card-sim-set-4">
+          <div class="diff-badge badge-sim">Practice Set 4</div>
+          <div class="diff-title">Set 4</div>
+          <div class="diff-desc">20 Questions. Balanced mix: 5 Easy (Q1–5), 5 Medium (Q6–10), and 10 Hard (Q11–20).</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>Mixed (1, 3 &amp; 4 Figures)</strong></div>
+          </div>
+          <button class="btn-diff-action btn-sim-primary" data-start-fig-set="sim_t4">Start Set 4 (25m) ➔</button>
+        </div>
+
+        <!-- SET 5 -->
+        <div class="glass-card diff-card diff-card-sim" style="cursor: pointer;" data-start-fig-set="sim_t5" id="card-sim-set-5">
+          <div class="diff-badge badge-sim">Practice Set 5</div>
+          <div class="diff-title">Set 5</div>
+          <div class="diff-desc">20 Questions. Balanced mix: 5 Easy (Q1–5), 5 Medium (Q6–10), and 10 Hard (Q11–20).</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong class="text-glow">20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong class="text-glow">25 Minutes</strong></div>
+            <div class="spec-row"><span>Format:</span><strong>Mixed (1, 3 &amp; 4 Figures)</strong></div>
+          </div>
+          <button class="btn-diff-action btn-sim-primary" data-start-fig-set="sim_t5">Start Set 5 (25m) ➔</button>
+        </div>
+
       </div>
     </div>
   </section>

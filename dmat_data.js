@@ -8415,6 +8415,2352 @@ if (DMAT_DATA.categoryInfo) {
   };
 }
 
+
+DMAT_DATA.sim_t1 = [
+  {
+    "id": 1,
+    "equations": [
+      "A + B = 5",
+      "B − A = 1"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B − A = 1",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 3"
+    ]
+  },
+  {
+    "id": 2,
+    "equations": [
+      "A + B = 6",
+      "B − A = 2"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 6",
+      "(2) B − A = 2",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 4"
+    ]
+  },
+  {
+    "id": 3,
+    "equations": [
+      "A + B = 7",
+      "B − A = 3"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 7",
+      "(2) B − A = 3",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 5"
+    ]
+  },
+  {
+    "id": 4,
+    "equations": [
+      "A + B = 8",
+      "B − A = 4"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 6
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 8",
+      "(2) B − A = 4",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 6"
+    ]
+  },
+  {
+    "id": 5,
+    "equations": [
+      "A + B = 9",
+      "B − A = 5"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 7
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 9",
+      "(2) B − A = 5",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 7"
+    ]
+  },
+  {
+    "id": 6,
+    "equations": [
+      "A + B = 5",
+      "B + C = 7",
+      "A + C = 6"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 4
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B + C = 7",
+      "(3) A + C = 6",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 3, C = 4"
+    ]
+  },
+  {
+    "id": 7,
+    "equations": [
+      "A + B = 5",
+      "B + C = 8",
+      "A + C = 7"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B + C = 8",
+      "(3) A + C = 7",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 3, C = 5"
+    ]
+  },
+  {
+    "id": 8,
+    "equations": [
+      "A + B = 5",
+      "B + C = 9",
+      "A + C = 8"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 6
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B + C = 9",
+      "(3) A + C = 8",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 3, C = 6"
+    ]
+  },
+  {
+    "id": 9,
+    "equations": [
+      "A + B = 5",
+      "B + C = 10",
+      "A + C = 9"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 7
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B + C = 10",
+      "(3) A + C = 9",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 3, C = 7"
+    ]
+  },
+  {
+    "id": 10,
+    "equations": [
+      "A + B = 5",
+      "B + C = 11",
+      "A + C = 10"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 8
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B + C = 11",
+      "(3) A + C = 10",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 3, C = 8"
+    ]
+  },
+  {
+    "id": 11,
+    "equations": [
+      "D = 3 × A",
+      "C = D − 2",
+      "B + C = 7",
+      "A + B + D = 11"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 4,
+      "D": 6
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) D = 3 × A",
+      "(2) C = D − 2",
+      "(3) B + C = 7",
+      "(4) A + B + D = 11",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 3, C = 4, D = 6"
+    ]
+  },
+  {
+    "id": 12,
+    "equations": [
+      "D = 3 × A",
+      "C = D − 1",
+      "B + C = 8",
+      "A + B + D = 11"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 5,
+      "D": 6
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) D = 3 × A",
+      "(2) C = D − 1",
+      "(3) B + C = 8",
+      "(4) A + B + D = 11",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 3, C = 5, D = 6"
+    ]
+  },
+  {
+    "id": 13,
+    "equations": [
+      "B = 2 × A",
+      "C = B − 1",
+      "D = A + 3",
+      "A + B + C + D = 14"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3,
+      "D": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B − 1",
+      "(3) D = A + 3",
+      "(4) A + B + C + D = 14",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 3, D = 5"
+    ]
+  },
+  {
+    "id": 14,
+    "equations": [
+      "B = 2 × A",
+      "C = B − 1",
+      "D = A + 4",
+      "A + B + C + D = 15"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3,
+      "D": 6
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B − 1",
+      "(3) D = A + 4",
+      "(4) A + B + C + D = 15",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 3, D = 6"
+    ]
+  },
+  {
+    "id": 15,
+    "equations": [
+      "B = 2 × A",
+      "C = B − 1",
+      "D = A + 5",
+      "A + B + C + D = 16"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3,
+      "D": 7
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B − 1",
+      "(3) D = A + 5",
+      "(4) A + B + C + D = 16",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 3, D = 7"
+    ]
+  },
+  {
+    "id": 16,
+    "equations": [
+      "B = 2 × A",
+      "C = B − 1",
+      "D = A + 6",
+      "A + B + C + D = 17"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3,
+      "D": 8
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B − 1",
+      "(3) D = A + 6",
+      "(4) A + B + C + D = 17",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 3, D = 8"
+    ]
+  },
+  {
+    "id": 17,
+    "equations": [
+      "B = 2 × A",
+      "C = B − 1",
+      "D = A + 7",
+      "A + B + C + D = 18"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3,
+      "D": 9
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B − 1",
+      "(3) D = A + 7",
+      "(4) A + B + C + D = 18",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 3, D = 9"
+    ]
+  },
+  {
+    "id": 18,
+    "equations": [
+      "B = 2 × A",
+      "C = B − 1",
+      "D = A + 8",
+      "A + B + C + D = 19"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3,
+      "D": 10
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B − 1",
+      "(3) D = A + 8",
+      "(4) A + B + C + D = 19",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 3, D = 10"
+    ]
+  },
+  {
+    "id": 19,
+    "equations": [
+      "B = 2 × A",
+      "C = B − 1",
+      "D = A + 9",
+      "A + B + C + D = 20"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3,
+      "D": 11
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B − 1",
+      "(3) D = A + 9",
+      "(4) A + B + C + D = 20",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 3, D = 11"
+    ]
+  },
+  {
+    "id": 20,
+    "equations": [
+      "B = 2 × A",
+      "C = B − 1",
+      "D = A + 10",
+      "A + B + C + D = 21"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3,
+      "D": 12
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B − 1",
+      "(3) D = A + 10",
+      "(4) A + B + C + D = 21",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 3, D = 12"
+    ]
+  }
+];
+DMAT_DATA.sim_t2 = [
+  {
+    "id": 1,
+    "equations": [
+      "A + B = 10",
+      "B − A = 6"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 8
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 10",
+      "(2) B − A = 6",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 8"
+    ]
+  },
+  {
+    "id": 2,
+    "equations": [
+      "A + B = 11",
+      "B − A = 7"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 9
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 11",
+      "(2) B − A = 7",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 9"
+    ]
+  },
+  {
+    "id": 3,
+    "equations": [
+      "A + B = 12",
+      "B − A = 8"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 10
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 12",
+      "(2) B − A = 8",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 10"
+    ]
+  },
+  {
+    "id": 4,
+    "equations": [
+      "A + B = 13",
+      "B − A = 9"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 11
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 13",
+      "(2) B − A = 9",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 11"
+    ]
+  },
+  {
+    "id": 5,
+    "equations": [
+      "A + B = 14",
+      "B − A = 10"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 12
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 14",
+      "(2) B − A = 10",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 12"
+    ]
+  },
+  {
+    "id": 6,
+    "equations": [
+      "A + B = 5",
+      "B + C = 12",
+      "A + C = 11"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 9
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B + C = 12",
+      "(3) A + C = 11",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 3, C = 9"
+    ]
+  },
+  {
+    "id": 7,
+    "equations": [
+      "A + B = 5",
+      "B + C = 13",
+      "A + C = 12"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 10
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B + C = 13",
+      "(3) A + C = 12",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 3, C = 10"
+    ]
+  },
+  {
+    "id": 8,
+    "equations": [
+      "A + B = 5",
+      "B + C = 14",
+      "A + C = 13"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 11
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B + C = 14",
+      "(3) A + C = 13",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 3, C = 11"
+    ]
+  },
+  {
+    "id": 9,
+    "equations": [
+      "A + B = 5",
+      "B + C = 15",
+      "A + C = 14"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 12
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B + C = 15",
+      "(3) A + C = 14",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 3, C = 12"
+    ]
+  },
+  {
+    "id": 10,
+    "equations": [
+      "A + B = 5",
+      "B + C = 16",
+      "A + C = 15"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 13
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B + C = 16",
+      "(3) A + C = 15",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 3, C = 13"
+    ]
+  },
+  {
+    "id": 11,
+    "equations": [
+      "B = 2 × A",
+      "C = B − 1",
+      "D = A + 11",
+      "A + B + C + D = 22"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3,
+      "D": 13
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B − 1",
+      "(3) D = A + 11",
+      "(4) A + B + C + D = 22",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 3, D = 13"
+    ]
+  },
+  {
+    "id": 12,
+    "equations": [
+      "B = 2 × A",
+      "C = B − 1",
+      "D = A + 12",
+      "A + B + C + D = 23"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3,
+      "D": 14
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B − 1",
+      "(3) D = A + 12",
+      "(4) A + B + C + D = 23",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 3, D = 14"
+    ]
+  },
+  {
+    "id": 13,
+    "equations": [
+      "B = 2 × A",
+      "C = B − 1",
+      "D = A + 13",
+      "A + B + C + D = 24"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3,
+      "D": 15
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B − 1",
+      "(3) D = A + 13",
+      "(4) A + B + C + D = 24",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 3, D = 15"
+    ]
+  },
+  {
+    "id": 14,
+    "equations": [
+      "B = 2 × A",
+      "C = B − 1",
+      "D = A + 14",
+      "A + B + C + D = 25"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3,
+      "D": 16
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B − 1",
+      "(3) D = A + 14",
+      "(4) A + B + C + D = 25",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 3, D = 16"
+    ]
+  },
+  {
+    "id": 15,
+    "equations": [
+      "B = 2 × A",
+      "C = B − 1",
+      "D = A + 15",
+      "A + B + C + D = 26"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3,
+      "D": 17
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B − 1",
+      "(3) D = A + 15",
+      "(4) A + B + C + D = 26",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 3, D = 17"
+    ]
+  },
+  {
+    "id": 16,
+    "equations": [
+      "B = 2 × A",
+      "C = B − 1",
+      "D = A + 16",
+      "A + B + C + D = 27"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3,
+      "D": 18
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B − 1",
+      "(3) D = A + 16",
+      "(4) A + B + C + D = 27",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 3, D = 18"
+    ]
+  },
+  {
+    "id": 17,
+    "equations": [
+      "B = 2 × A",
+      "C = B − 1",
+      "D = A + 17",
+      "A + B + C + D = 28"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3,
+      "D": 19
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B − 1",
+      "(3) D = A + 17",
+      "(4) A + B + C + D = 28",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 3, D = 19"
+    ]
+  },
+  {
+    "id": 18,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 1",
+      "D = A + 1",
+      "A + B + C + D = 14"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5,
+      "D": 3
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 1",
+      "(3) D = A + 1",
+      "(4) A + B + C + D = 14",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 5, D = 3"
+    ]
+  },
+  {
+    "id": 19,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 1",
+      "D = A + 4",
+      "A + B + C + D = 17"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5,
+      "D": 6
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 1",
+      "(3) D = A + 4",
+      "(4) A + B + C + D = 17",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 5, D = 6"
+    ]
+  },
+  {
+    "id": 20,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 1",
+      "D = A + 5",
+      "A + B + C + D = 18"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5,
+      "D": 7
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 1",
+      "(3) D = A + 5",
+      "(4) A + B + C + D = 18",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 5, D = 7"
+    ]
+  }
+];
+DMAT_DATA.sim_t3 = [
+  {
+    "id": 1,
+    "equations": [
+      "A + B = 15",
+      "B − A = 11"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 13
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 15",
+      "(2) B − A = 11",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 13"
+    ]
+  },
+  {
+    "id": 2,
+    "equations": [
+      "A + B = 16",
+      "B − A = 12"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 14
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 16",
+      "(2) B − A = 12",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 14"
+    ]
+  },
+  {
+    "id": 3,
+    "equations": [
+      "A + B = 17",
+      "B − A = 13"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 15
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 17",
+      "(2) B − A = 13",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 15"
+    ]
+  },
+  {
+    "id": 4,
+    "equations": [
+      "A + B = 18",
+      "B − A = 14"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 16
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 18",
+      "(2) B − A = 14",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 16"
+    ]
+  },
+  {
+    "id": 5,
+    "equations": [
+      "A + B = 19",
+      "B − A = 15"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 17
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 19",
+      "(2) B − A = 15",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 17"
+    ]
+  },
+  {
+    "id": 6,
+    "equations": [
+      "A + B = 5",
+      "B + C = 17",
+      "A + C = 16"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 14
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B + C = 17",
+      "(3) A + C = 16",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 3, C = 14"
+    ]
+  },
+  {
+    "id": 7,
+    "equations": [
+      "A + B = 5",
+      "B + C = 18",
+      "A + C = 17"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 15
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B + C = 18",
+      "(3) A + C = 17",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 3, C = 15"
+    ]
+  },
+  {
+    "id": 8,
+    "equations": [
+      "A + B = 5",
+      "B + C = 19",
+      "A + C = 18"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 16
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B + C = 19",
+      "(3) A + C = 18",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 3, C = 16"
+    ]
+  },
+  {
+    "id": 9,
+    "equations": [
+      "A + B = 5",
+      "B + C = 20",
+      "A + C = 19"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 17
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B + C = 20",
+      "(3) A + C = 19",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 3, C = 17"
+    ]
+  },
+  {
+    "id": 10,
+    "equations": [
+      "A + B = 5",
+      "B + C = 21",
+      "A + C = 20"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 3,
+      "C": 18
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) B + C = 21",
+      "(3) A + C = 20",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 3, C = 18"
+    ]
+  },
+  {
+    "id": 11,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 1",
+      "D = A + 6",
+      "A + B + C + D = 19"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5,
+      "D": 8
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 1",
+      "(3) D = A + 6",
+      "(4) A + B + C + D = 19",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 5, D = 8"
+    ]
+  },
+  {
+    "id": 12,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 1",
+      "D = A + 7",
+      "A + B + C + D = 20"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5,
+      "D": 9
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 1",
+      "(3) D = A + 7",
+      "(4) A + B + C + D = 20",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 5, D = 9"
+    ]
+  },
+  {
+    "id": 13,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 1",
+      "D = A + 8",
+      "A + B + C + D = 21"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5,
+      "D": 10
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 1",
+      "(3) D = A + 8",
+      "(4) A + B + C + D = 21",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 5, D = 10"
+    ]
+  },
+  {
+    "id": 14,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 1",
+      "D = A + 9",
+      "A + B + C + D = 22"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5,
+      "D": 11
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 1",
+      "(3) D = A + 9",
+      "(4) A + B + C + D = 22",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 5, D = 11"
+    ]
+  },
+  {
+    "id": 15,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 1",
+      "D = A + 10",
+      "A + B + C + D = 23"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5,
+      "D": 12
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 1",
+      "(3) D = A + 10",
+      "(4) A + B + C + D = 23",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 5, D = 12"
+    ]
+  },
+  {
+    "id": 16,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 1",
+      "D = A + 11",
+      "A + B + C + D = 24"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5,
+      "D": 13
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 1",
+      "(3) D = A + 11",
+      "(4) A + B + C + D = 24",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 5, D = 13"
+    ]
+  },
+  {
+    "id": 17,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 1",
+      "D = A + 12",
+      "A + B + C + D = 25"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5,
+      "D": 14
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 1",
+      "(3) D = A + 12",
+      "(4) A + B + C + D = 25",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 5, D = 14"
+    ]
+  },
+  {
+    "id": 18,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 1",
+      "D = A + 13",
+      "A + B + C + D = 26"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5,
+      "D": 15
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 1",
+      "(3) D = A + 13",
+      "(4) A + B + C + D = 26",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 5, D = 15"
+    ]
+  },
+  {
+    "id": 19,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 1",
+      "D = A + 14",
+      "A + B + C + D = 27"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5,
+      "D": 16
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 1",
+      "(3) D = A + 14",
+      "(4) A + B + C + D = 27",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 5, D = 16"
+    ]
+  },
+  {
+    "id": 20,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 1",
+      "D = A + 15",
+      "A + B + C + D = 28"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5,
+      "D": 17
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 1",
+      "(3) D = A + 15",
+      "(4) A + B + C + D = 28",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 5, D = 17"
+    ]
+  }
+];
+DMAT_DATA.sim_t4 = [
+  {
+    "id": 1,
+    "equations": [
+      "A + B = 20",
+      "B − A = 16"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 18
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 20",
+      "(2) B − A = 16",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 18"
+    ]
+  },
+  {
+    "id": 2,
+    "equations": [
+      "A + B = 21",
+      "B − A = 17"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 19
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 21",
+      "(2) B − A = 17",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 2, B = 19"
+    ]
+  },
+  {
+    "id": 3,
+    "equations": [
+      "A + B = 5",
+      "A − B = 1"
+    ],
+    "solution": {
+      "A": 3,
+      "B": 2
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 5",
+      "(2) A − B = 1",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 3, B = 2"
+    ]
+  },
+  {
+    "id": 4,
+    "equations": [
+      "A + B = 7",
+      "B − A = 1"
+    ],
+    "solution": {
+      "A": 3,
+      "B": 4
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 7",
+      "(2) B − A = 1",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 3, B = 4"
+    ]
+  },
+  {
+    "id": 5,
+    "equations": [
+      "A + B = 8",
+      "B − A = 2"
+    ],
+    "solution": {
+      "A": 3,
+      "B": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 8",
+      "(2) B − A = 2",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 3, B = 5"
+    ]
+  },
+  {
+    "id": 6,
+    "equations": [
+      "A + B = 6",
+      "B + C = 7",
+      "A + C = 5"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 3
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 6",
+      "(2) B + C = 7",
+      "(3) A + C = 5",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 4, C = 3"
+    ]
+  },
+  {
+    "id": 7,
+    "equations": [
+      "A + B = 6",
+      "B + C = 9",
+      "A + C = 7"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 6",
+      "(2) B + C = 9",
+      "(3) A + C = 7",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 4, C = 5"
+    ]
+  },
+  {
+    "id": 8,
+    "equations": [
+      "A + B = 6",
+      "B + C = 10",
+      "A + C = 8"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 6",
+      "(2) B + C = 10",
+      "(3) A + C = 8",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 4, C = 6"
+    ]
+  },
+  {
+    "id": 9,
+    "equations": [
+      "A + B = 6",
+      "B + C = 11",
+      "A + C = 9"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 7
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 6",
+      "(2) B + C = 11",
+      "(3) A + C = 9",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 4, C = 7"
+    ]
+  },
+  {
+    "id": 10,
+    "equations": [
+      "A + B = 6",
+      "B + C = 12",
+      "A + C = 10"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 8
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 6",
+      "(2) B + C = 12",
+      "(3) A + C = 10",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 4, C = 8"
+    ]
+  },
+  {
+    "id": 11,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 1",
+      "D = A + 16",
+      "A + B + C + D = 29"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5,
+      "D": 18
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 1",
+      "(3) D = A + 16",
+      "(4) A + B + C + D = 29",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 5, D = 18"
+    ]
+  },
+  {
+    "id": 12,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 1",
+      "D = A + 17",
+      "A + B + C + D = 30"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 5,
+      "D": 19
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 1",
+      "(3) D = A + 17",
+      "(4) A + B + C + D = 30",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 5, D = 19"
+    ]
+  },
+  {
+    "id": 13,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 2",
+      "D = A + 1",
+      "A + B + C + D = 15"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6,
+      "D": 3
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 2",
+      "(3) D = A + 1",
+      "(4) A + B + C + D = 15",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 6, D = 3"
+    ]
+  },
+  {
+    "id": 14,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 2",
+      "D = A + 3",
+      "A + B + C + D = 17"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6,
+      "D": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 2",
+      "(3) D = A + 3",
+      "(4) A + B + C + D = 17",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 6, D = 5"
+    ]
+  },
+  {
+    "id": 15,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 2",
+      "D = A + 5",
+      "A + B + C + D = 19"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6,
+      "D": 7
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 2",
+      "(3) D = A + 5",
+      "(4) A + B + C + D = 19",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 6, D = 7"
+    ]
+  },
+  {
+    "id": 16,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 2",
+      "D = A + 6",
+      "A + B + C + D = 20"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6,
+      "D": 8
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 2",
+      "(3) D = A + 6",
+      "(4) A + B + C + D = 20",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 6, D = 8"
+    ]
+  },
+  {
+    "id": 17,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 2",
+      "D = A + 7",
+      "A + B + C + D = 21"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6,
+      "D": 9
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 2",
+      "(3) D = A + 7",
+      "(4) A + B + C + D = 21",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 6, D = 9"
+    ]
+  },
+  {
+    "id": 18,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 2",
+      "D = A + 8",
+      "A + B + C + D = 22"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6,
+      "D": 10
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 2",
+      "(3) D = A + 8",
+      "(4) A + B + C + D = 22",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 6, D = 10"
+    ]
+  },
+  {
+    "id": 19,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 2",
+      "D = A + 9",
+      "A + B + C + D = 23"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6,
+      "D": 11
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 2",
+      "(3) D = A + 9",
+      "(4) A + B + C + D = 23",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 6, D = 11"
+    ]
+  },
+  {
+    "id": 20,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 2",
+      "D = A + 10",
+      "A + B + C + D = 24"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6,
+      "D": 12
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 2",
+      "(3) D = A + 10",
+      "(4) A + B + C + D = 24",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 6, D = 12"
+    ]
+  }
+];
+DMAT_DATA.sim_t5 = [
+  {
+    "id": 1,
+    "equations": [
+      "A + B = 9",
+      "B − A = 3"
+    ],
+    "solution": {
+      "A": 3,
+      "B": 6
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 9",
+      "(2) B − A = 3",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 3, B = 6"
+    ]
+  },
+  {
+    "id": 2,
+    "equations": [
+      "A + B = 10",
+      "B − A = 4"
+    ],
+    "solution": {
+      "A": 3,
+      "B": 7
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 10",
+      "(2) B − A = 4",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 3, B = 7"
+    ]
+  },
+  {
+    "id": 3,
+    "equations": [
+      "A + B = 11",
+      "B − A = 5"
+    ],
+    "solution": {
+      "A": 3,
+      "B": 8
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 11",
+      "(2) B − A = 5",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 3, B = 8"
+    ]
+  },
+  {
+    "id": 4,
+    "equations": [
+      "A + B = 12",
+      "B − A = 6"
+    ],
+    "solution": {
+      "A": 3,
+      "B": 9
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 12",
+      "(2) B − A = 6",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 3, B = 9"
+    ]
+  },
+  {
+    "id": 5,
+    "equations": [
+      "A + B = 13",
+      "B − A = 7"
+    ],
+    "solution": {
+      "A": 3,
+      "B": 10
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 13",
+      "(2) B − A = 7",
+      "Step 1: Solve for one variable directly or isolate by substitution.",
+      "Step 2: Substitute into the remaining equation to solve for the second variable.",
+      "Result: A = 3, B = 10"
+    ]
+  },
+  {
+    "id": 6,
+    "equations": [
+      "A + B = 6",
+      "B + C = 13",
+      "A + C = 11"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 9
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 6",
+      "(2) B + C = 13",
+      "(3) A + C = 11",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 4, C = 9"
+    ]
+  },
+  {
+    "id": 7,
+    "equations": [
+      "A + B = 6",
+      "B + C = 14",
+      "A + C = 12"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 10
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 6",
+      "(2) B + C = 14",
+      "(3) A + C = 12",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 4, C = 10"
+    ]
+  },
+  {
+    "id": 8,
+    "equations": [
+      "A + B = 6",
+      "B + C = 15",
+      "A + C = 13"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 11
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 6",
+      "(2) B + C = 15",
+      "(3) A + C = 13",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 4, C = 11"
+    ]
+  },
+  {
+    "id": 9,
+    "equations": [
+      "A + B = 6",
+      "B + C = 16",
+      "A + C = 14"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 12
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 6",
+      "(2) B + C = 16",
+      "(3) A + C = 14",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 4, C = 12"
+    ]
+  },
+  {
+    "id": 10,
+    "equations": [
+      "A + B = 6",
+      "B + C = 17",
+      "A + C = 15"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 13
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) A + B = 6",
+      "(2) B + C = 17",
+      "(3) A + C = 15",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into remaining equations to solve each unknown.",
+      "Result: A = 2, B = 4, C = 13"
+    ]
+  },
+  {
+    "id": 11,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 2",
+      "D = A + 11",
+      "A + B + C + D = 25"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6,
+      "D": 13
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 2",
+      "(3) D = A + 11",
+      "(4) A + B + C + D = 25",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 6, D = 13"
+    ]
+  },
+  {
+    "id": 12,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 2",
+      "D = A + 12",
+      "A + B + C + D = 26"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6,
+      "D": 14
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 2",
+      "(3) D = A + 12",
+      "(4) A + B + C + D = 26",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 6, D = 14"
+    ]
+  },
+  {
+    "id": 13,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 2",
+      "D = A + 13",
+      "A + B + C + D = 27"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6,
+      "D": 15
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 2",
+      "(3) D = A + 13",
+      "(4) A + B + C + D = 27",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 6, D = 15"
+    ]
+  },
+  {
+    "id": 14,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 2",
+      "D = A + 14",
+      "A + B + C + D = 28"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6,
+      "D": 16
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 2",
+      "(3) D = A + 14",
+      "(4) A + B + C + D = 28",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 6, D = 16"
+    ]
+  },
+  {
+    "id": 15,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 2",
+      "D = A + 15",
+      "A + B + C + D = 29"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6,
+      "D": 17
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 2",
+      "(3) D = A + 15",
+      "(4) A + B + C + D = 29",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 6, D = 17"
+    ]
+  },
+  {
+    "id": 16,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 2",
+      "D = A + 16",
+      "A + B + C + D = 30"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6,
+      "D": 18
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 2",
+      "(3) D = A + 16",
+      "(4) A + B + C + D = 30",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 6, D = 18"
+    ]
+  },
+  {
+    "id": 17,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 2",
+      "D = A + 17",
+      "A + B + C + D = 31"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 6,
+      "D": 19
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 2",
+      "(3) D = A + 17",
+      "(4) A + B + C + D = 31",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 6, D = 19"
+    ]
+  },
+  {
+    "id": 18,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 3",
+      "D = A + 1",
+      "A + B + C + D = 16"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 7,
+      "D": 3
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 3",
+      "(3) D = A + 1",
+      "(4) A + B + C + D = 16",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 7, D = 3"
+    ]
+  },
+  {
+    "id": 19,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 3",
+      "D = A + 3",
+      "A + B + C + D = 18"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 7,
+      "D": 5
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 3",
+      "(3) D = A + 3",
+      "(4) A + B + C + D = 18",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 7, D = 5"
+    ]
+  },
+  {
+    "id": 20,
+    "equations": [
+      "B = 2 × A",
+      "C = B + 3",
+      "D = A + 4",
+      "A + B + C + D = 19"
+    ],
+    "solution": {
+      "A": 2,
+      "B": 4,
+      "C": 7,
+      "D": 6
+    },
+    "stepByStep": [
+      "Given System of Equations:",
+      "(1) B = 2 × A",
+      "(2) C = B + 3",
+      "(3) D = A + 4",
+      "(4) A + B + C + D = 19",
+      "Step 1: Express variables in terms of a common variable via substitution.",
+      "Step 2: Substitute into the master equation to solve for the key variable.",
+      "Step 3: Back-substitute to find the remaining variables.",
+      "Result: A = 2, B = 4, C = 7, D = 6"
+    ]
+  }
+];
+DMAT_DATA.sim = DMAT_DATA.sim_t1;
+if (DMAT_DATA.categoryInfo) {
+  DMAT_DATA.categoryInfo.sim = {
+    title: 'Full Simulation (Sets 1–5)',
+    description: '5 sets of 20 systems (100 Q). Realistic exam mix: 5 Easy, 5 Medium & 10 Hard questions per set. 25-minute test timer.',
+    timerMinutes: 25,
+    variableCount: 4
+  };
+}
+
 DMAT_DATA.medium = DMAT_DATA.medium_t1;
 const INITIAL_SUBMISSIONS = getRealTimeSubmissions();
 

@@ -238,9 +238,20 @@ html, body {
 }
 .cards-grid.cols-4 {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   padding-bottom: 64px;
+}
+@media (max-width: 1200px) {
+  .cards-grid.cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .cards-grid.cols-4 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
 .diff-card {
   padding: 32px 24px 28px;
@@ -261,6 +272,24 @@ html, body {
 .badge-easy { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
 .badge-medium { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
 .badge-hard { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.badge-sim { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+.diff-card-sim {
+  border-color: rgba(168, 85, 247, 0.35);
+}
+.diff-card-sim:hover {
+  border-color: rgba(168, 85, 247, 0.7);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.18);
+}
+.btn-sim-primary {
+  background: rgba(168, 85, 247, 0.18);
+  color: #d8b4fe;
+  border: 1px solid rgba(168, 85, 247, 0.45);
+}
+.btn-sim-primary:hover {
+  background: rgba(168, 85, 247, 0.35);
+  border-color: #c084fc;
+  color: #fff;
+}
 
 .diff-title {
   font-size: 28px;
@@ -1639,13 +1668,7 @@ body.exam-active .site-footer { display: none; }
   /* ─ Difficulty Cards ─ */
   .cards-grid.cols-3,
   .cards-grid.cols-4 { grid-template-columns: 1fr; gap: 10px; }
-  .cards-grid.cols-4 {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 16px;
-  padding-bottom: 64px;
-}
-.diff-card { padding: 18px 14px; }
+  .diff-card { padding: 18px 14px; }
   .diff-title { font-size: 20px; }
   .diff-specs { padding: 8px 12px; font-size: 11px; }
   .btn-diff-action { padding: 12px 14px; font-size: 13px; min-height: 44px; }

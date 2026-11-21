@@ -112030,4 +112030,38617 @@ const FIGURES_DATA = {
   ]
 };
 
+
+FIGURES_DATA.sim_t1 = [
+  {
+    "id": 1,
+    "testSet": 1,
+    "qNum": 1,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 2,
+    "testSet": 1,
+    "qNum": 2,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 3,
+    "testSet": 1,
+    "qNum": 3,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 4,
+    "testSet": 1,
+    "qNum": 4,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 5,
+    "testSet": 1,
+    "qNum": 5,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 6,
+    "testSet": 1,
+    "qNum": 6,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 7,
+    "testSet": 1,
+    "qNum": 7,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 8,
+    "testSet": 1,
+    "qNum": 8,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 9,
+    "testSet": 1,
+    "qNum": 9,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 10,
+    "testSet": 1,
+    "qNum": 10,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 11,
+    "testSet": 1,
+    "qNum": 11,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 12,
+    "testSet": 1,
+    "qNum": 12,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 13,
+    "testSet": 1,
+    "qNum": 13,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 14,
+    "testSet": 1,
+    "qNum": 14,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 15,
+    "testSet": 1,
+    "qNum": 15,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 16,
+    "testSet": 1,
+    "qNum": 16,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 17,
+    "testSet": 1,
+    "qNum": 17,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 18,
+    "testSet": 1,
+    "qNum": 18,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 19,
+    "testSet": 1,
+    "qNum": 19,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 20,
+    "testSet": 1,
+    "qNum": 20,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  }
+];
+FIGURES_DATA.sim_t2 = [
+  {
+    "id": 1,
+    "testSet": 2,
+    "qNum": 1,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 2,
+    "testSet": 2,
+    "qNum": 2,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 3,
+    "testSet": 2,
+    "qNum": 3,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 4,
+    "testSet": 2,
+    "qNum": 4,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "green",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 5,
+    "testSet": 2,
+    "qNum": 5,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 6,
+    "testSet": 2,
+    "qNum": 6,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 7,
+    "testSet": 2,
+    "qNum": 7,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 8,
+    "testSet": 2,
+    "qNum": 8,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 9,
+    "testSet": 2,
+    "qNum": 9,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 10,
+    "testSet": 2,
+    "qNum": 10,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 11,
+    "testSet": 2,
+    "qNum": 11,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 12,
+    "testSet": 2,
+    "qNum": 12,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 13,
+    "testSet": 2,
+    "qNum": 13,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 14,
+    "testSet": 2,
+    "qNum": 14,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 15,
+    "testSet": 2,
+    "qNum": 15,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 16,
+    "testSet": 2,
+    "qNum": 16,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 17,
+    "testSet": 2,
+    "qNum": 17,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "black",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 18,
+    "testSet": 2,
+    "qNum": 18,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 19,
+    "testSet": 2,
+    "qNum": 19,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 20,
+    "testSet": 2,
+    "qNum": 20,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "pink",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "pink",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  }
+];
+FIGURES_DATA.sim_t3 = [
+  {
+    "id": 1,
+    "testSet": 3,
+    "qNum": 1,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 2,
+    "testSet": 3,
+    "qNum": 2,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 3,
+    "testSet": 3,
+    "qNum": 3,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 4,
+    "testSet": 3,
+    "qNum": 4,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 5,
+    "testSet": 3,
+    "qNum": 5,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 6,
+    "testSet": 3,
+    "qNum": 6,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 7,
+    "testSet": 3,
+    "qNum": 7,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 8,
+    "testSet": 3,
+    "qNum": 8,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 9,
+    "testSet": 3,
+    "qNum": 9,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 10,
+    "testSet": 3,
+    "qNum": 10,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 11,
+    "testSet": 3,
+    "qNum": 11,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 12,
+    "testSet": 3,
+    "qNum": 12,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 13,
+    "testSet": 3,
+    "qNum": 13,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 14,
+    "testSet": 3,
+    "qNum": 14,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 15,
+    "testSet": 3,
+    "qNum": 15,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 16,
+    "testSet": 3,
+    "qNum": 16,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 17,
+    "testSet": 3,
+    "qNum": 17,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 18,
+    "testSet": 3,
+    "qNum": 18,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 19,
+    "testSet": 3,
+    "qNum": 19,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 20,
+    "testSet": 3,
+    "qNum": 20,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  }
+];
+FIGURES_DATA.sim_t4 = [
+  {
+    "id": 1,
+    "testSet": 4,
+    "qNum": 1,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 2,
+    "testSet": 4,
+    "qNum": 2,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 3,
+    "testSet": 4,
+    "qNum": 3,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 4,
+    "testSet": 4,
+    "qNum": 4,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 5,
+    "testSet": 4,
+    "qNum": 5,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 6,
+    "testSet": 4,
+    "qNum": 6,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "black",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 7,
+    "testSet": 4,
+    "qNum": 7,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 8,
+    "testSet": 4,
+    "qNum": 8,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 9,
+    "testSet": 4,
+    "qNum": 9,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 10,
+    "testSet": 4,
+    "qNum": 10,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 11,
+    "testSet": 4,
+    "qNum": 11,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 12,
+    "testSet": 4,
+    "qNum": 12,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "black",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 13,
+    "testSet": 4,
+    "qNum": 13,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 90
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 14,
+    "testSet": 4,
+    "qNum": 14,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "black",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 15,
+    "testSet": 4,
+    "qNum": 15,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 16,
+    "testSet": 4,
+    "qNum": 16,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 17,
+    "testSet": 4,
+    "qNum": 17,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 18,
+    "testSet": 4,
+    "qNum": 18,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "orange",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 19,
+    "testSet": 4,
+    "qNum": 19,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "purple",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "L",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 20,
+    "testSet": 4,
+    "qNum": 20,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "pink",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  }
+];
+FIGURES_DATA.sim_t5 = [
+  {
+    "id": 1,
+    "testSet": 5,
+    "qNum": 1,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 2,
+    "testSet": 5,
+    "qNum": 2,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "pink",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 3,
+    "testSet": 5,
+    "qNum": 3,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "purple",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 4,
+    "testSet": 5,
+    "qNum": 4,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 5,
+    "testSet": 5,
+    "qNum": 5,
+    "difficulty": "easy",
+    "subtest": "figures",
+    "format": "1 Figure (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 1 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 6,
+    "testSet": 5,
+    "qNum": 6,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "L",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 7,
+    "testSet": 5,
+    "qNum": 7,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 8,
+    "testSet": 5,
+    "qNum": 8,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 9,
+    "testSet": 5,
+    "qNum": 9,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "black",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "purple",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 10,
+    "testSet": 5,
+    "qNum": 10,
+    "difficulty": "medium",
+    "subtest": "figures",
+    "format": "3 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "circle",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 3 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 11,
+    "testSet": 5,
+    "qNum": 11,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 180
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 12,
+    "testSet": 5,
+    "qNum": 12,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "red",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "white",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 13,
+    "testSet": 5,
+    "qNum": 13,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "red",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "triangle",
+          "color": "purple",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "black",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "green",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 14,
+    "testSet": 5,
+    "qNum": 14,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 15,
+    "testSet": 5,
+    "qNum": 15,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "green",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "yellow",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "square",
+          "color": "pink",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 16,
+    "testSet": 5,
+    "qNum": 16,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "green",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 17,
+    "testSet": 5,
+    "qNum": 17,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 90
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 180
+        },
+        {
+          "shape": "quartercircle",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "L",
+          "color": "orange",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "white",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        },
+        {
+          "shape": "pentagon",
+          "color": "blue",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "quartercircle",
+          "color": "black",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 18,
+    "testSet": 5,
+    "qNum": 18,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "white",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 270
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "hexagon",
+          "color": "red",
+          "r": 0,
+          "c": 3,
+          "pos": 4,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "semicircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "white",
+          "r": 3,
+          "c": 2,
+          "pos": 15,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "semicircle",
+          "color": "white",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "arrow",
+          "color": "blue",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "hexagon",
+          "color": "orange",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 0
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 3,
+      "m6": 3
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 19,
+    "testSet": 5,
+    "qNum": 19,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 0,
+          "c": 1,
+          "pos": 2,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 3,
+          "pos": 8,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 180
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 0,
+          "pos": 5,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 180
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 3,
+          "c": 0,
+          "pos": 13,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "green",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "purple",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 90
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 0
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 90
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "pentagon",
+          "color": "orange",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 270
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "red",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 270
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "r": 3,
+          "c": 1,
+          "pos": 14,
+          "rot": 270
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 1,
+      "m6": 2
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  },
+  {
+    "id": 20,
+    "testSet": 5,
+    "qNum": 20,
+    "difficulty": "hard",
+    "subtest": "figures",
+    "format": "4 Figures (4x4 Grid)",
+    "sequence": [
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ]
+    ],
+    "matrices": [
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 0,
+          "pos": 9,
+          "rot": 90
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 1,
+          "c": 1,
+          "pos": 6,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 270
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 0
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 180
+        }
+      ]
+    ],
+    "optionsM5": [
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 2,
+          "c": 1,
+          "pos": 10,
+          "rot": 90
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 270
+        },
+        {
+          "shape": "semicircle",
+          "color": "blue",
+          "r": 3,
+          "c": 3,
+          "pos": 16,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 2,
+          "c": 2,
+          "pos": 11,
+          "rot": 90
+        }
+      ]
+    ],
+    "optionsM6": [
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 0,
+          "c": 2,
+          "pos": 3,
+          "rot": 270
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 90
+        },
+        {
+          "shape": "diamond",
+          "color": "pink",
+          "r": 2,
+          "c": 3,
+          "pos": 12,
+          "rot": 180
+        },
+        {
+          "shape": "semicircle",
+          "color": "yellow",
+          "r": 0,
+          "c": 0,
+          "pos": 1,
+          "rot": 0
+        },
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "r": 1,
+          "c": 2,
+          "pos": 7,
+          "rot": 0
+        }
+      ]
+    ],
+    "solution": {
+      "m5": 2,
+      "m6": 1
+    },
+    "ruleText": "Pattern rule: 4 element sequence with coordinate displacement and rotation steps.",
+    "explanation": "Step-by-step: Follow the movement vector and rotation for each shape from Matrix 1 through 4 to deduce Matrix 5 and 6."
+  }
+];
+FIGURES_DATA.sim = FIGURES_DATA.sim_t1;
+
 if(typeof module!=='undefined')module.exports=FIGURES_DATA;

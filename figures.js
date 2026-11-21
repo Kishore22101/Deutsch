@@ -83,6 +83,7 @@
       viewSetsEasy: document.getElementById('view-sets-easy'),
       viewSetsMedium: document.getElementById('view-sets-medium'),
       viewSetsHard: document.getElementById('view-sets-hard'),
+      viewSetsSim: document.getElementById('view-sets-sim'),
       viewExam: document.getElementById('view-exam'),
       viewResults: document.getElementById('view-results'),
 
@@ -100,14 +101,17 @@
       diffCardEasy: document.getElementById('diff-card-easy'),
       diffCardMedium: document.getElementById('diff-card-medium'),
       diffCardHard: document.getElementById('diff-card-hard'),
+      diffCardSim: document.getElementById('diff-card-sim'),
       btnStartEasy: document.getElementById('btn-start-easy'),
       btnStartMed: document.getElementById('btn-start-med'),
       btnStartHard: document.getElementById('btn-start-hard'),
+      btnStartSim: document.getElementById('btn-start-sim'),
 
       // Back buttons
       btnBackToDiffEasy: document.getElementById('btn-back-to-diff-easy'),
       btnBackToDiffMed: document.getElementById('btn-back-to-diff-med'),
       btnBackToDiffHard: document.getElementById('btn-back-to-diff-hard'),
+      btnBackToDiffSim: document.getElementById('btn-back-to-diff-sim'),
 
       // Candidate Name Modal
       candidateNameInput: document.getElementById('input-candidate-name'),
@@ -176,10 +180,19 @@
       });
     }
 
+    if (dom.diffCardSim) dom.diffCardSim.addEventListener('click', () => showView('sets-sim'));
+    if (dom.btnStartSim) {
+      dom.btnStartSim.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showView('sets-sim');
+      });
+    }
+
     // Back buttons
     if (dom.btnBackToDiffEasy) dom.btnBackToDiffEasy.addEventListener('click', () => showView('difficulties'));
     if (dom.btnBackToDiffMed) dom.btnBackToDiffMed.addEventListener('click', () => showView('difficulties'));
     if (dom.btnBackToDiffHard) dom.btnBackToDiffHard.addEventListener('click', () => showView('difficulties'));
+    if (dom.btnBackToDiffSim) dom.btnBackToDiffSim.addEventListener('click', () => showView('difficulties'));
 
     // Set card click handlers (data-start-fig-set)
     document.querySelectorAll('[data-start-fig-set]').forEach(el => {
@@ -230,6 +243,7 @@
     if (dom.viewSetsEasy) dom.viewSetsEasy.classList.toggle('hidden', viewName !== 'sets-easy');
     if (dom.viewSetsMedium) dom.viewSetsMedium.classList.toggle('hidden', viewName !== 'sets-medium');
     if (dom.viewSetsHard) dom.viewSetsHard.classList.toggle('hidden', viewName !== 'sets-hard');
+    if (dom.viewSetsSim) dom.viewSetsSim.classList.toggle('hidden', viewName !== 'sets-sim');
     if (dom.viewExam) dom.viewExam.classList.toggle('hidden', viewName !== 'exam');
     if (dom.viewResults) dom.viewResults.classList.toggle('hidden', viewName !== 'results');
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -262,6 +276,9 @@
     } else if (s.startsWith('hard_t')) {
       track = 'Hard';
       num = s.replace('hard_t', '');
+    } else if (s.startsWith('sim_t')) {
+      track = 'Simulation';
+      num = s.replace('sim_t', '');
     }
 
     if (dom.nameModalSetLabel) {
@@ -292,6 +309,8 @@
       return `Figure Sequences – Medium Set ${setKey.replace('medium_t', '')}`;
     } else if (setKey.startsWith('hard_t')) {
       return `Figure Sequences – Hard Set ${setKey.replace('hard_t', '')}`;
+    } else if (setKey.startsWith('sim_t')) {
+      return `Figure Sequences – Simulation Set ${setKey.replace('sim_t', '')}`;
     }
     return `Figure Sequences – Set 1`;
   }

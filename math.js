@@ -90,6 +90,7 @@
       viewSets: document.getElementById('view-sets'),
       viewSetsEasy: document.getElementById('view-sets-easy'),
       viewSetsMedium: document.getElementById('view-sets-medium'),
+      viewSetsSim: document.getElementById('view-sets-sim'),
       viewExam: document.getElementById('view-exam'),
       viewResults: document.getElementById('view-results'),
       modalName: document.getElementById('modal-candidate-name'),
@@ -105,12 +106,15 @@
       diffCardEasy: document.getElementById('diff-card-easy'),
       diffCardMed: document.getElementById('diff-card-medium'),
       diffCardHard: document.getElementById('diff-card-hard'),
+      diffCardSim: document.getElementById('diff-card-sim'),
       btnStartEasy: document.getElementById('btn-start-easy'),
       btnStartMed: document.getElementById('btn-start-med'),
       btnStartHard: document.getElementById('btn-start-hard'),
+      btnStartSim: document.getElementById('btn-start-sim'),
       btnBackToDiff: document.getElementById('btn-back-to-diff'),
       btnBackToDiffEasy: document.getElementById('btn-back-to-diff-easy'),
       btnBackToDiffMed: document.getElementById('btn-back-to-diff-med'),
+      btnBackToDiffSim: document.getElementById('btn-back-to-diff-sim'),
 
       // Name Modal
       candidateNameInput: document.getElementById('input-candidate-name'),
@@ -195,6 +199,19 @@
       });
     }
 
+    // Simulation level click -> show Simulation Sets 1 to 5
+    if (dom.diffCardSim) {
+      dom.diffCardSim.addEventListener('click', () => {
+        showView('sets-sim');
+      });
+    }
+    if (dom.btnStartSim) {
+      dom.btnStartSim.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showView('sets-sim');
+      });
+    }
+
     // Back button from Sets to Difficulty level
     if (dom.btnBackToDiff) {
       dom.btnBackToDiff.addEventListener('click', () => {
@@ -208,6 +225,11 @@
     }
     if (dom.btnBackToDiffMed) {
       dom.btnBackToDiffMed.addEventListener('click', () => {
+        showView('difficulties');
+      });
+    }
+    if (dom.btnBackToDiffSim) {
+      dom.btnBackToDiffSim.addEventListener('click', () => {
         showView('difficulties');
       });
     }
@@ -226,6 +248,14 @@
       const c = document.getElementById(`card-easy-set-${s}`);
       if (c) {
         c.addEventListener('click', () => openStartModal(`easy_t${s}`));
+      }
+    }
+
+    // Simulation set card click handlers
+    for (let s = 1; s <= 5; s++) {
+      const c = document.getElementById(`card-sim-set-${s}`);
+      if (c) {
+        c.addEventListener('click', () => openStartModal(`sim_t${s}`));
       }
     }
 
@@ -335,6 +365,7 @@
     if (dom.viewSets) dom.viewSets.classList.toggle('hidden', viewName !== 'sets');
     if (dom.viewSetsEasy) dom.viewSetsEasy.classList.toggle('hidden', viewName !== 'sets-easy');
     if (dom.viewSetsMedium) dom.viewSetsMedium.classList.toggle('hidden', viewName !== 'sets-medium');
+    if (dom.viewSetsSim) dom.viewSetsSim.classList.toggle('hidden', viewName !== 'sets-sim');
     if (dom.viewExam) dom.viewExam.classList.toggle('hidden', viewName !== 'exam');
     if (dom.viewResults) dom.viewResults.classList.toggle('hidden', viewName !== 'results');
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -380,6 +411,10 @@
       const num = state.selectedSet.replace('medium_t', '');
       title = `Medium Level · Practice Set ${num} · 20 Questions`;
       btnText = `Begin Medium Set ${num} (25m) ➔`;
+    } else if (state.selectedSet.startsWith('sim_t')) {
+      const num = state.selectedSet.replace('sim_t', '');
+      title = `Simulation · Practice Set ${num} · 20 Questions`;
+      btnText = `Begin Simulation Set ${num} (25m) ➔`;
     }
     if (dom.nameModalSetLabel) dom.nameModalSetLabel.textContent = title;
     if (dom.btnConfirmStart) dom.btnConfirmStart.textContent = btnText;
@@ -443,6 +478,10 @@
       dataset = data[setKey] || [];
       const num = setKey.replace('easy_t', '');
       setDisplayName = `Easy – Set ${num}`;
+    } else if (setKey.startsWith('sim_t')) {
+      dataset = data[setKey] || [];
+      const num = setKey.replace('sim_t', '');
+      setDisplayName = `Simulation – Set ${num}`;
     } else {
       dataset = data[setKey] || data.medium_t1 || data.hard || [];
       setDisplayName = setKey;
@@ -617,11 +656,13 @@
     if (!q) return;
     const isEasyTest = state.selectedSet && state.selectedSet.startsWith('easy_t');
     const isMediumTest = state.selectedSet && state.selectedSet.startsWith('medium_t');
+    const hasC = !isEasyTest && (q.solution && q.solution.C !== undefined);
+    const hasD = !isEasyTest && !isMediumTest && (q.solution && q.solution.D !== undefined);
     state.userAnswers[q.id] = {
       A: dom.inputA.value.trim(),
       B: dom.inputB.value.trim(),
-      C: isEasyTest ? '' : dom.inputC.value.trim(),
-      D: (isEasyTest || isMediumTest) ? '' : dom.inputD.value.trim()
+      C: hasC ? dom.inputC.value.trim() : '',
+      D: hasD ? dom.inputD.value.trim() : ''
     };
   }
 
@@ -711,6 +752,9 @@
     } else if (state.selectedSet.startsWith('medium_t')) {
       const num = state.selectedSet.replace('medium_t', '');
       setDisplayName = `Equations – Medium Set ${num}`;
+    } else if (state.selectedSet.startsWith('sim_t')) {
+      const num = state.selectedSet.replace('sim_t', '');
+      setDisplayName = `Equations – Simulation Set ${num}`;
     }
 
     const submission = {
