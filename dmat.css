@@ -291,6 +291,28 @@ html, body {
   color: #fff;
 }
 
+/* ── Sets Grid Layout (shared between figures and math) ── */
+.fig-sets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+.fig-sets-grid .diff-card {
+  display: flex !important;
+  flex-direction: column !important;
+}
+.fig-sets-grid .diff-desc {
+  min-height: 48px !important;
+  margin-bottom: 16px !important;
+}
+.fig-sets-grid .diff-specs {
+  margin-top: auto !important;
+  margin-bottom: 20px !important;
+}
+.fig-sets-grid .btn-diff-action {
+  margin-top: 0 !important;
+}
+
 .diff-title {
   font-size: 28px;
   font-weight: 900;

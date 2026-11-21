@@ -9,7 +9,7 @@
       localStorage.removeItem('dmat_submissions_v1');
       localStorage.setItem('dmat_v3_cleared', '1');
     }
-  } catch (e) {}
+  } catch (e) { }
 })();
 
 (function () {
@@ -53,7 +53,7 @@
       if (dom.modalSubmissions && !dom.modalSubmissions.classList.contains('hidden')) {
         renderSubmissionsTable();
       }
-    }).catch(() => {});
+    }).catch(() => { });
 
     CloudSync.subscribeRealTime(() => {
       renderSubmissionsCount();
@@ -778,7 +778,7 @@
     saveSubmission(submission);
 
     if (typeof CloudSync !== 'undefined' && CloudSync.broadcastSubmission) {
-      CloudSync.broadcastSubmission(submission).catch(() => {});
+      CloudSync.broadcastSubmission(submission).catch(() => { });
     }
 
     state.lastResult = submission;
@@ -872,7 +872,7 @@
     try {
       const deleted = JSON.parse(localStorage.getItem('dmat_deleted_ids') || '[]');
       if (sub && sub.id && deleted.includes(sub.id)) return true;
-    } catch(e) {}
+    } catch (e) { }
 
     return false;
   }
@@ -887,7 +887,7 @@
         const arr = JSON.parse(s);
         return arr.filter(x => !isSampleRecord(x));
       }
-    } catch (e) {}
+    } catch (e) { }
     return [];
   }
 
@@ -918,8 +918,8 @@
     const filtered = subs.filter(s => {
       if (!query) return true;
       return (s.candidateName || '').toLowerCase().includes(query) ||
-             (s.difficulty || '').toLowerCase().includes(query) ||
-             (s.submittedAt || '').toLowerCase().includes(query);
+        (s.difficulty || '').toLowerCase().includes(query) ||
+        (s.submittedAt || '').toLowerCase().includes(query);
     });
 
     if (dom.subTableBody) dom.subTableBody.innerHTML = '';
