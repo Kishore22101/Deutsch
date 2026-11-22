@@ -3,76 +3,392 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"/>
-  <title>Latin Squares (Lateinische Quadrate) – dMAT</title>
-  <meta name="description" content="dMAT Latin Squares testing module. Questions will be updated soon."/>
+  <title>Latin Squares (Lateinische Quadrate) – dMAT Practice &amp; Exam</title>
+  <meta name="description" content="dMAT Latin Squares testing module: Solve 5x5 logic deduction matrices with row and column uniqueness constraints. 20 Practice Sets across Easy, Medium, Hard and Simulation."/>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="dmat.css"/>
   <style>
-    .placeholder-container {
-      max-width: 720px;
-      margin: 60px auto 40px;
-      text-align: center;
-      padding: 48px 32px;
-      border-radius: 20px;
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(168, 85, 247, 0.25);
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    /* ── Solid White Button ── */
+    .btn-white-solid {
+      background: #ffffff !important;
+      color: #0f172a !important;
+      font-weight: 800 !important;
+      border: none !important;
+      box-shadow: 0 4px 14px rgba(255, 255, 255, 0.25);
     }
-    .placeholder-icon {
-      width: 72px;
-      height: 72px;
-      border-radius: 20px;
-      background: rgba(168, 85, 247, 0.15);
-      border: 1px solid rgba(168, 85, 247, 0.3);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: #c084fc;
-      margin-bottom: 24px;
+    .btn-white-solid:hover {
+      background: #f1f5f9 !important;
+      transform: translateY(-2px);
     }
-    .placeholder-title {
-      font-size: 2rem;
-      font-weight: 800;
-      color: #f8fafc;
-      margin: 0 0 12px;
+
+    /* ── Compact Question Palette (Desktop & General) ── */
+    .exam-layout {
+      display: grid !important;
+      grid-template-columns: 210px 1fr !important;
+      gap: 18px !important;
+      align-items: start !important;
     }
-    .placeholder-badge {
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      background: rgba(168, 85, 247, 0.15);
-      color: #c084fc;
-      border: 1px solid rgba(168, 85, 247, 0.3);
-      margin-bottom: 16px;
+
+    .exam-palette-sidebar {
+      background: rgba(15, 23, 42, 0.8) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      border-radius: 12px !important;
+      padding: 12px 14px !important;
+      box-sizing: border-box !important;
+      position: sticky !important;
+      top: 80px !important;
     }
-    .placeholder-desc {
-      color: #94a3b8;
-      font-size: 1.05rem;
-      line-height: 1.6;
-      margin: 0 auto 32px;
-      max-width: 540px;
+
+    .palette-head {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding-bottom: 6px !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+      margin-bottom: 8px !important;
     }
-    .placeholder-actions {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
+
+    .palette-title-text {
+      font-size: 11px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase !important;
+      color: #94a3b8 !important;
+    }
+
+    .palette-sub-text {
+      font-size: 10px !important;
+      color: #64748b !important;
+    }
+
+    .palette-grid {
+      display: grid !important;
+      grid-template-columns: repeat(5, 1fr) !important;
+      gap: 5px !important;
+      margin: 8px 0 !important;
+    }
+
+    .palette-btn {
+      width: 100% !important;
+      height: 32px !important;
+      min-width: 0 !important;
+      aspect-ratio: auto !important;
+      border-radius: 6px !important;
+      background: rgba(30, 41, 59, 0.6) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      color: #94a3b8 !important;
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 0 !important;
+      cursor: pointer !important;
+      transition: all 0.15s ease !important;
+      position: relative !important;
+    }
+
+    .palette-btn:hover {
+      background: rgba(51, 65, 85, 0.8) !important;
+      color: #f8fafc !important;
+      border-color: rgba(255, 255, 255, 0.25) !important;
+    }
+
+    .palette-btn.current {
+      background: #ffffff !important;
+      color: #0f172a !important;
+      font-weight: 900 !important;
+      border-color: #ffffff !important;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .palette-btn.answered {
+      background: rgba(16, 185, 129, 0.25) !important;
+      border-color: #10b981 !important;
+      color: #34d399 !important;
+    }
+
+    .palette-btn.partial {
+      background: rgba(245, 158, 11, 0.2) !important;
+      border-color: #f59e0b !important;
+      color: #fbbf24 !important;
+    }
+
+    .palette-btn.flagged::after {
+      content: '' !important;
+      position: absolute !important;
+      top: 2px !important;
+      right: 2px !important;
+      width: 5px !important;
+      height: 5px !important;
+      border-radius: 50% !important;
+      background: #c084fc !important;
+    }
+
+    .palette-legend {
+      display: flex !important;
+      justify-content: space-between !important;
+      gap: 4px !important;
+      margin-top: 8px !important;
+      padding-top: 6px !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
+      font-size: 10px !important;
+      color: #64748b !important;
+    }
+
+    .palette-legend .legend-item {
+      display: flex !important;
+      align-items: center !important;
+      gap: 4px !important;
+    }
+
+    .palette-legend .leg-box {
+      width: 7px !important;
+      height: 7px !important;
+      border-radius: 2px !important;
+    }
+
+    /* ── Perfectly Aligned Difficulty Cards ── */
+    .cols-4 .diff-card {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .cols-4 .diff-desc {
+      min-height: 48px !important;
+      margin-bottom: 20px !important;
+    }
+    .cols-4 .diff-specs {
+      margin-top: auto !important;
+      margin-bottom: 20px !important;
+    }
+    .cols-4 .btn-diff-action {
+      margin-top: 0 !important;
+    }
+
+    /* ── Sets Grid Layout ── */
+    .fig-sets-grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+      gap: 18px !important;
+    }
+
+    /* ── Mobile & Tablet Responsiveness (<= 860px) ── */
+    @media (max-width: 860px) {
+      .fig-sets-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+        padding: 0 12px !important;
+      }
+
+      .exam-container {
+        padding: 10px 10px 30px !important;
+      }
+
+      .exam-layout {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+      }
+
+      /* Compact Horizontal Palette on Mobile */
+      .exam-palette-sidebar {
+        position: static !important;
+        order: -1 !important;
+        padding: 8px 10px !important;
+        border-radius: 10px !important;
+        margin-bottom: 2px !important;
+      }
+
+      .palette-head {
+        margin-bottom: 4px !important;
+        padding-bottom: 4px !important;
+      }
+
+      .palette-title-text {
+        font-size: 10px !important;
+      }
+
+      .palette-sub-text {
+        font-size: 9px !important;
+      }
+
+      .palette-grid {
+        display: flex !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 6px !important;
+        margin: 4px 0 !important;
+        padding-bottom: 4px !important;
+        scrollbar-width: none !important;
+      }
+
+      .palette-grid::-webkit-scrollbar {
+        display: none !important;
+      }
+
+      .palette-btn {
+        min-width: 34px !important;
+        width: 34px !important;
+        height: 34px !important;
+        flex-shrink: 0 !important;
+        font-size: 12px !important;
+        border-radius: 8px !important;
+      }
+
+      .palette-legend {
+        display: none !important;
+      }
+
+      /* Topbar Mobile */
+      .exam-topbar {
+        padding: 6px 0 !important;
+      }
+
+      .exam-topbar-inner {
+        padding: 0 10px !important;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+      }
+
+      .exam-meta {
+        gap: 6px !important;
+      }
+
+      .exam-badge {
+        font-size: 10px !important;
+        padding: 2px 8px !important;
+      }
+
+      .candidate-pill {
+        font-size: 10px !important;
+        padding: 2px 8px !important;
+      }
+
+      .timer-display {
+        font-size: 19px !important;
+      }
+
+      .btn-submit-exam {
+        padding: 6px 12px !important;
+        font-size: 12px !important;
+      }
+
+      /* Stage Card */
+      .exam-stage-card {
+        padding: 14px 12px !important;
+        border-radius: 12px !important;
+        gap: 12px !important;
+      }
+
+      .q-stage-head {
+        padding-bottom: 8px !important;
+      }
+
+      .q-stage-sub {
+        font-size: 9px !important;
+      }
+
+      .q-stage-title {
+        font-size: 1.15rem !important;
+      }
+
+      .q-stage-instruction {
+        font-size: 0.82rem !important;
+        line-height: 1.4 !important;
+      }
+
+      /* Equations Box */
+      .equations-stage-box {
+        padding: 20px 12px !important;
+        border-radius: 12px !important;
+        margin: 8px 0 !important;
+      }
+
+      .equation-line {
+        font-size: clamp(1.15rem, 5.5vw, 1.6rem) !important;
+        line-height: 1.6 !important;
+      }
+
+      /* Inputs Row */
+      .answer-entry-card {
+        padding: 14px 12px !important;
+        border-radius: 12px !important;
+      }
+
+      .entry-header h4 {
+        font-size: 0.85rem !important;
+      }
+
+      .entry-note {
+        font-size: 0.72rem !important;
+      }
+
+      .inputs-row-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 8px !important;
+      }
+
+      .var-input-group label {
+        font-size: 0.85rem !important;
+      }
+
+      .var-input-group input {
+        height: 46px !important;
+        font-size: 1.15rem !important;
+        text-align: center !important;
+      }
+
+      /* Actions Bar */
+      .exam-actions-bar {
+        margin-top: 14px !important;
+        gap: 8px !important;
+      }
+
+      .exam-btn {
+        padding: 10px 14px !important;
+        font-size: 0.85rem !important;
+        min-height: 42px !important;
+      }
+
+      /* Modals */
+      .dmat-modal-card {
+        width: 94% !important;
+        max-width: 440px !important;
+        margin: auto !important;
+        padding: 16px !important;
+        border-radius: 16px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .inputs-row-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+      }
     }
   </style>
 </head>
 <body>
+
+<!-- SVG Defs -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="ic-world" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="ic-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></symbol>
+  <symbol id="ic-math" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></symbol>
+  <symbol id="ic-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+</svg>
 
 <!-- Header -->
 <header class="site-header">
   <div class="header-inner">
     <div class="header-left">
       <a href="index.html" class="logo">
+        <div class="logo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-world"/></svg></div>
         <span class="logo-text">Learning Portal</span>
       </a>
       <span class="portal-badge" style="background:rgba(168,85,247,0.15); border-color:rgba(168,85,247,0.3); color:#c084fc;">Latin Squares</span>
+
     </div>
 
     <div class="header-actions">
@@ -80,70 +396,708 @@
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         <span>Admin Dashboard</span>
       </a>
-      <a href="dmat.html#submissions" class="dmat-btn-sub" title="Submissions & Times">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <button class="dmat-btn-sub" id="btn-nav-submissions">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
         <span>Submissions &amp; Times</span>
         <span class="badge-count sub-count-display" id="sub-count-badge">0</span>
-      </a>
+      </button>
       <a href="dmat.html" class="back-btn">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
         dMAT Hub
       </a>
     </div>
   </div>
 </header>
 
-<main class="container">
-  <div class="placeholder-container">
-    <div class="placeholder-icon">
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-        <line x1="3" y1="9" x2="21" y2="9"/>
-        <line x1="3" y1="15" x2="21" y2="15"/>
-        <line x1="9" y1="3" x2="9" y2="21"/>
-        <line x1="15" y1="3" x2="15" y2="21"/>
-      </svg>
+<main>
+  <!-- ══════════════════════════════════════════
+       VIEW 1: CHOOSE DIFFICULTY LEVEL (Easy, Medium, Hard)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view" id="view-difficulties">
+    <div class="page-hero container">
+      <h1>Choose Difficulty Level</h1>
+      <p>Test your constraint logic deduction, row-column uniqueness, and elimination skills. Select your level to begin.</p>
+      
+      <div class="hero-stats-row" style="margin-top: 20px;">
+        <div class="h-stat-item">
+          <span class="h-stat-num">4 Levels</span>
+          <span class="h-stat-lbl">Easy · Med · Hard · Sim</span>
+        </div>
+        <div class="h-stat-item">
+          <span class="h-stat-num">20 Sets</span>
+          <span class="h-stat-lbl">400 Questions</span>
+        </div>
+        <div class="h-stat-item">
+          <span class="h-stat-num">25 min</span>
+          <span class="h-stat-lbl">Exam Timer</span>
+        </div>
+        <button class="h-stat-btn" id="btn-hero-submissions">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
+          <span>Submissions Log (<span id="hero-sub-count">0</span>)</span>
+        </button>
+      </div>
     </div>
-    <div class="placeholder-badge">dMAT Subtest 3</div>
-    <h1 class="placeholder-title">Latin Squares (Lateinische Quadrate)</h1>
-    <p class="placeholder-desc">Questions will be updated soon. In the meantime, you can practice with the active Figure Sequences and Mathematic Equations modules.</p>
-    
-    <div class="placeholder-actions">
-      <a href="math.html" class="btn-diff-action btn-hard-primary" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none; background: linear-gradient(135deg, #059669, #047857);">
-        <span>Practice Mathematic Equations ➔</span>
-      </a>
-      <a href="dmat.html" class="dmat-btn-sub" style="text-decoration:none;">
-        <span>Back to dMAT Hub</span>
-      </a>
+
+    <div class="container">
+      <div class="cards-grid cols-4">
+
+        <!-- Easy -->
+        <div class="glass-card diff-card" id="diff-card-easy" style="cursor: pointer;">
+          <div class="diff-badge badge-easy">WARM-UP</div>
+          <div class="diff-title">Easy</div>
+          <div class="diff-desc">5 Sets (100 Q). 5×5 grid deduction with direct 1-to-2 step row/column elimination.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Q (5 Sets)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 mins</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" id="btn-start-easy">Start Easy (5 Sets)</button>
+        </div>
+
+        <!-- Medium -->
+        <div class="glass-card diff-card" id="diff-card-medium" style="cursor: pointer;">
+          <div class="diff-badge badge-medium">INTERMEDIATE</div>
+          <div class="diff-title">Medium</div>
+          <div class="diff-desc">5 Sets (100 Q). Intermediate 5×5 matrices requiring multi-cell constraint tracking.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Q (5 Sets)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 mins</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" id="btn-start-med">Start Medium (5 Sets)</button>
+        </div>
+
+        <!-- Hard -->
+        <div class="glass-card diff-card diff-card-hard" id="diff-card-hard" style="cursor: pointer;">
+          <div class="diff-badge badge-hard">OFFICIAL DMAT EXAM</div>
+          <div class="diff-title">Hard</div>
+          <div class="diff-desc">5 Sets (100 Q). Official dMAT speed standard logic matrices with sparse initial clues.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Q (5 Sets)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 mins</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" id="btn-start-hard">Start Hard (5 Sets)</button>
+        </div>
+
+        <!-- Simulation -->
+        <div class="glass-card diff-card diff-card-sim" id="diff-card-sim" style="cursor: pointer;">
+          <div class="diff-badge badge-sim">FULL EXAM SIMULATION</div>
+          <div class="diff-title">Simulation</div>
+          <div class="diff-desc">5 Sets (100 Q). Exam standard mix: 5 Easy, 5 Medium &amp; 10 Hard questions per set. 25-minute test timer.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Q (5 Sets)</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 mins</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action btn-white-solid" id="btn-start-sim">Start Simulation (5 Sets)</button>
+        </div>
+
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 1a: EASY SET SELECTION (Set 1 to Set 5)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-sets-easy">
+    <div class="page-hero container">
+      <button class="back-link-btn" id="btn-back-to-diff-easy" style="margin-bottom: 16px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+        Back to Difficulty Level
+      </button>
+      <div class="badge" style="background:rgba(59,130,246,0.15); color:#60a5fa; border-color:rgba(59,130,246,0.3);">
+        Easy Level · 5 Practice Sets (100 Questions) · 25 Minutes Each
+      </div>
+      <h1>Choose Easy Practice Set</h1>
+      <p>5 Practice sets with 20 unique 5×5 Latin Square constraint puzzles each. Identify which symbol (A–E) belongs in the highlighted ? cell.</p>
+    </div>
+
+    <div class="container">
+      <div class="cards-grid fig-sets-grid">
+
+        <!-- SET 1 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="easy_t1" id="card-easy-set-1">
+          <div class="diff-badge badge-easy">Set 1</div>
+          <div class="diff-title">Easy Set 1</div>
+          <div class="diff-desc">20 Questions. Direct row-and-column elimination with high clue density.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="easy_t1">Start Set 1 (25m) ➔</button>
+        </div>
+
+        <!-- SET 2 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="easy_t2" id="card-easy-set-2">
+          <div class="diff-badge badge-easy">Set 2</div>
+          <div class="diff-title">Easy Set 2</div>
+          <div class="diff-desc">20 Questions. Quick elimination across intersecting rows and columns.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="easy_t2">Start Set 2 (25m) ➔</button>
+        </div>
+
+        <!-- SET 3 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="easy_t3" id="card-easy-set-3">
+          <div class="diff-badge badge-easy">Set 3</div>
+          <div class="diff-title">Easy Set 3</div>
+          <div class="diff-desc">20 Questions. Fast pattern constraint elimination drills.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="easy_t3">Start Set 3 (25m) ➔</button>
+        </div>
+
+        <!-- SET 4 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="easy_t4" id="card-easy-set-4">
+          <div class="diff-badge badge-easy">Set 4</div>
+          <div class="diff-title">Easy Set 4</div>
+          <div class="diff-desc">20 Questions. Rapid exclusion deduction under timed pressure.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="easy_t4">Start Set 4 (25m) ➔</button>
+        </div>
+
+        <!-- SET 5 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="easy_t5" id="card-easy-set-5">
+          <div class="diff-badge badge-easy">Set 5</div>
+          <div class="diff-title">Easy Set 5</div>
+          <div class="diff-desc">20 Questions. Clean 5×5 elimination tests with single unknown cell focus.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="easy_t5">Start Set 5 (25m) ➔</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 1b: HARD SET SELECTION (Set 1 to Set 5)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-sets">
+    <div class="page-hero container">
+      <button class="back-link-btn" id="btn-back-to-diff" style="margin-bottom: 16px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+        Back to Difficulty Level
+      </button>
+      <div class="badge" style="background:rgba(16,185,129,0.12); color:#10b981; border-color:rgba(16,185,129,0.3);">
+        Hard Level · Official dMAT Standard · 5 Practice Sets (100 Questions) · 25 Minutes Each
+      </div>
+      <h1>Choose Hard Practice Set</h1>
+      <p>5 sets containing 20 unique equation systems each (A, B, C, D ∈ 1–20). Select the set you want to attempt — the 25-minute countdown begins after you enter your name.</p>
+    </div>
+
+    <div class="container">
+      <div class="cards-grid fig-sets-grid">
+
+        <!-- SET 1 -->
+        <div class="glass-card diff-card diff-card-hard" style="cursor: pointer;" data-start-set="hard_t1" id="card-set-1">
+          <div class="diff-badge badge-hard">Set 1</div>
+          <div class="diff-title">Hard Set 1</div>
+          <div class="diff-desc">20 Unique systems of equations. Chained single-variable substitutions and balance equations.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="hard_t1">Start Set 1 (25m) ➔</button>
+        </div>
+
+        <!-- SET 2 -->
+        <div class="glass-card diff-card diff-card-hard" style="cursor: pointer;" data-start-set="hard_t2" id="card-set-2">
+          <div class="diff-badge badge-hard">Set 2</div>
+          <div class="diff-title">Hard Set 2</div>
+          <div class="diff-desc">20 Unique systems of equations. Master equation multi-variable balance and speed substitution.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="hard_t2">Start Set 2 (25m) ➔</button>
+        </div>
+
+        <!-- SET 3 -->
+        <div class="glass-card diff-card diff-card-hard" style="cursor: pointer;" data-start-set="hard_t3" id="card-set-3">
+          <div class="diff-badge badge-hard">Set 3</div>
+          <div class="diff-title">Hard Set 3</div>
+          <div class="diff-desc">20 Unique systems of equations. Cross-variable substitution chains and 4-variable linear balance.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="hard_t3">Start Set 3 (25m) ➔</button>
+        </div>
+
+        <!-- SET 4 -->
+        <div class="glass-card diff-card diff-card-hard" style="cursor: pointer;" data-start-set="hard_t4" id="card-set-4">
+          <div class="diff-badge badge-hard">Set 4</div>
+          <div class="diff-title">Hard Set 4</div>
+          <div class="diff-desc">20 Unique systems of equations. Advanced 4-variable deduction and reverse substitution.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="hard_t4">Start Set 4 (25m) ➔</button>
+        </div>
+
+        <!-- SET 5 -->
+        <div class="glass-card diff-card diff-card-hard" style="cursor: pointer;" data-start-set="hard_t5" id="card-set-5">
+          <div class="diff-badge badge-hard">Set 5</div>
+          <div class="diff-title">Hard Set 5</div>
+          <div class="diff-desc">20 Unique systems of equations. High-speed 4-variable systems and proportional equation mastery.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="hard_t5">Start Set 5 (25m) ➔</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 1c: MEDIUM SET SELECTION (Set 1 to Set 5)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-sets-medium">
+    <div class="page-hero container">
+      <button class="back-link-btn" id="btn-back-to-diff-med" style="margin-bottom: 16px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+        Back to Difficulty Level
+      </button>
+      <div class="badge" style="background:rgba(245,158,11,0.15); color:#fbbf24; border-color:rgba(245,158,11,0.3);">
+        Medium Level · 5 Practice Sets (100 Questions) · 25 Minutes Each
+      </div>
+      <h1>Choose Medium Practice Set</h1>
+      <p>5 Official Medium practice sets with 20 unique 3-variable linear systems each (A, B, C ∈ 1–20). Select your set to begin.</p>
+    </div>
+
+    <div class="container">
+      <div class="cards-grid fig-sets-grid">
+
+        <!-- SET 1 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="medium_t1" id="card-med-set-1">
+          <div class="diff-badge badge-medium">Set 1</div>
+          <div class="diff-title">Medium Set 1</div>
+          <div class="diff-desc">20 Questions. Chained single-variable substitutions &amp; balance relations.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="medium_t1">Start Set 1 (25m) ➔</button>
+        </div>
+
+        <!-- SET 2 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="medium_t2" id="card-med-set-2">
+          <div class="diff-badge badge-medium">Set 2</div>
+          <div class="diff-title">Medium Set 2</div>
+          <div class="diff-desc">20 Questions. 2-step candidate propagation across lines.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="medium_t2">Start Set 2 (25m) ➔</button>
+        </div>
+
+        <!-- SET 3 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="medium_t3" id="card-med-set-3">
+          <div class="diff-badge badge-medium">Set 3</div>
+          <div class="diff-title">Medium Set 3</div>
+          <div class="diff-desc">20 Questions. Chained Latin Square constraint solving.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="medium_t3">Start Set 3 (25m) ➔</button>
+        </div>
+
+        <!-- SET 4 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="medium_t4" id="card-med-set-4">
+          <div class="diff-badge badge-medium">Set 4</div>
+          <div class="diff-title">Medium Set 4</div>
+          <div class="diff-desc">20 Questions. Speed deduction with moderate clue density.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="medium_t4">Start Set 4 (25m) ➔</button>
+        </div>
+
+        <!-- SET 5 -->
+        <div class="glass-card diff-card" style="cursor: pointer;" data-start-set="medium_t5" id="card-med-set-5">
+          <div class="diff-badge badge-medium">Set 5</div>
+          <div class="diff-title">Medium Set 5</div>
+          <div class="diff-desc">20 Questions. Strategic candidate elimination across 5×5 grid.</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action" data-start-set="medium_t5">Start Set 5 (25m) ➔</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 1d: SIMULATION SET SELECTION (Set 1 to Set 5)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-sets-sim">
+    <div class="page-hero container">
+      <button class="back-link-btn" id="btn-back-to-diff-sim" style="margin-bottom: 16px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+        Back to Difficulty Level
+      </button>
+      <div class="badge" style="background:rgba(168,85,247,0.15); color:#c084fc; border-color:rgba(168,85,247,0.3);">
+        Full Simulation · 5 Practice Sets (100 Questions) · 25 Minutes Each
+      </div>
+      <h1>Choose Simulation Practice Set</h1>
+      <p>5 Full Simulation sets containing 20 unique 5×5 Latin Squares each (5 Easy, 5 Medium, 10 Hard). Select your set to begin — 25-minute countdown.</p>
+    </div>
+
+    <div class="container">
+      <div class="cards-grid fig-sets-grid">
+
+        <!-- SET 1 -->
+        <div class="glass-card diff-card diff-card-sim" style="cursor: pointer;" data-start-set="sim_t1" id="card-sim-set-1">
+          <div class="diff-badge badge-sim">Set 1</div>
+          <div class="diff-title">Simulation Set 1</div>
+          <div class="diff-desc">20 Questions. Balanced mix: 5 Easy (Q1–5), 5 Medium (Q6–10), and 10 Hard (Q11–20).</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action btn-white-solid" data-start-set="sim_t1">Start Set 1 (25m) ➔</button>
+        </div>
+
+        <!-- SET 2 -->
+        <div class="glass-card diff-card diff-card-sim" style="cursor: pointer;" data-start-set="sim_t2" id="card-sim-set-2">
+          <div class="diff-badge badge-sim">Set 2</div>
+          <div class="diff-title">Simulation Set 2</div>
+          <div class="diff-desc">20 Questions. Balanced mix: 5 Easy (Q1–5), 5 Medium (Q6–10), and 10 Hard (Q11–20).</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action btn-white-solid" data-start-set="sim_t2">Start Set 2 (25m) ➔</button>
+        </div>
+
+        <!-- SET 3 -->
+        <div class="glass-card diff-card diff-card-sim" style="cursor: pointer;" data-start-set="sim_t3" id="card-sim-set-3">
+          <div class="diff-badge badge-sim">Set 3</div>
+          <div class="diff-title">Simulation Set 3</div>
+          <div class="diff-desc">20 Questions. Balanced mix: 5 Easy (Q1–5), 5 Medium (Q6–10), and 10 Hard (Q11–20).</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action btn-white-solid" data-start-set="sim_t3">Start Set 3 (25m) ➔</button>
+        </div>
+
+        <!-- SET 4 -->
+        <div class="glass-card diff-card diff-card-sim" style="cursor: pointer;" data-start-set="sim_t4" id="card-sim-set-4">
+          <div class="diff-badge badge-sim">Set 4</div>
+          <div class="diff-title">Simulation Set 4</div>
+          <div class="diff-desc">20 Questions. Balanced mix: 5 Easy (Q1–5), 5 Medium (Q6–10), and 10 Hard (Q11–20).</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action btn-white-solid" data-start-set="sim_t4">Start Set 4 (25m) ➔</button>
+        </div>
+
+        <!-- SET 5 -->
+        <div class="glass-card diff-card diff-card-sim" style="cursor: pointer;" data-start-set="sim_t5" id="card-sim-set-5">
+          <div class="diff-badge badge-sim">Set 5</div>
+          <div class="diff-title">Simulation Set 5</div>
+          <div class="diff-desc">20 Questions. Balanced mix: 5 Easy (Q1–5), 5 Medium (Q6–10), and 10 Hard (Q11–20).</div>
+          <div class="diff-specs">
+            <div class="spec-row"><span>Questions:</span><strong>20 Questions</strong></div>
+            <div class="spec-row"><span>Timer:</span><strong>25 Minutes</strong></div>
+            <div class="spec-row"><span>Inputs:</span><strong>A–E from response row</strong></div>
+          </div>
+          <button class="btn-diff-action btn-white-solid" data-start-set="sim_t5">Start Set 5 (25m) ➔</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 2: EXAM ENGINE (20Q · 25m Countdown)
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-exam">
+    <!-- Topbar -->
+    <div class="exam-topbar">
+      <div class="exam-topbar-inner">
+        <div class="exam-meta">
+          <span class="exam-badge" id="exam-title">Mathematic Equations – Set 1</span>
+          <div class="candidate-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
+            <span id="exam-candidate-name">Candidate</span>
+          </div>
+        </div>
+
+        <div class="timer-box">
+          <div class="timer-display" id="exam-timer">25:00</div>
+          <div class="timer-progress-wrap">
+            <div class="timer-progress-fill" id="exam-timer-progress"></div>
+          </div>
+        </div>
+
+        <div class="exam-topbar-actions">
+          <button class="btn-submit-exam" id="btn-submit-exam">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-check"/></svg>
+            <span>Finish &amp; Submit</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exam Stage Layout -->
+    <div class="exam-container">
+      <div class="exam-layout">
+
+        <!-- Question Palette (Left / Sidebar) - Compact & Sleek -->
+        <aside class="exam-palette-sidebar">
+          <div class="palette-head">
+            <span class="palette-title-text">Questions (1–20)</span>
+            <span class="palette-sub-text">Tap to jump</span>
+          </div>
+          <div class="palette-grid" id="q-palette">
+            <!-- 20 Buttons dynamically created -->
+          </div>
+          <div class="palette-legend">
+            <div class="legend-item"><span class="leg-box leg-answered"></span>Done</div>
+            <div class="legend-item"><span class="leg-box leg-flagged"></span>Flag</div>
+            <div class="legend-item"><span class="leg-box leg-current"></span>Current</div>
+          </div>
+        </aside>
+
+        <!-- Main Question Stage -->
+        <div class="exam-stage">
+          <div class="exam-stage-card">
+
+            <!-- Question Header -->
+            <div class="q-stage-head">
+              <div class="q-stage-sub">CORE MODULE · LATIN SQUARES (LATEINISCHE QUADRATE)</div>
+              <h2 class="q-stage-title" id="q-current-number">Question 1 of 20</h2>
+              <p class="q-stage-instruction">
+                Each letter from A to E appears at most once in each row and column. Choose the letter from the response row (A–E) that belongs in the highlighted ? cell.
+              </p>
+            </div>
+
+            <!-- Latin Square 5x5 Grid Box -->
+            <div id="q-latin-grid-box" style="margin: 10px 0;">
+              <!-- 5x5 Grid dynamically rendered -->
+            </div>
+
+            <!-- Response Options Row (A - E) -->
+            <div class="answer-entry-card" id="q-latin-options-card" style="text-align:center;">
+              <div class="entry-header" style="justify-content:center;">
+                <h4>Choose the letter for the highlighted ? cell:</h4>
+              </div>
+              <div id="latin-options-container">
+                <!-- A, B, C, D, E Buttons dynamically rendered -->
+              </div>
+            </div>
+
+            <!-- Action Controls -->
+            <div class="exam-actions-bar">
+              <button class="exam-btn" id="btn-prev-q">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#ic-back"/></svg>
+                <span>Previous</span>
+              </button>
+
+              <button class="exam-btn btn-flag" id="btn-flag-q">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                <span>Flag for Review</span>
+              </button>
+
+              <button class="exam-btn btn-next" id="btn-next-q">
+                <span>Next</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="transform:rotate(180deg);"><use href="#ic-back"/></svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 3: RESULTS & BREAKDOWN
+  ══════════════════════════════════════════ -->
+  <section class="dmat-view hidden" id="view-results">
+    <div class="container" style="max-width: 900px; padding: 40px 20px 80px;">
+
+      <div class="results-hero-card">
+        <div class="res-badge">Exam Performance Report</div>
+        <h1>Test Complete</h1>
+        <p class="res-candidate-name">Candidate: <strong id="res-candidate">—</strong></p>
+
+        <div class="results-metrics-grid">
+          <div class="metric-card">
+            <span class="m-label">Score</span>
+            <span class="m-val" id="res-score">0 / 20</span>
+          </div>
+          <div class="metric-card">
+            <span class="m-label">Percentage</span>
+            <span class="m-val" id="res-percent">0%</span>
+          </div>
+          <div class="metric-card">
+            <span class="m-label">Time Taken</span>
+            <span class="m-val" id="res-time-taken">0m 00s</span>
+          </div>
+          <div class="metric-card">
+            <span class="m-label">Time Left</span>
+            <span class="m-val" id="res-time-left">0m 00s</span>
+          </div>
+        </div>
+
+        <div class="results-actions-row">
+          <button class="btn-primary" id="btn-results-submissions">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-users"/></svg>
+            <span>View All Submissions &amp; Times Log</span>
+          </button>
+          <button class="btn-secondary" id="btn-retake-exam">Retake Test</button>
+          <a href="dmat.html" class="btn-secondary" style="text-decoration:none;">dMAT Hub</a>
+        </div>
+      </div>
+
+      <div class="results-breakdown-section">
+        <h3>Question-by-Question Solution Breakdown</h3>
+        <p class="breakdown-subtitle">Review every 5×5 Latin Square, your chosen letter, and the step-by-step constraint deduction logic.</p>
+        <div class="breakdown-list" id="res-breakdown">
+          <!-- Dynamically filled with 20 items -->
+        </div>
+      </div>
+
+    </div>
+  </section>
 </main>
 
-<script>
-  try {
-    const raw = localStorage.getItem('dmat_submissions') || localStorage.getItem('dmat_submissions_v1');
-    if (raw) {
-      const arr = JSON.parse(raw);
-      const isSample = s => {
-        if (!s || !s.id) return true;
-        if (s.id.startsWith('sub-live-')) return true;
-        // Check admin-deleted tombstone IDs
-        try {
-          const deleted = JSON.parse(localStorage.getItem('dmat_deleted_ids') || '[]');
-          if (s.id && deleted.includes(s.id)) return true;
-        } catch(e) {}
+<!-- ══════════════════════════════════════════
+     MODAL 1: CANDIDATE NAME (WITHOUT PRACTICE SET CHOICES)
+══════════════════════════════════════════ -->
+<div class="dmat-modal-overlay hidden" id="modal-candidate-name">
+  <div class="dmat-modal-card">
+    <div class="modal-header">
+      <h3>Start Exam Simulation</h3>
+      <span class="modal-sub" id="name-modal-set-label">Practice Set 1 · 20 Questions</span>
+    </div>
 
-        return false;
-      };
-      let clean = Array.isArray(arr) ? arr.filter(x => !isSample(x)) : [];
-      if (clean.length === 0 && typeof CloudSync !== 'undefined' && CloudSync.getLocalList) {
-        clean = CloudSync.getLocalList();
-      }
-      const b = document.getElementById('sub-count-badge');
-      if (b) b.textContent = clean.length;
-    }
-  } catch(e) {}
-</script>
+    <div class="modal-body">
+      <div class="modal-specs-strip">
+        <div><span>Questions:</span> <strong>20 System Questions</strong></div>
+        <div><span>Countdown:</span> <strong>25 Minutes</strong></div>
+      </div>
+
+      <div class="form-group" style="margin-top: 20px;">
+        <label for="input-candidate-name">Enter Candidate / Student Name:</label>
+        <input type="text" id="input-candidate-name" class="modal-input" placeholder="e.g. Kishore K. / Alex Bauer" autofocus/>
+        <div class="error-msg" id="name-modal-error"></div>
+      </div>
+
+      <p class="modal-note">
+        Your completion time, final score, and detailed answers will be recorded in the test submissions log.
+      </p>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-secondary" id="btn-cancel-start">Cancel</button>
+      <button class="btn-primary" id="btn-confirm-start">Begin Set 1 (25m) ➔</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     MODAL 2: SUBMISSIONS & TIMES DASHBOARD
+══════════════════════════════════════════ -->
+<div class="dmat-modal-overlay hidden" id="modal-submissions">
+  <div class="dmat-modal-card modal-large">
+    <div class="modal-header modal-header-flex">
+      <div>
+        <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+          <h3 style="margin:0;">Candidate Submissions &amp; Completion Times</h3>
+
+        </div>
+        <span class="modal-sub">View candidates who answered Latin Squares tests, completion times, and scores.</span>
+      </div>
+      <button class="modal-close-x" id="btn-close-submissions">✕</button>
+    </div>
+
+    <div class="modal-body" style="padding: 20px 24px;">
+      <div class="sub-controls-row">
+        <div class="search-wrap">
+          <input type="text" id="sub-search-input" placeholder="Search candidate by name or date..."/>
+        </div>
+        <div class="sub-export-btns">
+          <a href="admin.html" class="btn-sm" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+            <span>Admin Page</span>
+          </a>
+          <button class="btn-sm" id="btn-export-csv" title="Download Excel/CSV sheet">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Export CSV</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="sub-table-wrap">
+        <table class="sub-table">
+          <thead>
+            <tr>
+              <th style="width: 45px;">#</th>
+              <th>Candidate Name</th>
+              <th>Test Set</th>
+              <th>Score</th>
+              <th>Time Taken</th>
+              <th>Date &amp; Time</th>
+            </tr>
+          </thead>
+          <tbody id="submissions-table-body"></tbody>
+        </table>
+
+        <div class="sub-empty hidden" id="submissions-empty-state">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#ic-users"/></svg>
+          <p>No candidate submissions found yet. Take a test to record your results!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="latin_data.js"></script>
 <script src="cloud_sync.js"></script>
+<script src="latin.js"></script>
 </body>
 </html>

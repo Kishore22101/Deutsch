@@ -436,6 +436,40 @@
             </div>
             ${(d.explanation || d.ruleExplanation) ? `<div class="step-by-step" style="margin-top:8px;font-size:12px;color:var(--t-80);background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:6px;border-left:2px solid #10b981;">• <strong>Pattern Rule:</strong> ${escapeHtml(d.explanation || d.ruleExplanation)}</div>` : ''}
           `;
+        } else if (d.subtest === 'latin') {
+          const colLabels = ['α', 'β', 'γ', 'δ', 'ε'];
+          let miniGrid = '<table class="latin-breakdown-grid" style="margin:8px 0;"><thead><tr><th></th>' + colLabels.map(c => '<th>' + c + '</th>').join('') + '</tr></thead><tbody>';
+          if (Array.isArray(d.grid)) {
+            for (let r = 0; r < 5; r++) {
+              miniGrid += '<tr><th>' + (r + 1) + '</th>';
+              for (let c = 0; c < 5; c++) {
+                const val = d.grid[r] ? d.grid[r][c] : '';
+                const isT = (d.target && d.target.row === r && d.target.col === c);
+                if (isT) {
+                  miniGrid += '<td class="cell-target" style="background:#fef08a;color:#0f172a;font-weight:900;">' + (d.solution || '?') + '</td>';
+                } else {
+                  miniGrid += '<td>' + (val || '') + '</td>';
+                }
+              }
+              miniGrid += '</tr>';
+            }
+          }
+          miniGrid += '</tbody></table>';
+
+          card.innerHTML = `
+            <div class="q-detail-head">
+              <span>Question ${i + 1} · Latin Squares</span>
+              <span class="q-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">${d.isCorrect ? 'Correct' : 'Incorrect'}</span>
+            </div>
+            <div style="display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap; margin:10px 0;">
+              <div>${miniGrid}</div>
+              <div class="q-detail-ans" style="flex:1; min-width:200px;">
+                <div>Candidate Choice: <strong>? = ${userAns || d.userAnswer || '—'}</strong> ${d.isCorrect ? '<span style="color:#10b981;">✓</span>' : '<span style="color:#ef4444;">✕</span>'}</div>
+                <div>Official Solution: <strong style="color:#10b981;">? = ${sol || d.solution || '—'}</strong></div>
+              </div>
+            </div>
+            ${d.explanation ? `<div class="step-by-step" style="margin-top:8px;font-size:12px;color:var(--t-80);background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:6px;border-left:2px solid #a855f7;">• <strong>Logic Deduction:</strong> ${escapeHtml(d.explanation)}</div>` : ''}
+          `;
         } else {
           const eqs = Array.isArray(d.equations) ? d.equations : [];
           card.innerHTML = `
