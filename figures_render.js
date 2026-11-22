@@ -194,6 +194,31 @@
     `;
   }
 
+  function renderAnswerCompareSvg(label, userOptNum, solOptNum, optionsArr, isCorrect) {
+    const uIdx = parseInt(userOptNum, 10) - 1;
+    const sIdx = parseInt(solOptNum, 10) - 1;
+    const userShapes = Array.isArray(optionsArr) && uIdx >= 0 ? optionsArr[uIdx] : null;
+    const solShapes  = Array.isArray(optionsArr) && sIdx >= 0 ? optionsArr[sIdx]  : null;
+    const userSvg = userShapes ? renderMatrixSvg(userShapes, 64) : '<span class="bd-no-fig">—</span>';
+    const solSvg  = solShapes  ? renderMatrixSvg(solShapes, 64)  : '<span class="bd-no-fig">—</span>';
+    const sameOpt = parseInt(userOptNum, 10) === parseInt(solOptNum, 10);
+    return `
+      <div class="bd-compare-block ${isCorrect ? 'ans-pass' : 'ans-fail'}">
+        <div class="bd-compare-row bd-candidate-row">
+          <span class="bd-compare-label">Candidate Choice:</span>
+          <span class="bd-compare-matrix">${label} = Option ${userOptNum || '—'}</span>
+          <div class="bd-fig-box">${userSvg}</div>
+          <span class="bd-verdict ${isCorrect ? 'verdict-pass' : 'verdict-fail'}">${isCorrect ? '✓' : '✕'}</span>
+        </div>
+        <div class="bd-compare-row bd-solution-row${sameOpt ? ' bd-same-opt' : ''}">
+          <span class="bd-compare-label">Official Solution:</span>
+          <span class="bd-compare-matrix">${label} = Option ${solOptNum || '—'}</span>
+          <div class="bd-fig-box bd-sol-fig-box">${solSvg}</div>
+        </div>
+      </div>
+    `;
+  }
+
   function renderBreakdownItem(item, idx) {
     const qNum = idx + 1;
     const isCorrect = !!item.isCorrect;
@@ -228,21 +253,8 @@
       </div>
 
       <div class="bd-answers-grid">
-        <div class="bd-ans-block ${m5Correct ? 'ans-pass' : 'ans-fail'}">
-          <div class="bd-ans-head">
-            <strong>Matrix 5:</strong>
-            <span>Your Choice: Option ${user.m5 || 'None'} ${m5Correct ? '✓' : '✕'}</span>
-          </div>
-          <div class="bd-ans-correct">Correct Answer: <strong>Option ${sol.m5}</strong></div>
-        </div>
-
-        <div class="bd-ans-block ${m6Correct ? 'ans-pass' : 'ans-fail'}">
-          <div class="bd-ans-head">
-            <strong>Matrix 6:</strong>
-            <span>Your Choice: Option ${user.m6 || 'None'} ${m6Correct ? '✓' : '✕'}</span>
-          </div>
-          <div class="bd-ans-correct">Correct Answer: <strong>Option ${sol.m6}</strong></div>
-        </div>
+        ${renderAnswerCompareSvg('M5', user.m5, sol.m5, item.optionsM5, m5Correct)}
+        ${renderAnswerCompareSvg('M6', user.m6, sol.m6, item.optionsM6, m6Correct)}
       </div>
 
       ${item.explanation ? `
@@ -259,7 +271,8 @@
     renderMatrixSVG: renderMatrixSvg,
     renderFigureSequenceStrip,
     renderOptionCard,
-    renderBreakdownItem
+    renderBreakdownItem,
+    renderAnswerCompareSvg
   };
 
   if (typeof window !== 'undefined') {
