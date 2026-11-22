@@ -1,4 +1,4 @@
-﻿// admin.js – Admin Dashboard Controller with Login Gate & Live Sync
+// admin.js – Admin Dashboard Controller with Login Gate & Live Sync
 
 // Reset check completed
 
@@ -49,7 +49,7 @@
       showDashboard();
     } else {
       if (errEl) {
-        errEl.textContent = 'Invalid credentials. Hint: admin / Admin@123';
+        errEl.textContent = 'Invalid credentials. Please try again.';
         errEl.classList.remove('hidden');
       }
       const pwInput = document.getElementById('login-password');
