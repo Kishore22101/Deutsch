@@ -103,6 +103,10 @@
         svg += `<g transform="rotate(${rot} ${cx} ${cy})">`;
         svg += `<polygon points="${cx},${cy - 8} ${cx + 7.5},${cy + 6.5} ${cx - 7.5},${cy + 6.5}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
         svg += `</g>`;
+      } else if (shapeType === 'right-triangle' || shapeType === 'right_triangle') {
+        svg += `<g transform="rotate(${rot} ${cx} ${cy})">`;
+        svg += `<polygon points="${cx - 6.5},${cy + 6.5} ${cx + 6.5},${cy + 6.5} ${cx - 6.5},${cy - 6.5}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
+        svg += `</g>`;
       } else if (shapeType === 'arrow') {
         svg += `<g transform="rotate(${rot} ${cx} ${cy})">`;
         svg += `<polygon points="${cx},${cy - 8} ${cx + 6.5},${cy + 1} ${cx + 2.5},${cy + 1} ${cx + 2.5},${cy + 8} ${cx - 2.5},${cy + 8} ${cx - 2.5},${cy + 1} ${cx - 6.5},${cy + 1}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
