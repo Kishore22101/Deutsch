@@ -2410,3 +2410,103 @@ body.exam-active .site-footer { display: none; }
     font-size: 1.15rem;
   }
 }
+
+
+/* ══════════════════════════════════════════════
+   LATIN SQUARES BREAKDOWN ENHANCED STYLING
+   ══════════════════════════════════════════════ */
+.latin-breakdown-grid {
+  border-collapse: separate !important;
+  border-spacing: 2px !important;
+  margin: 6px 0 !important;
+  background: rgba(15, 23, 42, 0.85) !important;
+  border: 1px solid rgba(168, 85, 247, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 6px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+}
+
+.latin-breakdown-grid th,
+.latin-breakdown-grid td {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  min-height: 34px !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  border-radius: 4px !important;
+  font-family: inherit !important;
+  transition: all 0.2s ease !important;
+}
+
+.latin-breakdown-grid th {
+  background: rgba(30, 41, 59, 0.9) !important;
+  color: #c084fc !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.latin-breakdown-grid td {
+  background: rgba(255, 255, 255, 0.04) !important;
+  color: #f1f5f9 !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+.latin-breakdown-grid td.cell-target {
+  background: linear-gradient(135deg, #fef08a, #facc15) !important;
+  color: #0f172a !important;
+  font-weight: 900 !important;
+  font-size: 16px !important;
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.5) !important;
+  border: 2px solid #ca8a04 !important;
+}
+
+.comparison-col {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.comp-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--t-45);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.comp-values {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comp-values span {
+  font-size: 15px;
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.breakdown-card .breakdown-steps {
+  background: rgba(168, 85, 247, 0.04) !important;
+  border: 1px solid rgba(168, 85, 247, 0.2) !important;
+  border-left: 3px solid #a855f7 !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+}
+
+.breakdown-card .breakdown-steps summary {
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  color: #c084fc !important;
+  cursor: pointer !important;
+}

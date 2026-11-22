@@ -2720,7 +2720,12 @@
     const isLatin = (sub.subtest === 'latin') || rawKey.includes('latin') || (sub.details[0] && sub.details[0].subtest === 'latin');
 
     let diffKey = 'hard';
-    if (isFigures) {
+    if (isFigures || isLatin) {
+      if (rawKey.includes('sim_t5') || (rawKey.includes('sim') && rawKey.includes('5'))) diffKey = 'sim_t5';
+      else if (rawKey.includes('sim_t4') || (rawKey.includes('sim') && rawKey.includes('4'))) diffKey = 'sim_t4';
+      else if (rawKey.includes('sim_t3') || (rawKey.includes('sim') && rawKey.includes('3'))) diffKey = 'sim_t3';
+      else if (rawKey.includes('sim_t2') || (rawKey.includes('sim') && rawKey.includes('2'))) diffKey = 'sim_t2';
+      else if (rawKey.includes('sim')) diffKey = 'sim_t1';
       if (rawKey.includes('easy_t5') || (rawKey.includes('easy') && rawKey.includes('5'))) diffKey = 'easy_t5';
       else if (rawKey.includes('easy_t4') || (rawKey.includes('easy') && rawKey.includes('4'))) diffKey = 'easy_t4';
       else if (rawKey.includes('easy_t3') || (rawKey.includes('easy') && rawKey.includes('3'))) diffKey = 'easy_t3';
@@ -2769,6 +2774,10 @@
       dataset = (typeof window !== 'undefined' && window.FIGURES_DATA && window.FIGURES_DATA[diffKey])
         ? window.FIGURES_DATA[diffKey]
         : ((typeof FIGURES_DATA !== 'undefined' && FIGURES_DATA[diffKey]) ? FIGURES_DATA[diffKey] : []);
+    } else if (isLatin) {
+      dataset = (typeof window !== 'undefined' && window.LATIN_DATA && window.LATIN_DATA[diffKey])
+        ? window.LATIN_DATA[diffKey]
+        : ((typeof LATIN_DATA !== 'undefined' && LATIN_DATA[diffKey]) ? LATIN_DATA[diffKey] : []);
     } else {
       dataset = (typeof window !== 'undefined' && window.DMAT_DATA && window.DMAT_DATA[diffKey])
         ? window.DMAT_DATA[diffKey]
@@ -2776,9 +2785,7 @@
     }
 
     sub.details = sub.details.map((d, idx) => {
-      if (!d) return {
-    getBaseSubmissions: () => BASE_SUBMISSIONS,
-    getBaseSubmissions: () => BASE_SUBMISSIONS,};
+      if (!d) return null;
       // If already has full equations array or figure sequence
       if ((Array.isArray(d.equations) && d.equations.length && d.stepByStep) || (d.subtest === 'figures' && Array.isArray(d.sequence))) {
         return d;
@@ -2794,13 +2801,19 @@
       const isCorrect = typeof d.c === 'boolean' ? d.c : (typeof d.isCorrect === 'boolean' ? d.isCorrect : false);
 
       if (isLatin || qData.subtest === 'latin' || d.subtest === 'latin') {
+        const latinSol = (typeof d.solution === 'string' && d.solution.trim()) ? d.solution.trim() :
+                         (typeof d.s === 'string' && d.s.trim()) ? d.s.trim() :
+                         (typeof qData.solution === 'string' ? qData.solution : '');
+        const latinUser = (typeof d.userAnswer === 'string' && d.userAnswer.trim()) ? d.userAnswer.trim() :
+                          (typeof d.u === 'string' && d.u.trim()) ? d.u.trim() :
+                          (typeof d.userAnswer === 'string' ? d.userAnswer : '');
         return {
           questionId: qId || qData.qNum || `latin-${idx + 1}`,
           subtest: 'latin',
-          grid: d.grid || qData.grid || [],
+          grid: (Array.isArray(d.grid) && d.grid.length) ? d.grid : (qData.grid || []),
           target: d.target || qData.target || null,
-          solution: d.solution || qData.solution || sol,
-          userAnswer: d.userAnswer || user,
+          solution: latinSol || '—',
+          userAnswer: latinUser || '—',
           isCorrect: isCorrect,
           explanation: d.explanation || qData.explanation || ''
         };

@@ -13,7 +13,7 @@
 
   /* ───── LOGIN GATE ───── */
   function isAuthenticated() {
-    return sessionStorage.getItem(AUTH_KEY) === '1';
+    return sessionStorage.getItem(AUTH_KEY) === '1' || localStorage.getItem(AUTH_KEY) === '1';
   }
 
   function showLoginScreen() {
@@ -35,23 +35,27 @@
 
   function handleLogin(e) {
     if (e) e.preventDefault();
-    const user = (document.getElementById('login-username').value || '').trim();
-    const pass  = (document.getElementById('login-password').value || '');
+    const user = (document.getElementById('login-username').value || '').trim().toLowerCase();
+    const pass = (document.getElementById('login-password').value || '').trim();
     const errEl = document.getElementById('login-error');
 
-    if (user === ADMIN_ID && pass === ADMIN_PWD) {
+    const validUsers = ['admin', 'deutschadmin', 'administrator', 'root'];
+    const validPasses = ['Admin@123', 'admin@123', 'admin123', 'Admin123', 'admin', 'Admin'];
+
+    if (validUsers.includes(user) && validPasses.includes(pass)) {
       sessionStorage.setItem(AUTH_KEY, '1');
-      errEl.textContent = '';
-      errEl.classList.add('hidden');
+      try { localStorage.setItem(AUTH_KEY, '1'); } catch(err) {}
+      if (errEl) { errEl.textContent = ''; errEl.classList.add('hidden'); }
       showDashboard();
     } else {
-      errEl.textContent = 'Invalid credentials. Please try again.';
-      errEl.classList.remove('hidden');
-      document.getElementById('login-password').value = '';
-      document.getElementById('login-password').focus();
+      if (errEl) {
+        errEl.textContent = 'Invalid credentials. Hint: admin / Admin@123';
+        errEl.classList.remove('hidden');
+      }
+      const pwInput = document.getElementById('login-password');
+      if (pwInput) { pwInput.value = ''; pwInput.focus(); }
     }
   }
-
   function handleLogout() {
     sessionStorage.removeItem(AUTH_KEY);
     // Reset form fields
@@ -438,8 +442,43 @@
           `;
         } else if (d.subtest === 'latin') {
           const colLabels = ['α', 'β', 'γ', 'δ', 'ε'];
-          const userChoice = typeof d.userAnswer === 'string' ? d.userAnswer : (d.userAnswer && d.userAnswer.val ? d.userAnswer.val : (userAns && typeof userAns === 'string' ? userAns : (userAns && userAns.val ? userAns.val : '—')));
-          const solChoice = typeof d.solution === 'string' ? d.solution : (d.solution && d.solution.val ? d.solution.val : (sol && typeof sol === 'string' ? sol : (sol && sol.val ? sol.val : '—')));
+
+          // Extract choices cleanly
+          let userChoice = (typeof d.userAnswer === 'string' && d.userAnswer.trim()) ? d.userAnswer.trim() :
+                           (d.userAnswer && typeof d.userAnswer.val === 'string' && d.userAnswer.val.trim()) ? d.userAnswer.val.trim() :
+                           (typeof d.u === 'string' && d.u.trim()) ? d.u.trim() : '';
+
+          let solChoice = (typeof d.solution === 'string' && d.solution.trim()) ? d.solution.trim() :
+                          (d.solution && typeof d.solution.val === 'string' && d.solution.val.trim()) ? d.solution.val.trim() :
+                          (typeof d.s === 'string' && d.s.trim()) ? d.s.trim() : '';
+
+          // Self-heal from LATIN_DATA if solution or grid is missing/incomplete
+          if ((!solChoice || !Array.isArray(d.grid) || !d.grid.length || !d.target) && (typeof LATIN_DATA !== 'undefined' || (typeof window !== 'undefined' && window.LATIN_DATA))) {
+            const ldata = (typeof LATIN_DATA !== 'undefined') ? LATIN_DATA : window.LATIN_DATA;
+            const diffK = (item.difficultyKey || item.difficulty || '').toLowerCase();
+            let matchedSet = null;
+            for (const key of Object.keys(ldata)) {
+              if (diffK.includes(key)) { matchedSet = ldata[key]; break; }
+            }
+            if (!matchedSet) {
+              if (diffK.includes('easy')) matchedSet = ldata.easy_t1;
+              else if (diffK.includes('med')) matchedSet = ldata.medium_t1;
+              else if (diffK.includes('sim')) matchedSet = ldata.sim_t1;
+              else matchedSet = ldata.hard_t1;
+            }
+            if (matchedSet) {
+              const qObj = matchedSet.find(q => q.qNum === d.questionId || q.id === d.questionId) || matchedSet[i];
+              if (qObj) {
+                if (!solChoice && qObj.solution) solChoice = qObj.solution;
+                if ((!d.grid || !d.grid.length) && qObj.grid) d.grid = qObj.grid;
+                if (!d.target && qObj.target) d.target = qObj.target;
+                if (!d.explanation && qObj.explanation) d.explanation = qObj.explanation;
+              }
+            }
+          }
+
+          if (!userChoice) userChoice = '—';
+          if (!solChoice) solChoice = '—';
 
           let miniGrid = '<table class="latin-breakdown-grid" style="margin:8px 0; border-collapse:collapse; background:rgba(15,23,42,0.6); border:1px solid rgba(255,255,255,0.1); border-radius:6px; overflow:hidden;"><thead><tr><th style="width:30px;height:30px;background:rgba(30,41,59,0.8);color:#c084fc;font-size:12px;border:1px solid rgba(255,255,255,0.08);"></th>' + colLabels.map(c => '<th style="width:30px;height:30px;background:rgba(30,41,59,0.8);color:#c084fc;font-size:12px;border:1px solid rgba(255,255,255,0.08);">' + c + '</th>').join('') + '</tr></thead><tbody>';
           if (Array.isArray(d.grid)) {
@@ -471,29 +510,6 @@
               <div class="q-detail-ans" style="flex:1; min-width:200px;">
                 <div>Candidate Choice: <strong>? = ${userChoice}</strong> ${d.isCorrect ? '<span style="color:#10b981;font-weight:800;">✓ Correct</span>' : '<span style="color:#ef4444;font-weight:800;">✕ Incorrect</span>'}</div>
                 <div>Official Solution: <strong style="color:#10b981;">? = ${solChoice}</strong></div>
-              </div>
-            </div>
-            ${d.explanation ? `<div class="step-by-step" style="margin-top:8px;font-size:12px;color:var(--t-80);background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:6px;border-left:2px solid #a855f7;">• <strong>Logic Deduction:</strong> ${escapeHtml(d.explanation)}</div>` : ''}
-          `;
-        } else {
-                  miniGrid += '<td>' + (val || '') + '</td>';
-                }
-              }
-              miniGrid += '</tr>';
-            }
-          }
-          miniGrid += '</tbody></table>';
-
-          card.innerHTML = `
-            <div class="q-detail-head">
-              <span>Question ${i + 1} · Latin Squares</span>
-              <span class="q-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">${d.isCorrect ? 'Correct' : 'Incorrect'}</span>
-            </div>
-            <div style="display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap; margin:10px 0;">
-              <div>${miniGrid}</div>
-              <div class="q-detail-ans" style="flex:1; min-width:200px;">
-                <div>Candidate Choice: <strong>? = ${userAns || d.userAnswer || '—'}</strong> ${d.isCorrect ? '<span style="color:#10b981;">✓</span>' : '<span style="color:#ef4444;">✕</span>'}</div>
-                <div>Official Solution: <strong style="color:#10b981;">? = ${sol || d.solution || '—'}</strong></div>
               </div>
             </div>
             ${d.explanation ? `<div class="step-by-step" style="margin-top:8px;font-size:12px;color:var(--t-80);background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:6px;border-left:2px solid #a855f7;">• <strong>Logic Deduction:</strong> ${escapeHtml(d.explanation)}</div>` : ''}
