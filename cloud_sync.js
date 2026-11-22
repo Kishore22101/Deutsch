@@ -2717,6 +2717,7 @@
 
     let rawKey = (sub.difficultyKey || sub.difficulty || 'hard').toLowerCase();
     const isFigures = (sub.subtest === 'figures') || rawKey.includes('figure') || (sub.details[0] && sub.details[0].subtest === 'figures');
+    const isLatin = (sub.subtest === 'latin') || rawKey.includes('latin') || (sub.details[0] && sub.details[0].subtest === 'latin');
 
     let diffKey = 'hard';
     if (isFigures) {
@@ -2791,6 +2792,19 @@
       const sol = d.s || d.solution || qData.solution || {};
       const user = d.u || d.userAnswer || {};
       const isCorrect = typeof d.c === 'boolean' ? d.c : (typeof d.isCorrect === 'boolean' ? d.isCorrect : false);
+
+      if (isLatin || qData.subtest === 'latin' || d.subtest === 'latin') {
+        return {
+          questionId: qId || qData.qNum || `latin-${idx + 1}`,
+          subtest: 'latin',
+          grid: d.grid || qData.grid || [],
+          target: d.target || qData.target || null,
+          solution: d.solution || qData.solution || sol,
+          userAnswer: d.userAnswer || user,
+          isCorrect: isCorrect,
+          explanation: d.explanation || qData.explanation || ''
+        };
+      }
 
       if (isFigures || qData.subtest === 'figures' || d.subtest === 'figures') {
         return {

@@ -438,16 +438,44 @@
           `;
         } else if (d.subtest === 'latin') {
           const colLabels = ['α', 'β', 'γ', 'δ', 'ε'];
-          let miniGrid = '<table class="latin-breakdown-grid" style="margin:8px 0;"><thead><tr><th></th>' + colLabels.map(c => '<th>' + c + '</th>').join('') + '</tr></thead><tbody>';
+          const userChoice = typeof d.userAnswer === 'string' ? d.userAnswer : (d.userAnswer && d.userAnswer.val ? d.userAnswer.val : (userAns && typeof userAns === 'string' ? userAns : (userAns && userAns.val ? userAns.val : '—')));
+          const solChoice = typeof d.solution === 'string' ? d.solution : (d.solution && d.solution.val ? d.solution.val : (sol && typeof sol === 'string' ? sol : (sol && sol.val ? sol.val : '—')));
+
+          let miniGrid = '<table class="latin-breakdown-grid" style="margin:8px 0; border-collapse:collapse; background:rgba(15,23,42,0.6); border:1px solid rgba(255,255,255,0.1); border-radius:6px; overflow:hidden;"><thead><tr><th style="width:30px;height:30px;background:rgba(30,41,59,0.8);color:#c084fc;font-size:12px;border:1px solid rgba(255,255,255,0.08);"></th>' + colLabels.map(c => '<th style="width:30px;height:30px;background:rgba(30,41,59,0.8);color:#c084fc;font-size:12px;border:1px solid rgba(255,255,255,0.08);">' + c + '</th>').join('') + '</tr></thead><tbody>';
           if (Array.isArray(d.grid)) {
             for (let r = 0; r < 5; r++) {
-              miniGrid += '<tr><th>' + (r + 1) + '</th>';
+              miniGrid += '<tr><th style="width:30px;height:30px;background:rgba(30,41,59,0.8);color:#94a3b8;font-size:11px;border:1px solid rgba(255,255,255,0.08);">' + (r + 1) + '</th>';
               for (let c = 0; c < 5; c++) {
                 const val = d.grid[r] ? d.grid[r][c] : '';
                 const isT = (d.target && d.target.row === r && d.target.col === c);
                 if (isT) {
-                  miniGrid += '<td class="cell-target" style="background:#fef08a;color:#0f172a;font-weight:900;">' + (d.solution || '?') + '</td>';
+                  miniGrid += '<td class="cell-target" style="width:30px;height:30px;text-align:center;background:#fef08a;color:#0f172a;font-weight:900;font-size:14px;border:1px solid rgba(255,255,255,0.08);">' + (solChoice !== '—' ? solChoice : '?') + '</td>';
                 } else {
+                  miniGrid += '<td style="width:30px;height:30px;text-align:center;color:#f8fafc;font-weight:700;font-size:13px;border:1px solid rgba(255,255,255,0.08);">' + (val || '') + '</td>';
+                }
+              }
+              miniGrid += '</tr>';
+            }
+          }
+          miniGrid += '</tbody></table>';
+
+          const targetPos = d.target ? ('Row ' + (d.target.row + 1) + ', Col ' + colLabels[d.target.col]) : '';
+
+          card.innerHTML = `
+            <div class="q-detail-head">
+              <span>Question ${i + 1} · Latin Squares ${targetPos ? '· Target: ' + targetPos : ''}</span>
+              <span class="q-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">${d.isCorrect ? 'Correct' : 'Incorrect'}</span>
+            </div>
+            <div style="display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap; margin:10px 0;">
+              <div>${miniGrid}</div>
+              <div class="q-detail-ans" style="flex:1; min-width:200px;">
+                <div>Candidate Choice: <strong>? = ${userChoice}</strong> ${d.isCorrect ? '<span style="color:#10b981;font-weight:800;">✓ Correct</span>' : '<span style="color:#ef4444;font-weight:800;">✕ Incorrect</span>'}</div>
+                <div>Official Solution: <strong style="color:#10b981;">? = ${solChoice}</strong></div>
+              </div>
+            </div>
+            ${d.explanation ? `<div class="step-by-step" style="margin-top:8px;font-size:12px;color:var(--t-80);background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:6px;border-left:2px solid #a855f7;">• <strong>Logic Deduction:</strong> ${escapeHtml(d.explanation)}</div>` : ''}
+          `;
+        } else {
                   miniGrid += '<td>' + (val || '') + '</td>';
                 }
               }
