@@ -840,7 +840,7 @@
           Sign In to Continue
         </button>
         <div style="margin-top:16px;">
-          <a href="a1.html" style="color:#94a3b8; font-size:13px; text-decoration:none;">← Back to A1 Hub</a>
+          <a href="index.html" style="color:#94a3b8; font-size:13px; text-decoration:none;">← Back to Home</a>
         </div>
       </div>
     `;
