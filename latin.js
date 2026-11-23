@@ -257,6 +257,27 @@
   }
 
   function openStartModal(setKey) {
+    if (typeof AuthManager !== 'undefined') {
+      if (!AuthManager.isLoggedIn()) {
+        AuthManager.openModal({
+          message: 'Please sign in to attend this dMAT Latin Squares test.',
+          onLoginSuccess: (u) => {
+            if (u && u.name) {
+              state.candidateName = u.name;
+              localStorage.setItem('dmat_last_candidate', u.name);
+            }
+            openStartModal(setKey);
+          }
+        });
+        return;
+      } else {
+        const u = AuthManager.getUser();
+        if (u && u.name) {
+          state.candidateName = u.name;
+          localStorage.setItem('dmat_last_candidate', u.name);
+        }
+      }
+    }
     state.selectedSet = setKey;
     if (dom.candidateNameInput) {
       dom.candidateNameInput.value = state.candidateName || '';
