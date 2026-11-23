@@ -1736,9 +1736,27 @@ body.exam-active .site-footer { display: none; }
   .header-inner { padding: 0 10px; gap: 6px; }
   .logo-text { font-size: 14px; }
   .portal-badge { display: none; }
-  .dmat-btn-sub span:not(.badge-count) { display: none; }
-  .dmat-btn-sub { padding: 6px 8px; gap: 4px; min-height: 36px; }
-  .back-btn { padding: 6px 10px; font-size: 11px; min-height: 36px; }
+  .site-header .back-btn,
+  .site-header a.back-btn,
+  .site-header .dmat-nav-btn,
+  .site-header a[href="dmat.html"].dmat-btn-sub,
+  .site-header a[href="dmat.html"],
+  .site-header a[href="index.html"]:not(.logo) {
+    display: none !important;
+  }
+  .dmat-btn-sub {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 6px 10px !important;
+    gap: 5px !important;
+    min-height: 34px !important;
+    border-radius: 50px !important;
+  }
+  .dmat-btn-sub span:not(.badge-count) {
+    display: inline-block !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+  }
 
   /* ─ Hero ─ */
   .page-hero { padding: 20px 12px 12px; }

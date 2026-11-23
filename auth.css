@@ -811,3 +811,47 @@
 }
 
 .auth-link-login:hover { text-decoration: underline; }
+
+/* ─── Mobile Header (Only Learning Portal, Candidate Submissions, Sign In) ─── */
+@media (max-width: 768px) {
+  .site-header .back-btn,
+  .site-header a.back-btn,
+  .site-header .dmat-nav-btn,
+  .site-header a[href="dmat.html"].dmat-btn-sub,
+  .site-header a[href="dmat.html"],
+  .site-header a[href="index.html"]:not(.logo),
+  .site-header .portal-badge {
+    display: none !important;
+  }
+  .site-header {
+    padding: 6px 0 !important;
+  }
+  .site-header .header-inner {
+    padding: 0 12px !important;
+    gap: 8px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  .site-header .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-left: auto !important;
+  }
+  .btn-header-signin {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+    min-height: 32px !important;
+  }
+  .user-profile-pill {
+    padding: 3px 8px 3px 4px !important;
+    font-size: 11px !important;
+    min-height: 32px !important;
+    gap: 5px !important;
+  }
+  .user-profile-pill span {
+    max-width: 70px !important;
+    font-size: 11px !important;
+  }
+}

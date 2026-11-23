@@ -860,3 +860,19 @@ a{text-decoration:none;color:inherit;}
   .page-hero h1 { font-size: 1.6rem; }
 }
 
+
+/* ─── Mobile Header Navigation Overrides (≤768px) ─── */
+@media (max-width: 768px) {
+  .site-header .back-btn,
+  .site-header a.back-btn,
+  .site-header .dmat-nav-btn,
+  .site-header a[href="dmat.html"].dmat-btn-sub,
+  .site-header a[href="dmat.html"],
+  .site-header a[href="index.html"]:not(.logo),
+  .site-header .portal-badge {
+    display: none !important;
+  }
+  .site-header { padding: 8px 0 !important; }
+  .site-header .header-inner { padding: 0 12px !important; gap: 8px !important; }
+  .site-header .logo-text { font-size: 14px !important; }
+}
