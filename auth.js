@@ -1,11 +1,10 @@
 // auth.js – Real Google OAuth & Email Authentication System
-// Powered by Google Identity Services (GIS) - No Test Simulations
+// Powered by Google Identity Services (GIS) - Dark Portal Theme & Name Editing
 
 (function () {
   'use strict';
 
-  // Config: Put your real Google OAuth Client ID here, or set via UI
-  // Get free Client ID from: https://console.cloud.google.com/apis/credentials
+  // Real Google OAuth Client ID
   const DEFAULT_GOOGLE_CLIENT_ID = '530419745324-oani5bpuo6n026ds4qloego44e2gkfjl.apps.googleusercontent.com';
 
   const STORAGE_KEY = 'learning_portal_user';
@@ -58,17 +57,64 @@
       localStorage.setItem('dmat_last_candidate', user.name);
     }
     updateHeaderUI();
+    prefillCandidateInputs();
     document.dispatchEvent(new CustomEvent('portal:auth-change', { detail: { user } }));
+  }
+
+  function updateUserName(newName) {
+    const trimmed = (newName || '').trim();
+    if (!trimmed) return false;
+
+    const user = getUser();
+    if (user) {
+      user.name = trimmed;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
+    }
+    localStorage.setItem('dmat_last_candidate', trimmed);
+
+    // Also update in registered users db if email login
+    if (user && user.email) {
+      const users = getRegisteredUsers();
+      const u = users.find(x => x.email.toLowerCase() === user.email.toLowerCase());
+      if (u) {
+        u.name = trimmed;
+        localStorage.setItem(USERS_DB_KEY, JSON.stringify(users));
+      }
+    }
+
+    updateHeaderUI();
+    prefillCandidateInputs();
+    document.dispatchEvent(new CustomEvent('portal:auth-change', { detail: { user: getUser() } }));
+    return true;
   }
 
   function logout() {
     localStorage.removeItem(STORAGE_KEY);
     updateHeaderUI();
+    prefillCandidateInputs();
     document.dispatchEvent(new CustomEvent('portal:auth-change', { detail: { user: null } }));
     const path = window.location.pathname.toLowerCase();
     if (path.includes('learn.html') || path.includes('practice.html') || path.includes('assessment.html')) {
       window.location.reload();
     }
+  }
+
+  /* ───── PREFILL CANDIDATE NAME IN EXAM SIMULATION MODALS ───── */
+  function prefillCandidateInputs() {
+    const user = getUser();
+    const candidateName = (user && user.name) ? user.name : (localStorage.getItem('dmat_last_candidate') || '');
+
+    // 1. Inputs inside modal-candidate-name in math, figures, latin
+    document.querySelectorAll('#input-candidate-name').forEach(inp => {
+      if (candidateName && (!inp.value || inp.value === 'Candidate')) {
+        inp.value = candidateName;
+      }
+    });
+
+    // 2. Exam topbar candidate badges
+    document.querySelectorAll('#exam-candidate-name').forEach(el => {
+      if (candidateName) el.textContent = candidateName;
+    });
   }
 
   /* ───── MODAL CONTROLLER ───── */
@@ -144,9 +190,9 @@
                 <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
               </svg>
             </div>
-            <h3 style="font-size:16px; font-weight:800; color:#0f172a; margin:0 0 6px;">Connect Google OAuth</h3>
-            <p style="font-size:12px; color:#64748b; line-height:1.5; margin:0 0 14px;">
-              Enter your Google Cloud Web Client ID to connect real Google accounts (from <a href="https://console.cloud.google.com/apis/credentials" target="_blank" style="color:#2563eb; font-weight:700;">Google Cloud Console</a>):
+            <h3 style="font-size:16px; font-weight:800; color:#ffffff; margin:0 0 6px;">Connect Google OAuth</h3>
+            <p style="font-size:12px; color:#94a3b8; line-height:1.5; margin:0 0 14px;">
+              Enter your Google Cloud Web Client ID to connect real Google accounts (from <a href="https://console.cloud.google.com/apis/credentials" target="_blank" style="color:#60a5fa; font-weight:700;">Google Cloud Console</a>):
             </p>
             <div class="auth-form-field">
               <input type="text" id="input-google-client-id" class="auth-input" placeholder="e.g. 123456789-xxx.apps.googleusercontent.com" style="font-size:12px;"/>
@@ -154,16 +200,13 @@
             <button type="button" class="auth-submit-btn" id="btn-save-client-id" style="margin-top:10px;">
               Save &amp; Continue with Google
             </button>
-            <div style="font-size:11px; color:#94a3b8; margin-top:8px;">
-              Ensure <code>http://localhost:3000</code> is added in Google Console under <strong>Authorized JavaScript origins</strong>.
-            </div>
           </div>
           <div style="text-align:center; margin-top:14px;">
             <button type="button" class="auth-back-btn" id="btn-back-from-google-setup">← Back</button>
           </div>
         </div>
 
-        <!-- VIEW 3: Email & Password Form -->
+        <!-- VIEW 3: Email & Password Form (Our Theme CSS) -->
         <div class="auth-view" id="auth-view-form" style="display:none;">
           <div class="auth-error-banner" id="auth-form-error"></div>
 
@@ -192,7 +235,7 @@
           </form>
 
           <div style="text-align:center; margin-top:12px;">
-            <span id="auth-toggle-mode-text" style="font-size:13px; color:#475569;">Don't have an account? </span>
+            <span id="auth-toggle-mode-text" style="font-size:13px; color:#94a3b8;">Don't have an account? </span>
             <span class="auth-link-login" id="link-toggle-signup-login" style="font-size:13px;">Sign up</span>
           </div>
 
@@ -205,7 +248,93 @@
     `;
 
     document.body.appendChild(modalBackdrop);
+    createEditNameModalHtml();
     bindModalEvents();
+  }
+
+  /* ───── EDIT NAME MODAL ───── */
+  function createEditNameModalHtml() {
+    if (document.getElementById('portal-edit-name-modal')) return;
+
+    const backdrop = document.createElement('div');
+    backdrop.id = 'portal-edit-name-modal';
+    backdrop.className = 'edit-name-backdrop';
+
+    backdrop.innerHTML = `
+      <div class="edit-name-card" role="dialog" aria-modal="true">
+        <button type="button" class="auth-modal-close" id="btn-close-edit-name" aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+          <div style="width:36px; height:36px; border-radius:50%; background:rgba(67,83,255,0.15); display:flex; align-items:center; justify-content:center; color:#818cf8;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3 style="margin:0; font-size:18px; font-weight:800; color:#fff;">Edit Display Name</h3>
+        </div>
+        <p style="font-size:13px; color:#94a3b8; margin:0 0 16px; line-height:1.5;">
+          This name will appear on all your exam results, submissions log, and profile header.
+        </p>
+        <div class="auth-form-field">
+          <label for="input-edit-profile-name">Candidate / Display Name</label>
+          <input type="text" id="input-edit-profile-name" class="auth-input" placeholder="Your Full Name"/>
+        </div>
+        <div style="display:flex; gap:10px; margin-top:16px;">
+          <button type="button" class="auth-submit-btn" id="btn-save-edit-name" style="margin:0; flex:1;">Save Name</button>
+          <button type="button" class="auth-back-btn" id="btn-cancel-edit-name" style="margin:0; padding:0 14px;">Cancel</button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(backdrop);
+
+    const closeBtn = document.getElementById('btn-close-edit-name');
+    const cancelBtn = document.getElementById('btn-cancel-edit-name');
+    const saveBtn = document.getElementById('btn-save-edit-name');
+    const input = document.getElementById('input-edit-profile-name');
+
+    const closeEdit = () => backdrop.classList.remove('active');
+
+    if (closeBtn) closeBtn.addEventListener('click', closeEdit);
+    if (cancelBtn) cancelBtn.addEventListener('click', closeEdit);
+    backdrop.addEventListener('click', (e) => { if (e.target === backdrop) closeEdit(); });
+
+    if (saveBtn) {
+      saveBtn.addEventListener('click', () => {
+        const val = (input ? input.value : '').trim();
+        if (val) {
+          updateUserName(val);
+          closeEdit();
+        }
+      });
+    }
+
+    if (input) {
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          const val = input.value.trim();
+          if (val) {
+            updateUserName(val);
+            closeEdit();
+          }
+        }
+      });
+    }
+  }
+
+  function openEditNameModal() {
+    createEditNameModalHtml();
+    const backdrop = document.getElementById('portal-edit-name-modal');
+    const input = document.getElementById('input-edit-profile-name');
+    const user = getUser();
+
+    if (input) {
+      input.value = (user && user.name) ? user.name : (localStorage.getItem('dmat_last_candidate') || '');
+    }
+
+    if (backdrop) {
+      backdrop.classList.add('active');
+      setTimeout(() => { if (input) { input.focus(); input.select(); } }, 100);
+    }
   }
 
   /* ───── EVENT BINDINGS ───── */
@@ -234,7 +363,7 @@
       }
     });
 
-    // 1. Google Click -> Trigger Real Google Sign-In Popup
+    // 1. Google Click
     btnGoogle.addEventListener('click', () => {
       triggerRealGoogleSignIn();
     });
@@ -352,7 +481,6 @@
         callback: async (tokenResponse) => {
           if (tokenResponse && tokenResponse.access_token) {
             try {
-              // Real Google UserInfo API Call
               const res = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
                 headers: { Authorization: `Bearer ${tokenResponse.access_token}` }
               });
@@ -553,6 +681,11 @@
             <div style="padding:6px 12px; font-size:11px; color:#94a3b8; border-bottom:1px solid rgba(255,255,255,0.08); margin-bottom:4px;">
               Signed in with ${user.provider === 'google' ? 'Google' : 'Email'}:<br/><strong style="color:#fff;">${escapeHtml(user.email || user.name)}</strong>
             </div>
+            <!-- Edit Display Name -->
+            <button type="button" class="user-dropdown-item" id="btn-header-edit-name">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              <span>Edit Name</span>
+            </button>
             <button type="button" class="user-dropdown-item logout-item" id="btn-header-logout">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
               <span>Sign Out</span>
@@ -563,6 +696,7 @@
 
       const trigger = document.getElementById('user-profile-trigger');
       const menu = document.getElementById('user-dropdown-menu');
+      const editNameBtn = document.getElementById('btn-header-edit-name');
       const logoutBtn = document.getElementById('btn-header-logout');
 
       if (trigger && menu) {
@@ -573,6 +707,14 @@
 
         document.addEventListener('click', () => {
           menu.classList.remove('show');
+        });
+      }
+
+      if (editNameBtn) {
+        editNameBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          menu.classList.remove('show');
+          openEditNameModal();
         });
       }
 
@@ -639,6 +781,8 @@
         }, true);
       }
     });
+
+    prefillCandidateInputs();
   }
 
   function renderPageGateScreen() {
@@ -714,6 +858,8 @@
   window.AuthManager = {
     getUser,
     isLoggedIn,
+    updateUserName,
+    openEditNameModal,
     logout,
     openModal,
     closeModal,

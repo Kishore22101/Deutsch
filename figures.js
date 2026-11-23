@@ -275,7 +275,7 @@
     updateModalLabels();
 
     dom.nameModalError.textContent = '';
-    dom.candidateNameInput.value = state.candidateName || '';
+    dom.candidateNameInput.value = (typeof AuthManager !== 'undefined' && AuthManager.getUser() && AuthManager.getUser().name) ? AuthManager.getUser().name : (state.candidateName || localStorage.getItem('dmat_last_candidate') || '');
     dom.modalName.classList.remove('hidden');
     setTimeout(() => {
       dom.candidateNameInput.focus();
@@ -319,6 +319,7 @@
     }
     state.candidateName = name;
     localStorage.setItem('dmat_last_candidate', name);
+    if (typeof AuthManager !== 'undefined') { AuthManager.updateUserName(name); }
     dom.modalName.classList.add('hidden');
     startExam(state.selectedSet);
   }

@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════
-   auth.css – Modern Authentication Modal & User Status Pill
-   Matches exact Google / Email sign-in UI specification
+   auth.css – Modern Authentication Modal (Dark Portal Theme)
+   Seamlessly matches Learning Portal's glassmorphism style
    ══════════════════════════════════════════════════════════════ */
 
 /* ─── Backdrop Overlay ─── */
@@ -8,9 +8,9 @@
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background: rgba(10, 15, 29, 0.75);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(10, 15, 29, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,19 +25,20 @@
   visibility: visible;
 }
 
-/* ─── Modal Card ─── */
+/* ─── Modal Card (Portal Dark Theme) ─── */
 .auth-modal-card {
   width: 100%;
   max-width: 440px;
-  background: #ffffff;
-  color: #0f172a;
+  background: linear-gradient(180deg, #131b2e 0%, #0b0f19 100%);
+  color: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.08);
   padding: 36px 32px 32px;
   position: relative;
   transform: translateY(16px) scale(0.97);
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: inherit;
   overflow: hidden;
 }
 
@@ -54,8 +55,8 @@
   height: 34px;
   border-radius: 50%;
   border: none;
-  background: #f1f5f9;
-  color: #64748b;
+  background: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,8 +65,8 @@
 }
 
 .auth-modal-close:hover {
-  background: #e2e8f0;
-  color: #0f172a;
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
   transform: rotate(90deg);
 }
 
@@ -81,8 +82,9 @@
   gap: 6px;
   padding: 4px 12px;
   border-radius: 50px;
-  background: #eff6ff;
-  color: #2563eb;
+  background: rgba(67, 83, 255, 0.15);
+  color: #a5b4fc;
+  border: 1px solid rgba(67, 83, 255, 0.35);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -92,19 +94,19 @@
 .auth-modal-title {
   font-size: 24px;
   font-weight: 800;
-  color: #0f172a;
+  color: #ffffff;
   letter-spacing: -0.02em;
   margin: 0 0 6px;
 }
 
 .auth-modal-subtitle {
   font-size: 14px;
-  color: #64748b;
+  color: #94a3b8;
   margin: 0;
   line-height: 1.45;
 }
 
-/* ─── Action Buttons View (Exact Match from User Image) ─── */
+/* ─── Action Buttons View (Continue with Google / OR / Continue with Email) ─── */
 .auth-actions-group {
   display: flex;
   flex-direction: column;
@@ -128,14 +130,14 @@
   gap: 12px;
   cursor: pointer;
   transition: background 0.18s, border-color 0.18s, transform 0.15s, box-shadow 0.18s;
-  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.08);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.2);
 }
 
 .auth-btn-google:hover {
   background: #f8faff;
   border-color: #2563eb;
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.18);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
 }
 
 .auth-btn-google:active {
@@ -165,7 +167,7 @@
   content: "";
   flex: 1;
   height: 1px;
-  background: #e2e8f0;
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .auth-divider span {
@@ -187,30 +189,30 @@
   justify-content: center;
   cursor: pointer;
   transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
-  box-shadow: 0 4px 14px rgba(67, 83, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(67, 83, 255, 0.4);
 }
 
 .auth-btn-email:hover {
   background: #3342ee;
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(67, 83, 255, 0.4);
+  box-shadow: 0 6px 22px rgba(67, 83, 255, 0.5);
 }
 
 .auth-btn-email:active {
   transform: translateY(0);
 }
 
-/* ─── Modal Footer Link (Exact Match: Already have an account? Log in) ─── */
+/* ─── Modal Footer Link (Already have an account? Log in) ─── */
 .auth-modal-footer {
   text-align: center;
   margin-top: 26px;
   font-size: 14px;
-  color: #334155;
+  color: #94a3b8;
   font-weight: 500;
 }
 
 .auth-link-login {
-  color: #581c87;
+  color: #c084fc;
   font-weight: 700;
   text-decoration: underline;
   text-decoration-style: dashed;
@@ -220,10 +222,10 @@
 }
 
 .auth-link-login:hover {
-  color: #4353ff;
+  color: #e9d5ff;
 }
 
-/* ─── Email Form View (Expanded on Continue with Email / Log in) ─── */
+/* ─── Email Form View ─── */
 .auth-email-form {
   display: flex;
   flex-direction: column;
@@ -241,7 +243,7 @@
 .auth-form-field label {
   font-size: 13px;
   font-weight: 700;
-  color: #334155;
+  color: #cbd5e1;
 }
 
 .auth-input {
@@ -249,9 +251,9 @@
   height: 46px;
   padding: 0 14px;
   border-radius: 10px;
-  border: 1.5px solid #cbd5e1;
-  background: #f8fafc;
-  color: #0f172a;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
   font-size: 14px;
   font-weight: 500;
   font-family: inherit;
@@ -262,8 +264,12 @@
 .auth-input:focus {
   outline: none;
   border-color: #4353ff;
-  background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(67, 83, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(67, 83, 255, 0.25);
+}
+
+.auth-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
 }
 
 .auth-pwd-wrapper {
@@ -277,7 +283,7 @@
   right: 12px;
   background: none;
   border: none;
-  color: #64748b;
+  color: #94a3b8;
   cursor: pointer;
   padding: 4px;
   display: flex;
@@ -287,7 +293,7 @@
 }
 
 .auth-pwd-toggle:hover {
-  color: #0f172a;
+  color: #ffffff;
 }
 
 .auth-submit-btn {
@@ -301,18 +307,20 @@
   font-weight: 700;
   cursor: pointer;
   margin-top: 6px;
-  transition: background 0.18s, transform 0.15s;
+  transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+  box-shadow: 0 4px 14px rgba(67, 83, 255, 0.35);
 }
 
 .auth-submit-btn:hover {
   background: #3342ee;
   transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(67, 83, 255, 0.45);
 }
 
 .auth-back-btn {
   background: none;
   border: none;
-  color: #64748b;
+  color: #94a3b8;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
@@ -321,16 +329,17 @@
   gap: 6px;
   align-self: center;
   margin-top: 4px;
+  transition: color 0.15s;
 }
 
 .auth-back-btn:hover {
-  color: #0f172a;
+  color: #ffffff;
 }
 
 .auth-error-banner {
-  background: #fef2f2;
-  border: 1px solid #fecaca;
-  color: #dc2626;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #f87171;
   padding: 10px 14px;
   border-radius: 8px;
   font-size: 13px;
@@ -344,8 +353,8 @@
 
 /* ─── Real Google OAuth Setup Box ─── */
 .auth-google-setup-box {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
   padding: 20px;
   margin-top: 8px;
@@ -356,7 +365,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #eff6ff;
+  background: rgba(67, 83, 255, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -435,11 +444,11 @@
   position: absolute;
   top: calc(100% + 8px);
   right: 0;
-  min-width: 190px;
+  min-width: 210px;
   background: #1e293b;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 12px;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6);
   padding: 8px;
   display: none;
   flex-direction: column;
@@ -483,7 +492,40 @@
   color: #ef4444;
 }
 
-/* ─── Page Lock Gate Screen (for direct visits to learn/practice/assessment) ─── */
+/* ─── Edit Name Modal ─── */
+.edit-name-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(10, 15, 29, 0.8);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.edit-name-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.edit-name-card {
+  width: 100%;
+  max-width: 400px;
+  background: linear-gradient(180deg, #131b2e 0%, #0b0f19 100%);
+  color: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  padding: 28px 24px 24px;
+  position: relative;
+}
+
+/* ─── Page Lock Gate Screen ─── */
 .auth-gate-wrapper {
   max-width: 540px;
   margin: 60px auto;
@@ -500,7 +542,7 @@
   height: 64px;
   border-radius: 50%;
   background: rgba(67, 83, 255, 0.15);
-  color: #4353ff;
+  color: #818cf8;
   display: flex;
   align-items: center;
   justify-content: center;

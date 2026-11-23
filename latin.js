@@ -280,7 +280,7 @@
     }
     state.selectedSet = setKey;
     if (dom.candidateNameInput) {
-      dom.candidateNameInput.value = state.candidateName || '';
+      dom.candidateNameInput.value = (typeof AuthManager !== 'undefined' && AuthManager.getUser() && AuthManager.getUser().name) ? AuthManager.getUser().name : (state.candidateName || localStorage.getItem('dmat_last_candidate') || '');
     }
     if (dom.nameModalError) dom.nameModalError.textContent = '';
 
@@ -311,6 +311,7 @@
     }
     state.candidateName = val;
     localStorage.setItem('dmat_last_candidate', val);
+    if (typeof AuthManager !== 'undefined') { AuthManager.updateUserName(val); }
     if (dom.modalName) dom.modalName.classList.add('hidden');
     startExam(state.selectedSet);
   }
