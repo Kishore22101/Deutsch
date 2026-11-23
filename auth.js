@@ -6,7 +6,7 @@
 
   // Config: Put your real Google OAuth Client ID here, or set via UI
   // Get free Client ID from: https://console.cloud.google.com/apis/credentials
-  const DEFAULT_GOOGLE_CLIENT_ID = '';
+  const DEFAULT_GOOGLE_CLIENT_ID = '530419745324-oani5bpuo6n026ds4qloego44e2gkfjl.apps.googleusercontent.com';
 
   const STORAGE_KEY = 'learning_portal_user';
   const USERS_DB_KEY = 'learning_portal_registered_users';
