@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════
-   auth.css – Modern Authentication Modal (Dark Portal Theme)
-   Seamlessly matches Learning Portal's glassmorphism style
+   auth.css – Authentication Modal & UI (Black & White Theme)
+   Matches Learning Portal's black/white monochrome design
    ══════════════════════════════════════════════════════════════ */
 
 /* ─── Backdrop Overlay ─── */
@@ -8,9 +8,9 @@
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background: rgba(10, 15, 29, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,15 +25,15 @@
   visibility: visible;
 }
 
-/* ─── Modal Card (Portal Dark Theme) ─── */
+/* ─── Modal Card (Black & White) ─── */
 .auth-modal-card {
   width: 100%;
   max-width: 440px;
-  background: linear-gradient(180deg, #131b2e 0%, #0b0f19 100%);
+  background: #000000;
   color: #ffffff;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.06);
   padding: 36px 32px 32px;
   position: relative;
   transform: translateY(16px) scale(0.97);
@@ -54,23 +54,25 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.08);
-  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #aaaaaa;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: background 0.15s, color 0.15s, transform 0.15s;
+  font-size: 18px;
+  line-height: 1;
 }
 
 .auth-modal-close:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.14);
   color: #ffffff;
   transform: rotate(90deg);
 }
 
-/* ─── Modal Header / Context Notice ─── */
+/* ─── Modal Header ─── */
 .auth-modal-header {
   text-align: center;
   margin-bottom: 24px;
@@ -82,12 +84,13 @@
   gap: 6px;
   padding: 4px 12px;
   border-radius: 50px;
-  background: rgba(67, 83, 255, 0.15);
-  color: #a5b4fc;
-  border: 1px solid rgba(67, 83, 255, 0.35);
-  font-size: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #cccccc;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   margin-bottom: 12px;
 }
 
@@ -101,64 +104,60 @@
 
 .auth-modal-subtitle {
   font-size: 14px;
-  color: #94a3b8;
+  color: #888888;
   margin: 0;
   line-height: 1.45;
 }
 
-/* ─── Action Buttons View (Continue with Google / OR / Continue with Email) ─── */
+/* ─── Action Buttons Group ─── */
 .auth-actions-group {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   margin-top: 10px;
 }
 
-/* 1. Continue with Google Button */
+/* Google Button */
 .auth-btn-google {
   width: 100%;
-  height: 52px;
-  border-radius: 12px;
+  height: 50px;
+  border-radius: 10px;
   background: #ffffff;
-  border: 1.5px solid #3b82f6;
-  color: #1e293b;
-  font-size: 16px;
+  border: 1.5px solid #dddddd;
+  color: #111111;
+  font-size: 15px;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   cursor: pointer;
-  transition: background 0.18s, border-color 0.18s, transform 0.15s, box-shadow 0.18s;
-  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.2);
+  transition: background 0.15s, border-color 0.15s, transform 0.12s;
 }
 
 .auth-btn-google:hover {
-  background: #f8faff;
-  border-color: #2563eb;
+  background: #f5f5f5;
+  border-color: #bbbbbb;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
 }
 
-.auth-btn-google:active {
-  transform: translateY(0);
-}
+.auth-btn-google:active { transform: translateY(0); }
 
 .auth-google-icon {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
 }
 
-/* 2. Divider (OR) */
+/* OR Divider */
 .auth-divider {
   display: flex;
   align-items: center;
-  margin: 4px 0;
-  color: #64748b;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  margin: 2px 0;
+  color: #555555;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -170,176 +169,164 @@
   background: rgba(255, 255, 255, 0.12);
 }
 
-.auth-divider span {
-  padding: 0 16px;
-}
+.auth-divider::before { margin-right: 10px; }
+.auth-divider::after  { margin-left: 10px; }
 
-/* 3. Continue with Email Button */
+/* Email / Continue Button */
 .auth-btn-email {
   width: 100%;
-  height: 52px;
-  border-radius: 12px;
-  background: #4353ff;
-  border: none;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
-  box-shadow: 0 4px 16px rgba(67, 83, 255, 0.4);
-}
-
-.auth-btn-email:hover {
-  background: #3342ee;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 22px rgba(67, 83, 255, 0.5);
-}
-
-.auth-btn-email:active {
-  transform: translateY(0);
-}
-
-/* ─── Modal Footer Link (Already have an account? Log in) ─── */
-.auth-modal-footer {
-  text-align: center;
-  margin-top: 26px;
-  font-size: 14px;
-  color: #94a3b8;
-  font-weight: 500;
-}
-
-.auth-link-login {
-  color: #c084fc;
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-style: dashed;
-  text-underline-offset: 4px;
-  cursor: pointer;
-  transition: color 0.15s;
-}
-
-.auth-link-login:hover {
-  color: #e9d5ff;
-}
-
-/* ─── Email Form View ─── */
-.auth-email-form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 12px;
-}
-
-.auth-form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  text-align: left;
-}
-
-.auth-form-field label {
-  font-size: 13px;
-  font-weight: 700;
-  color: #cbd5e1;
-}
-
-.auth-input {
-  width: 100%;
-  height: 46px;
-  padding: 0 14px;
+  height: 50px;
   border-radius: 10px;
-  border: 1.5px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 500;
-  font-family: inherit;
-  transition: border-color 0.18s, box-shadow 0.18s, background 0.18s;
-  box-sizing: border-box;
-}
-
-.auth-input:focus {
-  outline: none;
-  border-color: #4353ff;
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 0 3px rgba(67, 83, 255, 0.25);
-}
-
-.auth-input::placeholder {
-  color: rgba(255, 255, 255, 0.35);
-}
-
-.auth-pwd-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.auth-pwd-toggle {
-  position: absolute;
-  right: 12px;
-  background: none;
+  background: #ffffff;
   border: none;
-  color: #94a3b8;
-  cursor: pointer;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.15s;
-}
-
-.auth-pwd-toggle:hover {
-  color: #ffffff;
-}
-
-.auth-submit-btn {
-  width: 100%;
-  height: 48px;
-  border-radius: 10px;
-  background: #4353ff;
-  color: #ffffff;
-  border: none;
+  color: #000000;
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
-  margin-top: 6px;
-  transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
-  box-shadow: 0 4px 14px rgba(67, 83, 255, 0.35);
+  transition: background 0.15s, transform 0.12s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-.auth-submit-btn:hover {
-  background: #3342ee;
+.auth-btn-email:hover {
+  background: #eeeeee;
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(67, 83, 255, 0.45);
 }
 
-.auth-back-btn {
-  background: none;
+.auth-btn-email:active { transform: translateY(0); }
+
+/* ─── Form View ─── */
+.auth-form-view {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-field label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #aaaaaa;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.auth-field input {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border-radius: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.15s, background 0.15s;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.auth-field input::placeholder { color: #555555; }
+
+.auth-field input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Submit Button in form */
+.auth-btn-submit {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
   border: none;
-  color: #94a3b8;
-  font-size: 13px;
-  font-weight: 600;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 700;
   cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.15s, transform 0.12s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.auth-btn-submit:hover {
+  background: #eeeeee;
+  transform: translateY(-1px);
+}
+
+.auth-btn-submit:active { transform: translateY(0); }
+
+/* Back link */
+.auth-back-link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  align-self: center;
-  margin-top: 4px;
+  font-size: 13px;
+  color: #888888;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
   transition: color 0.15s;
 }
 
-.auth-back-btn:hover {
-  color: #ffffff;
+.auth-back-link:hover { color: #ffffff; }
+
+/* Switch mode link */
+.auth-switch-mode {
+  text-align: center;
+  font-size: 13px;
+  color: #666666;
+  margin-top: 4px;
 }
 
+.auth-switch-mode a,
+.auth-switch-mode button {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.auth-switch-mode a:hover,
+.auth-switch-mode button:hover { text-decoration: underline; }
+
+/* ─── Forgot password ─── */
+.auth-forgot-link {
+  font-size: 12px;
+  color: #666666;
+  text-align: right;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  transition: color 0.15s;
+}
+
+.auth-forgot-link:hover { color: #ffffff; }
+
+/* ─── Error Banner ─── */
 .auth-error-banner {
-  background: rgba(239, 68, 68, 0.15);
-  border: 1px solid rgba(239, 68, 68, 0.35);
-  color: #f87171;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
   padding: 10px 14px;
   border-radius: 8px;
   font-size: 13px;
@@ -347,32 +334,30 @@
   display: none;
 }
 
-.auth-error-banner.show {
-  display: block;
-}
+.auth-error-banner.show { display: block; }
 
-/* ─── Real Google OAuth Setup Box ─── */
+/* ─── Google Setup Box ─── */
 .auth-google-setup-box {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 14px;
+  border-radius: 12px;
   padding: 20px;
   margin-top: 8px;
   text-align: center;
 }
 
 .google-setup-icon {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: rgba(67, 83, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 12px;
 }
 
-/* ─── Header User Profile Pill ─── */
+/* ─── Header Sign-In Button ─── */
 .header-auth-container {
   display: inline-flex;
   align-items: center;
@@ -383,25 +368,26 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
+  padding: 8px 18px;
   border-radius: 50px;
-  background: #4353ff;
-  color: #ffffff !important;
+  background: #ffffff;
+  color: #000000 !important;
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
   border: none;
-  box-shadow: 0 2px 8px rgba(67, 83, 255, 0.35);
-  transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+  box-shadow: none;
+  transition: background 0.15s, transform 0.12s;
+  letter-spacing: 0.01em;
 }
 
 .btn-header-signin:hover {
-  background: #3342ee;
+  background: #eeeeee;
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(67, 83, 255, 0.45);
 }
 
+/* ─── User Profile Pill ─── */
 .user-profile-pill {
   display: inline-flex;
   align-items: center;
@@ -409,8 +395,8 @@
   padding: 4px 12px 4px 6px;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
@@ -420,15 +406,15 @@
 
 .user-profile-pill:hover {
   background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .user-pill-avatar {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #10b981, #06b6d4);
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -437,36 +423,54 @@
 }
 
 .user-pill-avatar.google-avatar {
-  background: linear-gradient(135deg, #4285F4, #34A853);
+  background: #ffffff;
+  color: #000000;
 }
 
+/* ─── Dropdown Menu ─── */
 .user-dropdown-menu {
   position: absolute;
   top: calc(100% + 8px);
   right: 0;
-  min-width: 210px;
-  background: #1e293b;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  min-width: 200px;
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
-  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
   padding: 8px;
   display: none;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
   z-index: 1000;
 }
 
-.user-dropdown-menu.show {
-  display: flex;
+.user-dropdown-menu.show { display: flex; }
+
+.user-dropdown-header {
+  padding: 8px 12px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 4px;
+}
+
+.user-dropdown-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.user-dropdown-email {
+  font-size: 11px;
+  color: #666666;
+  margin-top: 2px;
 }
 
 .user-dropdown-item {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 12px;
+  padding: 9px 12px;
   border-radius: 8px;
-  color: #cbd5e1;
+  color: #cccccc;
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
@@ -475,7 +479,7 @@
   cursor: pointer;
   width: 100%;
   text-align: left;
-  transition: background 0.15s, color 0.15s;
+  transition: background 0.12s, color 0.12s;
 }
 
 .user-dropdown-item:hover {
@@ -483,12 +487,10 @@
   color: #ffffff;
 }
 
-.user-dropdown-item.logout-item {
-  color: #f87171;
-}
+.user-dropdown-item.logout-item { color: #f87171; }
 
 .user-dropdown-item.logout-item:hover {
-  background: rgba(239, 68, 68, 0.15);
+  background: rgba(239, 68, 68, 0.12);
   color: #ef4444;
 }
 
@@ -497,8 +499,8 @@
   position: fixed;
   inset: 0;
   z-index: 100000;
-  background: rgba(10, 15, 29, 0.8);
-  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -516,33 +518,112 @@
 .edit-name-card {
   width: 100%;
   max-width: 400px;
-  background: linear-gradient(180deg, #131b2e 0%, #0b0f19 100%);
+  background: #000000;
   color: #ffffff;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
   padding: 28px 24px 24px;
   position: relative;
 }
 
+.edit-name-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 20px;
+}
+
+.edit-name-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.edit-name-field label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #888888;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.edit-name-field input {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border-radius: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+
+.edit-name-field input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.edit-name-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-name-btn-save {
+  flex: 1;
+  height: 46px;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.edit-name-btn-save:hover { background: #eeeeee; }
+
+.edit-name-btn-cancel {
+  height: 46px;
+  padding: 0 20px;
+  border-radius: 9px;
+  background: transparent;
+  color: #aaaaaa;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.edit-name-btn-cancel:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
 /* ─── Page Lock Gate Screen ─── */
 .auth-gate-wrapper {
-  max-width: 540px;
-  margin: 60px auto;
-  padding: 40px 32px;
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
+  max-width: 520px;
+  margin: 80px auto;
+  padding: 48px 36px;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
 
 .auth-gate-icon {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: rgba(67, 83, 255, 0.15);
-  color: #818cf8;
+  background: rgba(255, 255, 255, 0.07);
+  color: #aaaaaa;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -550,7 +631,7 @@
 }
 
 .auth-gate-title {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 800;
   color: #ffffff;
   margin: 0 0 10px;
@@ -558,7 +639,7 @@
 
 .auth-gate-desc {
   font-size: 14px;
-  color: var(--t-70, #94a3b8);
+  color: #888888;
   line-height: 1.6;
-  margin: 0 0 24px;
+  margin: 0 0 28px;
 }

@@ -94,7 +94,11 @@
     prefillCandidateInputs();
     document.dispatchEvent(new CustomEvent('portal:auth-change', { detail: { user: null } }));
     const path = window.location.pathname.toLowerCase();
-    if (path.includes('learn.html') || path.includes('practice.html') || path.includes('assessment.html')) {
+    // After sign-out, redirect auth-gated pages back to themselves (triggers gate screen)
+    const isGated =
+      path.includes('learn.html') || path.includes('practice.html') || path.includes('assessment.html') ||
+      path.includes('math.html') || path.includes('figures.html') || path.includes('latin.html');
+    if (isGated) {
       window.location.reload();
     }
   }
@@ -731,9 +735,10 @@
   function autoProtectFeatures() {
     const path = window.location.pathname.toLowerCase();
 
-    // 1. Gated Pages: German Learn, Practice, Assessment
+    // 1. Gated Pages: German Learn, Practice, Assessment + dMAT Test Pages
     const isGermanGated = path.includes('learn.html') || path.includes('practice.html') || path.includes('assessment.html');
-    if (isGermanGated && !isLoggedIn()) {
+    const isDmatGated = path.includes('math.html') || path.includes('figures.html') || path.includes('latin.html');
+    if ((isGermanGated || isDmatGated) && !isLoggedIn()) {
       renderPageGateScreen();
       return;
     }
