@@ -643,3 +643,171 @@
   line-height: 1.6;
   margin: 0 0 28px;
 }
+
+/* ─── OTP Verification Boxes ─── */
+.auth-otp-boxes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.auth-otp-input {
+  width: 48px;
+  height: 56px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+  font-family: inherit;
+  caret-color: transparent;
+}
+
+.auth-otp-input:focus {
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.auth-otp-input:not(:placeholder-shown) {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes otp-shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-8px); }
+  40%       { transform: translateX(8px); }
+  60%       { transform: translateX(-6px); }
+  80%       { transform: translateX(6px); }
+}
+
+.otp-shake {
+  animation: otp-shake 0.45s ease;
+}
+
+/* ─── Password field wrapper ─── */
+.auth-pwd-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth-pwd-wrapper .auth-input {
+  padding-right: 44px;
+  width: 100%;
+}
+
+.auth-pwd-toggle {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #666666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: color 0.15s;
+}
+
+.auth-pwd-toggle:hover { color: #ffffff; }
+
+/* ─── Form fields ─── */
+.auth-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-input {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border-radius: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.15s, background 0.15s;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.auth-input::placeholder { color: #555555; }
+
+.auth-input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.auth-form-field label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #aaaaaa;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ─── Submit & Back buttons ─── */
+.auth-submit-btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: none;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.12s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+}
+
+.auth-submit-btn:hover {
+  background: #eeeeee;
+  transform: translateY(-1px);
+}
+
+.auth-submit-btn:active { transform: translateY(0); }
+
+.auth-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #666666;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 6px 10px;
+  font-family: inherit;
+  transition: color 0.15s;
+  border-radius: 6px;
+}
+
+.auth-back-btn:hover { color: #ffffff; }
+
+.auth-link-login {
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.auth-link-login:hover { text-decoration: underline; }

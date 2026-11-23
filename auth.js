@@ -124,6 +124,8 @@
   /* ───── MODAL CONTROLLER ───── */
   let activeCallback = null;
   let currentFormMode = 'login'; // 'login' or 'signup'
+  let pendingSignupData = null; // { name, email, password } waiting for OTP
+  let currentOtp = ''; // 6-digit OTP for email signup verification
 
   function createModalHtml() {
     if (document.getElementById('portal-auth-modal')) return;
@@ -235,6 +237,16 @@
               </div>
             </div>
 
+            <div class="auth-form-field" id="field-confirm-password-group" style="display:none;">
+              <label for="auth-input-confirm-password">Confirm Password</label>
+              <div class="auth-pwd-wrapper">
+                <input type="password" id="auth-input-confirm-password" class="auth-input" placeholder="Re-enter your password" autocomplete="new-password"/>
+                <button type="button" class="auth-pwd-toggle" id="auth-form-confirm-pwd-toggle" tabindex="-1" aria-label="Toggle confirm password">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </button>
+              </div>
+            </div>
+
             <button type="submit" class="auth-submit-btn" id="btn-auth-form-submit">Continue</button>
           </form>
 
@@ -245,6 +257,30 @@
 
           <div style="text-align:center; margin-top:10px;">
             <button type="button" class="auth-back-btn" id="btn-back-from-form">← Back to options</button>
+          </div>
+        </div>
+
+        <!-- VIEW 4: OTP Verification -->
+        <div class="auth-view" id="auth-view-otp" style="display:none;">
+          <div class="auth-modal-header" style="margin-bottom:16px;">
+            <h2 class="auth-modal-title">Verify Email</h2>
+            <p class="auth-modal-subtitle" id="otp-subtitle">Enter the 6-digit code sent to your email.</p>
+          </div>
+          <div class="auth-error-banner" id="auth-otp-error"></div>
+          <div class="auth-otp-boxes" id="auth-otp-boxes">
+            <input class="auth-otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" id="otp-0"/>
+            <input class="auth-otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" id="otp-1"/>
+            <input class="auth-otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" id="otp-2"/>
+            <input class="auth-otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" id="otp-3"/>
+            <input class="auth-otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" id="otp-4"/>
+            <input class="auth-otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" id="otp-5"/>
+          </div>
+          <button type="button" class="auth-submit-btn" id="btn-otp-verify" style="margin-top:20px;">Verify & Create Account</button>
+          <div style="text-align:center; margin-top:12px;">
+            <button type="button" class="auth-back-btn" id="btn-otp-resend">Resend Code</button>
+          </div>
+          <div style="text-align:center; margin-top:8px;">
+            <button type="button" class="auth-back-btn" id="btn-back-from-otp">← Back</button>
           </div>
         </div>
 
@@ -417,6 +453,23 @@
       }
     });
 
+    const confirmPwdToggle = document.getElementById('auth-form-confirm-pwd-toggle');
+    if (confirmPwdToggle) {
+      confirmPwdToggle.addEventListener('click', () => {
+        const cp = document.getElementById('auth-input-confirm-password');
+        if (!cp) return;
+        if (cp.type === 'password') {
+          cp.type = 'text';
+          confirmPwdToggle.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>`;
+        } else {
+          cp.type = 'password';
+          confirmPwdToggle.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`;
+        }
+      });
+    }
+
+    bindOtpEvents();
+
     emailForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const email = (document.getElementById('auth-input-email').value || '').trim();
@@ -433,6 +486,15 @@
           showFormError('Please enter your full name.');
           return;
         }
+        const confirmPass = (document.getElementById('auth-input-confirm-password') ? document.getElementById('auth-input-confirm-password').value : '');
+        if (pass !== confirmPass) {
+          showFormError('Passwords do not match. Please try again.');
+          return;
+        }
+        if (pass.length < 6) {
+          showFormError('Password must be at least 6 characters.');
+          return;
+        }
         const users = getRegisteredUsers();
         const existing = users.find(u => u.email.toLowerCase() === email.toLowerCase());
         if (existing) {
@@ -440,11 +502,10 @@
           return;
         }
 
-        const newUser = { name, email, password: pass, provider: 'email' };
-        users.push(newUser);
-        localStorage.setItem(USERS_DB_KEY, JSON.stringify(users));
-
-        handleSuccessfulLogin({ name, email, provider: 'email' });
+        // Store pending signup and show OTP screen
+        pendingSignupData = { name, email, password: pass };
+        startOtpFlow(email);
+        return;
       } else {
         const users = getRegisteredUsers();
         const found = users.find(u => u.email.toLowerCase() === email.toLowerCase());
@@ -463,6 +524,119 @@
         }
       }
     });
+  }
+
+  /* ───── OTP FLOW ───── */
+  function generateOtp() {
+    return String(Math.floor(100000 + Math.random() * 900000));
+  }
+
+  function startOtpFlow(email) {
+    currentOtp = generateOtp();
+    // Show OTP in a subtle notification (since no backend email service)
+    const subtitle = document.getElementById('otp-subtitle');
+    if (subtitle) {
+      subtitle.innerHTML = `A 6-digit verification code has been generated.<br><span style="font-size:11px;color:#666;">Since this is a client-side app, your code is: <strong style="color:#fff;letter-spacing:4px;">${currentOtp}</strong></span>`;
+    }
+    // Clear OTP boxes
+    for (let i = 0; i < 6; i++) {
+      const box = document.getElementById('otp-' + i);
+      if (box) box.value = '';
+    }
+    clearOtpError();
+    showView('otp');
+  }
+
+  function getEnteredOtp() {
+    let val = '';
+    for (let i = 0; i < 6; i++) {
+      const box = document.getElementById('otp-' + i);
+      val += (box ? box.value : '');
+    }
+    return val;
+  }
+
+  function showOtpError(msg) {
+    const el = document.getElementById('auth-otp-error');
+    if (el) { el.textContent = msg; el.classList.add('show'); }
+  }
+
+  function clearOtpError() {
+    const el = document.getElementById('auth-otp-error');
+    if (el) { el.textContent = ''; el.classList.remove('show'); }
+  }
+
+  function bindOtpEvents() {
+    // Wire OTP box auto-advance
+    for (let i = 0; i < 6; i++) {
+      const box = document.getElementById('otp-' + i);
+      if (!box) continue;
+      box.addEventListener('input', (e) => {
+        const val = e.target.value.replace(/[^0-9]/g, '');
+        e.target.value = val.slice(-1);
+        if (val && i < 5) {
+          const next = document.getElementById('otp-' + (i + 1));
+          if (next) next.focus();
+        }
+      });
+      box.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && !box.value && i > 0) {
+          const prev = document.getElementById('otp-' + (i - 1));
+          if (prev) { prev.focus(); prev.value = ''; }
+        }
+        if (e.key === 'Enter') verifyOtp();
+      });
+      box.addEventListener('paste', (e) => {
+        e.preventDefault();
+        const pasted = (e.clipboardData || window.clipboardData).getData('text').replace(/[^0-9]/g, '').slice(0, 6);
+        for (let j = 0; j < 6; j++) {
+          const b = document.getElementById('otp-' + j);
+          if (b) b.value = pasted[j] || '';
+        }
+        const last = document.getElementById('otp-' + Math.min(pasted.length, 5));
+        if (last) last.focus();
+      });
+    }
+
+    const verifyBtn = document.getElementById('btn-otp-verify');
+    if (verifyBtn) verifyBtn.addEventListener('click', verifyOtp);
+
+    const resendBtn = document.getElementById('btn-otp-resend');
+    if (resendBtn) resendBtn.addEventListener('click', () => {
+      if (pendingSignupData) startOtpFlow(pendingSignupData.email);
+    });
+
+    const backFromOtp = document.getElementById('btn-back-from-otp');
+    if (backFromOtp) backFromOtp.addEventListener('click', () => {
+      pendingSignupData = null;
+      currentOtp = '';
+      showView('form');
+    });
+  }
+
+  function verifyOtp() {
+    const entered = getEnteredOtp();
+    if (entered.length < 6) {
+      showOtpError('Please enter all 6 digits.');
+      return;
+    }
+    if (entered !== currentOtp) {
+      showOtpError('Incorrect code. Please check and try again.');
+      // Shake animation
+      const boxes = document.getElementById('auth-otp-boxes');
+      if (boxes) { boxes.classList.add('otp-shake'); setTimeout(() => boxes.classList.remove('otp-shake'), 500); }
+      return;
+    }
+    // OTP correct — complete signup
+    if (!pendingSignupData) return;
+    const { name, email, password } = pendingSignupData;
+    const users = getRegisteredUsers();
+    const newUser = { name, email, password, provider: 'email' };
+    users.push(newUser);
+    localStorage.setItem(USERS_DB_KEY, JSON.stringify(users));
+    pendingSignupData = null;
+    currentOtp = '';
+    handleSuccessfulLogin({ name, email, provider: 'email' });
   }
 
   /* ───── REAL GOOGLE IDENTITY SERVICES TRIGGER ───── */
@@ -554,15 +728,18 @@
     const toggleLink = document.getElementById('link-toggle-signup-login');
     const title = document.getElementById('auth-modal-title');
 
+    const confirmField = document.getElementById('field-confirm-password-group');
     if (mode === 'signup') {
       title.textContent = 'Create Account';
       if (nameField) nameField.style.display = 'flex';
-      if (submitBtn) submitBtn.textContent = 'Create Account & Continue';
+      if (confirmField) confirmField.style.display = 'flex';
+      if (submitBtn) submitBtn.textContent = 'Send Verification Code';
       if (toggleText) toggleText.textContent = 'Already have an account? ';
       if (toggleLink) toggleLink.textContent = 'Log in';
     } else {
       title.textContent = 'Sign In';
       if (nameField) nameField.style.display = 'none';
+      if (confirmField) confirmField.style.display = 'none';
       if (submitBtn) submitBtn.textContent = 'Sign In & Continue';
       if (toggleText) toggleText.textContent = "Don't have an account? ";
       if (toggleLink) toggleLink.textContent = 'Sign up';
@@ -573,16 +750,22 @@
     const vMain = document.getElementById('auth-view-main');
     const vGoogleSetup = document.getElementById('auth-view-google-setup');
     const vForm = document.getElementById('auth-view-form');
+    const vOtp = document.getElementById('auth-view-otp');
     const title = document.getElementById('auth-modal-title');
 
     if (vMain) vMain.style.display = viewName === 'main' ? 'block' : 'none';
     if (vGoogleSetup) vGoogleSetup.style.display = viewName === 'google-setup' ? 'block' : 'none';
     if (vForm) vForm.style.display = viewName === 'form' ? 'block' : 'none';
+    if (vOtp) vOtp.style.display = viewName === 'otp' ? 'block' : 'none';
 
     if (viewName === 'main') {
       if (title) title.textContent = 'Sign In';
     } else if (viewName === 'google-setup') {
       if (title) title.textContent = 'Google Sign-In';
+    } else if (viewName === 'otp') {
+      if (title) title.textContent = 'Verify Email';
+      // Focus first OTP box
+      setTimeout(() => { const b = document.getElementById('otp-0'); if (b) b.focus(); }, 100);
     }
   }
 
