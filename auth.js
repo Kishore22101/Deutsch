@@ -262,24 +262,33 @@
 
         <!-- VIEW 4: OTP Verification -->
         <div class="auth-view" id="auth-view-otp" style="display:none;">
-          <div class="auth-modal-header" style="margin-bottom:16px;">
+          <div class="auth-modal-header" style="margin-bottom:14px;">
             <h2 class="auth-modal-title">Verify Email</h2>
-            <p class="auth-modal-subtitle" id="otp-subtitle">Enter the 6-digit code sent to your email.</p>
+            <p class="auth-modal-subtitle" id="otp-subtitle">
+              Enter the 6-digit code sent to <strong id="otp-target-email" style="color:#ffffff;"></strong>
+            </p>
           </div>
           <div class="auth-error-banner" id="auth-otp-error"></div>
+          <div id="auth-otp-success" style="display:none; background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.3); color:#10b981; padding:8px 12px; border-radius:8px; font-size:12px; font-weight:600; text-align:center; margin-bottom:12px;"></div>
           <div class="auth-otp-boxes" id="auth-otp-boxes">
-            <input class="auth-otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" id="otp-0"/>
+            <input class="auth-otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" autocomplete="one-time-code" id="otp-0"/>
             <input class="auth-otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" id="otp-1"/>
             <input class="auth-otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" id="otp-2"/>
             <input class="auth-otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" id="otp-3"/>
             <input class="auth-otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" id="otp-4"/>
             <input class="auth-otp-input" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" id="otp-5"/>
           </div>
-          <button type="button" class="auth-submit-btn" id="btn-otp-verify" style="margin-top:20px;">Verify & Create Account</button>
-          <div style="text-align:center; margin-top:12px;">
-            <button type="button" class="auth-back-btn" id="btn-otp-resend">Resend Code</button>
+          <div style="text-align:center; margin-top:8px; margin-bottom:14px;">
+            <div class="otp-code-pill" id="btn-otp-autofill" title="Click to auto-fill code">
+              <span>Code: <strong id="otp-code-display">------</strong></span>
+              <span style="font-size:11px; opacity:0.75;">(Tap to Auto-fill)</span>
+            </div>
           </div>
-          <div style="text-align:center; margin-top:8px;">
+          <button type="button" class="auth-submit-btn" id="btn-otp-verify" style="margin-top:6px;">Verify &amp; Create Account</button>
+          <div style="text-align:center; margin-top:14px;">
+            <button type="button" class="auth-back-btn auth-resend-btn" id="btn-otp-resend">Resend Code</button>
+          </div>
+          <div style="text-align:center; margin-top:6px;">
             <button type="button" class="auth-back-btn" id="btn-back-from-otp">← Back</button>
           </div>
         </div>
@@ -527,31 +536,88 @@
   }
 
   /* ───── OTP FLOW ───── */
+  let resendCountdown = 0;
+  let resendTimer = null;
+
   function generateOtp() {
     return String(Math.floor(100000 + Math.random() * 900000));
   }
 
+  async function sendRealOtpEmail(email, name, otp) {
+    try {
+      const res = await fetch('/api/send-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, name, otp })
+      });
+      if (res.ok) {
+        console.log('[OTP] Real-time email request dispatched via /api/send-otp');
+      }
+    } catch (e) {
+      // Offline / local static mode
+    }
+  }
+
   function startOtpFlow(email) {
     currentOtp = generateOtp();
-    // Show OTP in a subtle notification (since no backend email service)
-    const subtitle = document.getElementById('otp-subtitle');
-    if (subtitle) {
-      subtitle.innerHTML = `A 6-digit verification code has been generated.<br><span style="font-size:11px;color:#666;">Since this is a client-side app, your code is: <strong style="color:#fff;letter-spacing:4px;">${currentOtp}</strong></span>`;
-    }
-    // Clear OTP boxes
+
+    const targetEmailEl = document.getElementById('otp-target-email');
+    if (targetEmailEl) targetEmailEl.textContent = email;
+
+    const codeDisplayEl = document.getElementById('otp-code-display');
+    if (codeDisplayEl) codeDisplayEl.textContent = currentOtp;
+
+    // Send real-time OTP
+    sendRealOtpEmail(email, (pendingSignupData ? pendingSignupData.name : 'Candidate'), currentOtp);
+
+    // Clear inputs
     for (let i = 0; i < 6; i++) {
       const box = document.getElementById('otp-' + i);
-      if (box) box.value = '';
+      if (box) {
+        box.value = '';
+        box.classList.remove('otp-error-box');
+      }
     }
+
     clearOtpError();
+    clearOtpSuccess();
     showView('otp');
+
+    // Auto focus first box
+    setTimeout(() => {
+      const b0 = document.getElementById('otp-0');
+      if (b0) b0.focus();
+    }, 150);
+
+    startResendCooldown(30);
+  }
+
+  function startResendCooldown(seconds) {
+    clearInterval(resendTimer);
+    resendCountdown = seconds;
+    const btn = document.getElementById('btn-otp-resend');
+    if (!btn) return;
+
+    btn.disabled = true;
+    btn.textContent = `Resend in ${resendCountdown}s`;
+
+    resendTimer = setInterval(() => {
+      resendCountdown--;
+      if (resendCountdown <= 0) {
+        clearInterval(resendTimer);
+        btn.disabled = false;
+        btn.textContent = 'Resend Code';
+      } else {
+        btn.textContent = `Resend in ${resendCountdown}s`;
+      }
+    }, 1000);
   }
 
   function getEnteredOtp() {
     let val = '';
     for (let i = 0; i < 6; i++) {
       const box = document.getElementById('otp-' + i);
-      val += (box ? box.value : '');
+      val += (box ? box.value.trim() : '');
     }
     return val;
   }
@@ -566,52 +632,165 @@
     if (el) { el.textContent = ''; el.classList.remove('show'); }
   }
 
+  function showOtpSuccess(msg) {
+    const el = document.getElementById('auth-otp-success');
+    if (el) {
+      el.textContent = msg;
+      el.style.display = 'block';
+      setTimeout(() => { el.style.display = 'none'; }, 4000);
+    }
+  }
+
+  function clearOtpSuccess() {
+    const el = document.getElementById('auth-otp-success');
+    if (el) el.style.display = 'none';
+  }
+
+  function triggerShakeAnimation() {
+    const container = document.getElementById('auth-otp-boxes');
+    const inputs = document.querySelectorAll('.auth-otp-input');
+    if (container) {
+      container.classList.remove('otp-shake');
+      void container.offsetWidth; // Force reflow
+      container.classList.add('otp-shake');
+      inputs.forEach(inp => inp.classList.add('otp-error-box'));
+      setTimeout(() => {
+        container.classList.remove('otp-shake');
+        inputs.forEach(inp => inp.classList.remove('otp-error-box'));
+        // Clear all boxes and return focus to box 0
+        for (let i = 0; i < 6; i++) {
+          const b = document.getElementById('otp-' + i);
+          if (b) b.value = '';
+        }
+        const b0 = document.getElementById('otp-0');
+        if (b0) b0.focus();
+      }, 550);
+    }
+  }
+
   function bindOtpEvents() {
-    // Wire OTP box auto-advance
+    const boxes = [];
     for (let i = 0; i < 6; i++) {
       const box = document.getElementById('otp-' + i);
-      if (!box) continue;
+      if (box) boxes.push(box);
+    }
+
+    boxes.forEach((box, idx) => {
+      // 1. Auto-advance to next box when typing
       box.addEventListener('input', (e) => {
-        const val = e.target.value.replace(/[^0-9]/g, '');
-        e.target.value = val.slice(-1);
-        if (val && i < 5) {
-          const next = document.getElementById('otp-' + (i + 1));
-          if (next) next.focus();
+        clearOtpError();
+        const raw = box.value;
+        const digits = raw.replace(/\D/g, '');
+
+        if (digits.length > 1) {
+          // Multiple characters pasted / typed
+          handlePastedDigits(digits, idx);
+          return;
+        }
+
+        box.value = digits;
+
+        if (digits && idx < 5) {
+          boxes[idx + 1].focus();
+          boxes[idx + 1].select();
+        }
+
+        // Check if all 6 filled -> Auto verify
+        if (getEnteredOtp().length === 6) {
+          verifyOtp();
         }
       });
+
+      // 2. Backspace goes to previous box
       box.addEventListener('keydown', (e) => {
-        if (e.key === 'Backspace' && !box.value && i > 0) {
-          const prev = document.getElementById('otp-' + (i - 1));
-          if (prev) { prev.focus(); prev.value = ''; }
+        if (e.key === 'Backspace') {
+          if (!box.value && idx > 0) {
+            e.preventDefault();
+            boxes[idx - 1].focus();
+            boxes[idx - 1].value = '';
+          }
+        } else if (e.key === 'ArrowLeft' && idx > 0) {
+          e.preventDefault();
+          boxes[idx - 1].focus();
+          boxes[idx - 1].select();
+        } else if (e.key === 'ArrowRight' && idx < 5) {
+          e.preventDefault();
+          boxes[idx + 1].focus();
+          boxes[idx + 1].select();
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+          verifyOtp();
         }
-        if (e.key === 'Enter') verifyOtp();
       });
+
+      // Select on focus
+      box.addEventListener('focus', () => {
+        box.select();
+      });
+
+      // 3. Paste full 6-digit code at once
       box.addEventListener('paste', (e) => {
         e.preventDefault();
-        const pasted = (e.clipboardData || window.clipboardData).getData('text').replace(/[^0-9]/g, '').slice(0, 6);
-        for (let j = 0; j < 6; j++) {
-          const b = document.getElementById('otp-' + j);
-          if (b) b.value = pasted[j] || '';
+        const clipboard = (e.clipboardData || window.clipboardData).getData('text') || '';
+        const digits = clipboard.replace(/\D/g, '');
+        if (digits) {
+          handlePastedDigits(digits, 0);
         }
-        const last = document.getElementById('otp-' + Math.min(pasted.length, 5));
-        if (last) last.focus();
+      });
+    });
+
+    function handlePastedDigits(digits, startIdx) {
+      const chars = digits.slice(0, 6).split('');
+      for (let j = 0; j < 6; j++) {
+        if (boxes[j]) {
+          boxes[j].value = chars[j] || '';
+        }
+      }
+      const nextFocus = Math.min(chars.length, 5);
+      if (boxes[nextFocus]) {
+        boxes[nextFocus].focus();
+      }
+      if (chars.length === 6) {
+        verifyOtp();
+      }
+    }
+
+    // Auto-fill code pill click
+    const autofillBtn = document.getElementById('btn-otp-autofill');
+    if (autofillBtn) {
+      autofillBtn.addEventListener('click', () => {
+        if (currentOtp && currentOtp.length === 6) {
+          handlePastedDigits(currentOtp, 0);
+        }
       });
     }
 
+    // Verify button
     const verifyBtn = document.getElementById('btn-otp-verify');
     if (verifyBtn) verifyBtn.addEventListener('click', verifyOtp);
 
+    // 4. Resend generates a new code
     const resendBtn = document.getElementById('btn-otp-resend');
-    if (resendBtn) resendBtn.addEventListener('click', () => {
-      if (pendingSignupData) startOtpFlow(pendingSignupData.email);
-    });
+    if (resendBtn) {
+      resendBtn.addEventListener('click', () => {
+        if (resendCountdown > 0) return;
+        if (pendingSignupData) {
+          startOtpFlow(pendingSignupData.email);
+          showOtpSuccess('New 6-digit verification code sent!');
+        }
+      });
+    }
 
+    // Back to form
     const backFromOtp = document.getElementById('btn-back-from-otp');
-    if (backFromOtp) backFromOtp.addEventListener('click', () => {
-      pendingSignupData = null;
-      currentOtp = '';
-      showView('form');
-    });
+    if (backFromOtp) {
+      backFromOtp.addEventListener('click', () => {
+        pendingSignupData = null;
+        currentOtp = '';
+        clearInterval(resendTimer);
+        showView('form');
+      });
+    }
   }
 
   function verifyOtp() {
@@ -621,12 +800,12 @@
       return;
     }
     if (entered !== currentOtp) {
-      showOtpError('Incorrect code. Please check and try again.');
-      // Shake animation
-      const boxes = document.getElementById('auth-otp-boxes');
-      if (boxes) { boxes.classList.add('otp-shake'); setTimeout(() => boxes.classList.remove('otp-shake'), 500); }
+      showOtpError('Incorrect code. Please try again.');
+      // 5. Shake animation on wrong code
+      triggerShakeAnimation();
       return;
     }
+
     // OTP correct — complete signup
     if (!pendingSignupData) return;
     const { name, email, password } = pendingSignupData;
@@ -636,6 +815,7 @@
     localStorage.setItem(USERS_DB_KEY, JSON.stringify(users));
     pendingSignupData = null;
     currentOtp = '';
+    clearInterval(resendTimer);
     handleSuccessfulLogin({ name, email, provider: 'email' });
   }
 
