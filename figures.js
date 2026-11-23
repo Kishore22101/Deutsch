@@ -650,6 +650,7 @@
     const submission = {
       id: 'sub-' + Date.now(),
       candidateName: state.candidateName,
+      candidateEmail: (typeof AuthManager !== 'undefined' && AuthManager.getUser()) ? (AuthManager.getUser().email || '') : '',
       difficulty: diffDisplay,
       difficultyKey: state.selectedSet,
       subtest: 'figures',

@@ -346,7 +346,10 @@
       const tr = document.createElement('tr');
       tr.innerHTML = `
         <td style="color:var(--t-45);">${idx + 1}</td>
-        <td><strong>${escapeHtml(sub.candidateName)}</strong></td>
+        <td>
+          <strong>${escapeHtml(sub.candidateName)}</strong>
+          ${sub.candidateEmail ? `<div style="font-size:11px;color:var(--t-45);margin-top:2px;">${escapeHtml(sub.candidateEmail)}</div>` : ''}
+        </td>
         <td><span class="badge-tag-diff">${escapeHtml(sub.difficulty)}</span></td>
         <td><strong style="color:#10b981;">${sub.score} / ${sub.total}</strong> (${sub.percentage}%)</td>
         <td>${sub.timeTakenFormatted || formatDuration(sub.timeTakenSeconds || 0)}</td>
@@ -384,6 +387,7 @@
       <span>Score: <strong>${item.score}/${item.total} (${item.percentage}%)</strong></span>
       <span>• Time Taken: <strong>${item.timeTakenFormatted}</strong></span>
       <span>• Submitted: <strong>${item.submittedAt}</strong></span>
+      ${item.candidateEmail ? `<span>• Email: <strong style="color:var(--t-60);">${escapeHtml(item.candidateEmail)}</strong></span>` : ''}
     `;
 
     dom.detailsBody.innerHTML = '';
