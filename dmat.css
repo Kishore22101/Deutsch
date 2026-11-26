@@ -2549,3 +2549,98 @@ body.exam-active .site-footer { display: none; }
   color: #c084fc !important;
   cursor: pointer !important;
 }
+
+/* ─── Figure Sequence Breakdown Cards (Shared between Figures & Admin) ─── */
+.breakdown-item {
+  background: var(--bg-02);
+  border: 1px solid var(--border-lo);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.breakdown-item.correct {
+  border-color: rgba(16, 185, 129, 0.3);
+}
+.breakdown-item.incorrect {
+  border-color: rgba(239, 68, 68, 0.3);
+}
+.breakdown-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.bd-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.bd-qnum {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--t-100);
+}
+.bd-badge {
+  padding: 3px 10px !important;
+  border-radius: 999px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+.bd-badge.bd-correct {
+  background: rgba(16, 185, 129, 0.15) !important;
+  color: #34d399 !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+}
+.bd-badge.bd-incorrect {
+  background: rgba(239, 68, 68, 0.15) !important;
+  color: #f87171 !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+}
+.bd-seq-strip {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  overflow-x: auto !important;
+  padding: 10px 0 !important;
+  margin-bottom: 12px !important;
+}
+.bd-matrix-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+.bd-matrix-lbl {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  color: #64748b !important;
+}
+.bd-answers-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  margin: 12px 0 !important;
+}
+.bd-explanation-box {
+  margin-top: 12px !important;
+  padding: 10px 14px !important;
+  border-radius: 8px !important;
+  background: rgba(30, 41, 59, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  color: #cbd5e1 !important;
+}
+.bd-explanation-box strong {
+  color: #38bdf8 !important;
+  display: block !important;
+  margin-bottom: 4px !important;
+}
+.bd-explanation-box p {
+  margin: 0 !important;
+}
+@media (max-width: 768px) {
+  .bd-answers-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

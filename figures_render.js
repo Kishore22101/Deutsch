@@ -224,10 +224,14 @@
     const isCorrect = !!item.isCorrect;
     const user = item.userAnswer || {};
     const sol = item.solution || {};
-    const m5Correct = item.fieldCorrectness ? item.fieldCorrectness.m5 : (parseInt(user.m5, 10) === sol.m5);
-    const m6Correct = item.fieldCorrectness ? item.fieldCorrectness.m6 : (parseInt(user.m6, 10) === sol.m6);
+    const m5Correct = (item.fieldCorrectness && typeof item.fieldCorrectness.m5 === 'boolean')
+      ? item.fieldCorrectness.m5
+      : (parseInt(user.m5, 10) === parseInt(sol.m5, 10));
+    const m6Correct = (item.fieldCorrectness && typeof item.fieldCorrectness.m6 === 'boolean')
+      ? item.fieldCorrectness.m6
+      : (parseInt(user.m6, 10) === parseInt(sol.m6, 10));
 
-    const seq = item.sequence || [];
+    const seq = item.sequence || item.matrices || [];
     let seqStripHtml = '';
     for (let i = 0; i < Math.min(4, seq.length); i++) {
       seqStripHtml += `

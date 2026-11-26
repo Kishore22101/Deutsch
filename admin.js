@@ -405,49 +405,13 @@
         const userAns = d.userAnswer || {};
         const sol     = d.solution   || {};
 
-        if (d.subtest === 'figures') {
-          const seq = d.matrices || d.sequence;
-          const stripHtml = (typeof FiguresRender !== 'undefined' && Array.isArray(seq) && seq.length)
-            ? `<div class="figures-sequence-strip" style="padding:10px; margin:10px 0; background:rgba(0,0,0,0.6); overflow-x:auto;">
-                 ${FiguresRender.renderFigureSequenceStrip(d, userAns, 60)}
-               </div>`
-            : '';
-          card.innerHTML = `
-            <div class="q-detail-head">
-              <span>Question ${i + 1} · Figure Sequences</span>
-              <span class="q-badge ${d.isCorrect ? 'badge-correct' : 'badge-wrong'}">${d.isCorrect ? 'Correct' : 'Incorrect'}</span>
-            </div>
-            ${stripHtml}
-            <div class="q-detail-figures-compare">
-              <div class="bd-compare-block ${(()=>{ const m5c = parseInt(userAns.m5,10)===parseInt(sol.m5,10); return m5c?`ans-pass`:`ans-fail`; })()}">
-                <div class="bd-compare-row bd-candidate-row">
-                  <span class="bd-compare-label">Candidate Choice:</span>
-                  <span class="bd-compare-matrix">M5 = Option ${userAns.m5 || "—"}</span>
-                  <div class="bd-fig-box">${(typeof FiguresRender!=="undefined"&&Array.isArray(d.optionsM5)&&parseInt(userAns.m5,10)>0)?FiguresRender.renderMatrixSvg(d.optionsM5[parseInt(userAns.m5,10)-1],64):"<span class=\"bd-no-fig\">—</span>"}</div>
-                  <span class="bd-verdict ${parseInt(userAns.m5,10)===parseInt(sol.m5,10)?`verdict-pass`:`verdict-fail`}">${parseInt(userAns.m5,10)===parseInt(sol.m5,10)?"✓":"✕"}</span>
-                </div>
-                <div class="bd-compare-row bd-solution-row">
-                  <span class="bd-compare-label">Official Solution:</span>
-                  <span class="bd-compare-matrix">M5 = Option ${sol.m5 || "—"}</span>
-                  <div class="bd-fig-box bd-sol-fig-box">${(typeof FiguresRender!=="undefined"&&Array.isArray(d.optionsM5)&&parseInt(sol.m5,10)>0)?FiguresRender.renderMatrixSvg(d.optionsM5[parseInt(sol.m5,10)-1],64):""}</div>
-                </div>
-              </div>
-              <div class="bd-compare-block ${(()=>{ const m6c = parseInt(userAns.m6,10)===parseInt(sol.m6,10); return m6c?`ans-pass`:`ans-fail`; })()}">
-                <div class="bd-compare-row bd-candidate-row">
-                  <span class="bd-compare-label">Candidate Choice:</span>
-                  <span class="bd-compare-matrix">M6 = Option ${userAns.m6 || "—"}</span>
-                  <div class="bd-fig-box">${(typeof FiguresRender!=="undefined"&&Array.isArray(d.optionsM6)&&parseInt(userAns.m6,10)>0)?FiguresRender.renderMatrixSvg(d.optionsM6[parseInt(userAns.m6,10)-1],64):"<span class=\"bd-no-fig\">—</span>"}</div>
-                  <span class="bd-verdict ${parseInt(userAns.m6,10)===parseInt(sol.m6,10)?`verdict-pass`:`verdict-fail`}">${parseInt(userAns.m6,10)===parseInt(sol.m6,10)?"✓":"✕"}</span>
-                </div>
-                <div class="bd-compare-row bd-solution-row">
-                  <span class="bd-compare-label">Official Solution:</span>
-                  <span class="bd-compare-matrix">M6 = Option ${sol.m6 || "—"}</span>
-                  <div class="bd-fig-box bd-sol-fig-box">${(typeof FiguresRender!=="undefined"&&Array.isArray(d.optionsM6)&&parseInt(sol.m6,10)>0)?FiguresRender.renderMatrixSvg(d.optionsM6[parseInt(sol.m6,10)-1],64):""}</div>
-                </div>
-              </div>
-            </div>
-            ${(d.explanation || d.ruleExplanation) ? `<div class="step-by-step" style="margin-top:8px;font-size:12px;color:var(--t-80);background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:6px;border-left:2px solid #10b981;">• <strong>Pattern Rule:</strong> ${escapeHtml(d.explanation || d.ruleExplanation)}</div>` : ''}
-          `;
+        const isFigure = (d.subtest === 'figures') || (item.subtest === 'figures') || (String(item.difficulty || '').toLowerCase().includes('figure'));
+        if (isFigure) {
+          d.subtest = 'figures';
+          card.className = `breakdown-item ${d.isCorrect ? 'correct' : 'incorrect'}`;
+          if (typeof FiguresRender !== 'undefined') {
+            card.innerHTML = FiguresRender.renderBreakdownItem(d, i);
+          }
         } else if (d.subtest === 'latin') {
           const colLabels = ['α', 'β', 'γ', 'δ', 'ε'];
 
