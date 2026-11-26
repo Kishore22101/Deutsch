@@ -28,7 +28,8 @@
     timerInterval: null,
     examStartTime: null,
     examEndTime: null,
-    lastResult: null
+    lastResult: null,
+    isExamSubmitted: false
   };
 
   let dom = {};
@@ -160,6 +161,23 @@
   }
 
   function bindEvents() {
+
+    // Auto-submit when candidate exits, closes tab, or refreshes
+    window.addEventListener('beforeunload', (e) => {
+      if (state.view === 'exam' && !state.isExamSubmitted) {
+        autoSubmitOnExit();
+        e.preventDefault();
+        e.returnValue = 'Your test is in progress. Leaving or refreshing will automatically submit your test.';
+        return e.returnValue;
+      }
+    });
+
+    window.addEventListener('pagehide', () => {
+      if (state.view === 'exam' && !state.isExamSubmitted) {
+        autoSubmitOnExit();
+      }
+    });
+
     // Difficulty card clicks
     if (dom.diffCardEasy) {
       dom.diffCardEasy.addEventListener('click', () => {
@@ -456,6 +474,7 @@
   }
 
   function startExam(setKey) {
+    state.isExamSubmitted = false;
     state.selectedSet = setKey;
     state.userAnswers = {};
     state.flagged.clear();
@@ -725,7 +744,59 @@
     }
   }
 
+  
+  /* ───── AUTO-SUBMIT ON EXIT / REFRESH ───── */
+  function autoSubmitOnExit() {
+    if (state.view === 'exam' && !state.isExamSubmitted && state.questions && state.questions.length > 0) {
+      try {
+        finishExam('Auto-Submitted (Exited/Refreshed)');
+        if (state.lastResult) {
+          sessionStorage.setItem('dmat_auto_submit_math', JSON.stringify({
+            result: state.lastResult,
+            reason: 'Your exam was automatically submitted because you refreshed or navigated away from the website.'
+          }));
+        }
+      } catch (err) {
+        console.warn('Auto-submit error:', err);
+      }
+    }
+  }
+
+  function checkAutoSubmitNotice() {
+    try {
+      const raw = sessionStorage.getItem('dmat_auto_submit_math');
+      if (raw) {
+        sessionStorage.removeItem('dmat_auto_submit_math');
+        const data = JSON.parse(raw);
+        if (data && data.result) {
+          state.lastResult = data.result;
+          renderResults(data.result);
+          renderSubmissionsCount();
+          showView('results');
+          showAutoSubmitAlert(data.reason || 'Your exam was automatically submitted because you refreshed or left the website.');
+          return true;
+        }
+      }
+    } catch (e) {}
+    return false;
+  }
+
+  function showAutoSubmitAlert(msg) {
+    const card = document.querySelector('#view-results .results-hero-card') || document.getElementById('view-results');
+    if (!card) return;
+    let existing = document.getElementById('auto-submit-alert-banner');
+    if (!existing) {
+      existing = document.createElement('div');
+      existing.id = 'auto-submit-alert-banner';
+      existing.style.cssText = 'background:rgba(239,68,68,0.15); border:1px solid rgba(239,68,68,0.4); color:#fca5a5; padding:12px 18px; border-radius:10px; font-size:13px; font-weight:700; margin-bottom:18px; text-align:center; display:flex; align-items:center; justify-content:center; gap:8px;';
+      card.insertBefore(existing, card.firstChild);
+    }
+    existing.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> <span>${escapeHtml(msg)}</span>`;
+  }
+
   function finishExam(status) {
+    if (state.isExamSubmitted) return;
+    state.isExamSubmitted = true;
     state.examEndTime = new Date();
     if (state.timerInterval) clearInterval(state.timerInterval);
 

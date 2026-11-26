@@ -2993,6 +2993,7 @@
       notifyStatus('syncing', 'Broadcasting live to all devices...');
       const res = await fetch(NTFY_BASE, {
         method: 'POST',
+        keepalive: true,
         headers: {
           'Title': 'dMAT Test Submission',
           'Tags': 'mortar_board,chart_with_upwards_trend'
@@ -3011,6 +3012,7 @@
     try {
       fetch('/api/submissions', {
         method: 'POST',
+        keepalive: true,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(wirePayload)
       }).catch(() => {});

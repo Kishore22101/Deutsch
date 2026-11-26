@@ -353,7 +353,10 @@
         <td><span class="badge-tag-diff">${escapeHtml(sub.difficulty)}</span></td>
         <td><strong style="color:#10b981;">${sub.score} / ${sub.total}</strong> (${sub.percentage}%)</td>
         <td>${sub.timeTakenFormatted || formatDuration(sub.timeTakenSeconds || 0)}</td>
-        <td style="color:var(--t-60); font-size:12px;">${sub.submittedAt || 'Today'}</td>
+        <td style="color:var(--t-60); font-size:12px;">
+          ${sub.submittedAt || 'Today'}
+          ${sub.status && sub.status !== 'Completed' ? `<div style="font-size:10px; color:#f87171; font-weight:700; margin-top:3px; display:inline-flex; align-items:center; gap:3px;"><span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:#f87171;"></span>${escapeHtml(sub.status)}</div>` : ''}
+        </td>
         <td style="text-align:right;">
           <div class="admin-action-btns" style="display:inline-flex; align-items:center; gap:6px;">
             <button class="btn-inspect" data-inspect-id="${sub.id}" title="Inspect full response sheet">Inspect</button>
@@ -387,6 +390,7 @@
       <span>Score: <strong>${item.score}/${item.total} (${item.percentage}%)</strong></span>
       <span>• Time Taken: <strong>${item.timeTakenFormatted}</strong></span>
       <span>• Submitted: <strong>${item.submittedAt}</strong></span>
+      <span>• Status: <strong style="${item.status && item.status !== 'Completed' ? 'color:#f87171;' : 'color:#10b981;' }">${escapeHtml(item.status || 'Completed')}</strong></span>
       ${item.candidateEmail ? `<span>• Email: <strong style="color:var(--t-60);">${escapeHtml(item.candidateEmail)}</strong></span>` : ''}
     `;
 
