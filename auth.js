@@ -142,7 +142,7 @@
         <!-- Header / Badge -->
         <div class="auth-modal-header">
           <div class="auth-portal-badge" id="auth-header-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <img src="logo.png" alt="Logo" style="width:14px;height:14px;object-fit:contain;border-radius:3px;vertical-align:middle;margin-right:4px;"/>
             <span>Learning Portal</span>
           </div>
           <h2 class="auth-modal-title" id="auth-modal-title">Sign In</h2>
