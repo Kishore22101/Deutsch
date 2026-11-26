@@ -382,7 +382,7 @@
     return pool;
   }
 
-  // Autogenerate 20 randomized questions with dynamic option shuffling
+  // Autogenerate 20 randomized questions from pool
   function generateExamQuestions(trackKey) {
     let rawQuestions = [];
 
@@ -408,28 +408,17 @@
       rawQuestions = pool.slice(0, 20);
     }
 
-    // Clone questions, assign IDs 1..20, and dynamically randomize option positions
+    // Clone questions and assign sequential IDs 1..20
+    // Keep official options & solutions (1-based: 1, 2, or 3) completely intact
     return rawQuestions.map((origQ, idx) => {
       const q = JSON.parse(JSON.stringify(origQ));
       q.id = idx + 1;
       q.qNum = idx + 1;
-
-      // Randomize M5 options order while preserving correct answer mapping
-      if (Array.isArray(q.optionsM5) && q.optionsM5.length === 3 && q.solution && typeof q.solution.m5 === 'number') {
-        const origSolM5 = q.solution.m5;
-        const perm5 = shuffleArray([0, 1, 2]);
-        q.optionsM5 = perm5.map(i => origQ.optionsM5[i]);
-        q.solution.m5 = perm5.indexOf(origSolM5);
+      // Ensure solution numbers are clean integers
+      if (q.solution) {
+        q.solution.m5 = parseInt(q.solution.m5, 10);
+        q.solution.m6 = parseInt(q.solution.m6, 10);
       }
-
-      // Randomize M6 options order while preserving correct answer mapping
-      if (Array.isArray(q.optionsM6) && q.optionsM6.length === 3 && q.solution && typeof q.solution.m6 === 'number') {
-        const origSolM6 = q.solution.m6;
-        const perm6 = shuffleArray([0, 1, 2]);
-        q.optionsM6 = perm6.map(i => origQ.optionsM6[i]);
-        q.solution.m6 = perm6.indexOf(origSolM6);
-      }
-
       return q;
     });
   }
@@ -782,10 +771,11 @@
         subtest: 'figures',
         title: `Question ${q.id}`,
         sequence: q.matrices || q.sequence || [],
+        matrices: q.matrices || q.sequence || [],
         optionsM5: q.optionsM5,
         optionsM6: q.optionsM6,
-        solution: sol,
-        userAnswer: user,
+        solution: { m5: parseInt(sol.m5, 10), m6: parseInt(sol.m6, 10) },
+        userAnswer: { m5: user.m5 ? parseInt(user.m5, 10) : '', m6: user.m6 ? parseInt(user.m6, 10) : '' },
         isCorrect: allCorrect,
         explanation: q.ruleExplanation || q.explanation || '',
         fieldCorrectness: { m5: isM5Correct, m6: isM6Correct }
