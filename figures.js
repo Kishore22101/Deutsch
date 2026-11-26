@@ -362,7 +362,7 @@
     return a;
   }
 
-  // Retrieve full pool of 100 questions for a given track
+  // Retrieve full pool of 100 questions for a given track with provenance
   function getTrackPool(track) {
     const data = (typeof FIGURES_DATA !== 'undefined') ? FIGURES_DATA : {};
     let setKeys = [];
@@ -376,7 +376,14 @@
     let pool = [];
     setKeys.forEach(k => {
       if (Array.isArray(data[k])) {
-        pool.push(...data[k]);
+        data[k].forEach((origQ, qIdx) => {
+          const item = JSON.parse(JSON.stringify(origQ));
+          item.setKey = k;
+          item.origIndex = qIdx;
+          item.origQNum = item.qNum || (qIdx + 1);
+          item.ref = `${k}_${item.origQNum}`;
+          pool.push(item);
+        });
       }
     });
     return pool;
@@ -409,11 +416,15 @@
     }
 
     // Clone questions and assign sequential IDs 1..20
-    // Keep official options & solutions (1-based: 1, 2, or 3) completely intact
+    // Keep provenance, official options & solutions (1-based: 1, 2, or 3) completely intact
     return rawQuestions.map((origQ, idx) => {
       const q = JSON.parse(JSON.stringify(origQ));
       q.id = idx + 1;
       q.qNum = idx + 1;
+      q.setKey = origQ.setKey || '';
+      q.origIndex = origQ.origIndex;
+      q.origQNum = origQ.origQNum;
+      q.ref = origQ.ref || (origQ.setKey ? `${origQ.setKey}_${origQ.origQNum || (idx + 1)}` : `fig_${idx + 1}`);
       // Ensure solution numbers are clean integers
       if (q.solution) {
         q.solution.m5 = parseInt(q.solution.m5, 10);
@@ -768,12 +779,16 @@
 
       return {
         questionId: q.id,
+        ref: q.ref || '',
+        setKey: q.setKey || '',
+        origIndex: q.origIndex,
+        origQNum: q.origQNum,
         subtest: 'figures',
         title: `Question ${q.id}`,
         sequence: q.matrices || q.sequence || [],
         matrices: q.matrices || q.sequence || [],
-        optionsM5: q.optionsM5,
-        optionsM6: q.optionsM6,
+        optionsM5: q.optionsM5 || [],
+        optionsM6: q.optionsM6 || [],
         solution: { m5: parseInt(sol.m5, 10), m6: parseInt(sol.m6, 10) },
         userAnswer: { m5: user.m5 ? parseInt(user.m5, 10) : '', m6: user.m6 ? parseInt(user.m6, 10) : '' },
         isCorrect: allCorrect,
