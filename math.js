@@ -35,11 +35,13 @@
 
   let dom = {};
 
+  const MATH_SESSION_KEY = 'dmat_math_session';
+
   function init() {
     cacheDom();
     bindEvents();
     renderSubmissionsCount();
-    showView('difficulties');
+    if (!checkPersistentTimer()) showView('difficulties');
     initCloudSync();
   }
 
@@ -593,12 +595,27 @@
     updateTimerDisplay();
     state.timerInterval = setInterval(handleTimerTick, 1000);
 
+    try {
+      localStorage.setItem(MATH_SESSION_KEY, JSON.stringify({
+        startEpoch: Date.now(),
+        totalSeconds: state.timerTotalSeconds,
+        setKey: setKey,
+        candidateName: state.candidateName,
+        questions: state.questions,
+        userAnswers: state.userAnswers
+      }));
+    } catch (e) {}
+
     renderPalette();
     loadQuestion(0);
     showView('exam');
   }
 
   function handleTimerTick() {
+    try {
+      const _s = JSON.parse(localStorage.getItem(MATH_SESSION_KEY) || 'null');
+      if (_s) { _s.userAnswers = state.userAnswers; localStorage.setItem(MATH_SESSION_KEY, JSON.stringify(_s)); }
+    } catch (e) {}
     state.timerRemainingSeconds--;
     if (state.timerRemainingSeconds <= 0) {
       state.timerRemainingSeconds = 0;
@@ -816,6 +833,38 @@
     }
   }
 
+  function checkPersistentTimer() {
+    try {
+      const sess = JSON.parse(localStorage.getItem(MATH_SESSION_KEY) || 'null');
+      if (!sess || state.isExamSubmitted) return false;
+      const elapsed = Math.floor((Date.now() - sess.startEpoch) / 1000);
+      const remaining = sess.totalSeconds - elapsed;
+      state.candidateName = sess.candidateName || '';
+      state.selectedSet = sess.setKey || '';
+      state.questions = sess.questions || [];
+      state.userAnswers = sess.userAnswers || {};
+      state.flagged = new Set();
+      state.currentIndex = 0;
+      state.timerTotalSeconds = sess.totalSeconds;
+      if (remaining <= 0) {
+        state.timerRemainingSeconds = 0;
+        finishExam('Timed Out (Away)');
+        return true;
+      }
+      state.timerRemainingSeconds = remaining;
+      if (dom.examTitle) dom.examTitle.textContent = getSetDisplayName(sess.setKey);
+      if (dom.examCandidateName) dom.examCandidateName.textContent = state.candidateName;
+      if (state.timerInterval) clearInterval(state.timerInterval);
+      updateTimerDisplay();
+      state.timerInterval = setInterval(handleTimerTick, 1000);
+      renderPalette();
+      loadQuestion(state.currentIndex);
+      showView('exam');
+      return true;
+    } catch (e) {}
+    return false;
+  }
+
   function checkAutoSubmitNotice() {
     try {
       const raw = sessionStorage.getItem('dmat_auto_submit_math');
@@ -853,6 +902,7 @@
     state.isExamSubmitted = true;
     state.examEndTime = new Date();
     if (state.timerInterval) clearInterval(state.timerInterval);
+    try { localStorage.removeItem(MATH_SESSION_KEY); } catch (e) {}
 
     const secondsTaken = state.timerTotalSeconds - state.timerRemainingSeconds;
     const timeTakenFormatted = formatDuration(secondsTaken);
