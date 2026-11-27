@@ -155,6 +155,7 @@
       resTimeLeft: document.getElementById('res-time-left'),
       resBreakdown: document.getElementById('res-breakdown'),
       btnRetakeExam: document.getElementById('btn-retake-exam'),
+      btnResultsDiff: document.getElementById('btn-results-diff'),
       btnResultsSubmissions: document.getElementById('btn-results-submissions'),
 
       // Submissions Modal
@@ -366,6 +367,11 @@
     if (dom.btnRetakeExam) {
       dom.btnRetakeExam.addEventListener('click', () => {
         openStartModal(state.selectedSet);
+      });
+    }
+    if (dom.btnResultsDiff) {
+      dom.btnResultsDiff.addEventListener('click', () => {
+        showView('difficulties');
       });
     }
     if (dom.btnResultsSubmissions) {
