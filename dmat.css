@@ -2655,6 +2655,8 @@ body.exam-active .site-footer { display: none; }
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 .gen-spinner-wrap {
   width: 56px;
@@ -2668,9 +2670,9 @@ body.exam-active .site-footer { display: none; }
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 3px solid rgba(255, 255, 255, 0.1);
-  border-top-color: #10b981;
-  border-right-color: #38bdf8;
+  border: 3px solid rgba(255, 255, 255, 0.12);
+  border-top-color: #ffffff;
+  border-right-color: #9ca3af;
   animation: genSpin 0.85s linear infinite;
 }
 @keyframes genSpin {
@@ -2680,18 +2682,18 @@ body.exam-active .site-footer { display: none; }
   margin: 0;
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
 }
 .gen-subtitle {
   margin: 0;
   font-size: 13.5px;
-  color: var(--t-60);
+  color: #9ca3af;
   line-height: 1.5;
 }
 .gen-progress-track {
   width: 100%;
   height: 6px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 999px;
   overflow: hidden;
   margin-top: 8px;
@@ -2699,13 +2701,13 @@ body.exam-active .site-footer { display: none; }
 .gen-progress-fill {
   width: 0%;
   height: 100%;
-  background: linear-gradient(90deg, #10b981, #38bdf8);
+  background: linear-gradient(90deg, #9ca3af, #ffffff);
   border-radius: 999px;
   transition: width 1s linear;
 }
 .gen-countdown {
   font-size: 13px;
   font-weight: 600;
-  color: #10b981;
+  color: #e5e7eb;
   letter-spacing: 0.02em;
 }
