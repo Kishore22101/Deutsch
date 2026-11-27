@@ -424,28 +424,40 @@
                           (d.solution && typeof d.solution.val === 'string' && d.solution.val.trim()) ? d.solution.val.trim() :
                           (typeof d.s === 'string' && d.s.trim()) ? d.s.trim() : '';
 
-          // Self-heal from LATIN_DATA if solution or grid is missing/incomplete
+          // Self-heal from LATIN_DATA if solution or grid is missing/incomplete (preferring setKey+origIndex)
           if ((!solChoice || !Array.isArray(d.grid) || !d.grid.length || !d.target) && (typeof LATIN_DATA !== 'undefined' || (typeof window !== 'undefined' && window.LATIN_DATA))) {
             const ldata = (typeof LATIN_DATA !== 'undefined') ? LATIN_DATA : window.LATIN_DATA;
-            const diffK = (item.difficultyKey || item.difficulty || '').toLowerCase();
-            let matchedSet = null;
-            for (const key of Object.keys(ldata)) {
-              if (diffK.includes(key)) { matchedSet = ldata[key]; break; }
-            }
-            if (!matchedSet) {
-              if (diffK.includes('easy')) matchedSet = ldata.easy_t1;
-              else if (diffK.includes('med')) matchedSet = ldata.medium_t1;
-              else if (diffK.includes('sim')) matchedSet = ldata.sim_t1;
-              else matchedSet = ldata.hard_t1;
-            }
-            if (matchedSet) {
-              const qObj = matchedSet.find(q => q.qNum === d.questionId || q.id === d.questionId) || matchedSet[i];
-              if (qObj) {
-                if (!solChoice && qObj.solution) solChoice = qObj.solution;
-                if ((!d.grid || !d.grid.length) && qObj.grid) d.grid = qObj.grid;
-                if (!d.target && qObj.target) d.target = qObj.target;
-                if (!d.explanation && qObj.explanation) d.explanation = qObj.explanation;
+            let qObj = null;
+            const targetSet = d.setKey || (d.ref ? d.ref.split('_').slice(0, 2).join('_') : '');
+            if (targetSet && Array.isArray(ldata[targetSet])) {
+              if (typeof d.origIndex === 'number' && ldata[targetSet][d.origIndex]) {
+                qObj = ldata[targetSet][d.origIndex];
+              } else {
+                const targetQNum = parseInt(d.origQNum || (d.ref ? d.ref.split('_')[2] : ''), 10);
+                qObj = ldata[targetSet].find(q => q.qNum === targetQNum || q.id === targetQNum) || ldata[targetSet][i];
               }
+            }
+            if (!qObj) {
+              const diffK = (item.difficultyKey || item.difficulty || '').toLowerCase();
+              let matchedSet = null;
+              for (const key of Object.keys(ldata)) {
+                if (diffK.includes(key)) { matchedSet = ldata[key]; break; }
+              }
+              if (!matchedSet) {
+                if (diffK.includes('easy')) matchedSet = ldata.easy_t1;
+                else if (diffK.includes('med')) matchedSet = ldata.medium_t1;
+                else if (diffK.includes('sim')) matchedSet = ldata.sim_t1;
+                else matchedSet = ldata.hard_t1;
+              }
+              if (matchedSet) {
+                qObj = matchedSet.find(q => q.qNum === d.questionId || q.id === d.questionId) || matchedSet[i];
+              }
+            }
+            if (qObj) {
+              if (!solChoice && qObj.solution) solChoice = qObj.solution;
+              if ((!d.grid || !d.grid.length) && qObj.grid) d.grid = qObj.grid;
+              if (!d.target && qObj.target) d.target = qObj.target;
+              if (!d.explanation && qObj.explanation) d.explanation = qObj.explanation;
             }
           }
 

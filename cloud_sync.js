@@ -2813,19 +2813,33 @@
       } else if (Array.isArray(d.equations) && d.equations.length && d.stepByStep) {
         return d;
       } else {
-        const dmatData = (typeof window !== 'undefined' && window.DMAT_DATA) ? window.DMAT_DATA : ((typeof DMAT_DATA !== 'undefined') ? DMAT_DATA : {});
         const targetSet = d.setKey || (d.ref ? d.ref.split('_').slice(0, 2).join('_') : '');
-        if (!isLatin && targetSet && Array.isArray(dmatData[targetSet])) {
-          if (typeof d.origIndex === 'number' && dmatData[targetSet][d.origIndex]) {
-            qData = dmatData[targetSet][d.origIndex];
-          } else {
-            const targetQNum = parseInt(d.origQNum || (d.ref ? d.ref.split('_')[2] : ''), 10);
-            qData = dmatData[targetSet].find(item => item.id === targetQNum) || dmatData[targetSet][idx] || {};
+        if (isLatin || d.subtest === 'latin') {
+          const latinData = (typeof window !== 'undefined' && window.LATIN_DATA) ? window.LATIN_DATA : ((typeof LATIN_DATA !== 'undefined') ? LATIN_DATA : {});
+          if (targetSet && Array.isArray(latinData[targetSet])) {
+            if (typeof d.origIndex === 'number' && latinData[targetSet][d.origIndex]) {
+              qData = latinData[targetSet][d.origIndex];
+            } else {
+              const targetQNum = parseInt(d.origQNum || (d.ref ? d.ref.split('_')[2] : ''), 10);
+              qData = latinData[targetSet].find(item => item.qNum === targetQNum || item.id === targetQNum) || latinData[targetSet][idx] || {};
+            }
+          } else if (dataset && dataset.length) {
+            qData = dataset.find(item => item.qNum === qId || item.id === qId) || dataset[idx] || {};
           }
         } else {
-          qData = (dataset && dataset.length)
-            ? (dataset.find(item => item.id === qId) || dataset[idx] || {})
-            : {};
+          const dmatData = (typeof window !== 'undefined' && window.DMAT_DATA) ? window.DMAT_DATA : ((typeof DMAT_DATA !== 'undefined') ? DMAT_DATA : {});
+          if (targetSet && Array.isArray(dmatData[targetSet])) {
+            if (typeof d.origIndex === 'number' && dmatData[targetSet][d.origIndex]) {
+              qData = dmatData[targetSet][d.origIndex];
+            } else {
+              const targetQNum = parseInt(d.origQNum || (d.ref ? d.ref.split('_')[2] : ''), 10);
+              qData = dmatData[targetSet].find(item => item.id === targetQNum) || dmatData[targetSet][idx] || {};
+            }
+          } else {
+            qData = (dataset && dataset.length)
+              ? (dataset.find(item => item.id === qId) || dataset[idx] || {})
+              : {};
+          }
         }
       }
 
@@ -2843,8 +2857,12 @@
         return {
           questionId: qId || qData.qNum || ('latin-' + (idx + 1)),
           subtest: 'latin',
-          grid: (Array.isArray(d.grid) && d.grid.length) ? d.grid : (qData.grid || []),
-          target: d.target || qData.target || null,
+          setKey: d.setKey || '',
+          origIndex: d.origIndex,
+          origQNum: d.origQNum || '',
+          ref: d.ref || '',
+          grid: (Array.isArray(qData.grid) && qData.grid.length) ? qData.grid : ((Array.isArray(d.grid) && d.grid.length) ? d.grid : []),
+          target: qData.target || d.target || null,
           solution: latinSol || '\u2014',
           userAnswer: latinUser || '\u2014',
           isCorrect: isCorrect,
