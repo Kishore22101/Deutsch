@@ -19,7 +19,8 @@
     examStartTime: null,
     examEndTime: null,
     lastResult: null,
-    isExamSubmitted: false
+    isExamSubmitted: false,
+    isGenerating: false
   };
 
   let dom = {};
@@ -120,6 +121,11 @@
       nameModalSetLabel: document.getElementById('name-modal-set-label'),
       btnConfirmStart: document.getElementById('btn-confirm-start'),
       btnCancelStart: document.getElementById('btn-cancel-start'),
+
+      // Generating Questions Popup
+      modalGenerating: document.getElementById('modal-generating-questions'),
+      genProgressFill: document.getElementById('gen-progress-fill'),
+      genCountdown: document.getElementById('gen-countdown'),
 
       // Exam UI
       examTitle: document.getElementById('exam-title'),
@@ -326,6 +332,7 @@
   }
 
   function confirmStartExam() {
+    if (state.isGenerating) return;
     const name = dom.candidateNameInput.value.trim();
     if (!name) {
       dom.nameModalError.textContent = 'Please enter your name to start the test.';
@@ -336,7 +343,34 @@
     localStorage.setItem('dmat_last_candidate', name);
     if (typeof AuthManager !== 'undefined') { AuthManager.updateUserName(name); }
     dom.modalName.classList.add('hidden');
-    startExam(state.selectedSet);
+
+    if (dom.modalGenerating) {
+      state.isGenerating = true;
+      let secondsLeft = 5;
+      if (dom.genCountdown) dom.genCountdown.textContent = `Starting in ${secondsLeft}s...`;
+      if (dom.genProgressFill) {
+        dom.genProgressFill.style.transition = 'none';
+        dom.genProgressFill.style.width = '0%';
+        void dom.genProgressFill.offsetWidth;
+        dom.genProgressFill.style.transition = 'width 5s linear';
+        dom.genProgressFill.style.width = '100%';
+      }
+      dom.modalGenerating.classList.remove('hidden');
+
+      const genTimer = setInterval(() => {
+        secondsLeft--;
+        if (secondsLeft > 0) {
+          if (dom.genCountdown) dom.genCountdown.textContent = `Starting in ${secondsLeft}s...`;
+        } else {
+          clearInterval(genTimer);
+          dom.modalGenerating.classList.add('hidden');
+          state.isGenerating = false;
+          startExam(state.selectedSet);
+        }
+      }, 1000);
+    } else {
+      startExam(state.selectedSet);
+    }
   }
 
   function getSetDisplayName(setKey) {
