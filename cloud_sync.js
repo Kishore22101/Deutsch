@@ -2813,9 +2813,20 @@
       } else if (Array.isArray(d.equations) && d.equations.length && d.stepByStep) {
         return d;
       } else {
-        qData = (dataset && dataset.length)
-          ? (dataset.find(item => item.id === qId) || dataset[idx] || {})
-          : {};
+        const dmatData = (typeof window !== 'undefined' && window.DMAT_DATA) ? window.DMAT_DATA : ((typeof DMAT_DATA !== 'undefined') ? DMAT_DATA : {});
+        const targetSet = d.setKey || (d.ref ? d.ref.split('_').slice(0, 2).join('_') : '');
+        if (!isLatin && targetSet && Array.isArray(dmatData[targetSet])) {
+          if (typeof d.origIndex === 'number' && dmatData[targetSet][d.origIndex]) {
+            qData = dmatData[targetSet][d.origIndex];
+          } else {
+            const targetQNum = parseInt(d.origQNum || (d.ref ? d.ref.split('_')[2] : ''), 10);
+            qData = dmatData[targetSet].find(item => item.id === targetQNum) || dmatData[targetSet][idx] || {};
+          }
+        } else {
+          qData = (dataset && dataset.length)
+            ? (dataset.find(item => item.id === qId) || dataset[idx] || {})
+            : {};
+        }
       }
 
       const sol = d.s || d.solution || qData.solution || {};
@@ -2863,6 +2874,11 @@
 
       return {
         questionId: qId || qData.id || ('q-' + (idx + 1)),
+        subtest: d.subtest || sub.subtest || 'math',
+        setKey: d.setKey || '',
+        origIndex: d.origIndex,
+        origQNum: d.origQNum || '',
+        ref: d.ref || '',
         equations: d.equations || qData.equations || [],
         solution: sol,
         userAnswer: user,
