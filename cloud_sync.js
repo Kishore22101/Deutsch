@@ -2790,29 +2790,27 @@
       const qId = d.q || d.questionId;
       let qData = {};
 
-      // For figure questions: ALWAYS re-fetch from FIGURES_DATA using setKey+origIndex
-      // This fixes old submissions that had wrong sequence stored from a buggy enrichment.
       if (isFigures || d.subtest === 'figures') {
         const figData = (typeof window !== 'undefined' && window.FIGURES_DATA) ? window.FIGURES_DATA : ((typeof FIGURES_DATA !== 'undefined') ? FIGURES_DATA : {});
         const targetSet = d.setKey || (d.ref ? d.ref.split('_').slice(0, 2).join('_') : '');
         if (targetSet && Array.isArray(figData[targetSet])) {
+          // Provenance present: ALWAYS re-fetch from FIGURES_DATA (setKey+origIndex are verified correct)
           if (typeof d.origIndex === 'number' && figData[targetSet][d.origIndex]) {
             qData = figData[targetSet][d.origIndex];
           } else {
             const targetQNum = parseInt(d.origQNum || (d.ref ? d.ref.split('_')[2] : ''), 10);
             qData = figData[targetSet].find(item => item.qNum === targetQNum || item.id === targetQNum) || figData[targetSet][idx] || {};
           }
-        } else if (!targetSet && Array.isArray(d.sequence) && d.sequence.length >= 4 && Array.isArray(d.optionsM5) && d.optionsM5.length === 3) {
-          // No provenance fields (pre-fix submission) but has embedded sequence — preserve as-is
+        } else if (Array.isArray(d.sequence) && d.sequence.length >= 4) {
+          // No provenance — use embedded sequence as-is
           const sol2 = d.s || d.solution || {};
           const user2 = d.u || d.userAnswer || {};
           const isCorrect2 = typeof d.c === 'boolean' ? d.c : (typeof d.isCorrect === 'boolean' ? d.isCorrect : false);
-          return { questionId: qId || d.questionId || ('fig-' + (idx+1)), subtest: 'figures', title: d.title || ('Figure Sequence #' + (idx+1)), sequence: d.sequence, optionsM5: d.optionsM5, optionsM6: d.optionsM6 || [], solution: sol2, userAnswer: user2, isCorrect: isCorrect2, explanation: d.explanation || '' };
+          return { questionId: qId || ('fig-' + (idx+1)), subtest: 'figures', title: d.title || ('Figure Sequence #' + (idx+1)), sequence: d.sequence, matrices: d.matrices || d.sequence, optionsM5: d.optionsM5 || [], optionsM6: d.optionsM6 || [], solution: sol2, userAnswer: user2, isCorrect: isCorrect2, setKey: d.setKey || '', origIndex: d.origIndex, origQNum: d.origQNum || '', ref: d.ref || '', explanation: d.explanation || '' };
         } else if (dataset && dataset.length) {
           qData = dataset.find(item => item.id === qId) || dataset[idx] || {};
         }
       } else if (Array.isArray(d.equations) && d.equations.length && d.stepByStep) {
-        // Math question already fully hydrated — preserve as-is
         return d;
       } else {
         qData = (dataset && dataset.length)
@@ -2832,12 +2830,12 @@
                           (typeof d.u === 'string' && d.u.trim()) ? d.u.trim() :
                           (typeof d.userAnswer === 'string' ? d.userAnswer : '');
         return {
-          questionId: qId || qData.qNum || `latin-${idx + 1}`,
+          questionId: qId || qData.qNum || ('latin-' + (idx + 1)),
           subtest: 'latin',
           grid: (Array.isArray(d.grid) && d.grid.length) ? d.grid : (qData.grid || []),
           target: d.target || qData.target || null,
-          solution: latinSol || '—',
-          userAnswer: latinUser || '—',
+          solution: latinSol || '\u2014',
+          userAnswer: latinUser || '\u2014',
           isCorrect: isCorrect,
           explanation: d.explanation || qData.explanation || ''
         };
@@ -2845,21 +2843,26 @@
 
       if (isFigures || qData.subtest === 'figures' || d.subtest === 'figures') {
         return {
-          questionId: qId || qData.id || `fig-${idx + 1}`,
+          questionId: qId || qData.id || ('fig-' + (idx + 1)),
           subtest: 'figures',
-          title: d.title || qData.title || `Figure Sequence #${idx + 1}`,
-          sequence: (qData.sequence || qData.matrices) || d.sequence || [],
+          title: d.title || qData.title || ('Figure Sequence #' + (idx + 1)),
+          sequence: qData.sequence || qData.matrices || d.sequence || [],
+          matrices: qData.matrices || qData.sequence || d.sequence || [],
           optionsM5: qData.optionsM5 || d.optionsM5 || [],
           optionsM6: qData.optionsM6 || d.optionsM6 || [],
           solution: sol,
           userAnswer: user,
           isCorrect: isCorrect,
+          setKey: d.setKey || '',
+          origIndex: d.origIndex,
+          origQNum: d.origQNum || '',
+          ref: d.ref || '',
           explanation: d.explanation || qData.explanation || ''
         };
       }
 
       return {
-        questionId: qId || qData.id || `q-${idx + 1}`,
+        questionId: qId || qData.id || ('q-' + (idx + 1)),
         equations: d.equations || qData.equations || [],
         solution: sol,
         userAnswer: user,
@@ -2977,9 +2980,27 @@
     (localList || []).forEach(item => {
       if (item && item.id && !isSampleRecord(item)) map.set(item.id, enrichSubmissionDetails(item));
     });
-    // 2. Put remote real items (override/prepend)
+    // 2. Put remote real items (override/prepend, but preserve local provenance/sequence if remote lacks it)
     (remoteList || []).forEach(item => {
-      if (item && item.id && !isSampleRecord(item)) map.set(item.id, enrichSubmissionDetails(item));
+      if (item && item.id && !isSampleRecord(item)) {
+        const existing = map.get(item.id);
+        let mergedItem = item;
+        if (existing && Array.isArray(existing.details) && Array.isArray(item.details) && existing.details.length === item.details.length) {
+          mergedItem = {
+            ...item,
+            details: item.details.map((rd, idx) => {
+              const ld = existing.details[idx];
+              if (!rd || !ld) return rd || ld;
+              const remoteHasProv = !!(rd.setKey || rd.ref || (Array.isArray(rd.sequence) && rd.sequence.length >= 4));
+              if (!remoteHasProv && (ld.setKey || ld.ref || (Array.isArray(ld.sequence) && ld.sequence.length >= 4))) {
+                return ld;
+              }
+              return rd;
+            })
+          };
+        }
+        map.set(item.id, enrichSubmissionDetails(mergedItem));
+      }
     });
 
     const merged = Array.from(map.values());
